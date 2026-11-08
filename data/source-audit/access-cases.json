@@ -1,0 +1,154 @@
+{
+  "researcher_access_evidence": {
+    "audit": "CollisionGuard bounded access and reuse audit",
+    "scope": "Read-only complement; no project or external writes; no credentials or author contact",
+    "limit": {
+      "max_bytes_requested": 10485760,
+      "timeout_seconds_per_request": 20,
+      "retries": 0,
+      "note": "One python command failed before any request because python was unavailable; one AsynCodeBench tree was re-read to verify its entry count."
+    },
+    "sources": [
+      {
+        "name": "ParallACT",
+        "role_fit": "Controlled unaware-agent pair candidate per existing source-search audit; run/export evidence was not re-fetched in this terms complement.",
+        "reuse_terms": "Unresolved. Pinned GitHub README has no license statement; LICENSE, COPYING, and dataset/v1/README.md returned 404. The paper carries arXiv's perpetual non-exclusive paper license but declares no separate dataset/output license. Do not interpret missing files as prohibition.",
+        "upstream_terms": [
+          {
+            "source": "NodeBB",
+            "base": "4327a09d76f10a79109da9d91c22120428d3bdb9",
+            "declared": "GNU GPL v3",
+            "license_http": 200,
+            "copying_http": 404,
+            "readme_http": 200
+          },
+          {
+            "source": "ParallACT paper",
+            "url": "https://arxiv.org/html/2611.00314",
+            "declared": "arXiv perpetual non-exclusive license for paper only",
+            "dataset_term": "not stated"
+          }
+        ],
+        "verdict": "Conditional; establish dataset and run-output terms before import.",
+        "project_page_term": {
+          "declared": "CC BY-SA 4.0 for website",
+          "dataset_or_run_term": "not stated"
+        }
+      },
+      {
+        "name": "CooperBench original trajectories",
+        "role_fit": "Two task inputs and patches previously inspected; coordinated plans, file/line hints, and later communication mean separate planned/communicating condition, not unaware or natural-dispatch evidence.",
+        "reuse_terms": "Trajectory card declares MIT. CooperBench code README and pyproject declare MIT, but LICENSE and COPYING absent at checked code revision 63b9d44d9f39a02fccf5bf0052db48a917a011fd. Run-producing revision not tied to traces.",
+        "upstream_terms": [
+          {
+            "source": "Outlines",
+            "base": "7149a5e613b9c2bb3c2ed3ee5b7c9228772504b1",
+            "declared": "Apache License 2.0",
+            "license_http": 200,
+            "readme_http": 200
+          }
+        ],
+        "verdict": "Secondary condition; source/output rights and run provenance remain open."
+      },
+      {
+        "name": "AsynCodeBench",
+        "role_fit": "Pinned tree has one v0.4 single-agent result bundle, one combined task statement, one declared agent, and no two-prompt/two-output pair.",
+        "inspected": [
+          "agent_request.schema.json",
+          "agent_response.schema.json",
+          "run_bundle.schema.json",
+          "run_bundle.json",
+          "protocol.json",
+          "task_snapshot.json",
+          "outputs.jsonl"
+        ],
+        "tree_http": 200,
+        "tree_entries": 736,
+        "tree_truncated": false,
+        "verdict": "Useful harness/task source for newly captured paired runs, not a released paired dataset."
+      },
+      {
+        "name": "gh-aw and Copilot",
+        "gh_aw_existing_case": {
+          "run": "33578395023",
+          "run_jobs_artifact_metadata_http": 200,
+          "artifact_zip_http": 401,
+          "job_log_http": 403,
+          "step_log_http": 404
+        },
+        "gh_aw_additional_runs": [
+          42451670371,
+          42451670285,
+          42451670249,
+          42451670206,
+          42451670178
+        ],
+        "gh_aw_additional_status": "Runs metadata HTTP 200; each artifact-list HTTP 200 with empty list; all action_required pull_request runs.",
+        "copilot_case": {
+          "commit": "https://github.com/oneminch/nuxt-feedback/commit/8335be756ed30beb458c47470fcf750fc5a28ef2",
+          "session": "https://github.com/oneminch/nuxt-feedback/sessions/d60540f7-7ec8-4740-ba3e-1e370d572549",
+          "session_anonymous_status": 404
+        },
+        "access_conditions": "GitHub docs allow anonymous public metadata reads; artifact downloads document Actions read scope. Copilot cloud sessions visible to repository readers; local sessions unshared by default.",
+        "verdict": "Requires owner-published accessible prompts, outputs, and checkout state for historical pairing."
+      },
+      {
+        "name": "AIDev pilot",
+        "source": "docs/pilot/results.md",
+        "parquet_refetched": false,
+        "primary_audit": "not checked",
+        "verdict": "NOT_ASSESSABLE, not invalid; no pair verified."
+      },
+      {
+        "name": "CooperBench merge-solver-sft-data",
+        "inspected": "Public viewer sample; raw README returned 404.",
+        "role_fit": "Post-conflict resolver output; no separate pre-start tasks/base/pair in sample.",
+        "verdict": "Secondary resolver target only; terms/schema not established."
+      }
+    ]
+  },
+  "coordinator_authenticated_public_artifact": {
+    "artifact_api": "https://api.github.com/repos/github/gh-aw/actions/artifacts/9827577745",
+    "auth_method": "existing gh CLI account, public repository only",
+    "metadata_ok": true,
+    "size_in_bytes": 2263,
+    "download_ok": true,
+    "members": [
+      {
+        "name": "agent_output.json",
+        "size": 1794,
+        "preview": "{\"items\":[{\"type\":\"create_issue\",\"body\":\"# Contribution Check — 2026-09-02\\n\\nEvaluated **3** pull request(s) against [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md); **7** were skipped by pre-filters.\\n\\nRun: https://github.com/github/gh-aw/actions/runs/33578395023\\n\\n## ✅ Ready (Aligned)\\n\\n| PR | Title | Author | Lines | Tests | Labels |\\n|---|-"
+      },
+      {
+        "name": "safeoutputs.jsonl",
+        "size": 1775,
+        "preview": "{\"body\":\"# Contribution Check — 2026-09-02\\n\\nEvaluated **3** pull request(s) against [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md); **7** were skipped by pre-filters.\\n\\nRun: https://github.com/github/gh-aw/actions/runs/33578395023\\n\\n## ✅ Ready (Aligned)\\n\\n| PR | Title | Author | Lines | Tests | Labels |\\n|---|---|---|---|---|---|\\n| #57801 | "
+      }
+    ]
+  },
+  "coordinator_authenticated_public_session": {
+    "repo": "oneminch/nuxt-feedback",
+    "session": "d60540f7-7ec8-4740-ba3e-1e370d572549",
+    "auth_method": "existing gh CLI login, public repository only",
+    "metadata_exit": 0,
+    "metadata": {
+      "createdAt": "2026-10-21T14:54:49.706384135Z",
+      "id": "d60540f7-7ec8-4740-ba3e-1e370d572549",
+      "pullRequestUrl": "https://github.com/oneminch/nuxt-feedback/pull/47",
+      "state": "completed"
+    },
+    "log_exit": 0,
+    "log_bytes": 67,
+    "log_sha256": "88335b53e0670bb1221c428d57461aed6c6a9dfa000cfda7b5ef6ad403b6ce7a",
+    "log_preview": "Start 'github-mcp-server' MCP server\nStart 'playwright' MCP server\n"
+  },
+  "correction": "NodeBB license independently checked at actual base754965b572f33bfd864e98e4805e1182c1960080; instance-ID suffix4327... is not the run base.",
+  "asyn_pinned_release": {
+    "revision": "2a639b049f249e79eb2031876bc06a110be9ac3a",
+    "tree_url": "https://github.com/KaituoZhang/AsynCodeBench/tree/2a639b049f249e79eb2031876bc06a110be9ac3a",
+    "bundle_url": "https://github.com/KaituoZhang/AsynCodeBench/blob/2a639b049f249e79eb2031876bc06a110be9ac3a/manifests/release/v0.4/baselines/qwen35-9b-wcwidth-single-v01/run_bundle.json",
+    "observed_protocol": "single",
+    "observed_declared_agents": 1,
+    "provenance": "Researcher note pin now retained alongside its existing inspected release-tree evidence"
+  }
+}

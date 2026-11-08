@@ -1,0 +1,26 @@
+{
+  "files": [
+    {
+      "bytes": 362078556,
+      "name": "pull_request.parquet",
+      "recorded_at": "2026-11-08T04:34:12.678813+00:00",
+      "sha256": "a9341e2ef692ae4220830b046da228000becc623a1591c5634728d78c331c32b",
+      "url": "https://huggingface.co/datasets/hao-li/AIDev/resolve/b8dc67df93e7c11f6f20c84129db7232eb1ec253/pull_request.parquet"
+    },
+    {
+      "bytes": 74957881,
+      "name": "issue.parquet",
+      "recorded_at": "2026-11-08T04:34:17.746972+00:00",
+      "sha256": "fc45ba381ca3566a88ffce91272dd0a37eba3fa31e681a333ef2ded85e9c3a30",
+      "url": "https://huggingface.co/datasets/hao-li/AIDev/resolve/b8dc67df93e7c11f6f20c84129db7232eb1ec253/issue.parquet"
+    },
+    {
+      "bytes": 1264494,
+      "name": "related_issue.parquet",
+      "recorded_at": "2026-11-08T04:34:18.465804+00:00",
+      "sha256": "16a22395a2572b29345888c76aba4c39e98dc1cf79b54685a521451c469e7aef",
+      "url": "https://huggingface.co/datasets/hao-li/AIDev/resolve/b8dc67df93e7c11f6f20c84129db7232eb1ec253/related_issue.parquet"
+    }
+  ],
+  "revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253"
+}

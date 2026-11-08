@@ -1,0 +1,133 @@
+{
+  "audited_at": "2026-11-08T04:39:32.357692+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/pandas-dev/pandas/pulls/64759",
+      "base_sha": "1bba48f900275af485e457b056f3e4fc82b38f94",
+      "observed_at": "2026-11-08T04:39:33.361450+00:00",
+      "sha": "180752dce34e29d76f4b56d370d106928198e2ab"
+    },
+    {
+      "api_url": "https://api.github.com/repos/pandas-dev/pandas/pulls/64822",
+      "base_sha": "9df51a79c83d8f905da9d6af2a391b23d2095410",
+      "observed_at": "2026-11-08T04:39:33.361474+00:00",
+      "sha": "3e719cf2ccbc961b8c84859a4fb50efda04b2019"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "detail": "",
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/pandas-dev/pandas.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "180752dce34e29d76f4b56d370d106928198e2ab",
+      "3e719cf2ccbc961b8c84859a4fb50efda04b2019"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [],
+    "reason": "no merge base in fetched history",
+    "shallow": true,
+    "status": "ERROR"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:42:50.085012+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 15011218,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2023-06-04T16:14:40Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 1740458037,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 53521,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "04203db41892394c6bb01b7008979a2bba39dfac2e4206dfa51ba8682f95cb40",
+          "url": "https://github.com/pandas-dev/pandas/issues/53521"
+        }
+      ],
+      "pr_id": 4114354734
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-21T14:49:46Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4112753929,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 64749,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "05305735d989a2a2d701114b6c81107e7ca49be8e1258e818970841a2203f518",
+          "url": "https://github.com/pandas-dev/pandas/issues/64749"
+        }
+      ],
+      "pr_id": 4125951100
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.059554+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-27 09:44:56-07",
+    "end2": "2026-03-25 17:37:43-07",
+    "issue1_ids": [
+      1740458037
+    ],
+    "issue2_ids": [
+      4112753929
+    ],
+    "pr1_id": 4114354734,
+    "pr1_number": 64759,
+    "pr2_id": 4125951100,
+    "pr2_number": 64822,
+    "repo_id": 858127,
+    "repo_url": "https://api.github.com/repos/pandas-dev/pandas",
+    "start1": "2026-03-21 18:22:04-07",
+    "start2": "2026-03-24 00:54:29-07"
+  },
+  "strict_valid": false
+}

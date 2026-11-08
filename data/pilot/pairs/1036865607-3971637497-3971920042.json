@@ -1,0 +1,151 @@
+{
+  "audited_at": "2026-11-08T04:39:31.431069+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/github/gh-aw/pulls/17419",
+      "base_sha": "26b6572ae210580303087bc3142fe58d140bf65c",
+      "observed_at": "2026-11-08T04:39:32.356848+00:00",
+      "sha": "a587be03afb9ae542ed2213a2c86b41e922362e7"
+    },
+    {
+      "api_url": "https://api.github.com/repos/github/gh-aw/pulls/17458",
+      "base_sha": "1be6247c4b38e9fc5a07a901a3afc282e403fbc4",
+      "observed_at": "2026-11-08T04:39:32.356869+00:00",
+      "sha": "780001646ac706c7b178ce82f82f4fa396aa59f5"
+    }
+  ],
+  "current_replay": {
+    "exit_code": 128,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/github/gh-aw.git",
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "reason": "repository transfer budget exhausted",
+    "status": "ERROR",
+    "stderr": "error: RPC failed; curl 56 GnuTLS recv error (-9): Error decoding the received TLS packet.\nerror: 4371 bytes of body are still expected\nfetch-pack: unexpected disconnect while reading sideband packet\nfatal: early EOF\nfatal: fetch-pack: invalid index-pack output\n"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:42:41.036071+00:00",
+  "git_cap_exhausted": true,
+  "git_wire_bytes": 67105925,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-02-21T09:11:34Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3971712465,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 17433,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "5936e9b6562e6b5bcc9c5d0a5cfaad8cef731a543b5263ef65a1ad6f758c8c22",
+          "url": "https://github.com/github/gh-aw/issues/17433"
+        },
+        {
+          "created_at": "2026-02-21T11:30:14Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3971877578,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 17444,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "604c109c36cf485f6f84ff941e69de29bd1465a959c06516781581de5a3a63a4",
+          "url": "https://github.com/github/gh-aw/issues/17444"
+        },
+        {
+          "created_at": "2026-02-21T11:35:01Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3971883265,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 17446,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "aa6d000feac397ccb1880558b757f7730e6013030c016de43fab520e59da4a2a",
+          "url": "https://github.com/github/gh-aw/issues/17446"
+        }
+      ],
+      "pr_id": 3971637497
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-02-21T12:21:42Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3971939220,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 17473,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "6a91b517dfcd371f6d6af7beb89eb1bf324d8e1df1291a35ce9c225a9de411cc",
+          "url": "https://github.com/github/gh-aw/issues/17473"
+        }
+      ],
+      "pr_id": 3971920042
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.062275+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "previous_replay_reason": "bounded Git fetch failed",
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Copilot",
+    "agent2": "Copilot",
+    "end1": "2026-02-21 05:19:56-07",
+    "end2": "2026-02-21 05:22:31-07",
+    "issue1_ids": [
+      3971712465,
+      3971877578,
+      3971883265
+    ],
+    "issue2_ids": [
+      3971939220
+    ],
+    "pr1_id": 3971637497,
+    "pr1_number": 17419,
+    "pr2_id": 3971920042,
+    "pr2_number": 17458,
+    "repo_id": 1036865607,
+    "repo_url": "https://api.github.com/repos/github/gh-aw",
+    "start1": "2026-02-21 01:06:05-07",
+    "start2": "2026-02-21 05:06:05-07"
+  },
+  "strict_valid": false
+}

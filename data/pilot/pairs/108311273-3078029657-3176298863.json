@@ -1,0 +1,133 @@
+{
+  "audited_at": "2026-11-08T04:39:21.626628+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/Azure/azure-sdk-for-js/pulls/34476",
+      "base_sha": "dd57109566ad8aa14c80dfc2dcceed85005aa4c2",
+      "observed_at": "2026-11-08T04:39:22.901021+00:00",
+      "sha": "8b253f1a897f0bfb49afdba6cb9d7806b80c21b4"
+    },
+    {
+      "api_url": "https://api.github.com/repos/Azure/azure-sdk-for-js/pulls/34981",
+      "base_sha": "e8000a2609939960c43277a6d4ca3e5bce3e8d0d",
+      "observed_at": "2026-11-08T04:39:22.901054+00:00",
+      "sha": "08f14f700a7cdcdfea59d3a55b1a488dfaf1c08c"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "detail": "",
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/Azure/azure-sdk-for-js.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "8b253f1a897f0bfb49afdba6cb9d7806b80c21b4",
+      "08f14f700a7cdcdfea59d3a55b1a488dfaf1c08c"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [],
+    "reason": "no merge base in fetched history",
+    "shallow": true,
+    "status": "ERROR"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:42.801689+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 52556435,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2025-01-22T21:56:55Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 2805433445,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 32671,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "26bd2bb141be051bad603ba50d2a2e120c0b59bea063c366c5787a20acf79ae5",
+          "url": "https://github.com/Azure/azure-sdk-for-js/issues/32671"
+        }
+      ],
+      "pr_id": 3078029657
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2025-06-24T14:45:50Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3172290357,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 34961,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "623371e0b6de870b9c551ec1b9b65fb1f778f5adf6af0de7d0e1622c484172ce",
+          "url": "https://github.com/Azure/azure-sdk-for-js/issues/34961"
+        }
+      ],
+      "pr_id": 3176298863
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.057607+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Copilot",
+    "agent2": "Copilot",
+    "end1": "2025-11-18 11:06:43-07",
+    "end2": "2025-07-14 15:19:57-07",
+    "issue1_ids": [
+      2805433445
+    ],
+    "issue2_ids": [
+      3172290357
+    ],
+    "pr1_id": 3078029657,
+    "pr1_number": 34476,
+    "pr2_id": 3176298863,
+    "pr2_number": 34981,
+    "repo_id": 108311273,
+    "repo_url": "https://api.github.com/repos/Azure/azure-sdk-for-js",
+    "start1": "2025-05-20 12:27:25-07",
+    "start2": "2025-06-25 09:44:57-07"
+  },
+  "strict_valid": false
+}

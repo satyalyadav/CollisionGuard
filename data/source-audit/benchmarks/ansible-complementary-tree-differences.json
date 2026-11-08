@@ -1,0 +1,20 @@
+{
+  "url": "https://api.github.com/repos/ansible/ansible/git/trees/6b5923ee0c5faf2cdce299350fb9814863fa2e53?recursive=1",
+  "response_sha256": "78a9812d4e3a7699236e7eac098d3f95507944f9fc953af0d020fd48232d3b4e",
+  "truncated": false,
+  "missing_paths": [
+    ".github/BOTMETA.yml",
+    ".github/CODE_OF_CONDUCT.md",
+    ".github/CONTRIBUTING.md",
+    ".github/ISSUE_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/bug_report.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/documentation_report.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.yml",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/RELEASE_NAMES.yml",
+    ".github/SECURITY.md"
+  ],
+  "extra_paths": [],
+  "mismatches": []
+}

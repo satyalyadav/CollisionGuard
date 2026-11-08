@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Local private records and credentials
+*.private.*
+.env
+.env.*
+!.env.example
+
+# Keep third-party source patches local pending redistribution checks
+data/source-audit/benchmarks/*.patch

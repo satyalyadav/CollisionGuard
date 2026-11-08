@@ -1,0 +1,138 @@
+{
+  "audited_at": "2026-11-08T04:39:17.016893+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/openclaw/openclaw/pulls/5834",
+      "base_sha": "a66b98a9daae61139a05ebc6e709f6e0bff10647",
+      "observed_at": "2026-11-08T04:39:17.906963+00:00",
+      "sha": "0206e480e92dd1828079f1393f19ea3692e19f44"
+    },
+    {
+      "api_url": "https://api.github.com/repos/openclaw/openclaw/pulls/22198",
+      "base_sha": "a66b98a9daae61139a05ebc6e709f6e0bff10647",
+      "observed_at": "2026-11-08T04:39:17.906993+00:00",
+      "sha": "83fb806ee8a0aa943d8c4a9ee15fb265ecc6eb0f"
+    }
+  ],
+  "current_replay": {
+    "exit_code": 128,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/openclaw/openclaw.git",
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "reason": "repository transfer budget exhausted",
+    "status": "ERROR",
+    "stderr": "fatal: unable to access 'https://github.com/openclaw/openclaw.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.\n"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:21.460595+00:00",
+  "git_cap_exhausted": true,
+  "git_wire_bytes": 0,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-01-31T03:00:35Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3878207814,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 5125,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "c7ce4aeb28281b96d38448053f680969ca38e2414c4879d0dbe3479b286cc2eb",
+          "url": "https://github.com/openclaw/openclaw/issues/5125"
+        }
+      ],
+      "pr_id": 3880733698
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-02-20T08:28:24Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3967273838,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 21709,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "2ea22758d340cf943e2941fa2eebdf7f4c11d29b45874f6b5607fdd422af0762",
+          "url": "https://github.com/openclaw/openclaw/issues/21709"
+        },
+        {
+          "created_at": "2026-02-20T08:28:24Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3967273838,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 21709,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "2ea22758d340cf943e2941fa2eebdf7f4c11d29b45874f6b5607fdd422af0762",
+          "url": "https://github.com/openclaw/openclaw/issues/21709"
+        }
+      ],
+      "pr_id": 3970484826
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.058679+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "previous_replay_reason": "bounded Git fetch failed",
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-02-23 22:36:55-07",
+    "end2": "2026-03-19 21:09:43-07",
+    "issue1_ids": [
+      3878207814
+    ],
+    "issue2_ids": [
+      3967273838
+    ],
+    "pr1_id": 3880733698,
+    "pr1_number": 5834,
+    "pr2_id": 3970484826,
+    "pr2_number": 22198,
+    "repo_id": 1103012935,
+    "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+    "start1": "2026-01-31 18:40:16-07",
+    "start2": "2026-02-20 14:39:49-07"
+  },
+  "strict_valid": false
+}

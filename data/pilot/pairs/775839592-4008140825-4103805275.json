@@ -1,0 +1,144 @@
+{
+  "audited_at": "2026-11-08T04:39:28.575532+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/marin-community/marin/pulls/3138",
+      "base_sha": "acb2663871ee684f0ce47ce5eb9c1ff8384db0f5",
+      "observed_at": "2026-11-08T04:39:29.380858+00:00",
+      "sha": "60ed5739ca081e5506880d4032526aaaaadb558a"
+    },
+    {
+      "api_url": "https://api.github.com/repos/marin-community/marin/pulls/3866",
+      "base_sha": "8ade7b56049b2cba81c1c2b38cc3cfc479bc5bc5",
+      "observed_at": "2026-11-08T04:39:29.380888+00:00",
+      "sha": "b4e2a0171a3ef486d9bb84a76d70530f2e9dd3b7"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "detail": "",
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/marin-community/marin.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "60ed5739ca081e5506880d4032526aaaaadb558a",
+      "b4e2a0171a3ef486d9bb84a76d70530f2e9dd3b7"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [],
+    "reason": "no merge base in fetched history",
+    "shallow": true,
+    "status": "ERROR"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:42:29.803464+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 19644914,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-01T11:19:52Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4006956598,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 3131,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "454b4cd63597b1adaf7c433fa252b948cefc63d2803099ed7fb952a084c39f11",
+          "url": "https://github.com/marin-community/marin/issues/3131"
+        }
+      ],
+      "pr_id": 4008140825
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-19T19:31:07Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4103785950,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 3864,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "6b2a61198b39e4c9616cca509f6abb2094dcec66cfe65dd78d6f4f6118c32971",
+          "url": "https://github.com/marin-community/marin/issues/3864"
+        },
+        {
+          "created_at": "2026-03-19T19:31:07Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4103785950,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 3864,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "6b2a61198b39e4c9616cca509f6abb2094dcec66cfe65dd78d6f4f6118c32971",
+          "url": "https://github.com/marin-community/marin/issues/3864"
+        }
+      ],
+      "pr_id": 4103805275
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.066239+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "OpenAI_Codex",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-31 16:59:59-07",
+    "end2": "2026-03-19 12:45:19-07",
+    "issue1_ids": [
+      4006956598
+    ],
+    "issue2_ids": [
+      4103785950
+    ],
+    "pr1_id": 4008140825,
+    "pr1_number": 3138,
+    "pr2_id": 4103805275,
+    "pr2_number": 3866,
+    "repo_id": 775839592,
+    "repo_url": "https://api.github.com/repos/marin-community/marin",
+    "start1": "2026-03-01 12:55:38-07",
+    "start2": "2026-03-19 12:34:38-07"
+  },
+  "strict_valid": false
+}

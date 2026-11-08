@@ -1,0 +1,28 @@
+{
+  "agent_heads": [
+    "7e03e9dd12f117c283bc81a4dd17e0b7f68a83e2",
+    "715bc479544f70445a687632675960697668fe61"
+  ],
+  "archive_bytes": 2475650,
+  "archive_entries": 250,
+  "archive_sha256": "482d9248c75e7310e3a729cf87bd59cea1eaaff27f29135a00183e9c2af0f9e1",
+  "base": "7149a5e613b9c2bb3c2ed3ee5b7c9228772504b1",
+  "base_head": "c7e60809c24479b7b71f4a845800b8b575e8f6e0",
+  "commit_api": "https://api.github.com/repos/dottxt-ai/outlines/git/commits/7149a5e613b9c2bb3c2ed3ee5b7c9228772504b1",
+  "expected_tree": "b0d6a6563adae62d95c3bbf2dcdf6394414dcfc2",
+  "label": "clean",
+  "merge": {
+    "exit": 0,
+    "stderr": "",
+    "stdout": "4b2efda214656f1bcad69edc2d72ee2ba470a9f5\n"
+  },
+  "patch_sha256": [
+    "f2ec40df4a9131ae9113c801ed3fda20e76d950850b0e5871b7dac064164b78d",
+    "73a21fa54594fb5b844e7bf8e6c75fa8c5a4bd1bba8adc5d5d041d40d221a942"
+  ],
+  "repeat_identical": true,
+  "repo": "dottxt-ai/outlines",
+  "snapshot_tree": "b0d6a6563adae62d95c3bbf2dcdf6394414dcfc2",
+  "snapshot_url": "https://codeload.github.com/dottxt-ai/outlines/tar.gz/7149a5e613b9c2bb3c2ed3ee5b7c9228772504b1",
+  "status": "complete"
+}

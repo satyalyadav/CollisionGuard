@@ -1,0 +1,133 @@
+{
+  "audited_at": "2026-11-08T04:39:17.908157+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/oven-sh/bun/pulls/26273",
+      "base_sha": "f8adf01f510003150ef32f34d3127b87caaa3047",
+      "observed_at": "2026-11-08T04:39:18.840149+00:00",
+      "sha": "fd4c0144d45c3d670160d9af27fa72fc75dd5c1b"
+    },
+    {
+      "api_url": "https://api.github.com/repos/oven-sh/bun/pulls/27674",
+      "base_sha": "2cae6c327e5e203bf864132e838851dda31999cb",
+      "observed_at": "2026-11-08T04:39:18.840176+00:00",
+      "sha": "4392ea4c6f3323e8d57a44275e03f0579f570343"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "detail": "",
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/oven-sh/bun.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "fd4c0144d45c3d670160d9af27fa72fc75dd5c1b",
+      "4392ea4c6f3323e8d57a44275e03f0579f570343"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [],
+    "reason": "no merge base in fetched history",
+    "shallow": true,
+    "status": "ERROR"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:22.005818+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 55657167,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2025-10-29T13:33:50Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3566019721,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 24184,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "9157a415e76f23ce042485f3eb0619727f4fe4b49fd9ccc6104b4c4e7676af57",
+          "url": "https://github.com/oven-sh/bun/issues/24184"
+        }
+      ],
+      "pr_id": 3831348763
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-01T13:03:27Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4007137318,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 27670,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "1d37900466a89565d1843e98bf0076810f394b83bf932ea98bdc10ab0db8a3e5",
+          "url": "https://github.com/oven-sh/bun/issues/27670"
+        }
+      ],
+      "pr_id": 4007247005
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.061426+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-31 16:59:59-07",
+    "end2": "2026-03-31 16:59:59-07",
+    "issue1_ids": [
+      3566019721
+    ],
+    "issue2_ids": [
+      4007137318
+    ],
+    "pr1_id": 3831348763,
+    "pr1_number": 26273,
+    "pr2_id": 4007247005,
+    "pr2_number": 27674,
+    "repo_id": 357728969,
+    "repo_url": "https://api.github.com/repos/oven-sh/bun",
+    "start1": "2026-01-19 15:10:28-07",
+    "start2": "2026-03-01 06:49:31-07"
+  },
+  "strict_valid": false
+}

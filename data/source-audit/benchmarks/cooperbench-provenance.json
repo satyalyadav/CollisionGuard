@@ -1,0 +1,41 @@
+{
+  "license_declaration": "MIT in release README; underlying repository terms need independent review",
+  "condition": "Coordinated plans and explicit communication; not parallel-unaware",
+  "group": "dottxt_ai_outlines_task/task1371/feature1_feature2; group all models and runs together",
+  "items": {
+    "trajectory1": {
+      "url": "https://huggingface.co/datasets/CooperBench/trajectories/resolve/906bc2f62325eb6f8ccb4cf221e63df051cb3c99/coop/dottxt_ai_outlines_task/task1371/feature1_feature2/execution_traj_claude_k1_feature1.json",
+      "sha256": "28e9b04381029a434ab333727b53fb1bca6070ad4bf834a09dce35fc7341efe7",
+      "bytes": 894579,
+      "event_count": 146,
+      "user_message_count": 12,
+      "first_user_event_id": 1,
+      "first_user_timestamp": "2025-10-31T21:59:38.439997",
+      "first_user_sha256": "2e98a34fb029a65c95dc4008921a43a7801a44c774450c78fcad78b356635eea",
+      "first_user_mentions_prompts_file": true,
+      "communication_instruction_in_first_agent_event": true
+    },
+    "trajectory2": {
+      "url": "https://huggingface.co/datasets/CooperBench/trajectories/resolve/906bc2f62325eb6f8ccb4cf221e63df051cb3c99/coop/dottxt_ai_outlines_task/task1371/feature1_feature2/execution_traj_claude_k1_feature2.json",
+      "sha256": "b82228234575885e2ccbc3f3bcd20a7b94119fc93e0e79d03c38179ed3d3a507",
+      "bytes": 471045,
+      "event_count": 83,
+      "user_message_count": 8,
+      "first_user_event_id": 1,
+      "first_user_timestamp": "2025-10-31T21:59:30.242826",
+      "first_user_sha256": "00ac6e31574177a5e5c3ecb722441d404861204fc56825ef3cf4e353243d627b",
+      "first_user_mentions_prompts_file": true,
+      "communication_instruction_in_first_agent_event": true
+    },
+    "patch1": {
+      "url": "https://huggingface.co/datasets/CooperBench/trajectories/resolve/906bc2f62325eb6f8ccb4cf221e63df051cb3c99/coop/dottxt_ai_outlines_task/task1371/feature1_feature2/patch_claude_k1_feature1.patch",
+      "sha256": "f2ec40df4a9131ae9113c801ed3fda20e76d950850b0e5871b7dac064164b78d",
+      "bytes": 8545
+    },
+    "patch2": {
+      "url": "https://huggingface.co/datasets/CooperBench/trajectories/resolve/906bc2f62325eb6f8ccb4cf221e63df051cb3c99/coop/dottxt_ai_outlines_task/task1371/feature1_feature2/patch_claude_k1_feature2.patch",
+      "sha256": "73a21fa54594fb5b844e7bf8e6c75fa8c5a4bd1bba8adc5d5d041d40d221a942",
+      "bytes": 2763
+    }
+  }
+}

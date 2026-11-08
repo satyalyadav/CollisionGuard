@@ -1,0 +1,127 @@
+{
+  "audited_at": "2026-11-08T04:39:22.902742+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/crewAIInc/crewAI/pulls/4625",
+      "base_sha": "d259150d8d084c96dd53491a1c33596f54c5c643",
+      "observed_at": "2026-11-08T04:39:23.816163+00:00",
+      "sha": "70c6c7abf2557dd2c2b01000ea8aa36abcc07193"
+    },
+    {
+      "api_url": "https://api.github.com/repos/crewAIInc/crewAI/pulls/4791",
+      "base_sha": "e1d7de0dbadcadb3ac485565b35f1d89ce1c2cf7",
+      "observed_at": "2026-11-08T04:39:23.816190+00:00",
+      "sha": "bd09b548d55d4c0eee1732c83f1c2213dbfc7c76"
+    }
+  ],
+  "current_replay": {
+    "exit_code": 128,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/crewAIInc/crewAI.git",
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "reason": "repository transfer budget exhausted",
+    "status": "ERROR",
+    "stderr": "error: RPC failed; curl 56 GnuTLS recv error (-9): Error decoding the received TLS packet.\nerror: 3920 bytes of body are still expected\nfetch-pack: unexpected disconnect while reading sideband packet\nfatal: early EOF\nfatal: fetch-pack: invalid index-pack output\n"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:59.867412+00:00",
+  "git_cap_exhausted": true,
+  "git_wire_bytes": 67092816,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-02-23T15:38:27Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3978819460,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 4571,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "868b9196770277d32641c77885d7aa96b15f34f4d71eede5348c3223a208e9af",
+          "url": "https://github.com/crewAIInc/crewAI/issues/4571"
+        }
+      ],
+      "pr_id": 3998080806
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2024-04-09T01:14:34Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 2232422247,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 447,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "5f5cf1d06af4f3237e2375755addf1754fee1482b15594a62dc2279f7ec3a90f",
+          "url": "https://github.com/crewAIInc/crewAI/issues/447"
+        }
+      ],
+      "pr_id": 4045960070
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.068933+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "previous_replay_reason": "bounded Git fetch failed",
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Cursor",
+    "end1": "2026-03-31 16:59:59-07",
+    "end2": "2026-03-14 22:18:02-07",
+    "issue1_ids": [
+      3978819460
+    ],
+    "issue2_ids": [
+      2232422247
+    ],
+    "pr1_id": 3998080806,
+    "pr1_number": 4625,
+    "pr2_id": 4045960070,
+    "pr2_number": 4791,
+    "repo_id": 710601088,
+    "repo_url": "https://api.github.com/repos/crewAIInc/crewAI",
+    "start1": "2026-02-26 15:30:53-07",
+    "start2": "2026-03-09 07:33:05-07"
+  },
+  "strict_valid": false
+}

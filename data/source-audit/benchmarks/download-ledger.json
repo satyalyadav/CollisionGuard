@@ -1,0 +1,455 @@
+{
+  "downloaded_body_bytes": 54973285,
+  "requests": [
+    {
+      "body_bytes": 4022256,
+      "completed": true,
+      "url": "https://codeload.github.com/NodeBB/NodeBB/tar.gz/754965b572f33bfd864e98e4805e1182c1960080"
+    },
+    {
+      "body_bytes": 2475650,
+      "completed": true,
+      "url": "https://codeload.github.com/dottxt-ai/outlines/tar.gz/7149a5e613b9c2bb3c2ed3ee5b7c9228772504b1"
+    },
+    {
+      "body_bytes": 4835806,
+      "completed": true,
+      "url": "https://codeload.github.com/NodeBB/NodeBB/tar.gz/1e137b07052bc3ea0da44ed201702c94055b8ad2"
+    },
+    {
+      "body_bytes": 7126838,
+      "completed": true,
+      "url": "https://codeload.github.com/ansible/ansible/tar.gz/0fae2383dafba38cdd0f02bcc4da1b89f414bf93"
+    },
+    {
+      "body_bytes": 14489474,
+      "completed": true,
+      "url": "https://codeload.github.com/element-hq/element-web/tar.gz/339e7dab18df52b7fb3e5a86a195eab2adafe36a"
+    },
+    {
+      "body_bytes": 5694073,
+      "completed": true,
+      "url": "https://codeload.github.com/ansible/ansible/tar.gz/9281148b623d4e2e8302778d91af3e84ab9579a9"
+    },
+    {
+      "body_bytes": 14635731,
+      "completed": true,
+      "url": "https://codeload.github.com/element-hq/element-web/tar.gz/8166306e0f8951a9554bf1437f7ef6eef54a3267"
+    },
+    {
+      "body_bytes": 3924,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/BOTMETA.yml"
+    },
+    {
+      "body_bytes": 162,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/CODE_OF_CONDUCT.md"
+    },
+    {
+      "body_bytes": 1678,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/CONTRIBUTING.md"
+    },
+    {
+      "body_bytes": 98,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE.md"
+    },
+    {
+      "body_bytes": 12446,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "body_bytes": 1559,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "body_bytes": 6551,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/documentation_report.yml"
+    },
+    {
+      "body_bytes": 5706,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/feature_request.yml"
+    },
+    {
+      "body_bytes": 720,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "body_bytes": 427,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/RELEASE_NAMES.yml"
+    },
+    {
+      "body_bytes": 593,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/SECURITY.md"
+    },
+    {
+      "body_bytes": 1425270,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/BOTMETA.yml"
+    },
+    {
+      "body_bytes": 1447,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/ISSUE_TEMPLATE/bug_report.md"
+    },
+    {
+      "body_bytes": 1543,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "body_bytes": 1227,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/ISSUE_TEMPLATE/documentation_report.md"
+    },
+    {
+      "body_bytes": 751,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/ISSUE_TEMPLATE/feature_request.md"
+    },
+    {
+      "body_bytes": 726,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "body_bytes": 305,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/.github/RELEASE_NAMES.yml"
+    },
+    {
+      "body_bytes": 1996,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/README.md"
+    },
+    {
+      "body_bytes": 1425,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ansible-profile"
+    },
+    {
+      "body_bytes": 1040,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/backport/README.md"
+    },
+    {
+      "body_bytes": 0,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/backport/__init__.py"
+    },
+    {
+      "body_bytes": 9977,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/backport/backport_of_line_adder.py"
+    },
+    {
+      "body_bytes": 2609,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build-ansible.py"
+    },
+    {
+      "body_bytes": 7671,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/announce.py"
+    },
+    {
+      "body_bytes": 1078,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/change_detection.py"
+    },
+    {
+      "body_bytes": 3270,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/collection_meta.py"
+    },
+    {
+      "body_bytes": 3075,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/dump_config.py"
+    },
+    {
+      "body_bytes": 5064,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/dump_keywords.py"
+    },
+    {
+      "body_bytes": 5460,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/file_deprecated_issues.py"
+    },
+    {
+      "body_bytes": 9954,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/generate_man.py"
+    },
+    {
+      "body_bytes": 33876,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/plugin_formatter.py"
+    },
+    {
+      "body_bytes": 3213,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/porting_guide.py"
+    },
+    {
+      "body_bytes": 2905,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/release_announcement.py"
+    },
+    {
+      "body_bytes": 4321,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/command_plugins/update_intersphinx.py"
+    },
+    {
+      "body_bytes": 1578,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/commands.py"
+    },
+    {
+      "body_bytes": 526,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/errors.py"
+    },
+    {
+      "body_bytes": 2617,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/build_library/build_ansible/jinja2/filters.py"
+    },
+    {
+      "body_bytes": 389,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/deprecated_issue_template.md"
+    },
+    {
+      "body_bytes": 2960,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/env-setup"
+    },
+    {
+      "body_bytes": 2458,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/env-setup.fish"
+    },
+    {
+      "body_bytes": 3563,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/fix_test_syntax.py"
+    },
+    {
+      "body_bytes": 875,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/get_library.py"
+    },
+    {
+      "body_bytes": 19246,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/metadata-tool.py"
+    },
+    {
+      "body_bytes": 6781,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/report.py"
+    },
+    {
+      "body_bytes": 3279,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/return_skeleton_generator.py"
+    },
+    {
+      "body_bytes": 6094,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/README.md"
+    },
+    {
+      "body_bytes": 12281,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/download.py"
+    },
+    {
+      "body_bytes": 2662,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/get_recent_coverage_runs.py"
+    },
+    {
+      "body_bytes": 17958,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/incidental.py"
+    },
+    {
+      "body_bytes": 7511,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/rebalance.py"
+    },
+    {
+      "body_bytes": 3857,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/shippable/run.py"
+    },
+    {
+      "body_bytes": 14,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/test-module"
+    },
+    {
+      "body_bytes": 10760,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/test-module.py"
+    },
+    {
+      "body_bytes": 2395,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/tests/gen_distribution_version_testcase.py"
+    },
+    {
+      "body_bytes": 471,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/tests/selinux/README.md"
+    },
+    {
+      "body_bytes": 463,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/tests/selinux/ansible-podman.te"
+    },
+    {
+      "body_bytes": 243,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/tests/selinux/build.sh"
+    },
+    {
+      "body_bytes": 440,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/README.md"
+    },
+    {
+      "body_bytes": 775,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_cannot_reproduce.md"
+    },
+    {
+      "body_bytes": 733,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_confirmed_p1_or_p2.md"
+    },
+    {
+      "body_bytes": 651,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_internal_api.md"
+    },
+    {
+      "body_bytes": 589,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_is_really_a_question.md"
+    },
+    {
+      "body_bytes": 695,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_misunderstanding.md"
+    },
+    {
+      "body_bytes": 902,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/bug_not_a_bug.md"
+    },
+    {
+      "body_bytes": 679,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/change_applied.md"
+    },
+    {
+      "body_bytes": 791,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/collections.md"
+    },
+    {
+      "body_bytes": 714,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/file_under_another_project.md"
+    },
+    {
+      "body_bytes": 1179,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/great_idea.md"
+    },
+    {
+      "body_bytes": 519,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/guide_newbie_about_gh_and_contributing_to_ansible.md"
+    },
+    {
+      "body_bytes": 1158,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/needs_info.md"
+    },
+    {
+      "body_bytes": 1264,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/needs_locale_info.md"
+    },
+    {
+      "body_bytes": 1715,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/needs_template.md"
+    },
+    {
+      "body_bytes": 943,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/no_thanks.md"
+    },
+    {
+      "body_bytes": 1572,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/pr_cleanup_commits.md"
+    },
+    {
+      "body_bytes": 958,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/pr_duplicate.md"
+    },
+    {
+      "body_bytes": 688,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/pr_merged.md"
+    },
+    {
+      "body_bytes": 1309,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/pr_needs_rebase.md"
+    },
+    {
+      "body_bytes": 1123,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/pr_needs_revision.md"
+    },
+    {
+      "body_bytes": 621,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/proposal.md"
+    },
+    {
+      "body_bytes": 827,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/resolved.md"
+    },
+    {
+      "body_bytes": 1063,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/thanks.md"
+    },
+    {
+      "body_bytes": 501,
+      "completed": true,
+      "url": "https://raw.githubusercontent.com/ansible/ansible/9281148b623d4e2e8302778d91af3e84ab9579a9/hacking/ticket_stubs/wider_discussion.md"
+    }
+  ]
+}

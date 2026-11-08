@@ -1,0 +1,435 @@
+{
+  "cutoff": "2026-03-31T23:59:59Z",
+  "frame_size": 1471903,
+  "frozen_at": "2026-11-08T04:39:13.411198+00:00",
+  "protocol_sha256": "13ebc4e1bd792dc7236ff4cd60cf35254c38107fd02500a083d770bbd543abb6",
+  "protocol_version": 2,
+  "python_version": "3.13.13 (main, May 10 2026, 19:26:54) [Clang 22.1.3 ]",
+  "repository_visitation_order": [
+    1103012935,
+    357728969,
+    179116914,
+    108311273,
+    710601088,
+    1117184424,
+    41881900,
+    1178493295,
+    775839592,
+    1096175506,
+    1036865607,
+    858127
+  ],
+  "revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+  "selected": [
+    {
+      "agent1": "Claude_Code",
+      "agent2": "OpenAI_Codex",
+      "end1": "2026-03-16 23:27:36-07",
+      "end2": "2026-03-11 09:51:26-07",
+      "issue1_ids": [
+        3959394382
+      ],
+      "issue2_ids": [
+        3888063943
+      ],
+      "pr1_id": 3961956163,
+      "pr1_number": 20806,
+      "pr2_id": 4059334320,
+      "pr2_number": 43350,
+      "repo_id": 1103012935,
+      "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+      "start1": "2026-02-19 02:48:02-07",
+      "start2": "2026-03-11 09:40:01-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-02-23 22:29:07-07",
+      "end2": "2026-03-08 22:57:35-07",
+      "issue1_ids": [
+        3878043083
+      ],
+      "issue2_ids": [
+        3781940918
+      ],
+      "pr1_id": 3878176840,
+      "pr1_number": 5115,
+      "pr2_id": 3960726063,
+      "pr2_number": 20555,
+      "repo_id": 1103012935,
+      "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+      "start1": "2026-01-30 19:41:01-07",
+      "start2": "2026-02-18 19:55:49-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-08 02:07:10-07",
+      "end2": "2026-03-07 12:42:16-07",
+      "issue1_ids": [
+        3830738119,
+        3853250023
+      ],
+      "issue2_ids": [
+        3779908138,
+        3792948853,
+        3852976525
+      ],
+      "pr1_id": 4038942409,
+      "pr1_number": 39027,
+      "pr2_id": 4039243293,
+      "pr2_number": 39116,
+      "repo_id": 1103012935,
+      "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+      "start1": "2026-03-07 10:04:04-07",
+      "start2": "2026-03-07 12:20:39-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-02-23 22:36:55-07",
+      "end2": "2026-03-19 21:09:43-07",
+      "issue1_ids": [
+        3878207814
+      ],
+      "issue2_ids": [
+        3967273838
+      ],
+      "pr1_id": 3880733698,
+      "pr1_number": 5834,
+      "pr2_id": 3970484826,
+      "pr2_number": 22198,
+      "repo_id": 1103012935,
+      "repo_url": "https://api.github.com/repos/openclaw/openclaw",
+      "start1": "2026-01-31 18:40:16-07",
+      "start2": "2026-02-20 14:39:49-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-31 16:59:59-07",
+      "issue1_ids": [
+        3566019721
+      ],
+      "issue2_ids": [
+        4007137318
+      ],
+      "pr1_id": 3831348763,
+      "pr1_number": 26273,
+      "pr2_id": 4007247005,
+      "pr2_number": 27674,
+      "repo_id": 357728969,
+      "repo_url": "https://api.github.com/repos/oven-sh/bun",
+      "start1": "2026-01-19 15:10:28-07",
+      "start2": "2026-03-01 06:49:31-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-01 01:03:25-07",
+      "end2": "2026-03-31 16:59:59-07",
+      "issue1_ids": [
+        3252797554,
+        3995959795,
+        4025173932
+      ],
+      "issue2_ids": [
+        4000186084
+      ],
+      "pr1_id": 3996422441,
+      "pr1_number": 27466,
+      "pr2_id": 4000232825,
+      "pr2_number": 27513,
+      "repo_id": 357728969,
+      "repo_url": "https://api.github.com/repos/oven-sh/bun",
+      "start1": "2026-02-26 09:11:20-07",
+      "start2": "2026-02-27 03:09:57-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-21 03:40:01-07",
+      "end2": "2026-03-21 03:47:01-07",
+      "issue1_ids": [
+        4111938124
+      ],
+      "issue2_ids": [
+        4111938465
+      ],
+      "pr1_id": 4112025976,
+      "pr1_number": 149,
+      "pr2_id": 4112041337,
+      "pr2_number": 151,
+      "repo_id": 179116914,
+      "repo_url": "https://api.github.com/repos/antimony-lang/antimony",
+      "start1": "2026-03-21 03:30:22-07",
+      "start2": "2026-03-21 03:36:57-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-31 16:59:59-07",
+      "issue1_ids": [
+        3826546611
+      ],
+      "issue2_ids": [
+        3893716135
+      ],
+      "pr1_id": 3826555822,
+      "pr1_number": 26217,
+      "pr2_id": 3893786016,
+      "pr2_number": 26722,
+      "repo_id": 357728969,
+      "repo_url": "https://api.github.com/repos/oven-sh/bun",
+      "start1": "2026-01-18 02:28:50-07",
+      "start2": "2026-02-03 16:50:37-07"
+    },
+    {
+      "agent1": "Copilot",
+      "agent2": "Copilot",
+      "end1": "2025-11-18 11:06:43-07",
+      "end2": "2025-07-14 15:19:57-07",
+      "issue1_ids": [
+        2805433445
+      ],
+      "issue2_ids": [
+        3172290357
+      ],
+      "pr1_id": 3078029657,
+      "pr1_number": 34476,
+      "pr2_id": 3176298863,
+      "pr2_number": 34981,
+      "repo_id": 108311273,
+      "repo_url": "https://api.github.com/repos/Azure/azure-sdk-for-js",
+      "start1": "2025-05-20 12:27:25-07",
+      "start2": "2025-06-25 09:44:57-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Cursor",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-14 22:18:02-07",
+      "issue1_ids": [
+        3978819460
+      ],
+      "issue2_ids": [
+        2232422247
+      ],
+      "pr1_id": 3998080806,
+      "pr1_number": 4625,
+      "pr2_id": 4045960070,
+      "pr2_number": 4791,
+      "repo_id": 710601088,
+      "repo_url": "https://api.github.com/repos/crewAIInc/crewAI",
+      "start1": "2026-02-26 15:30:53-07",
+      "start2": "2026-03-09 07:33:05-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-10 20:58:37-07",
+      "end2": "2026-03-08 15:30:21-07",
+      "issue1_ids": [
+        4039570787
+      ],
+      "issue2_ids": [
+        4042151871
+      ],
+      "pr1_id": 4040325753,
+      "pr1_number": 2523,
+      "pr2_id": 4042214081,
+      "pr2_number": 2574,
+      "repo_id": 1117184424,
+      "repo_url": "https://api.github.com/repos/gastownhall/gastown",
+      "start1": "2026-03-07 20:31:23-07",
+      "start2": "2026-03-08 14:26:42-07"
+    },
+    {
+      "agent1": "Copilot",
+      "agent2": "Copilot",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-17 04:18:38-07",
+      "issue1_ids": [
+        2080766472
+      ],
+      "issue2_ids": [
+        117873315
+      ],
+      "pr1_id": 3220865429,
+      "pr1_number": 255248,
+      "pr2_id": 4002250485,
+      "pr2_number": 298312,
+      "repo_id": 41881900,
+      "repo_url": "https://api.github.com/repos/microsoft/vscode",
+      "start1": "2025-07-10 15:22:57-07",
+      "start2": "2026-02-27 11:14:10-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-29 03:54:52-07",
+      "end2": "2026-03-30 13:39:35-07",
+      "issue1_ids": [
+        4129175167,
+        4148752093
+      ],
+      "issue2_ids": [
+        4146809916
+      ],
+      "pr1_id": 4128880464,
+      "pr1_number": 2369,
+      "pr2_id": 4162726554,
+      "pr2_number": 3081,
+      "repo_id": 1178493295,
+      "repo_url": "https://api.github.com/repos/gsd-build/gsd-2",
+      "start1": "2026-03-24 08:45:05-07",
+      "start2": "2026-03-28 22:28:10-07"
+    },
+    {
+      "agent1": "Copilot",
+      "agent2": "Copilot",
+      "end1": "2025-12-16 05:04:59-07",
+      "end2": "2025-08-12 06:26:28-07",
+      "issue1_ids": [
+        2372478155
+      ],
+      "issue2_ids": [
+        3314073813
+      ],
+      "pr1_id": 3173312690,
+      "pr1_number": 252347,
+      "pr2_id": 3314074539,
+      "pr2_number": 261224,
+      "repo_id": 41881900,
+      "repo_url": "https://api.github.com/repos/microsoft/vscode",
+      "start1": "2025-06-24 14:12:08-07",
+      "start2": "2025-08-12 05:42:00-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-30 16:32:43-07",
+      "end2": "2026-03-30 13:31:58-07",
+      "issue1_ids": [
+        4148505020
+      ],
+      "issue2_ids": [
+        4164147947
+      ],
+      "pr1_id": 4162747808,
+      "pr1_number": 3088,
+      "pr2_id": 4171622452,
+      "pr2_number": 3234,
+      "repo_id": 1178493295,
+      "repo_url": "https://api.github.com/repos/gsd-build/gsd-2",
+      "start1": "2026-03-28 22:32:23-07",
+      "start2": "2026-03-30 08:16:05-07"
+    },
+    {
+      "agent1": "OpenAI_Codex",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-19 12:45:19-07",
+      "issue1_ids": [
+        4006956598
+      ],
+      "issue2_ids": [
+        4103785950
+      ],
+      "pr1_id": 4008140825,
+      "pr1_number": 3138,
+      "pr2_id": 4103805275,
+      "pr2_number": 3866,
+      "repo_id": 775839592,
+      "repo_url": "https://api.github.com/repos/marin-community/marin",
+      "start1": "2026-03-01 12:55:38-07",
+      "start2": "2026-03-19 12:34:38-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-31 16:59:59-07",
+      "end2": "2026-03-31 16:59:59-07",
+      "issue1_ids": [
+        2925176849
+      ],
+      "issue2_ids": [
+        3828341610
+      ],
+      "pr1_id": 3721278447,
+      "pr1_number": 25480,
+      "pr2_id": 3828379135,
+      "pr2_number": 26242,
+      "repo_id": 357728969,
+      "repo_url": "https://api.github.com/repos/oven-sh/bun",
+      "start1": "2025-12-11 16:12:00-07",
+      "start2": "2026-01-19 00:26:55-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-15 21:07:59-07",
+      "end2": "2026-03-15 01:10:43-07",
+      "issue1_ids": [
+        4068823633
+      ],
+      "issue2_ids": [
+        4077626797,
+        4077810400
+      ],
+      "pr1_id": 4069439318,
+      "pr1_number": 4715,
+      "pr2_id": 4077834506,
+      "pr2_number": 4838,
+      "repo_id": 1096175506,
+      "repo_url": "https://api.github.com/repos/vm0-ai/vm0",
+      "start1": "2026-03-13 00:28:00-07",
+      "start2": "2026-03-15 00:34:55-07"
+    },
+    {
+      "agent1": "Copilot",
+      "agent2": "Copilot",
+      "end1": "2026-02-21 05:19:56-07",
+      "end2": "2026-02-21 05:22:31-07",
+      "issue1_ids": [
+        3971712465,
+        3971877578,
+        3971883265
+      ],
+      "issue2_ids": [
+        3971939220
+      ],
+      "pr1_id": 3971637497,
+      "pr1_number": 17419,
+      "pr2_id": 3971920042,
+      "pr2_number": 17458,
+      "repo_id": 1036865607,
+      "repo_url": "https://api.github.com/repos/github/gh-aw",
+      "start1": "2026-02-21 01:06:05-07",
+      "start2": "2026-02-21 05:06:05-07"
+    },
+    {
+      "agent1": "Claude_Code",
+      "agent2": "Claude_Code",
+      "end1": "2026-03-27 09:44:56-07",
+      "end2": "2026-03-25 17:37:43-07",
+      "issue1_ids": [
+        1740458037
+      ],
+      "issue2_ids": [
+        4112753929
+      ],
+      "pr1_id": 4114354734,
+      "pr1_number": 64759,
+      "pr2_id": 4125951100,
+      "pr2_number": 64822,
+      "repo_id": 858127,
+      "repo_url": "https://api.github.com/repos/pandas-dev/pandas",
+      "start1": "2026-03-21 18:22:04-07",
+      "start2": "2026-03-24 00:54:29-07"
+    }
+  ],
+  "selection": "stable numeric repo/pr/pr sort; Python random.Random(39).shuffle; greedy cap 4/repo and no PR reuse"
+}

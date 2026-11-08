@@ -1,0 +1,5 @@
+[project]
+name = "collisionguard-pilot"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["duckdb==1.4.2", "requests==2.32.5"]

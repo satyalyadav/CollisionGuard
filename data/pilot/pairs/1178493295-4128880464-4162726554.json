@@ -1,0 +1,156 @@
+{
+  "audited_at": "2026-11-08T04:39:25.791383+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/gsd-build/gsd-2/pulls/2369",
+      "base_sha": "e30863537b1a154409a1b11ea045942384ee827e",
+      "observed_at": "2026-11-08T04:39:26.658988+00:00",
+      "sha": "6a4d5edb1ef54adb113d8893e54a823842a57ec6"
+    },
+    {
+      "api_url": "https://api.github.com/repos/gsd-build/gsd-2/pulls/3081",
+      "base_sha": "fe0e218954d5e42d2045192f8b8234c0cd56b8c6",
+      "observed_at": "2026-11-08T04:39:26.659068+00:00",
+      "sha": "b9853412fc81ae00aabd360dcee4282ed0dad8e6"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "detail": "",
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/gsd-build/gsd-2.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "6a4d5edb1ef54adb113d8893e54a823842a57ec6",
+      "b9853412fc81ae00aabd360dcee4282ed0dad8e6"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [],
+    "reason": "no merge base in fetched history",
+    "shallow": true,
+    "status": "ERROR"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:42:21.647142+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 10210225,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-24T16:29:53Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4129175167,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 2372,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "4cebc83cd46bdb0921fed1cf94b643fa2a02c3ae780abe3f760a2f6f32baa07f",
+          "url": "https://github.com/gsd-build/gsd-2/issues/2372"
+        },
+        {
+          "created_at": "2026-03-24T16:29:53Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4129175167,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 2372,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "4cebc83cd46bdb0921fed1cf94b643fa2a02c3ae780abe3f760a2f6f32baa07f",
+          "url": "https://github.com/gsd-build/gsd-2/issues/2372"
+        },
+        {
+          "created_at": "2026-03-27T02:45:17Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4148752093,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 2792,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "3f5ce0cefacef6d130fc33c7431f7f1c17238f2fcab408d1b4a1837fcbd59554",
+          "url": "https://github.com/gsd-build/gsd-2/issues/2792"
+        }
+      ],
+      "pr_id": 4128880464
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-26T19:31:58Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4146809916,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 2715,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "8353e6107d02971bd94502669bdca136b03040d17ef581b49c747901e3609e9e",
+          "url": "https://github.com/gsd-build/gsd-2/issues/2715"
+        }
+      ],
+      "pr_id": 4162726554
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.072817+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-29 03:54:52-07",
+    "end2": "2026-03-30 13:39:35-07",
+    "issue1_ids": [
+      4129175167,
+      4148752093
+    ],
+    "issue2_ids": [
+      4146809916
+    ],
+    "pr1_id": 4128880464,
+    "pr1_number": 2369,
+    "pr2_id": 4162726554,
+    "pr2_number": 3081,
+    "repo_id": 1178493295,
+    "repo_url": "https://api.github.com/repos/gsd-build/gsd-2",
+    "start1": "2026-03-24 08:45:05-07",
+    "start2": "2026-03-28 22:28:10-07"
+  },
+  "strict_valid": false
+}

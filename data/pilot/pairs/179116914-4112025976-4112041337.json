@@ -1,0 +1,142 @@
+{
+  "audited_at": "2026-11-08T04:39:19.820418+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/antimony-lang/antimony/pulls/149",
+      "base_sha": "68c6aa56b0f996b680cbabe8741e61ec22a125cb",
+      "observed_at": "2026-11-08T04:39:20.738964+00:00",
+      "sha": "6c22999accd9f3210999c75e51d5f8a4f550d846"
+    },
+    {
+      "api_url": "https://api.github.com/repos/antimony-lang/antimony/pulls/151",
+      "base_sha": "f30deb6379ece154c1b67ca93debd9381ae1fa92",
+      "observed_at": "2026-11-08T04:39:20.738994+00:00",
+      "sha": "d6a1dde6f725880064a0a9ead6388440b0ada0c2"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "conflict_messages": [],
+    "conflict_paths": [],
+    "conflict_types": null,
+    "exit_code": 0,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/antimony-lang/antimony.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "6c22999accd9f3210999c75e51d5f8a4f550d846",
+      "d6a1dde6f725880064a0a9ead6388440b0ada0c2"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [
+      "6c22999accd9f3210999c75e51d5f8a4f550d846"
+    ],
+    "provisional_status": "CLEAN",
+    "reason": "shallow history: merge base completeness unverified",
+    "shallow": true,
+    "status": "ERROR",
+    "stderr": "",
+    "stdout": "40be3cbd03c6646bdb669af58b3a49a7c599fe46\n\n",
+    "tree_id": "40be3cbd03c6646bdb669af58b3a49a7c599fe46"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:39.204876+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 246668,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-21T09:36:20Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4111938124,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 141,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "4ae572eb4bcf3a881cbaad837f8344cccab643385f24b2c8adce3032e1412a00",
+          "url": "https://github.com/antimony-lang/antimony/issues/141"
+        }
+      ],
+      "pr_id": 4112025976
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-21T09:36:31Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4111938465,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 143,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "a3bc4bc110530495cf72aea61757c09d779ab0c8397c3ff8dc009e6201a26f75",
+          "url": "https://github.com/antimony-lang/antimony/issues/143"
+        }
+      ],
+      "pr_id": 4112041337
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.075447+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-21 03:40:01-07",
+    "end2": "2026-03-21 03:47:01-07",
+    "issue1_ids": [
+      4111938124
+    ],
+    "issue2_ids": [
+      4111938465
+    ],
+    "pr1_id": 4112025976,
+    "pr1_number": 149,
+    "pr2_id": 4112041337,
+    "pr2_number": 151,
+    "repo_id": 179116914,
+    "repo_url": "https://api.github.com/repos/antimony-lang/antimony",
+    "start1": "2026-03-21 03:30:22-07",
+    "start2": "2026-03-21 03:36:57-07"
+  },
+  "strict_valid": false
+}

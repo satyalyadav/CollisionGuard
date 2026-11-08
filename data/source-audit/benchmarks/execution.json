@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-08T05:53:57.914676+00:00",
+  "jobs": [
+    {
+      "name": "collisionguard-benchmark-job",
+      "wrapper": "#!/bin/bash\nset -u\ncd /home/satyal/cse-572/Project\nstart=$(date -u +%FT%TZ)\ndeadline=$(date -u -d '+40 minutes' +%FT%TZ)\nprintf 'owner=collisionguard-benchmark-audit purpose=bounded-source-replay pid=%s start=%s deadline=%s checkpoint=data/source-audit/benchmarks/ budget=/tmp/collisionguard-benchmark-cache/snapshot-budget.json\\n' \"$$\" \"$start\" \"$deadline\" > /tmp/collisionguard-benchmark-job.log\nexec timeout -k 10s 40m python3 -u scripts/audit_benchmark_sources.py >> /tmp/collisionguard-benchmark-job.log 2>&1\n",
+      "log": "owner=collisionguard-benchmark-audit purpose=bounded-source-replay pid=211339 start=2026-11-08T05:38:51Z deadline=2026-11-08T06:18:51Z checkpoint=data/source-audit/benchmarks/ budget=/tmp/collisionguard-benchmark-cache/snapshot-budget.json\ncached-nodebb complete conflict\ncached-cooperbench complete clean\ninstance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan complete clean\ninstance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59 unverified_tree \ninstance_element-hq__element-web-5e8488c2838ff4268f39db4a8cca7d74eecf5a7e-vnan complete clean\ninstance_NodeBB__NodeBB-4327a09d76f10a79109da9d91c22120428d3bdb9-vnan complete conflict\ninstance_ansible__ansible-1ee70fc272aff6bf3415357c6e13c5de5b928d9b-v1055803c3a812189a1133297f7f5468579283f86 unverified_tree \ninstance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan complete conflict\n"
+    },
+    {
+      "name": "collisionguard-benchmark-repair-job",
+      "wrapper": "#!/bin/bash\nset -u\ncd /home/satyal/cse-572/Project\nprintf 'owner=collisionguard-benchmark-audit purpose=restore-verified-omitted-blobs pid=%s start=%s deadline=2026-11-08T06:18:51Z checkpoint=data/source-audit/benchmarks/ budget=/tmp/collisionguard-benchmark-cache/snapshot-budget.json\\n' \"$$\" \"$(date -u +%FT%TZ)\" > /tmp/collisionguard-benchmark-repair-job.log\nexec timeout -k 10s 35m python3 -u scripts/audit_benchmark_sources.py --repair-unverified >> /tmp/collisionguard-benchmark-repair-job.log 2>&1\n",
+      "log": "owner=collisionguard-benchmark-audit purpose=restore-verified-omitted-blobs pid=244111 start=2026-11-08T05:43:35Z deadline=2026-11-08T06:18:51Z checkpoint=data/source-audit/benchmarks/ budget=/tmp/collisionguard-benchmark-cache/snapshot-budget.json\ninstance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59 complete conflict\ninstance_ansible__ansible-1ee70fc272aff6bf3415357c6e13c5de5b928d9b-v1055803c3a812189a1133297f7f5468579283f86 complete conflict\n"
+    }
+  ],
+  "current_script_sha256": "2dd167ded05042ba03277b5dece347340f74260857b35318575752d2ac4e23c8",
+  "collection_revision_hashes": "not recorded; helper evolved for archive repair and post-collection metadata guards",
+  "corrections": "Coordinator fixed supplemental-file snapshot_url metadata, enforced two patches and fail-closed repetition, and checked commit API identity; no source replay or labels were changed.",
+  "git_version": "git version 2.43.0"
+}

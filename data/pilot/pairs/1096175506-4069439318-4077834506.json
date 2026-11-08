@@ -1,0 +1,176 @@
+{
+  "audited_at": "2026-11-08T04:39:30.288230+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/okou-ai/okou/pulls/4715",
+      "base_sha": "f219ec6d4a664ffef660e060647d1e577bd5212a",
+      "observed_at": "2026-11-08T04:39:31.429836+00:00",
+      "sha": "dbe243083c7cf6cd484ceadef2c923da33b26264"
+    },
+    {
+      "api_url": "https://api.github.com/repos/okou-ai/okou/pulls/4838",
+      "base_sha": "d02b481c6886669f20c7cfb1216036f8e56fe895",
+      "observed_at": "2026-11-08T04:39:31.429856+00:00",
+      "sha": "1d6cd18fa5bcd737ad7312a21d5c2a3f1d1ff602"
+    }
+  ],
+  "current_replay": {
+    "command": "git merge-tree --write-tree --messages HEAD1 HEAD2",
+    "conflict_messages": [],
+    "conflict_paths": [],
+    "conflict_types": null,
+    "exit_code": 0,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/vm0-ai/vm0.git",
+    "git_version": "git version 2.43.0",
+    "heads": [
+      "dbe243083c7cf6cd484ceadef2c923da33b26264",
+      "1d6cd18fa5bcd737ad7312a21d5c2a3f1d1ff602"
+    ],
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "merge_bases": [
+      "68ebaebafd0b9159e5c8218a32048af31e18b684"
+    ],
+    "provisional_status": "CLEAN",
+    "reason": "shallow history: merge base completeness unverified",
+    "shallow": true,
+    "status": "ERROR",
+    "stderr": "",
+    "stdout": "b224f20a5cdf28dabeab1fc951363c6546f68966\n\n",
+    "tree_id": "b224f20a5cdf28dabeab1fc951363c6546f68966"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:42:36.399826+00:00",
+  "git_cap_exhausted": false,
+  "git_wire_bytes": 14977410,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-13T04:44:25Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4068823633,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 4669,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "a63ccbef325d644a3903c5ce41e9cd41fcea8f3b8c4d1f9c3faef2f1b24da4c6",
+          "url": "https://github.com/vm0-ai/vm0/issues/4669"
+        },
+        {
+          "created_at": "2026-03-13T04:44:25Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4068823633,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 4669,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "a63ccbef325d644a3903c5ce41e9cd41fcea8f3b8c4d1f9c3faef2f1b24da4c6",
+          "url": "https://github.com/vm0-ai/vm0/issues/4669"
+        }
+      ],
+      "pr_id": 4069439318
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-03-15T05:09:45Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4077626797,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 4830,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "9c2fe55c0ad0f48596d5e8435a73db8160eba046ec0fd15951943c8fb7c8ec91",
+          "url": "https://github.com/vm0-ai/vm0/issues/4830"
+        },
+        {
+          "created_at": "2026-03-15T07:19:56Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4077810400,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 4835,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "5d533db8830c742404c78373f821fb17f9f618a8e2fddae8a4db47fd9ee0f12c",
+          "url": "https://github.com/vm0-ai/vm0/issues/4835"
+        },
+        {
+          "created_at": "2026-03-15T07:19:56Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4077810400,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 4835,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "5d533db8830c742404c78373f821fb17f9f618a8e2fddae8a4db47fd9ee0f12c",
+          "url": "https://github.com/vm0-ai/vm0/issues/4835"
+        }
+      ],
+      "pr_id": 4077834506
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.067142+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-15 21:07:59-07",
+    "end2": "2026-03-15 01:10:43-07",
+    "issue1_ids": [
+      4068823633
+    ],
+    "issue2_ids": [
+      4077626797,
+      4077810400
+    ],
+    "pr1_id": 4069439318,
+    "pr1_number": 4715,
+    "pr2_id": 4077834506,
+    "pr2_number": 4838,
+    "repo_id": 1096175506,
+    "repo_url": "https://api.github.com/repos/vm0-ai/vm0",
+    "start1": "2026-03-13 00:28:00-07",
+    "start2": "2026-03-15 00:34:55-07"
+  },
+  "strict_valid": false
+}

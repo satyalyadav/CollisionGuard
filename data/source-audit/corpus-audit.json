@@ -1,0 +1,433 @@
+{
+  "scope": "bounded audit of single-agent coding corpora from CollisionGuard research",
+  "local_criteria": [
+    "docs/research/data-source-search.md#single-agent-trajectories",
+    "docs/research/data-source-audit.md"
+  ],
+  "constraints": {
+    "project_writes": false,
+    "external_writes": false,
+    "nested_delegation": false,
+    "max_response_body_bytes": 20971520,
+    "max_request_seconds": 30,
+    "max_attempts_per_endpoint": 3,
+    "downloads": "No parquet/corpus/repository downloads",
+    "truncated_successful_readmes": false
+  },
+  "datasets": [
+    {
+      "name": "nebius/SWE-rebench-openhands-trajectories",
+      "revision": "35455389ab51bf5e2306bfd436ef72d0f98bf882",
+      "hub_card_license": "CC BY 4.0",
+      "card_count": 67074,
+      "count_source": "README comparison table at pinned revision",
+      "readme_status": 200,
+      "readme_bytes": 6924,
+      "readme_sha256": "90fa586c747d9ed1022c28847439489576049cde7de1fdfb80d24b2a0ae77b32",
+      "trace_fields": [
+        "trajectory_id",
+        "instance_id",
+        "repo",
+        "trajectory",
+        "tools",
+        "model_patch",
+        "exit_status",
+        "resolved",
+        "gen_tests_correct",
+        "pred_passes_gen_test"
+      ],
+      "probe": {
+        "instance_id": "PlasmaFAIR__sdf-xarray-24",
+        "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench-openhands-trajectories&config=default&split=train&offset=0&length=1",
+        "status_from_existing_probe": 200,
+        "bytes": 395268,
+        "sha256": "54270287b38d6031c5c3548bf0bfcf63b6267eacbf322ffca3c3b2a07239cf75",
+        "truncated": false,
+        "has_user": true,
+        "event_order_retained": false,
+        "model_patch_chars": 27897
+      },
+      "task_catalog": {
+        "name": "nebius/SWE-rebench",
+        "revision": "89cdfbab4ab1bd8f5a658bb212d1b63624f4f881",
+        "license": "CC BY 4.0",
+        "counts": {
+          "filtered": 21336,
+          "test": 6542
+        },
+        "fields": [
+          "instance_id",
+          "base_commit",
+          "problem_statement",
+          "patch",
+          "test_patch",
+          "license_name"
+        ]
+      },
+      "join_attempts": [
+        {
+          "instance_id": "PlasmaFAIR__sdf-xarray-24",
+          "status": 500
+        },
+        {
+          "instance_id": "alexgolec__tda-api-37",
+          "status": 500
+        }
+      ],
+      "verdict": "conditional on exact catalog join, input ordering/equality, base verification, output/reference comparison, and distinct-task same-base evidence"
+    },
+    {
+      "name": "nebius/SWE-agent-trajectories",
+      "revision": "68195a1450865274106246d0d0296a1d6807b88e",
+      "hub_card_license": "CC BY 4.0",
+      "card_count": 80036,
+      "readme_status": 200,
+      "readme_bytes": 5784,
+      "readme_sha256": "81cbf0ee9f00e45aff9eb90ebe7f59e714ca7135b9b78a90d5227f866021f564",
+      "older_revision": {
+        "revision": "eb503c4b8a09d83dd93e7d4fa09dc8cb70c35be4",
+        "license": "MIT",
+        "count": 84480,
+        "readme_status": 200,
+        "readme_bytes": 5155,
+        "readme_sha256": "6b9a5d80286ca0ce5c9113e2755038311fb50b633765f006d5e1cd6e82ad4e59",
+        "previous_revision": "eb503c4b8a09d83dd93e7d4fa09dc8cb70c35be",
+        "revision_correction": {
+          "url": "https://huggingface.co/datasets/nebius/SWE-agent-trajectories/raw/eb503c4b8a09d83dd93e7d4fa09dc8cb70c35be4/README.md",
+          "http_status": 200,
+          "response_sha256": "6b9a5d80286ca0ce5c9113e2755038311fb50b633765f006d5e1cd6e82ad4e59",
+          "response_bytes": 5155,
+          "declared_license": "mit"
+        }
+      },
+      "task_catalog": {
+        "name": "nebius/SWE-bench-extra",
+        "revision": "11dcbfb30e19552df2a2f8030bd764adc95c92a5",
+        "license": "CC BY 4.0",
+        "count": 6376,
+        "readme_status": 200,
+        "readme_bytes": 7286,
+        "readme_sha256": "1ddf148e05cce5e300b6b94d77bdfbc9f1a5424f2fb135d0591f3a8b6a4a1bdb",
+        "fields": [
+          "instance_id",
+          "patch",
+          "repo",
+          "base_commit",
+          "hints_text",
+          "test_patch",
+          "license"
+        ]
+      },
+      "join_attempts": [
+        {
+          "instance_id": "Melevir__cognitive_complexity-15",
+          "status": 500
+        }
+      ],
+      "verdict": "conditional on exact catalog join, base and patch comparison, prompt ordering, and pair evidence; license metadata differs across revisions",
+      "trace_fields": [
+        "instance_id",
+        "model_name",
+        "target",
+        "trajectory",
+        "exit_status",
+        "generated_patch",
+        "eval_logs"
+      ]
+    },
+    {
+      "name": "SWE-Gym/OpenHands-Sampled-Trajectories",
+      "revision": "baf3a4e4bff514d48ddc08a93a2ade5c126212c7",
+      "card_license": "not declared in pinned README frontmatter or Hub tags",
+      "count": 6055,
+      "readme_status": 200,
+      "readme_bytes": 2988,
+      "readme_sha256": "45e76541e88ef9a50192e77137a4622c6f38fbe299fbbae4beb2bbb0d135d8d3",
+      "fields": [
+        "instance_id",
+        "run_id",
+        "resolved",
+        "messages",
+        "tools",
+        "test_result"
+      ],
+      "sample": {
+        "instance_id": "getmoto__moto-5321",
+        "empty_generation": true,
+        "git_patch": ""
+      },
+      "task_catalog": {
+        "name": "SWE-Gym/SWE-Gym",
+        "revision": "bb94ed9e39bbeb96a7fcbfb533b80f25a7fd59cb",
+        "license": "MIT",
+        "count": 2438,
+        "readme_status": 200,
+        "readme_bytes": 1141,
+        "readme_sha256": "d6fc7d653a1b65c486b0a273bedf14b6a9c892c201bb85776bc0132d29639c31",
+        "fields": [
+          "instance_id",
+          "hints_text",
+          "patch",
+          "test_patch",
+          "created_at",
+          "problem_statement",
+          "repo",
+          "base_commit"
+        ]
+      },
+      "nonmatching_task_sample": {
+        "instance_id": "chaoss__augur-46",
+        "base_commit": "c417d3a13aa33099f6ca6af2db18bf18217b144b"
+      },
+      "verdict": "conditional on joining sampled trace IDs to task rows, patch/status checks, license metadata reconciliation, and pair evidence"
+    },
+    {
+      "name": "SWE-bench/SWE-smith-trajectories",
+      "revision": "08e109b4a59eaeebf80e4675cd125d42e7ac99a4",
+      "license": "MIT",
+      "counts": {
+        "tool": 24100,
+        "xml": 26076,
+        "ticks": 25826
+      },
+      "readme_status": 200,
+      "readme_bytes": 1675,
+      "readme_sha256": "1fa2f5971a723a60a6ca60a5842aa83eb78259bfd175bce9a80692c5a2248aa0",
+      "sample_instance_id": "django-money__django-money.835c1ab8.func_pm_ctrl_shuffle__viqnyl9u",
+      "task_catalog": {
+        "name": "SWE-bench/SWE-smith",
+        "revision": "ea6d7173829c7ec8fa16c22055699ff2e9188091",
+        "license": "MIT",
+        "card_count": 59136,
+        "description_count": 50137,
+        "readme_status": 200,
+        "readme_bytes": 1821,
+        "readme_sha256": "fb6e25bf688afc41e30c918a9c938b4dac01d2de01cdaa7b1c6a4ffe1dfff11e",
+        "fields": "Synthetic task fields in pinned README; sampled trace-to-task row fields were not retrievable during this audit"
+      },
+      "verdict": "unsuitable for primary historical-issue setting; useful as synthetic-task secondary source after exact join/base/patch checks and count reconciliation",
+      "trace_fields": [
+        "messages",
+        "instance_id",
+        "resolved",
+        "model",
+        "traj_id",
+        "patch"
+      ]
+    },
+    {
+      "name": "R2E-Gym/R2EGym-SFT-Trajectories",
+      "revision": "63ab4eb37668f8be0104133c21d896bedbcf8404",
+      "count": 3231,
+      "readme_status": 200,
+      "readme_bytes": 352,
+      "readme_sha256": "8129abea3d1eb286d285dc02336cde741e743a8f99fee24709c11937b53f22d4",
+      "fields": [
+        "messages"
+      ],
+      "task_catalog": {
+        "name": "R2E-Gym/R2E-Gym-V1",
+        "revision": "903d405799ac435061c41e72260c81ca5100f964",
+        "license": "Apache 2.0",
+        "count": 8101,
+        "readme_status": 200,
+        "readme_bytes": 1152,
+        "readme_sha256": "654385cf1cf7f6be9d9daadb7a0dd2259f5ab8597129a3859a5e3256cdc66bef",
+        "fields": [
+          "repo_name",
+          "docker_image",
+          "commit_hash",
+          "parsed_commit_content",
+          "execution_result_content",
+          "modified_files",
+          "modified_entity_summaries",
+          "problem_statement",
+          "prompt"
+        ]
+      },
+      "task_sample": {
+        "repo_name": "orange3",
+        "commit_hash": "2d9617bd0cb1f0ba61771258410ab8fae8e7e24d",
+        "fields": [
+          "repo_name",
+          "docker_image",
+          "commit_hash",
+          "parsed_commit_content",
+          "execution_result_content",
+          "modified_files",
+          "modified_entity_summaries",
+          "problem_statement",
+          "prompt"
+        ]
+      },
+      "verdict": "insufficient accessible evidence; trace has no stable task/base join field"
+    }
+  ],
+  "record_api_attempts": [
+    {
+      "route": "https://datasets-server.huggingface.co/rows",
+      "status": "502 then 503 for OpenHands offsets 0,1,2 and retries; subsequent rows calls for all listed sources returned 503",
+      "error_body_bytes": 162,
+      "error_body_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b",
+      "truncated": false,
+      "requests": [
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench-openhands-trajectories&config=default&split=train&offset=0&length=1",
+          "status": 502,
+          "truncated": false,
+          "response_bytes": null,
+          "response_sha256": null
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench-openhands-trajectories&config=default&split=train&offset=1&length=1",
+          "status": 502,
+          "truncated": false,
+          "response_bytes": null,
+          "response_sha256": null
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench-openhands-trajectories&config=default&split=train&offset=2&length=1",
+          "status": 502,
+          "truncated": false,
+          "response_bytes": null,
+          "response_sha256": null
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench-openhands-trajectories&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench&config=default&split=filtered&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-rebench&config=default&split=test&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-agent-trajectories&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=nebius%2FSWE-bench-extra&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=SWE-Gym%2FOpenHands-Sampled-Trajectories&config=default&split=train.raw&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=SWE-Gym%2FSWE-Gym&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=SWE-bench%2FSWE-smith-trajectories&config=default&split=tool&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=SWE-bench%2FSWE-smith&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=R2E-Gym%2FR2EGym-SFT-Trajectories&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/rows?dataset=R2E-Gym%2FR2E-Gym-V1&config=default&split=train&offset=0&length=1",
+          "status": 503,
+          "truncated": false,
+          "response_bytes": 162,
+          "response_sha256": "258c66556e2e065b0d04f6ae39a98fcf182e3e584cd0b7bdb20d0a395796347b"
+        }
+      ]
+    },
+    {
+      "route": "https://datasets-server.huggingface.co/filter",
+      "queries": [
+        "PlasmaFAIR__sdf-xarray-24 in nebius/SWE-rebench filtered",
+        "alexgolec__tda-api-37 in nebius/SWE-rebench filtered",
+        "Melevir__cognitive_complexity-15 in nebius/SWE-bench-extra train"
+      ],
+      "status": 500,
+      "error_body_bytes": 134,
+      "error_body_sha256": "c960bbe066a9c8419e9530b70f2aa6f40c002e5970888a45dba198331db04d41",
+      "truncated": false,
+      "requests": [
+        {
+          "url": "https://datasets-server.huggingface.co/filter?dataset=nebius%2FSWE-rebench&config=default&split=filtered&where=%22instance_id%22%3D%27PlasmaFAIR__sdf-xarray-24%27&offset=0&length=1",
+          "status": 500,
+          "truncated": null,
+          "response_bytes": null,
+          "response_sha256": null,
+          "attempt": 1
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/filter?dataset=nebius%2FSWE-rebench&config=default&split=filtered&where=%22instance_id%22%3D%27PlasmaFAIR__sdf-xarray-24%27&offset=0&length=1",
+          "status": 500,
+          "truncated": false,
+          "response_bytes": 134,
+          "response_sha256": "c960bbe066a9c8419e9530b70f2aa6f40c002e5970888a45dba198331db04d41",
+          "attempt": 2
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/filter?dataset=nebius%2FSWE-rebench&config=default&split=filtered&where=%22instance_id%22%3D%27alexgolec__tda-api-37%27&offset=0&length=1",
+          "status": 500,
+          "truncated": false,
+          "response_bytes": 134,
+          "response_sha256": "c960bbe066a9c8419e9530b70f2aa6f40c002e5970888a45dba198331db04d41",
+          "attempt": 1
+        },
+        {
+          "url": "https://datasets-server.huggingface.co/filter?dataset=nebius%2FSWE-bench-extra&config=default&split=train&where=%22instance_id%22%3D%27Melevir__cognitive_complexity-15%27&offset=0&length=1",
+          "status": 500,
+          "truncated": false,
+          "response_bytes": 134,
+          "response_sha256": "c960bbe066a9c8419e9530b70f2aa6f40c002e5970888a45dba198331db04d41",
+          "attempt": 1
+        }
+      ]
+    }
+  ],
+  "pairing": {
+    "verified_pairs": 0,
+    "same_repo_exact_base_coverage": "not measurable because sampled task joins were unavailable or missing",
+    "exhaustiveness": "none claimed"
+  },
+  "prior_probe": {
+    "path": "/tmp/collisionguard-nebius-probe.json",
+    "task_query_url": "https://datasets-server.huggingface.co/filter?dataset=nebius%2FSWE-rebench-V2&config=default&split=train&where=%22instance_id%22%3D%27PlasmaFAIR__sdf-xarray-24%27&offset=0&length=1",
+    "status": 500,
+    "body_captured": false,
+    "interpretation": "inconclusive; current pass queried the linked nebius/SWE-rebench catalog instead"
+  }
+}

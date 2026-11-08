@@ -1,0 +1,28 @@
+{
+  "agent_heads": [
+    "0a6865ea0220496e59682f314c17b2670db65173",
+    "95767331b66c00dc588c4a7723ca9593872eec43"
+  ],
+  "archive_bytes": 4022256,
+  "archive_entries": 4639,
+  "archive_sha256": "1aac8ef0c489e7ee73604daeb559d7397aa520f8d6d56b8a0496d6010d4955e3",
+  "base": "754965b572f33bfd864e98e4805e1182c1960080",
+  "base_head": "0b88a9421be564079287e5d01c939240758f55ed",
+  "commit_api": "https://api.github.com/repos/NodeBB/NodeBB/git/commits/754965b572f33bfd864e98e4805e1182c1960080",
+  "expected_tree": "88aa7bb096f813243cfc24d0f8dbc09c93c15a14",
+  "label": "conflict",
+  "merge": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "58011e9f1818d13c532aa228d1b3f414fe356593\n100644 e6911a09b262bf741e72c3e53f04eb68f627c7e9 1\tsrc/database/mongo/hash.js\n100644 5f58dfd93be04d634ceebf7482a1aea8898dbbf8 2\tsrc/database/mongo/hash.js\n100644 a8865c80fb51f7f3bf3e03612b681e603b60c8b2 3\tsrc/database/mongo/hash.js\n100644 c6f46e1e74ff2de26400da7add68d10c2ba9f993 1\tsrc/database/postgres/hash.js\n100644 bf1fdedc40a77cc23695b463a20fa402bdc88a48 2\tsrc/database/postgres/hash.js\n100644 371ab3d468a78d0a9aba3232c41925d068bf9ce9 3\tsrc/database/postgres/hash.js\n100644 276ada4a0572bedc00fc56d7dc2ed44c4d1edbce 1\tsrc/database/redis/hash.js\n100644 c9ea41930558f6bddca354c4b1a72b345fdfd2e6 2\tsrc/database/redis/hash.js\n100644 8cb89d991108adfb43e3222381e61b5ed6823461 3\tsrc/database/redis/hash.js\n\nAuto-merging src/database/mongo/hash.js\nCONFLICT (content): Merge conflict in src/database/mongo/hash.js\nAuto-merging src/database/postgres/hash.js\nCONFLICT (content): Merge conflict in src/database/postgres/hash.js\nAuto-merging src/database/redis/hash.js\nCONFLICT (content): Merge conflict in src/database/redis/hash.js\n"
+  },
+  "patch_sha256": [
+    "024e1d57172321897c31f8381476ed4240ed1bdf001bb22df6879a5a9ced8528",
+    "4d5b5cd8721ccc6afb334d893f27d01820909f4c9e48292edd9f356e675f35bd"
+  ],
+  "repeat_identical": true,
+  "repo": "NodeBB/NodeBB",
+  "snapshot_tree": "88aa7bb096f813243cfc24d0f8dbc09c93c15a14",
+  "snapshot_url": "https://codeload.github.com/NodeBB/NodeBB/tar.gz/754965b572f33bfd864e98e4805e1182c1960080",
+  "status": "complete"
+}

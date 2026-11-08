@@ -1,0 +1,151 @@
+{
+  "audited_at": "2026-11-08T04:39:18.842203+00:00",
+  "current_heads": [
+    {
+      "api_url": "https://api.github.com/repos/oven-sh/bun/pulls/27466",
+      "base_sha": "30e609e08073cf7114bfb278506962a5b19d0677",
+      "observed_at": "2026-11-08T04:39:19.819285+00:00",
+      "sha": "623c67431a5a032eb62a48022ca16ec3208fe4a4"
+    },
+    {
+      "api_url": "https://api.github.com/repos/oven-sh/bun/pulls/27513",
+      "base_sha": "6e317c861f50177d7e1e0f95af4ae3e88970ecc6",
+      "observed_at": "2026-11-08T04:39:19.819320+00:00",
+      "sha": "c6a730ae7c0ac141b11d6c9268293f5885c48471"
+    }
+  ],
+  "current_replay": {
+    "exit_code": 128,
+    "fetch_command": "git fetch --no-tags --no-recurse-submodules --depth=50 URL HEAD1 HEAD2",
+    "fetch_url": "https://github.com/oven-sh/bun.git",
+    "history": "Depth 50; incomplete histories cannot establish complete merge bases.",
+    "reason": "repository transfer budget exhausted",
+    "status": "ERROR",
+    "stderr": "error: RPC failed; curl 56 GnuTLS recv error (-9): Error decoding the received TLS packet.\nerror: 5134 bytes of body are still expected\nfetch-pack: unexpected disconnect while reading sideband packet\nfatal: early EOF\nfatal: fetch-pack: invalid index-pack output\n"
+  },
+  "description_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "diagnostic_attempted": "2026-11-08T04:41:33.152477+00:00",
+  "git_cap_exhausted": true,
+  "git_wire_bytes": 11444925,
+  "historical_head_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "issue_evidence": [
+    {
+      "issues": [
+        {
+          "created_at": "2025-07-22T13:53:18Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3252797554,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 21283,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "36660f32e4949f82f466fb7766a0f49d48a0366f83b1d5c1083e65cfdd64c901",
+          "url": "https://github.com/oven-sh/bun/issues/21283"
+        },
+        {
+          "created_at": "2026-02-26T14:41:18Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 3995959795,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 27465,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "40fdba97850c983cd8c05d08791515ce60493a8eba537106ca7454b34badc8c5",
+          "url": "https://github.com/oven-sh/bun/issues/27465"
+        },
+        {
+          "created_at": "2026-03-05T01:49:22Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4025173932,
+          "link_source": "timeline",
+          "link_time": "unknown",
+          "number": 27820,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "ce6cb83d1d0d929fa32151e74ab0b833141baf73bca06ce652d0aed01aaab6f4",
+          "url": "https://github.com/oven-sh/bun/issues/27820"
+        }
+      ],
+      "pr_id": 3996422441
+    },
+    {
+      "issues": [
+        {
+          "created_at": "2026-02-27T09:58:37Z",
+          "historical_revision": "unknown; no edit history in source table",
+          "id": 4000186084,
+          "link_source": "body",
+          "link_time": "unknown",
+          "number": 27512,
+          "source_revision": "b8dc67df93e7c11f6f20c84129db7232eb1ec253",
+          "title_body_sha256": "207732e9a2f4384a80bda3c6fbfa73e68692f654fe57b5d3e9f9ceba252885ce",
+          "url": "https://github.com/oven-sh/bun/issues/27512"
+        }
+      ],
+      "pr_id": 4000232825
+    }
+  ],
+  "post_review_correction": {
+    "corrected_at": "2026-11-08T04:54:30.069937+00:00",
+    "previous_provenance": {
+      "description_provenance": {
+        "reason": "No authenticated task wording and issue association at decision time",
+        "status": "unknown"
+      },
+      "historical_head_provenance": {
+        "reason": "No first original agent-run completion event or output heads",
+        "status": "unknown"
+      },
+      "prestart_base_provenance": {
+        "reason": "No timestamped original checkout or branch state",
+        "status": "unknown"
+      },
+      "prestart_eligibility": {
+        "reason": "No documented dispatch readiness or lower bound on original agent start",
+        "status": "unknown"
+      }
+    },
+    "previous_replay_reason": "bounded Git fetch failed",
+    "reason": "Post-review distinction between evidence not queried and evidence confirmed absent"
+  },
+  "prestart_base_provenance": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "prestart_eligibility": {
+    "reason": "Historical evidence not queried in this pilot; absence from source tables does not establish absence from all sources",
+    "status": "not_checked"
+  },
+  "primary_replay": {
+    "reason": "Original run heads and pre-start snapshot unverified",
+    "status": "UNAVAILABLE"
+  },
+  "sample": {
+    "agent1": "Claude_Code",
+    "agent2": "Claude_Code",
+    "end1": "2026-03-01 01:03:25-07",
+    "end2": "2026-03-31 16:59:59-07",
+    "issue1_ids": [
+      3252797554,
+      3995959795,
+      4025173932
+    ],
+    "issue2_ids": [
+      4000186084
+    ],
+    "pr1_id": 3996422441,
+    "pr1_number": 27466,
+    "pr2_id": 4000232825,
+    "pr2_number": 27513,
+    "repo_id": 357728969,
+    "repo_url": "https://api.github.com/repos/oven-sh/bun",
+    "start1": "2026-02-26 09:11:20-07",
+    "start2": "2026-02-27 03:09:57-07"
+  },
+  "strict_valid": false
+}
