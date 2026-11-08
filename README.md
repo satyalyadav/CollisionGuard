@@ -11,6 +11,8 @@ CollisionGuard studies whether task descriptions and repository information avai
 - [Alternative data-source search](docs/research/data-source-search.md), reviewed by Opus 5.5. ParallACT is the first import-audit candidate; reuse checks remain open.
 - [Data-source audit and verdicts](docs/research/data-source-audit.md), reviewed by Opus 5.5, with complete-tree replay evidence and explicit reuse conditions.
 
+The [ParallACT reuse assessment](docs/research/parallact-reuse-terms.md) recommends a bounded local research and training pilot with unresolved rights documented. Raw content and text-derived artifacts stay private.
+
 The audit reproduced selected benchmark merge outcomes. A complete training dataset has not been validated, and no model has been trained.
 
 ## Start here

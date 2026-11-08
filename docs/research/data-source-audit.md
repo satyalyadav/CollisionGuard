@@ -10,6 +10,8 @@ Audit date: 8 November 2026 UTC. This gives a source-level verdict for the candi
 
 There is no need to generate new agent outputs immediately to prove the replay method. If ParallACT cannot be used or lacks enough independent examples, new controlled collection remains the fallback. No model or new agent dataset was generated during this audit.
 
+The subsequent [reuse assessment](parallact-reuse-terms.md) recommends proceeding with a bounded local pilot and local model experiments, while recording unresolved rights. It does not establish a blanket dataset license. Raw-data redistribution remains deferred; retention, provenance and coverage checks still apply.
+
 ## Audit criteria
 
 These criteria were recorded before this audit: access and declared reuse terms; actual initial input; pinned repository state; agent-output provenance; distinct-task pairing; interaction condition; reproducible Git labels; leakage risks; and usable coverage. Missing, inaccessible and not checked remain separate from verified absence. Gold patches are not agent outputs, and repeated attempts are not distinct tasks. Controlled benchmark evidence does not retrospectively pass the [AIDev pilot](../pilot/results.md).
@@ -71,6 +73,8 @@ Authenticated `gh agent-task view` also retrieved public session `d60540f7-7ec8-
 ParallACT's checked data repository did not establish separate dataset/run-output terms. The run exports are hosted on the project site whose footer declares CC BY-SA 4.0; the scope of that declaration over those files has not been established and is an open check, not an exclusion. The [project page](https://lingyunxiao18.github.io/ParallACT/) also explicitly describes its use of SWE-Bench Pro source tasks, so the upstream task-statement terms are part of the provenance and terms chain still to check. The paper's arXiv license concerns another asset. None of this is a conclusion that research use is forbidden. The NodeBB license was independently checked at the actual run base `754965b572f33bfd864e98e4805e1182c1960080`; the earlier access note had mistaken an instance-ID suffix for that base. CooperBench's pinned trajectory card declares MIT; the inspected Outlines base declares Apache-2.0. The upstream declarations for every replayed base are retained in [upstream-declarations.json](../../data/source-audit/benchmarks/upstream-declarations.json). These facts do not decide rights for every embedded prompt or generated patch.
 
 The practical condition is to establish the terms for the intended import and any redistribution rather than relabel all upstream code with the dataset card's license. Do not silently treat public availability, a website footer or a missing license file as a complete answer. This audit does not give a legal opinion.
+
+The [follow-up terms investigation](parallact-reuse-terms.md) checks the upstream card, local-use grants and website-footer limits. Use that assessment for the current scope decision.
 
 ## Reproducibility and limits
 
