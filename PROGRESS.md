@@ -4,6 +4,8 @@ A short, living summary for context and report writing. Dates use America/Phoeni
 
 ## Current status
 
+- [Public team repository](https://github.com/satyalyadav/CollisionGuard) is live. Student IDs and raw third-party patches are excluded. Eleven local helper tests pass.
+
 - The [source audit](docs/research/data-source-audit.md) is complete at source level. ParallACT is the recommended conditional source for a controlled benchmark pilot; six selected cases have repeatable full-tree merge labels.
 - Before import, establish intended reuse terms and preserve exact run exports against recorded hashes. Five checked exports were not retained as bytes. No complete training dataset is approved.
 - CooperBench's inspected outputs are a separate planned/communicating condition. Other corpora lack verified task/base joins or suitable paired evidence; access failures do not prove their data unusable.
@@ -14,7 +16,7 @@ A short, living summary for context and report writing. Dates use America/Phoeni
 
 ### 2026-11-07: Preserve the proposal
 
-Converted the supplied PDF to [Markdown](docs/proposal/original-proposal.md). Source word-token counts and nine distinct links were preserved. Keep this record fixed. Redundant PDF and conversion audit files were removed at the user's request. No Git commit or remote backup was created.
+Converted the supplied PDF to [Markdown](docs/proposal/original-proposal.md), preserving the proposal and its nine links. Redundant PDF and conversion audit files were removed at the user's request. The original private copy remains local; the public version removes student IDs.
 
 ### 2026-11-07: Research the proposal and compute options
 
@@ -27,6 +29,10 @@ Sampled PR pairs and attempted Git diagnostics. Original historical records were
 ### 2026-11-07: Search and audit alternative sources
 
 Found paired benchmark inputs and agent patches. The audit reproduced six selected ParallACT cases and one CooperBench case on complete tree-verified snapshots. ParallACT is conditional on terms, retained exports, provenance and coverage. CooperBench plans and communication preclude unaware-agent claims. Existing GitHub login enabled public artifact access, but the checked records did not form historical coding pairs. Corpus record-service failures prevented joins. Opus confirmed the replay evidence; text and pin corrections are recorded in the [audit](docs/research/data-source-audit.md). Generate new outputs only if existing sources prove inadequate.
+
+### 2026-11-08: Publish the team repository
+
+Published code, reports and audit metadata on GitHub. Preserved an ignored private proposal copy and removed IDs from the public copy. Added setup instructions and made the replay test independent of the original cache directory. ParallACT reuse terms are under investigation.
 
 ## How to maintain this log
 
