@@ -1,0 +1,460 @@
+{
+  "cases": [
+    {
+      "association": "valid",
+      "base": "1a6a284bc124d579c44053a6b0435cd20ead715c",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "ff0051523f9951da91cbbb37c49063b976523195a41ccf0930e3ecfa79daffbf",
+      "path": "dataset/v1/generated/complementary/instance_navidrome__navidrome-f78257235ec3429ef42af6687738cd327ec77ce8.json",
+      "replay": {
+        "agent_heads": [
+          "6034fee9e7e223cad72783114660b01223c288b8",
+          "6effbdca3b9bcd15b6232bd29fb9d00da216b82d"
+        ],
+        "archive_bytes": 7127170,
+        "archive_entries": 654,
+        "archive_sha256": "efed7dd1a27f4affd72eee6cdc4dcd1f20a957c5d53ee25e2138563605affeff",
+        "archive_url": "https://codeload.github.com/navidrome/navidrome/tar.gz/1a6a284bc124d579c44053a6b0435cd20ead715c",
+        "base_head": "3c2f808538bf9f016c3dc0f8a3d8bcc24f1546d6",
+        "commit_url": "https://api.github.com/repos/navidrome/navidrome/git/commits/1a6a284bc124d579c44053a6b0435cd20ead715c",
+        "expected_tree": "d4600edf55a07cdf7c8307750f3fb631b13a88a2",
+        "label": "clean",
+        "patch_sha256": [
+          "561fb63253f5cf122d1c38b4cb291ddfb09273a4b075346933eeea346d4f2ebb",
+          "943e0464c27eca980641a123f3055bfbab12780253abef02e632b2aa64d5db84"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "d4600edf55a07cdf7c8307750f3fb631b13a88a2",
+        "status": "complete"
+      },
+      "repo": "navidrome/navidrome",
+      "run_sha256": "b42d3da9b299c21ecd3e0d26f4aba6f4ff1474e6e37a6a148a82ce2f5359c437",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_navidrome__navidrome-f78257235ec3429ef42af6687738cd327ec77ce8/parallel_unaware.json.gz",
+      "seed_sha256": "a36f026b8e84f31104227e686a450db4d2079a5581ae5540f248128c04f06d42",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/complementary/instance_navidrome__navidrome-f78257235ec3429ef42af6687738cd327ec77ce8.json",
+      "task_sha256": [
+        "2a82cc2574d61e1d1c002fe33ec3de694642763bf67bed8d8f0588fbb8f71a62",
+        "afa77408f713f366dad9acae2a249f7520e3313625d8010a356650e7348945e7"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "3910e77a7a6ff747487b5ef484a67dbab5826f6a",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "262cd1e831413345f3e1f242fca17111fc68078f99d08a252fd147cb16751c22",
+      "path": "dataset/v1/generated/complementary/instance_navidrome__navidrome-669c8f4c49a7ef51ac9a53c725097943f67219eb.json",
+      "replay": {
+        "agent_heads": [
+          "f3c796885b2069e2329fbbacd12fdbdd06f463f8",
+          "10e3e0bffb164b1b5ead20fd85dae7557e07cdfe"
+        ],
+        "archive_bytes": 7470286,
+        "archive_entries": 913,
+        "archive_sha256": "e1f2202adf0a3d5601bc3ce32f893d982a22a38ca7d56e5035248ed954a5fb85",
+        "archive_url": "https://codeload.github.com/navidrome/navidrome/tar.gz/3910e77a7a6ff747487b5ef484a67dbab5826f6a",
+        "base_head": "b90851e941627d236673332767b841c7d0c763d7",
+        "commit_url": "https://api.github.com/repos/navidrome/navidrome/git/commits/3910e77a7a6ff747487b5ef484a67dbab5826f6a",
+        "expected_tree": "e2c4151ee0ddc7d34eadf76a72d7547d7697a508",
+        "label": "conflict",
+        "patch_sha256": [
+          "1b5e6d16c714fae29224e7c4ab7e4b4f26008baa39d3362f3ab98193c4e992b8",
+          "d47d47cdfbee426887093b5a3de127636f590f85f54ab12fa846197c0c945632"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "e2c4151ee0ddc7d34eadf76a72d7547d7697a508",
+        "status": "complete"
+      },
+      "repo": "navidrome/navidrome",
+      "run_sha256": "4bdac023c840da016780d5fb8b51c6b531cf723537ee01c1a519768184899094",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_navidrome__navidrome-669c8f4c49a7ef51ac9a53c725097943f67219eb/parallel_unaware.json.gz",
+      "seed_sha256": "1f872229deb4ded0c81fcc39d426c1101baef14cc319b15e36a1a22f81adecdd",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/complementary/instance_navidrome__navidrome-669c8f4c49a7ef51ac9a53c725097943f67219eb.json",
+      "task_sha256": [
+        "c517928858adf3d0f4c255792acb6849b7edcf1dbca443613cd834e4df24e7ed",
+        "7b19c48cf29dd8728ad4dc353f3d1c79cba7679697816096b1611ce0b9af616f"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "47910d708d8d6c18fdc3e57a0933b6d2a1d881bd",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "ca39a23c4506732b7c4ac5d41e00ede2198c004d8281a014b941a894478fc3cb",
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-b398321a5eb913666f903a794219833926881a8f-vd59a5728dfc977f44533186ace531248c2917516.json",
+      "replay": {
+        "agent_heads": [
+          "700742daa48076a6cbfa17243a881401429e6176",
+          "d740ba4318687758728a83488d84365105cb4104"
+        ],
+        "archive_bytes": 4315155,
+        "archive_entries": 4943,
+        "archive_sha256": "81b374d21fec71257c08df3e9427b84edddc431c999fa7a9347b91a1ac06012e",
+        "archive_url": "https://codeload.github.com/NodeBB/NodeBB/tar.gz/47910d708d8d6c18fdc3e57a0933b6d2a1d881bd",
+        "base_head": "5f5f056a0ad463de677bb5926be807095e5792b9",
+        "commit_url": "https://api.github.com/repos/NodeBB/NodeBB/git/commits/47910d708d8d6c18fdc3e57a0933b6d2a1d881bd",
+        "expected_tree": "28bd41b2cf94305c0d12336c87e250fd3fdc7677",
+        "label": "clean",
+        "patch_sha256": [
+          "9c65617cc6f65d143d7c7b3aa2c1a3a80f1ec63b5119d65ad3825df0f7e12c00",
+          "1c5e949a659480763837ce23ec33bb6174b2fb0ece6f02473b1e10f299c4f1a0"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "28bd41b2cf94305c0d12336c87e250fd3fdc7677",
+        "status": "complete"
+      },
+      "repo": "NodeBB/NodeBB",
+      "run_sha256": "9748872e2a7157178561c573ff6246f0990660c88dd0b74e57421214aa287ab9",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_NodeBB__NodeBB-b398321a5eb913666f903a794219833926881a8f-vd59a5728dfc977f44533186ace531248c2917516/parallel_unaware.json.gz",
+      "seed_sha256": "d461771bc1231db55a5b3792275d9db5034296e00ac334a5f0192faaabd1b870",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-b398321a5eb913666f903a794219833926881a8f-vd59a5728dfc977f44533186ace531248c2917516.json",
+      "task_sha256": [
+        "15d1baec2ea74cc34c2cb32e0b1b42a736abb0ec3303bd71b137ce74235e6b1a",
+        "8ac91f7f11048b671cbfc0e4a0df9415890b6d3d1194abdf9c82264e7490bb5a"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "invalid",
+      "base": "85244157b056985dd5289f6cbf92f60b35ffad8a",
+      "checks": {
+        "A_assignment": false,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "path": "dataset/v1/generated/contradictory/instance_gravitational__teleport-89f0432ad5dc70f1f6a30ec3a8363d548371a718.json",
+      "replay": {
+        "status": "not_attempted",
+        "recorded_placeholder_status": "unfinished",
+        "reason": "association was not accepted in frozen collection"
+      },
+      "repo": "gravitational/teleport",
+      "run_sha256": "bf0fee7e047a7a77c8ddc9871f88821a11e4a06432d392176f834cdd09abd257",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_gravitational__teleport-89f0432ad5dc70f1f6a30ec3a8363d548371a718/parallel_unaware.json.gz",
+      "seed_sha256": "07566944f4cc5ba6e47eb4518ed2bad522b730e85fec6944f52898dca1caf033",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/contradictory/instance_gravitational__teleport-89f0432ad5dc70f1f6a30ec3a8363d548371a718.json",
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "4a28722e4aa14f1d125ae789b9966c658d60c0ed",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "f91809352f889b74e5b153d6f7624874193df97959d06b088e1e80e1585443cf",
+      "path": "dataset/v1/seeds/complementary/instance_future-architect__vuls-01441351c3407abfc21c48a38e28828e1b504e0c.json",
+      "prior_replay": {
+        "expected_tree": "cc9c67a7454e394f937baf3a1f5012b4f341c4f6",
+        "reason": "archive_entries_mismatch_or_gitlink",
+        "status": "unverified_tree"
+      },
+      "replay": {
+        "agent_heads": [
+          "11c82bdac84280ec70b17009d0c2e0727f24fa50",
+          "21eeb803251e2a5f95ddefc9e6d414c29fb19617"
+        ],
+        "archive_bytes": 1159980,
+        "archive_entries": 214,
+        "archive_sha256": "5820a0a2faf12c25f99fd10a87a5418b1454d15be74637316b2e1f1617230b63",
+        "archive_url": "https://codeload.github.com/future-architect/vuls/tar.gz/4a28722e4aa14f1d125ae789b9966c658d60c0ed",
+        "base_head": "ae94ed58c7527ee89f091b59be6d8af787d36a85",
+        "commit_url": "https://api.github.com/repos/future-architect/vuls/git/commits/4a28722e4aa14f1d125ae789b9966c658d60c0ed",
+        "expected_tree": "cc9c67a7454e394f937baf3a1f5012b4f341c4f6",
+        "gitlink_count": 1,
+        "label": "conflict",
+        "patch_sha256": [
+          "e92b2003f5c381a650336559a76da2e836f5382e904d5990a030e178cec5e679",
+          "dca26ca67f759366c14d6226801f2bc864c0c5ee23aedb53b55999acccc39759"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "cc9c67a7454e394f937baf3a1f5012b4f341c4f6",
+        "status": "complete",
+        "supplemented_count": 0
+      },
+      "repo": "future-architect/vuls",
+      "run_sha256": "920e43260ca3a645588355dea5c43be4300686efc0526ebc33d23769ea5da03f",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_future-architect__vuls-01441351c3407abfc21c48a38e28828e1b504e0c/parallel_unaware.json.gz",
+      "seed_sha256": "473d85a0875f6eb8a7353cbc7e9bd4a95659c03fa513c4d6a8db394b46d4f41c",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_future-architect__vuls-01441351c3407abfc21c48a38e28828e1b504e0c.json",
+      "task_sha256": [
+        "7f6501019d5a918652e6e484d6b1b123004e0616b921733530a06e76f9ccc82f",
+        "04e0217b2b01d8fd28c635824f5d9b7af62edfccbfc7eded918ca14c4a75a9ef"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "f34c1609c3c42f095b59bc068620f342894f94ed",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "b96af2732a3da06aed077a59617dd1a20e638fe1869726acc838436419605e77",
+      "path": "dataset/v1/seeds/complementary/instance_element-hq__element-web-ecfd1736e5dd9808e87911fc264e6c816653e1a9-vnan.json",
+      "replay": {
+        "agent_heads": [
+          "dfbcc1c2e341946c6ba65239ccf0c53e6bed6f47",
+          "d9c2d2eefbef7ba77e84d3356900a811b8c960d1"
+        ],
+        "archive_bytes": 14191656,
+        "archive_entries": 2651,
+        "archive_sha256": "21d5a25f2d013bca924824da35f8a375e059ba9557b36abbb4140f92bb13726a",
+        "archive_url": "https://codeload.github.com/element-hq/element-web/tar.gz/f34c1609c3c42f095b59bc068620f342894f94ed",
+        "base_head": "382d1cf0c741ba761b52cf6be54d7c5063ef4092",
+        "commit_url": "https://api.github.com/repos/element-hq/element-web/git/commits/f34c1609c3c42f095b59bc068620f342894f94ed",
+        "expected_tree": "43a70860d27482e9ad18512e402713ed04312a92",
+        "label": "conflict",
+        "patch_sha256": [
+          "a5470fdeddf03e22e44b1aa602320ae70c7bd0483de48fe9249b87c2e450e42a",
+          "f6bc59b2a5f13e2b4602be58e338497428b2447ea50b573b5cf9e220dfe2fa9f"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "43a70860d27482e9ad18512e402713ed04312a92",
+        "status": "complete"
+      },
+      "repo": "element-hq/element-web",
+      "run_sha256": "893ddf7c2501e08aa27111401f53dfc5f7c8c4e93d32a866cd661138e29afc53",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_element-hq__element-web-ecfd1736e5dd9808e87911fc264e6c816653e1a9-vnan/parallel_unaware.json.gz",
+      "seed_sha256": "d9de533c1ce3901ac80f23bad247a250ce260fc6e79ac2802a4da3052090b038",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_element-hq__element-web-ecfd1736e5dd9808e87911fc264e6c816653e1a9-vnan.json",
+      "task_sha256": [
+        "3af2d49f8b33a5d65a8532ddf324dddd2d11634c499bd195b51665a593cc981a",
+        "38210414af1ce8213a59e3287aaee03ab4aed0e086afcddaed1be7b14c88ae87"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "b36762b27e11d2bdf1ef556a8c5588294bb7deb7",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "5e8fa45b130cae303e9e891df5fe9298b5426716803495231de653d37e546699",
+      "path": "dataset/v1/seeds/contradictory/instance_internetarchive__openlibrary-3aeec6afed9198d734b7ee1293f03ca94ff970e1-v13642507b4fc1f8d234172bf8129942da2c2ca26.json",
+      "prior_replay": {
+        "expected_tree": "76a89860e1b367128013a2d70f5e143aeded658c",
+        "reason": "archive_entries_mismatch_or_gitlink",
+        "status": "unverified_tree"
+      },
+      "replay": {
+        "agent_heads": [
+          "47ac08e1571d091ac576b61284eeca8d1dd72ee4",
+          "25134e789ae5d0248043afb2cbd6e27397b12177"
+        ],
+        "archive_bytes": 16170372,
+        "archive_entries": 1759,
+        "archive_sha256": "e45061eb5deff76edd112910178a0ebf5d964392e68749533f0acd81a7b7e4a7",
+        "archive_url": "https://codeload.github.com/internetarchive/openlibrary/tar.gz/b36762b27e11d2bdf1ef556a8c5588294bb7deb7",
+        "base_head": "fe81c68cd836959c191ce7e444c1ac330493273d",
+        "commit_url": "https://api.github.com/repos/internetarchive/openlibrary/git/commits/b36762b27e11d2bdf1ef556a8c5588294bb7deb7",
+        "expected_tree": "76a89860e1b367128013a2d70f5e143aeded658c",
+        "gitlink_count": 2,
+        "label": "conflict",
+        "patch_sha256": [
+          "e2856c2e1fcbb7ea65ffe2394b2557b7660551cb9059391fc5b8221fe1b92961",
+          "a9ed034aeff33ca5ff6197255637bde2effe3de69213bcf036ebf69271d77e8a"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "76a89860e1b367128013a2d70f5e143aeded658c",
+        "status": "complete",
+        "supplemented_count": 0
+      },
+      "repo": "internetarchive/openlibrary",
+      "run_sha256": "9d75990035d49d965b8ca4657bf5a036465d86c3ab1dd53aeec59e609959919a",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_internetarchive__openlibrary-3aeec6afed9198d734b7ee1293f03ca94ff970e1-v13642507b4fc1f8d234172bf8129942da2c2ca26/parallel_unaware.json.gz",
+      "seed_sha256": "4541384b70e6f08b3380dd6018d7d741ed156113079dcb8c3fbd374c85667b91",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_internetarchive__openlibrary-3aeec6afed9198d734b7ee1293f03ca94ff970e1-v13642507b4fc1f8d234172bf8129942da2c2ca26.json",
+      "task_sha256": [
+        "15957c336b9dcdc6c818f97331814bd5c6224fa00ab4df49762eecad46d6732e",
+        "5611dbe3e5a45ed44d159234286615b03cb4924f9e290e0ec6a654fae7bed482"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "valid",
+      "base": "facafbe7339ca48a33e0d07e089e99b2cf6235df",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "5b591b1535370aafa4d0df72524c61ebe1617becee6d951f54e2e2e070ca086e",
+      "path": "dataset/v1/seeds/contradictory/instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+      "prior_replay": {
+        "expected_tree": "00260c6a5e3c383a2e6f4765e3f77cca0c97a7dd",
+        "reason": "archive_entries_mismatch_or_gitlink",
+        "status": "unverified_tree"
+      },
+      "replay": {
+        "agent_heads": [
+          "4f347340071961af31bf1a5bc3de7bf2e1ecce8c",
+          "a7b6550a7cd28d352fec4df9e65b15c659e8eb52"
+        ],
+        "archive_bytes": 10057625,
+        "archive_entries": 1555,
+        "archive_sha256": "faf4b0810610ffb7b42af9a9bb28a6be5e620511008efbdb002b833d82b4eafc",
+        "archive_url": "https://codeload.github.com/internetarchive/openlibrary/tar.gz/facafbe7339ca48a33e0d07e089e99b2cf6235df",
+        "base_head": "2ea4b957b75172ff9439f5af56e65d94417f47a1",
+        "commit_url": "https://api.github.com/repos/internetarchive/openlibrary/git/commits/facafbe7339ca48a33e0d07e089e99b2cf6235df",
+        "expected_tree": "00260c6a5e3c383a2e6f4765e3f77cca0c97a7dd",
+        "gitlink_count": 2,
+        "label": "conflict",
+        "patch_sha256": [
+          "d5f036cdf82d17b5db8f9ceb16dd2e7b59c05b7283d0051f406d4d8163258f32",
+          "99f7bddd5d5e8e896c27092be9ae19d8ed773f73db5eca1f8b5d376333457050"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "00260c6a5e3c383a2e6f4765e3f77cca0c97a7dd",
+        "status": "complete",
+        "supplemented_count": 0
+      },
+      "repo": "internetarchive/openlibrary",
+      "run_sha256": "0cb98f18cb16e6ee7d9a7134d769dde8ced24fb452eadf6df831ce0bf8695afd",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866/parallel_unaware.json.gz",
+      "seed_sha256": "942213edc548f5fae4efb2f30d499d6e6b44f608284b227d66422c97db39841d",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_internetarchive__openlibrary-5069b09e5f64428dce59b33455c8bb17fe577070-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+      "task_sha256": [
+        "997d66d79b1ad40b40de48b11f1a0d3291da04864cc562847aef8df7d6f1c0b1",
+        "8bc59b28513d0ba45b9730df66ae7a9f81a9b065e147b510d194f28cd3766a8e"
+      ],
+      "timing": "source_reported"
+    },
+    {
+      "association": "unavailable",
+      "path": "dataset/v2/generated/complementary/instance_flipt-io__flipt-c12967bc73fdf02054cf3ef8498c05e25f0a18c0.json",
+      "reason": "http_404",
+      "replay": {
+        "status": "not_attempted",
+        "recorded_placeholder_status": "unfinished",
+        "reason": "association was not accepted in frozen collection"
+      },
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v2/complementary/instance_flipt-io__flipt-c12967bc73fdf02054cf3ef8498c05e25f0a18c0/parallel_unaware.json.gz",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v2/generated/complementary/instance_flipt-io__flipt-c12967bc73fdf02054cf3ef8498c05e25f0a18c0.json"
+    },
+    {
+      "association": "unavailable",
+      "path": "dataset/v2/generated/complementary/instance_gravitational__teleport-288c5519ce0dec9622361a5e5d6cd36aa2d9e348.json",
+      "reason": "http_404",
+      "replay": {
+        "status": "not_attempted",
+        "recorded_placeholder_status": "unfinished",
+        "reason": "association was not accepted in frozen collection"
+      },
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v2/complementary/instance_gravitational__teleport-288c5519ce0dec9622361a5e5d6cd36aa2d9e348/parallel_unaware.json.gz",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v2/generated/complementary/instance_gravitational__teleport-288c5519ce0dec9622361a5e5d6cd36aa2d9e348.json"
+    },
+    {
+      "association": "unavailable",
+      "path": "dataset/v2/generated/contradictory/instance_element-hq__element-web-f0359a5c180b8fec4329c77adcf967c8d3b7b787-vnan.json",
+      "reason": "http_404",
+      "replay": {
+        "status": "not_attempted",
+        "recorded_placeholder_status": "unfinished",
+        "reason": "association was not accepted in frozen collection"
+      },
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v2/contradictory/instance_element-hq__element-web-f0359a5c180b8fec4329c77adcf967c8d3b7b787-vnan/parallel_unaware.json.gz",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v2/generated/contradictory/instance_element-hq__element-web-f0359a5c180b8fec4329c77adcf967c8d3b7b787-vnan.json"
+    },
+    {
+      "association": "unfinished",
+      "path": "dataset/v2/generated/contradictory/instance_NodeBB__NodeBB-445b70deda20201b7d9a68f7224da751b3db728c-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json",
+      "reason": "source_stopped",
+      "replay": {
+        "status": "unfinished"
+      },
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v2/contradictory/instance_NodeBB__NodeBB-445b70deda20201b7d9a68f7224da751b3db728c-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed/parallel_unaware.json.gz",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v2/generated/contradictory/instance_NodeBB__NodeBB-445b70deda20201b7d9a68f7224da751b3db728c-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json"
+    }
+  ],
+  "denominator": 12,
+  "review_note": "Display-only status clarification; private frozen checkpoint and association counts unchanged."
+}

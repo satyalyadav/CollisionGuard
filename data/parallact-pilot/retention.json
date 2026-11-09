@@ -1,0 +1,72 @@
+{
+  "cases": [
+    {
+      "expected_run_sha256": "4ebf4127e96ddfdcbfd1ec727c8af7718451fadbc5ec55885b293fa16bf2f410",
+      "expected_seed_sha256": "82cf1f12f81650c6be63416786ad23c7c6f8c319ea399de235a8d81af4d372e0",
+      "path": "dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan.json",
+      "repo": "NodeBB/NodeBB",
+      "run_sha256": "4ebf4127e96ddfdcbfd1ec727c8af7718451fadbc5ec55885b293fa16bf2f410",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan/parallel_unaware.json.gz",
+      "seed_sha256": "82cf1f12f81650c6be63416786ad23c7c6f8c319ea399de235a8d81af4d372e0",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-04998908ba6721d64eba79ae3b65a351dcfbc5b5-vnan.json",
+      "status": "matched"
+    },
+    {
+      "expected_run_sha256": "f69652f38fd672164460500d42517bfaea5835381a7bb9031d18470bacf82d06",
+      "expected_seed_sha256": "b5f35b11661ef03962946dc75c02dd8cf7ee4084165a45df45a0b01c10288a71",
+      "path": "dataset/v1/seeds/complementary/instance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+      "repo": "ansible/ansible",
+      "run_sha256": "f69652f38fd672164460500d42517bfaea5835381a7bb9031d18470bacf82d06",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59/parallel_unaware.json.gz",
+      "seed_sha256": "b5f35b11661ef03962946dc75c02dd8cf7ee4084165a45df45a0b01c10288a71",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_ansible__ansible-5e369604e1930b1a2e071fecd7ec5276ebd12cb1-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+      "status": "matched"
+    },
+    {
+      "expected_run_sha256": "2ed1e22f8af29fc3fda8ec2da5f5b685a4b58ab2947e9bb2a43f5ee93665c61d",
+      "expected_seed_sha256": "e1570ade7ff0f87938b47a98fa1944d7d0c92c196cfa89e12612c9a05a2f70f0",
+      "path": "dataset/v1/seeds/complementary/instance_element-hq__element-web-5e8488c2838ff4268f39db4a8cca7d74eecf5a7e-vnan.json",
+      "repo": "element-hq/element-web",
+      "run_sha256": "2ed1e22f8af29fc3fda8ec2da5f5b685a4b58ab2947e9bb2a43f5ee93665c61d",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_element-hq__element-web-5e8488c2838ff4268f39db4a8cca7d74eecf5a7e-vnan/parallel_unaware.json.gz",
+      "seed_sha256": "e1570ade7ff0f87938b47a98fa1944d7d0c92c196cfa89e12612c9a05a2f70f0",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_element-hq__element-web-5e8488c2838ff4268f39db4a8cca7d74eecf5a7e-vnan.json",
+      "status": "matched"
+    },
+    {
+      "expected_run_sha256": "bda5acf0c99b41a689eaac755529e76a47c645da9dc3e716c4b8f5018c02d8b5",
+      "expected_seed_sha256": "c62f9dc0f0a5da0434cf79271a86a8c113dd85dfb228b545c67a65e6470d0d82",
+      "path": "dataset/v1/seeds/contradictory/instance_NodeBB__NodeBB-4327a09d76f10a79109da9d91c22120428d3bdb9-vnan.json",
+      "repo": "NodeBB/NodeBB",
+      "run_sha256": "bda5acf0c99b41a689eaac755529e76a47c645da9dc3e716c4b8f5018c02d8b5",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_NodeBB__NodeBB-4327a09d76f10a79109da9d91c22120428d3bdb9-vnan/parallel_unaware.json.gz",
+      "seed_sha256": "c62f9dc0f0a5da0434cf79271a86a8c113dd85dfb228b545c67a65e6470d0d82",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_NodeBB__NodeBB-4327a09d76f10a79109da9d91c22120428d3bdb9-vnan.json",
+      "status": "matched"
+    },
+    {
+      "expected_run_sha256": "27a23b32fe7e5b345f80128e14b39c82019af22cb836202f15840d0ef3b97430",
+      "expected_seed_sha256": "396e64f1e3d6a9e959ca392939a651d722a5a188e767c5d74df4a6f0b33afa55",
+      "path": "dataset/v1/seeds/contradictory/instance_ansible__ansible-1ee70fc272aff6bf3415357c6e13c5de5b928d9b-v1055803c3a812189a1133297f7f5468579283f86.json",
+      "repo": "ansible/ansible",
+      "run_sha256": "27a23b32fe7e5b345f80128e14b39c82019af22cb836202f15840d0ef3b97430",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_ansible__ansible-1ee70fc272aff6bf3415357c6e13c5de5b928d9b-v1055803c3a812189a1133297f7f5468579283f86/parallel_unaware.json.gz",
+      "seed_sha256": "396e64f1e3d6a9e959ca392939a651d722a5a188e767c5d74df4a6f0b33afa55",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_ansible__ansible-1ee70fc272aff6bf3415357c6e13c5de5b928d9b-v1055803c3a812189a1133297f7f5468579283f86.json",
+      "status": "matched"
+    },
+    {
+      "expected_run_sha256": "d22f1fa65ab315cf25e0bcc80dc47bc14c610d54560226ad28c18c32fd9a97fd",
+      "expected_seed_sha256": "afad8802f1c8074f36c6710c0f3b7cdd95137642ffc30a8f3197696ff9bd1e45",
+      "path": "dataset/v1/seeds/contradictory/instance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan.json",
+      "repo": "element-hq/element-web",
+      "run_sha256": "d22f1fa65ab315cf25e0bcc80dc47bc14c610d54560226ad28c18c32fd9a97fd",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan/parallel_unaware.json.gz",
+      "seed_sha256": "afad8802f1c8074f36c6710c0f3b7cdd95137642ffc30a8f3197696ff9bd1e45",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_element-hq__element-web-33299af5c9b7a7ec5a9c31d578d4ec5b18088fb7-vnan.json",
+      "status": "matched"
+    }
+  ],
+  "new_case_status": "unfinished",
+  "note": "Known-label retention checks; not new validation."
+}

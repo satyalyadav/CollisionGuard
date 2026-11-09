@@ -4,10 +4,10 @@ A short, living summary for context and reports. Dates use America/Phoenix time.
 
 ## Current status
 
-- The [public team repository](https://github.com/satyalyadav/CollisionGuard) is live. Student IDs and raw third-party patches are excluded. Eleven local helper tests pass.
+- The [public team repository](https://github.com/satyalyadav/CollisionGuard) is live. Student IDs and raw third-party patches are excluded. Twenty local helper tests pass.
 - The [source audit](docs/research/data-source-audit.md) recommends ParallACT for a controlled pilot. Six selected cases have repeatable full-tree merge labels.
 - The [reuse assessment](docs/research/parallact-reuse-terms.md), reviewed by Opus 5.5 at high effort, supports bounded local analysis and local model experiments with unresolved rights documented. Raw content, embeddings and model artifacts stay private; redistribution is deferred.
-- Next, privately retain exact run files and verify recorded hashes. Five checked files were not retained. Execution provenance and broader coverage still need checks; no complete training dataset is validated.
+- The [local pilot](docs/pilot/parallact-results.md) retained all six earlier run/seed pairs and replayed seven new pairs across five repositories. Its frozen coverage gate failed. Plan any follow-up around verified v1 run coverage; execution provenance remains unknown.
 - CooperBench's inspected outputs form a separate communicating condition. Other corpora lack verified task/base joins or paired evidence; access failures do not prove them unusable.
 - The [AIDev pilot](docs/pilot/results.md) remains inconclusive because primary historical records were not queried. No model, new agent dataset or Sol job has run. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
 
@@ -32,6 +32,10 @@ Reproduced six ParallACT cases and one CooperBench case on verified source trees
 ### 2026-11-08: Publish and decide local research scope
 
 Published scripts, reports and audit metadata with teammate setup instructions. Preserved private IDs locally and isolated the replay test from the original cache. Checked ParallACT's terms chain and incorporated Opus review. Continue the bounded local pilot; source-material redistribution remains unresolved.
+
+### 2026-11-08: Run the local import pilot
+
+Six retention checks matched. Seven of twelve new cases replayed twice, with two clean and five conflict labels. Opus found that four sampled v2 cases had no runs in the chosen configuration and one v1 rejection was a whitespace bug. Fixed the check for future runs; preserved the failed gate and original counts. Raw data stays private. No training or follow-up collection ran.
 
 ## Maintaining this log
 

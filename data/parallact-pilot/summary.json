@@ -1,0 +1,58 @@
+{
+  "association_counts": {
+    "invalid": 1,
+    "unavailable": 3,
+    "unfinished": 1,
+    "valid": 7
+  },
+  "association_repositories": [
+    "NodeBB/NodeBB",
+    "element-hq/element-web",
+    "future-architect/vuls",
+    "internetarchive/openlibrary",
+    "navidrome/navidrome"
+  ],
+  "cached_manifest_bytes": 316756,
+  "complete_replay_count": 7,
+  "complete_replay_labels": {
+    "clean": 2,
+    "conflict": 5
+  },
+  "complete_replay_repositories": [
+    "NodeBB/NodeBB",
+    "element-hq/element-web",
+    "future-architect/vuls",
+    "internetarchive/openlibrary",
+    "navidrome/navidrome"
+  ],
+  "duplicate_pair_hashes": {},
+  "duplicate_task_hashes": {},
+  "independent_review": "completed; corrections incorporated by coordinator",
+  "job_exit": 2,
+  "job_exit_reason": "unfinished case remains after source stop",
+  "new_denominator": 12,
+  "phase2_cache_reuse_bytes_read": 28736206,
+  "received_body_bytes": 62266479,
+  "repository_groups": {
+    "NodeBB/NodeBB": 1,
+    "element-hq/element-web": 1,
+    "future-architect/vuls": 1,
+    "internetarchive/openlibrary": 2,
+    "navidrome/navidrome": 2
+  },
+  "retention_denominator": 6,
+  "retention_matches": 6,
+  "run_producing_revision": "unknown",
+  "transport_overhead_counted": false,
+  "reviewer": "claude-opus-5.5 high",
+  "frozen_gate": "FAIL",
+  "review_findings": {
+    "configuration_coverage": "v1 only in review-time site manifest",
+    "maximum_available_associations_in_frozen_frame": 8,
+    "collector_false_negative_count": 1,
+    "frozen_counts_unchanged": true,
+    "coverage_verified_during_collection": false,
+    "future_ledger_requires_explicit_reset": true
+  },
+  "checkpoint_stop_reason": null
+}

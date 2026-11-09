@@ -1,0 +1,28 @@
+{
+  "url": "https://lingyunxiao18.github.io/ParallACT/data/manifest.json",
+  "retrieved_at": "2026-11-09T03:36:41.419004+00:00",
+  "sha256": "64848e75f11c0eca3dcf5ab1fbe6e5c952377d8f3872b60c2b725ac9eea6b8b2",
+  "body_bytes": 6418,
+  "built_at": "2026-10-28T03:03:42Z",
+  "selected_configuration": [
+    {
+      "id": "api--claude_code--opus-4.8",
+      "track": "api",
+      "harness": "claude_code",
+      "model": "opus-4.8",
+      "harness_label": "Claude Code",
+      "model_label": "Claude Opus 4.8",
+      "coverage": {
+        "v1": {
+          "instances": 85,
+          "runs": 1580,
+          "graded": 1580,
+          "passed": 910
+        }
+      }
+    }
+  ],
+  "phase": "post-run review",
+  "included_in_collection_ledger": false,
+  "note": "Separate review response; frozen cases and collection counts unchanged."
+}

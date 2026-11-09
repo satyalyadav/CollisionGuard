@@ -1,0 +1,10 @@
+{
+  "collector_sha256": "d3f17f69db2a54792cfec3d589baac9434262d2cab3dfacb9143ff61c318e63e",
+  "helper_sha256": "2dd167ded05042ba03277b5dece347340f74260857b35318575752d2ac4e23c8",
+  "parent_collector_sha256": "f08d08b19cad1e09d3b9b902b3c80fbd2454407dfc1773a0dd90c975bdcdc38c",
+  "parent_producer_sha256": "1f016c8cb66e0ce8ed8b0833c2c082f601e6b4636f94ffb611a222ed85963ed1",
+  "parent_protocol_sha256": "c9373b7b7af581b8f0d0b2d76f7cf76e3162654ac912b277f019a3432b3473b4",
+  "parent_selection_sha256": "55310d468476b7cfd43c34960c1ec07d4b5681189836dc592118bd6a9b370bce",
+  "reason": "preserve gitlinks and correct source-stopped status",
+  "started_at": "2026-11-09T03:25:43.072783+00:00"
+}

@@ -8,7 +8,8 @@ CollisionGuard studies whether task descriptions and repository information avai
 - Detailed research on [prior work and novelty](docs/research/prior-work-and-novelty.md), [data and labels](docs/research/data-and-label-feasibility.md), and [evaluation](docs/research/evaluation-and-experiments.md).
 - [Research automation and ASU Sol](docs/research/research-automation.md), with options for later experiment runs.
 - [Exploratory pilot results](docs/pilot/results.md), with the [protocol](docs/pilot/protocol.md). Opus review is complete; primary historical-evidence collection remains unfinished.
-- [Alternative data-source search](docs/research/data-source-search.md), reviewed by Opus 5.5. ParallACT is the first import-audit candidate; reuse checks remain open.
+- [ParallACT local pilot](docs/pilot/parallact-results.md), reviewed by Opus 5.5. Seven new pairs replayed; the frozen coverage gate failed because the sample included unsupported v2 runs and one whitespace false negative.
+- [Alternative data-source search](docs/research/data-source-search.md), reviewed by Opus 5.5. ParallACT is the first import-audit candidate; see the later reuse assessment and pilot below.
 - [Data-source audit and verdicts](docs/research/data-source-audit.md), reviewed by Opus 5.5, with complete-tree replay evidence and explicit reuse conditions.
 
 The [ParallACT reuse assessment](docs/research/parallact-reuse-terms.md) recommends a bounded local research and training pilot with unresolved rights documented. Raw content and text-derived artifacts stay private.

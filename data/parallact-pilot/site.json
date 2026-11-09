@@ -1,0 +1,39 @@
+{
+  "retrieved_site_code": [
+    {
+      "sha256": "78be137f15fbe9d808e287c5b6b9033e591bf36c9779b54fc5e57478d88ae083",
+      "url": "https://lingyunxiao18.github.io/ParallACT/"
+    },
+    {
+      "sha256": "afa347c6d1da190b122f0a36ef15269edcafb626c0a2e9ac2014909cdbf159df",
+      "url": "https://lingyunxiao18.github.io/ParallACT/explorer.html"
+    },
+    {
+      "sha256": "19d44651bc8fc56fcda42fd02c60c45d049b9ce38c458ea12cb42e81e62c285a",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/explorer/main.js"
+    },
+    {
+      "sha256": "c4da88600ed955dcfa5d1e2afea882cb77338a217316e925819799dace265d12",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/util.js"
+    },
+    {
+      "sha256": "47ce595287bdf2b4b050da4bbb9dfefa43dc51c78002c929ab50e988d8fc222c",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/config.js"
+    },
+    {
+      "sha256": "ab0b33674ed3c19c29c31d8d3d76fe50682fb7897f6279a0886e28dd2165b3ef",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/explorer/list.js"
+    },
+    {
+      "sha256": "129427c70497fd68836aad4891ce1a37de77508703f6f11a5d70835ee10212f7",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/explorer/instance.js"
+    },
+    {
+      "sha256": "472011a4b50c439d7b13d82037f1bdb2d26ac970dbf5df4f3a26a6bcb9f8a440",
+      "url": "https://lingyunxiao18.github.io/ParallACT/assets/js/explorer/run.js"
+    }
+  ],
+  "run_path_convention": "data/runs/{configuration}/{version}/{family}/{instance}/{scenario}.json.gz",
+  "run_producing_revision": "unknown",
+  "site_revision": "unknown"
+}
