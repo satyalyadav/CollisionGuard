@@ -1,0 +1,533 @@
+{
+  "availability": [
+    {
+      "available": true,
+      "bytes": 27613,
+      "path": "dataset/v1/generated/complementary/instance_NodeBB__NodeBB-3c85b944e30a0ba8b3ec9e1f441c74f383625a15-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json",
+      "sha256": "c752a70bd128a02c25ad2f779640a9c08f0ae451da034a3e88524d7f2afaaef0",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_NodeBB__NodeBB-3c85b944e30a0ba8b3ec9e1f441c74f383625a15-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json"
+    },
+    {
+      "available": true,
+      "bytes": 25977,
+      "path": "dataset/v1/generated/complementary/instance_NodeBB__NodeBB-84dfda59e6a0e8a77240f939a7cb8757e6eaf945-v2c59007b1005cd5cd14cbb523ca5229db1fd2dd8.json",
+      "sha256": "fa58b1690ade8aa65892447f4b3903bdf2db44bb7628c0de27e1933038d017ac",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_NodeBB__NodeBB-84dfda59e6a0e8a77240f939a7cb8757e6eaf945-v2c59007b1005cd5cd14cbb523ca5229db1fd2dd8.json"
+    },
+    {
+      "available": true,
+      "bytes": 23945,
+      "path": "dataset/v1/generated/complementary/instance_NodeBB__NodeBB-97c8569a798075c50e93e585ac741ab55cb7c28b-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+      "sha256": "c5de61c8554fcfeabc49214f6d1d5fd7d64698232c6c4ed049c224ef100e6615",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_NodeBB__NodeBB-97c8569a798075c50e93e585ac741ab55cb7c28b-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json"
+    },
+    {
+      "available": true,
+      "bytes": 45391,
+      "path": "dataset/v1/generated/complementary/instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+      "sha256": "48f1be468a676b3dfb87bd6613c5f491dfee035671eb34a432e4080cf5617353",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59.json"
+    },
+    {
+      "available": true,
+      "bytes": 34155,
+      "path": "dataset/v1/generated/complementary/instance_element-hq__element-web-1216285ed2e82e62f8780b6702aa0f9abdda0b34-vnan.json",
+      "sha256": "f61c763a886249a9f5644cd05f44936630fa28c20f8583202784753e06a6b819",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_element-hq__element-web-1216285ed2e82e62f8780b6702aa0f9abdda0b34-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 27489,
+      "path": "dataset/v1/generated/complementary/instance_element-hq__element-web-6205c70462e0ce2e1e77afb3a70b55d0fdfe1b31-vnan.json",
+      "sha256": "de652383a2afb46c889a27c79a799c6f98dd9d5004c49c60d6bf4005eea3c145",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_element-hq__element-web-6205c70462e0ce2e1e77afb3a70b55d0fdfe1b31-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 36809,
+      "path": "dataset/v1/generated/complementary/instance_element-hq__element-web-776ffa47641c7ec6d142ab4a47691c30ebf83c2e.json",
+      "sha256": "6f5c421f037128388a0c31412c4b6f26221485515f028c56cc1dd1c98896ff19",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_element-hq__element-web-776ffa47641c7ec6d142ab4a47691c30ebf83c2e.json"
+    },
+    {
+      "available": true,
+      "bytes": 22407,
+      "path": "dataset/v1/generated/complementary/instance_flipt-io__flipt-b6cef5cdc0daff3ee99e5974ed60a1dc6b4b0d67.json",
+      "sha256": "73dbfe55bfe7d9d9ac10875ce9caba2e668469c3fb8601ca1415e14a06beebe5",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_flipt-io__flipt-b6cef5cdc0daff3ee99e5974ed60a1dc6b4b0d67.json"
+    },
+    {
+      "available": true,
+      "bytes": 59595,
+      "path": "dataset/v1/generated/complementary/instance_future-architect__vuls-78b52d6a7f480bd610b692de9bf0c86f57332f23.json",
+      "sha256": "0b4b4bfa254d343184861698ec9477c137a99b94805c24f2a5fe763f70c1e6d8",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_future-architect__vuls-78b52d6a7f480bd610b692de9bf0c86f57332f23.json"
+    },
+    {
+      "available": true,
+      "bytes": 23669,
+      "path": "dataset/v1/generated/complementary/instance_future-architect__vuls-e4728e388120b311c4ed469e4f942e0347a2689b-v264a82e2f4818e30f5a25e4da53b27ba119f62b5.json",
+      "sha256": "5ce87cf445128bbeac1c93ccee65dfd94db3614111cb697208d9bf1a6da52ce6",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_future-architect__vuls-e4728e388120b311c4ed469e4f942e0347a2689b-v264a82e2f4818e30f5a25e4da53b27ba119f62b5.json"
+    },
+    {
+      "available": true,
+      "bytes": 16475,
+      "path": "dataset/v1/generated/complementary/instance_future-architect__vuls-f6509a537660ea2bce0e57958db762edd3a36702.json",
+      "sha256": "ddf0bcb92dbd4fd8c6d939f8a0990daa124dcc04955eeae8bf7bba77fae9b5b7",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_future-architect__vuls-f6509a537660ea2bce0e57958db762edd3a36702.json"
+    },
+    {
+      "available": true,
+      "bytes": 24398,
+      "path": "dataset/v1/generated/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779.json",
+      "sha256": "868349dbc3c0683fa14773d8d3e9184541c1d6465cdeb0992870fd8b007a5029",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779.json"
+    },
+    {
+      "available": true,
+      "bytes": 36898,
+      "path": "dataset/v1/generated/complementary/instance_internetarchive__openlibrary-7bf3238533070f2d24bafbb26eedf675d51941f6-v08d8e8889ec945ab821fb156c04c7d2e2810debb.json",
+      "sha256": "52fbbf4beac700b36a15e0b07d37b8b1524c32fb07f2cf5ae23f3f7b6252ebc0",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_internetarchive__openlibrary-7bf3238533070f2d24bafbb26eedf675d51941f6-v08d8e8889ec945ab821fb156c04c7d2e2810debb.json"
+    },
+    {
+      "available": true,
+      "bytes": 20042,
+      "path": "dataset/v1/generated/complementary/instance_internetarchive__openlibrary-e8084193a895d8ee81200f49093389a3887479ce-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json",
+      "sha256": "f466849fe89b53b774e6d9e43f730aae1659b22e2fbf4d55777204decdf5a726",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_internetarchive__openlibrary-e8084193a895d8ee81200f49093389a3887479ce-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json"
+    },
+    {
+      "available": true,
+      "bytes": 26551,
+      "path": "dataset/v1/generated/complementary/instance_navidrome__navidrome-6c6223f2f9db2c8c253e0d40a192e3519c9037d1.json",
+      "sha256": "ba2060439e7b1b47e19edf46ac5e777cde3fcfc7bb71d9d9074c4310008881e0",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_navidrome__navidrome-6c6223f2f9db2c8c253e0d40a192e3519c9037d1.json"
+    },
+    {
+      "available": true,
+      "bytes": 38329,
+      "path": "dataset/v1/generated/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json",
+      "sha256": "ded198a9a3e7f484ce00743e608d2b462723800bcadcb10f863c44ad69b3e580",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json"
+    },
+    {
+      "available": true,
+      "bytes": 44936,
+      "path": "dataset/v1/generated/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39.json",
+      "sha256": "f7f591042e4f84e41bcb2f93fe3f61dd963d5584d28a57d079f2112afe40f84f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39.json"
+    },
+    {
+      "available": true,
+      "bytes": 30417,
+      "path": "dataset/v1/generated/complementary/instance_qutebrowser__qutebrowser-322834d0e6bf17e5661145c9f085b41215c280e8-v488d33dd1b2540b234cbb0468af6b6614941ce8f.json",
+      "sha256": "5ced1194a40ff8bc1d9c6141db2549bb9bee3b5c469135c173fb22c4162b8364",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_qutebrowser__qutebrowser-322834d0e6bf17e5661145c9f085b41215c280e8-v488d33dd1b2540b234cbb0468af6b6614941ce8f.json"
+    },
+    {
+      "available": true,
+      "bytes": 35667,
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-00c70ce7b0541cfc94afe567921d7668cdc8f4ac-vnan.json",
+      "sha256": "6c34ba6632e22e63644e75e35d1affb08461d939a2bc44f04fb325647236507e",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-00c70ce7b0541cfc94afe567921d7668cdc8f4ac-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 30329,
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-05f2236193f407cf8e2072757fbd6bb170bc13f0-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+      "sha256": "f71374363d1f014df61d7044643ad290978e3d2a80b92fb60bec0c21f00572b2",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-05f2236193f407cf8e2072757fbd6bb170bc13f0-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json"
+    },
+    {
+      "available": true,
+      "bytes": 52104,
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-3c85b944e30a0ba8b3ec9e1f441c74f383625a15-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json",
+      "sha256": "b6e10ea04a34c4b7d6bc378b44ba05c9463199af59a5cb9da523e9061d4674df",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-3c85b944e30a0ba8b3ec9e1f441c74f383625a15-v4fbcfae8b15e4ce5d132c408bca69ebb9cf146ed.json"
+    },
+    {
+      "available": true,
+      "bytes": 60821,
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-cfc237c2b79d8c731bbfc6cadf977ed530bfd57a-v0495b863a912fbff5749c67e860612b91825407c.json",
+      "sha256": "b79633cccef85ec876441e20ed99095f187de8f8952f4d24aa224fe2e2156e01",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-cfc237c2b79d8c731bbfc6cadf977ed530bfd57a-v0495b863a912fbff5749c67e860612b91825407c.json"
+    },
+    {
+      "available": true,
+      "bytes": 25391,
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+      "sha256": "a262b157464db41fc0fe3287311285f2dfa2b7e4358b683cc0de4ca217ea7aac",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json"
+    },
+    {
+      "available": true,
+      "bytes": 30973,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-12734fa21c08a0ce8c84e533abdc560db2eb1955-v7eee2454f617569fd6889f2211f75bc02a35f9f8.json",
+      "sha256": "435a524b4497a0fe4ffb39134be1ff284a076fae5089a5fb091b3444d77ad5ad",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-12734fa21c08a0ce8c84e533abdc560db2eb1955-v7eee2454f617569fd6889f2211f75bc02a35f9f8.json"
+    },
+    {
+      "available": true,
+      "bytes": 47903,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-1a4644ff15355fd696ac5b9d074a566a80fe7ca3-v30a923fb5c164d6cd18280c02422f75e611e8fb2.json",
+      "sha256": "21939e6f627136e6e2412b8bdbd3c0a9169ad48d46c89f058c663609dd26d98c",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-1a4644ff15355fd696ac5b9d074a566a80fe7ca3-v30a923fb5c164d6cd18280c02422f75e611e8fb2.json"
+    },
+    {
+      "available": true,
+      "bytes": 42496,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-5d253a13807e884b7ce0b6b57a963a45e2f0322c-v1055803c3a812189a1133297f7f5468579283f86.json",
+      "sha256": "d865fa80bd3277a520cc7a80a9ca2c0a8bf092f3bf25d11c651bf82f34cc3c7d",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-5d253a13807e884b7ce0b6b57a963a45e2f0322c-v1055803c3a812189a1133297f7f5468579283f86.json"
+    },
+    {
+      "available": true,
+      "bytes": 69847,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-949c503f2ef4b2c5d668af0492a5c0db1ab86140-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+      "sha256": "3f2ab673b000845d232f418456a87493101c4113cb950ba06bd8e3cd94c8d3de",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-949c503f2ef4b2c5d668af0492a5c0db1ab86140-v0f01c69f1e2528b935359cfe578530722bca2c59.json"
+    },
+    {
+      "available": true,
+      "bytes": 36792,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-9a21e247786ebd294dafafca1105fcd770ff46c6-v67cdaa49f89b34e42b69d5b7830b3c3ad3d8803f.json",
+      "sha256": "840b00ebde44df09fce829770d9de691401c63750bd71a9b2734d8f3f9681f3f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-9a21e247786ebd294dafafca1105fcd770ff46c6-v67cdaa49f89b34e42b69d5b7830b3c3ad3d8803f.json"
+    },
+    {
+      "available": true,
+      "bytes": 24620,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59.json",
+      "sha256": "6c3067e02210e598c302c8fa68fedf14644101473d3d8fa0e85e06f87a61fcd0",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-d33bedc48fdd933b5abd65a77c081876298e2f07-v0f01c69f1e2528b935359cfe578530722bca2c59.json"
+    },
+    {
+      "available": true,
+      "bytes": 30278,
+      "path": "dataset/v1/generated/contradictory/instance_ansible__ansible-de01db08d00c8d2438e1ba5989c313ba16a145b0-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json",
+      "sha256": "2ace5a437d0977cb2d94cb0f4d4512b3902dc2c52587070a6473b01539b54759",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-de01db08d00c8d2438e1ba5989c313ba16a145b0-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json"
+    },
+    {
+      "available": true,
+      "bytes": 73286,
+      "path": "dataset/v1/generated/contradictory/instance_element-hq__element-web-772df3021201d9c73835a626df8dcb6334ad9a3e-vnan.json",
+      "sha256": "e1eb2a375359d3ec76d3cbc4a4cb5058674a211250c82a5adfde19d5e4267f00",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_element-hq__element-web-772df3021201d9c73835a626df8dcb6334ad9a3e-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 42510,
+      "path": "dataset/v1/generated/contradictory/instance_element-hq__element-web-ee13e23b156fbad9369d6a656c827b6444343d4f-vnan.json",
+      "sha256": "263c2ede1a3df51f1fabdb006ab7dae1c5e38dc7b284f76b5bf105034713eca2",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_element-hq__element-web-ee13e23b156fbad9369d6a656c827b6444343d4f-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 34988,
+      "path": "dataset/v1/generated/contradictory/instance_flipt-io__flipt-b6cef5cdc0daff3ee99e5974ed60a1dc6b4b0d67.json",
+      "sha256": "2cc4be39ee2a68bdbfbfdb6dcc6adc3178bda0b440f043a78b46aec70c42fe4c",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_flipt-io__flipt-b6cef5cdc0daff3ee99e5974ed60a1dc6b4b0d67.json"
+    },
+    {
+      "available": true,
+      "bytes": 34173,
+      "path": "dataset/v1/generated/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063.json",
+      "sha256": "459b6283e45dee8423a472535a4aab5e3a0a7acc050b45d253c8b3c5178bc83b",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063.json"
+    },
+    {
+      "available": true,
+      "bytes": 34776,
+      "path": "dataset/v1/generated/contradictory/instance_future-architect__vuls-0ec945d0510cdebf92cdd8999f94610772689f14.json",
+      "sha256": "99f63a5a07cc4133277fbe58e7adb268acd0dc0f3924517797ec1ed26ecf5e21",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_future-architect__vuls-0ec945d0510cdebf92cdd8999f94610772689f14.json"
+    },
+    {
+      "available": true,
+      "bytes": 46309,
+      "path": "dataset/v1/generated/contradictory/instance_future-architect__vuls-8659668177f1feb65963db7a967347a79c5f9c40.json",
+      "sha256": "b0d7d55e179c22efbb9b73de78d75e7dd81a4588f7ad5b90fdce8501777069bc",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_future-architect__vuls-8659668177f1feb65963db7a967347a79c5f9c40.json"
+    },
+    {
+      "available": true,
+      "bytes": 34424,
+      "path": "dataset/v1/generated/contradictory/instance_future-architect__vuls-a76302c11174ca081f656c63a000ffa746e350af.json",
+      "sha256": "ce4a5a8a421a7158313ae549612f26b97a9901c77c9b4b3d48777f023efc7837",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_future-architect__vuls-a76302c11174ca081f656c63a000ffa746e350af.json"
+    },
+    {
+      "available": true,
+      "bytes": 31690,
+      "path": "dataset/v1/generated/contradictory/instance_future-architect__vuls-edb324c3d9ec3b107bf947f00e38af99d05b3e16.json",
+      "sha256": "2df21168dc2ff26f6ee2ed400552c7cf3fbdcb696c10338dab30ba5cbfe5ff8e",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_future-architect__vuls-edb324c3d9ec3b107bf947f00e38af99d05b3e16.json"
+    },
+    {
+      "available": true,
+      "bytes": 33222,
+      "path": "dataset/v1/generated/contradictory/instance_internetarchive__openlibrary-f0341c0ba81c790241b782f5103ce5c9a6edf8e3-ve8fc82d8aae8463b752a211156c5b7b59f349237.json",
+      "sha256": "86dcf4d93c08659ac407790257f9b53cf6111329cd567b624dcf9a812fa2104f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_internetarchive__openlibrary-f0341c0ba81c790241b782f5103ce5c9a6edf8e3-ve8fc82d8aae8463b752a211156c5b7b59f349237.json"
+    },
+    {
+      "available": true,
+      "bytes": 43852,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-23bebe4e06124becf1000e88472ae71a6ca7de4c.json",
+      "sha256": "66bd399651c003b9ff9eec8f19b4cb014d7cc2e8f871425b25744fbfe26c1773",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-23bebe4e06124becf1000e88472ae71a6ca7de4c.json"
+    },
+    {
+      "available": true,
+      "bytes": 50020,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-66b74c81f115c78cb69910b0472eeb376750efc4.json",
+      "sha256": "4df0d5f6f748d21a4a2540b32cadd6f0c78aa127c3695bed80c9dbaccb0459b6",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-66b74c81f115c78cb69910b0472eeb376750efc4.json"
+    },
+    {
+      "available": true,
+      "bytes": 22674,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-b3980532237e57ab15b2b93c49d5cd5b2d050013.json",
+      "sha256": "b1b97697c5bf966ec4fb1151943be3a5637886cd19521dd06a0b04dd14c60191",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-b3980532237e57ab15b2b93c49d5cd5b2d050013.json"
+    },
+    {
+      "available": true,
+      "bytes": 47285,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json",
+      "sha256": "b62ccd3a1a79611b8f95e98f8f4cf5e410e8a1486ce8d57da1dadc40b9e31f56",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json"
+    },
+    {
+      "available": true,
+      "bytes": 35432,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-d5df102f9f97c21715c756069c9e141da2a422dc.json",
+      "sha256": "b21e8c9bdbe80cad0863bdb2ef0f52ad47726b5593858c38ed3c671da56a3d14",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-d5df102f9f97c21715c756069c9e141da2a422dc.json"
+    },
+    {
+      "available": true,
+      "bytes": 34780,
+      "path": "dataset/v1/generated/contradictory/instance_navidrome__navidrome-f78257235ec3429ef42af6687738cd327ec77ce8.json",
+      "sha256": "24f8e9c08f84d366acf794b4b3e1bd5039cd09b1ae43a52ba4c1da728b9c67ee",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_navidrome__navidrome-f78257235ec3429ef42af6687738cd327ec77ce8.json"
+    },
+    {
+      "available": true,
+      "bytes": 41596,
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-1501eb765873b2884b6f1944fd242ecfc9d6b103.json",
+      "sha256": "31fe5fd700a0ed8a70ce662c1796df3658e449a1eb9e27f936efe283f59f0829",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_protonmail__webclients-1501eb765873b2884b6f1944fd242ecfc9d6b103.json"
+    },
+    {
+      "available": true,
+      "bytes": 52918,
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-428cd033fede5fd6ae9dbc7ab634e010b10e4209.json",
+      "sha256": "4278169d4f76aa82376f4a609e4b3cd363fa03816cebed6e363f55094c361a14",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_protonmail__webclients-428cd033fede5fd6ae9dbc7ab634e010b10e4209.json"
+    },
+    {
+      "available": true,
+      "bytes": 30131,
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8.json",
+      "sha256": "90e1b46c6df2b817a7195d6d559a2980c6234e75f0b48f8c70d403b6b679c1e6",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8.json"
+    },
+    {
+      "available": true,
+      "bytes": 42992,
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-b387b24147e4b5ec3b482b8719ea72bee001462a.json",
+      "sha256": "ecf79f83bbd00af36204b1a515f20283b1cb27a7076da0784d845d06c63290fa",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_protonmail__webclients-b387b24147e4b5ec3b482b8719ea72bee001462a.json"
+    },
+    {
+      "available": true,
+      "bytes": 41835,
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-c8117f446c3d1d7e117adc6e0e46b0ece9b0b90e.json",
+      "sha256": "8b0c287ef9ba0bf916d8014e4cfe60e6b85d7365c002f439554184201f4bc138",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_protonmail__webclients-c8117f446c3d1d7e117adc6e0e46b0ece9b0b90e.json"
+    },
+    {
+      "available": true,
+      "bytes": 40226,
+      "path": "dataset/v1/generated/contradictory/instance_qutebrowser__qutebrowser-0fc6d1109d041c69a68a896db87cf1b8c194cef7-v2ef375ac784985212b1805e1d0431dc8f1b3c171.json",
+      "sha256": "5eaf811760ff6cee52aabbc0cbd948cc9243772edf012f7699014a0064e7a377",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-0fc6d1109d041c69a68a896db87cf1b8c194cef7-v2ef375ac784985212b1805e1d0431dc8f1b3c171.json"
+    },
+    {
+      "available": true,
+      "bytes": 33136,
+      "path": "dataset/v1/generated/contradictory/instance_qutebrowser__qutebrowser-77c3557995704a683cdb67e2a3055f7547fa22c3-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json",
+      "sha256": "73a53b2020a0e9979d63097b8c25db4ead294e3a104456d45c33d48e7fb02237",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-77c3557995704a683cdb67e2a3055f7547fa22c3-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json"
+    },
+    {
+      "available": true,
+      "bytes": 36648,
+      "path": "dataset/v1/generated/contradictory/instance_qutebrowser__qutebrowser-f8e7fea0becae25ae20606f1422068137189fe9e.json",
+      "sha256": "1887b8873daacbb96052307884e1da1ed3f9f54da152320b21d58f0631954c22",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-f8e7fea0becae25ae20606f1422068137189fe9e.json"
+    },
+    {
+      "available": true,
+      "bytes": 29501,
+      "path": "dataset/v1/generated/contradictory/instance_qutebrowser__qutebrowser-fec187c2cb53d769c2682b35ca77858a811414a8-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json",
+      "sha256": "1b3e8a752f2ed5da324606f9418091b6c580c6352aff90845d26943db0eaf504",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-fec187c2cb53d769c2682b35ca77858a811414a8-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json"
+    },
+    {
+      "available": true,
+      "bytes": 38641,
+      "path": "dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json",
+      "sha256": "015b417e4b05d639b1e09d7fb7a295f02a6cd6fae461f9f63f60ace84da26d3f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json"
+    },
+    {
+      "available": true,
+      "bytes": 41397,
+      "path": "dataset/v1/seeds/complementary/instance_ansible__ansible-b748edea457a4576847a10275678127895d2f02f-v1055803c3a812189a1133297f7f5468579283f86.json",
+      "sha256": "0a936ec76f1ab8d1d076d338bd921736e09564bdcc2ba529822b448f6b43e21f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_ansible__ansible-b748edea457a4576847a10275678127895d2f02f-v1055803c3a812189a1133297f7f5468579283f86.json"
+    },
+    {
+      "available": true,
+      "bytes": 83748,
+      "path": "dataset/v1/seeds/complementary/instance_flipt-io__flipt-b3cd920bbb25e01fdb2dab66a5a913363bc62f6c.json",
+      "sha256": "d90313381735b13a1dbeb0968a9fd2b9f6724531ecd21b78e92f0c55ebb66ba6",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_flipt-io__flipt-b3cd920bbb25e01fdb2dab66a5a913363bc62f6c.json"
+    },
+    {
+      "available": true,
+      "bytes": 52114,
+      "path": "dataset/v1/seeds/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d.json",
+      "sha256": "8b2d693009dacc83853f916dadcfff4d5617eebb325552cff0872b4f5a51a94c",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d.json"
+    },
+    {
+      "available": true,
+      "bytes": 32992,
+      "path": "dataset/v1/seeds/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+      "sha256": "0ee4c0a83fe0a6205478db178c85aeabb1919e190ad0bbf8284d8d2bb27c67b3",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json"
+    },
+    {
+      "available": true,
+      "bytes": 22681,
+      "path": "dataset/v1/seeds/complementary/instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json",
+      "sha256": "e88ad7569c439064a956fa2b665711a87a97411d3010cd0fc2be659461f51a9d",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_internetarchive__openlibrary-09865f5fb549694d969f0a8e49b9d204ef1853ca-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json"
+    },
+    {
+      "available": true,
+      "bytes": 38331,
+      "path": "dataset/v1/seeds/complementary/instance_navidrome__navidrome-0488fb92cb02a82924fb1181bf1642f2e87096db.json",
+      "sha256": "700d183a4225631e4ba30108b1c38673801b78af4755ad850fd666b5c9ac983c",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_navidrome__navidrome-0488fb92cb02a82924fb1181bf1642f2e87096db.json"
+    },
+    {
+      "available": true,
+      "bytes": 19972,
+      "path": "dataset/v1/seeds/complementary/instance_navidrome__navidrome-10108c63c9b5bdf2966ffb3239bbfd89683e37b7.json",
+      "sha256": "f9aeeb084381d6353f9fe79d53902e037853f1887871e46fd9e004059cecc718",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_navidrome__navidrome-10108c63c9b5bdf2966ffb3239bbfd89683e37b7.json"
+    },
+    {
+      "available": true,
+      "bytes": 19966,
+      "path": "dataset/v1/seeds/complementary/instance_navidrome__navidrome-29b7b740ce469201af0a0510f3024adc93ef4c8e.json",
+      "sha256": "174684e8deacd67a45c9e37ed6f998b9148f74c1e6083b5cad9b668e58ab3a67",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_navidrome__navidrome-29b7b740ce469201af0a0510f3024adc93ef4c8e.json"
+    },
+    {
+      "available": true,
+      "bytes": 31880,
+      "path": "dataset/v1/seeds/complementary/instance_qutebrowser__qutebrowser-0aa57e4f7243024fa4bba8853306691b5dbd77b3-v5149fcda2a9a6fe1d35dfed1bade1444a11ef271.json",
+      "sha256": "ca686aec861865fe17a89e5bce8f715aa4aafc3e6e3a68c36e45e72662909c9f",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/complementary/instance_qutebrowser__qutebrowser-0aa57e4f7243024fa4bba8853306691b5dbd77b3-v5149fcda2a9a6fe1d35dfed1bade1444a11ef271.json"
+    },
+    {
+      "available": true,
+      "bytes": 32589,
+      "path": "dataset/v1/seeds/contradictory/instance_NodeBB__NodeBB-b1f9ad5534bb3a44dab5364f659876a4b7fe34c1-vnan.json",
+      "sha256": "2654d9e0150c683d2cf5989b85c9aa40d2646769bb4b17703e66f9ebdfb4fbf6",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_NodeBB__NodeBB-b1f9ad5534bb3a44dab5364f659876a4b7fe34c1-vnan.json"
+    },
+    {
+      "available": true,
+      "bytes": 37466,
+      "path": "dataset/v1/seeds/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a.json",
+      "sha256": "9d672b90a24ec4fd90b3680ed285ec2abdf463192185148f7d672725256d4752",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a.json"
+    },
+    {
+      "available": true,
+      "bytes": 30529,
+      "path": "dataset/v1/seeds/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a.json",
+      "sha256": "20e0878f45caccaf981dd191ba6c0a2297c014f427df502c2141f91a727c5698",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a.json"
+    },
+    {
+      "available": true,
+      "bytes": 31308,
+      "path": "dataset/v1/seeds/contradictory/instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8.json",
+      "sha256": "311b82eed0f359ddfb88bf264c26ede3c535fa4a4ed14717d023e45f1ff2a2a0",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8.json"
+    },
+    {
+      "available": true,
+      "bytes": 55470,
+      "path": "dataset/v1/seeds/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e.json",
+      "sha256": "1fb89bc9aa23f58f91dd9876f21b773b0847164b9a20e7c050d004592e916291",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e.json"
+    },
+    {
+      "available": true,
+      "bytes": 25523,
+      "path": "dataset/v1/seeds/contradictory/instance_qutebrowser__qutebrowser-0b621cb0ce2b54d3f93d8d41d8ff4257888a87e5-v2ef375ac784985212b1805e1d0431dc8f1b3c171.json",
+      "sha256": "b5d3fd6b515246e45e089b13f0af1c2127eeb6ece52521ca67ddfa1ea0d2d2da",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-0b621cb0ce2b54d3f93d8d41d8ff4257888a87e5-v2ef375ac784985212b1805e1d0431dc8f1b3c171.json"
+    },
+    {
+      "available": true,
+      "bytes": 24756,
+      "path": "dataset/v1/seeds/contradictory/instance_qutebrowser__qutebrowser-96b997802e942937e81d2b8a32d08f00d3f4bc4e-v5fc38aaf22415ab0b70567368332beee7955b367.json",
+      "sha256": "9bee8345f1668bac24fbfa13a63cd892222cd8c3183f85e498879fb3a72ccc88",
+      "url": "https://lingyunxiao18.github.io/ParallACT/data/instances/v1/contradictory/instance_qutebrowser__qutebrowser-96b997802e942937e81d2b8a32d08f00d3f4bc4e-v5fc38aaf22415ab0b70567368332beee7955b367.json"
+    }
+  ],
+  "excluded_old_pilot_sha256": "55310d468476b7cfd43c34960c1ec07d4b5681189836dc592118bd6a9b370bce",
+  "excluded_source_audit_sha256": "e413055d1840751344a74dd50d8498c0bf3214e543f8667e034bd9776e20f184",
+  "paths": [
+    "dataset/v1/generated/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779.json",
+    "dataset/v1/generated/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39.json",
+    "dataset/v1/generated/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json",
+    "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+    "dataset/v1/generated/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8.json",
+    "dataset/v1/generated/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063.json",
+    "dataset/v1/seeds/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d.json",
+    "dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json",
+    "dataset/v1/seeds/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+    "dataset/v1/seeds/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a.json",
+    "dataset/v1/seeds/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e.json",
+    "dataset/v1/seeds/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a.json"
+  ],
+  "producer_hashes": {
+    "docs/pilot/parallact-v1-protocol.md": "a15b830cec413216b196a2594d7c80e5b5e78e147d24275bbf6941b612a31f2a",
+    "scripts/audit_benchmark_sources.py": "2dd167ded05042ba03277b5dece347340f74260857b35318575752d2ac4e23c8",
+    "scripts/parallact_collect.py": "c014d409b06ef218f461b236921d5a9a5549aae88644bd9997ea939621bb1fba",
+    "scripts/parallact_pilot.py": "3e6c8d2750f2d275c871e17eec55db392b620036078bf7b4684b5257d323ef99",
+    "scripts/parallact_v1_pilot.py": "859b599e8b9442dbad23e8dc5da4cd2836884498bfb25fbd93ef91dbea1dbd5a"
+  },
+  "selection_algorithm": "sorted strata and paths, Random(39), three per stratum, global repository cap two",
+  "shortages": {},
+  "site_manifest": {
+    "bytes": 6418,
+    "sha256": "64848e75f11c0eca3dcf5ab1fbe6e5c952377d8f3872b60c2b725ac9eea6b8b2",
+    "url": "https://lingyunxiao18.github.io/ParallACT/data/manifest.json"
+  },
+  "source_manifest_sha256": "162ccc22b4b27340bbb1c72db031c5fee631ba0d91cc8dfdb76d362ffcb0a498",
+  "source_revision": "c212deb174fbc8980212cc1bde5b3f047941f332"
+}

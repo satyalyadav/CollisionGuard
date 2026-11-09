@@ -1,0 +1,496 @@
+{
+  "cases": [
+    {
+      "association": "valid",
+      "base": "7b8bfe4f609a40c5a4d592b91c91d2921ed24e64",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "4a2c8937d27f2813e8a318469b565bd205a6304caa9938a5ed0922a80983fe27",
+      "path": "dataset/v1/generated/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779.json",
+      "replay": {
+        "reason": "repository body budget exhausted in prior job",
+        "status": "unavailable"
+      },
+      "repo": "gravitational/teleport",
+      "run_sha256": "4d19a29858e06e8290a3a30e2348540e240748458ac207fe199572080dd556de",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779/parallel_unaware.json.gz",
+      "seed_sha256": "a3d03092b530f10318142aa04fd34ef822ccfd2b2e1726b15238cc42884299cc",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/complementary/instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779.json",
+      "task_sha256": [
+        "2d796834c227b7aeea05b22904a99aca1f1e676e7a5f1ef778296486516004fc",
+        "daa39ccdc4f9a1deb0f894d9e09aa7a7cac7a31c7d292138f91670ff7832a002"
+      ],
+      "unordered_pair_sha256": "4a2c8937d27f2813e8a318469b565bd205a6304caa9938a5ed0922a80983fe27"
+    },
+    {
+      "association": "valid",
+      "base": "03feb9230522f77f82e6c7860c2aab087624d540",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "24fb0fd5604525153ae7f857d4ffaf297bfe367c5c532325fef800372695f288",
+      "path": "dataset/v1/generated/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "protonmail/webclients",
+      "run_sha256": "25086121528ce2ca75f919c5d78772e12a263f7c6b1491e5fe40fae754b6bb68",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39/parallel_unaware.json.gz",
+      "seed_sha256": "fe1714bcb781ac71fd47e7890f694f65eb88850d0379a4d2171360872309c60b",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/complementary/instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39.json",
+      "task_sha256": [
+        "ded549e7cd83aa375eeaa418cf446a862964bfc772cf52eb88f532249ecc5319",
+        "8f7477dec5a85661a676db0d18314b01c4e2dbfa9c1a5649f12d3d688c3b3700"
+      ],
+      "unordered_pair_sha256": "fc851aaf7ec8eabde65e1e09e9b52b4800fb83a01443ee3d92afcaa358a16827"
+    },
+    {
+      "association": "valid",
+      "base": "c72add516a0f260e83a289c2355b2e74071311e0",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "ebe308022e83c8862e5c74726a5e41ba608d58d4b6e771f332dc307423c89805",
+      "path": "dataset/v1/generated/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json",
+      "replay": {
+        "agent_heads": [
+          "e1155bfd10ac71b90c7507d594486aa2fb56fef4",
+          "91c04ffb6fa51cbc8392940c944f647d9d6dbaf1"
+        ],
+        "archive_bytes": 7202201,
+        "archive_entries": 694,
+        "archive_sha256": "92fb2ed249d6a669598cbfb79686c882efaa472822af426abc4b71260270966b",
+        "archive_url": "https://codeload.github.com/navidrome/navidrome/tar.gz/c72add516a0f260e83a289c2355b2e74071311e0",
+        "base_head": "d41384371ebddd9eea4229820f5d9da9f4836491",
+        "commit_url": "https://api.github.com/repos/navidrome/navidrome/git/commits/c72add516a0f260e83a289c2355b2e74071311e0",
+        "expected_tree": "a62185bc810b8a9cf4a0a0a62d52e2a191021083",
+        "label": "clean",
+        "patch_sha256": [
+          "32841c889c981368d91afb1ca14e79e5eb6e9cacd063bfd43bbb73e2099a36f2",
+          "5b7aebaf3d43888655fce7c7c1f285c4c94d4748dea3d5789f262b5a7c7a8f7d"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "a62185bc810b8a9cf4a0a0a62d52e2a191021083",
+        "status": "complete"
+      },
+      "repo": "navidrome/navidrome",
+      "run_sha256": "ce547a8ba0620c11225ea2d1e32b6fd926d396fe2855f612a6dcc01a1317776c",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a/parallel_unaware.json.gz",
+      "seed_sha256": "40ec40fa9ca30b23dd59db624048b269297da18e618a805ff530742b9b3ac81b",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/complementary/instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a.json",
+      "task_sha256": [
+        "715ced7b51ffcc25edbb473d109633024a058bd771319ead95e54715858190f5",
+        "465ac289872c56e1d429af73bb257e0dc93014003b6e6a7501795ec0ce75eaf8"
+      ],
+      "unordered_pair_sha256": "44cca7c138bc62b865d792d0d7c2a56e4097ca9e20c2b278c5c737ff3a805748"
+    },
+    {
+      "association": "valid",
+      "base": "61d17c95e573f91ab5c65d25218451e9afd07d77",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "39cf321b6d00207ff010b5c6d6f5a0d5ea2689f020fd015ba6ca111973a64c06",
+      "path": "dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "NodeBB/NodeBB",
+      "run_sha256": "f3d21a614df032773be67d31446885fc562387bdd7eeda105e5d4d0f5fa44431",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e/parallel_unaware.json.gz",
+      "seed_sha256": "e319a722e75cf68a40146be322d344d89c9f04584123dced35f388818abf3ba9",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/contradictory/instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e.json",
+      "task_sha256": [
+        "d0a8e2fc67c4f8913670cc2697d403f0384426767a6a2e6752da4bd35c210b92",
+        "b82568fa0cb5e484ccefc82e6feba4bff80799da32c973db49e2867cf81b94d8"
+      ],
+      "unordered_pair_sha256": "4bb6d254e8ca2dedef5d60744510a75ed7e2ebd821fb751bb40cd4f4c2a16863"
+    },
+    {
+      "association": "valid",
+      "base": "808897a3f701f58c9b93efb5bc79112e79fd20f9",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "2184ab95a04d73006779c389464bc9908cdfd8beb1085eac7be1022f2df5fbd1",
+      "path": "dataset/v1/generated/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "protonmail/webclients",
+      "run_sha256": "df4bdf941565d86ee581e29a2e2f276b01271732ed2dc38fea52a815dac39a24",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8/parallel_unaware.json.gz",
+      "seed_sha256": "927aafe81ff3316f644e4d6108566e9951bfbeacc01a72274a8c2efaf9e8ee70",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/contradictory/instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8.json",
+      "task_sha256": [
+        "2febf64efc5f39ce51212bce2e301dec4a441adaafe3b9177527ad6b438c1e7c",
+        "cf09a4ef552a93ad09684aae91af3d6f4c64acd9284a36d3c10b41d689d750ac"
+      ],
+      "unordered_pair_sha256": "2184ab95a04d73006779c389464bc9908cdfd8beb1085eac7be1022f2df5fbd1"
+    },
+    {
+      "association": "valid",
+      "base": "879520526664656ad9f93925cd0b1f2220c0c3f2",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "2ede2233118f6f24cc153c0ba5b59f1dbea7c93a5c9d35dfe726b167f05b848c",
+      "path": "dataset/v1/generated/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063.json",
+      "replay": {
+        "agent_heads": [
+          "1437090adca8e2981cc2d30e92f2b42ae3b25694",
+          "89b7393ee9b8c2d5fd76a6a3f1df0d4077f3c660"
+        ],
+        "archive_bytes": 6297000,
+        "archive_entries": 1112,
+        "archive_sha256": "c89c90cad15a1e80e0db0e22542b82c2001308fa574faa4928ee76503f124ad8",
+        "archive_url": "https://codeload.github.com/flipt-io/flipt/tar.gz/879520526664656ad9f93925cd0b1f2220c0c3f2",
+        "base_head": "efb73f5be3c7dcbf3f531caee8d4a787482e7b19",
+        "commit_url": "https://api.github.com/repos/flipt-io/flipt/git/commits/879520526664656ad9f93925cd0b1f2220c0c3f2",
+        "expected_tree": "0b89a450ef39844bf1cc413fe870ac8e45c67cc5",
+        "label": "clean",
+        "patch_sha256": [
+          "aa2101201f50cb740e4e5bd53e1c44f896776db36719e3c94c5a8014ea4e77fc",
+          "0a453199085b3aa3b2c2e56fcc3891b41e2adbe810aecb470a574381efba5a75"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "0b89a450ef39844bf1cc413fe870ac8e45c67cc5",
+        "status": "complete"
+      },
+      "repo": "flipt-io/flipt",
+      "run_sha256": "890c1384eb41fb85da10b0b918e357034ee6a7359d1b3b11a89448b718ade4d3",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063/parallel_unaware.json.gz",
+      "seed_sha256": "6bae8e16565cca61994f4d2ab3335eebb91cb6aa41295ac80d2e3b58abbf2e1a",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/generated/contradictory/instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063.json",
+      "task_sha256": [
+        "c3c06e71a0b61e63af926e788d22244b83f40bd769f35fc1feb96f34ba456ecb",
+        "36936118d00cbeaa7f0161f18a9b31640bbadfbf1b1619fc040ae21d9a7d32f7"
+      ],
+      "unordered_pair_sha256": "02927674be05d44b259c22c1b13ad7154545405798ac8a362cdec91c66a2f466"
+    },
+    {
+      "association": "valid",
+      "base": "4d7c51b4f535cecfd139625e6af1746c46abc712",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "06f099ea3d7523a37b23d5c09edb5659c20be44b6deafc75a163d591f3ba75e1",
+      "path": "dataset/v1/seeds/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d.json",
+      "replay": {
+        "reason": "repository body budget exhausted in prior job",
+        "status": "unavailable"
+      },
+      "repo": "gravitational/teleport",
+      "run_sha256": "5a92f55c08c39acb15ed3084f8cddf653e70c9cf7503507c67f16563c045f0d4",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d/parallel_unaware.json.gz",
+      "seed_sha256": "c1263f88491eb951d52297c61e09830474acaa1a897172df3d6ae47419e71f3f",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d.json",
+      "task_sha256": [
+        "7531778741d7471fab5736a738c75deb0615636b529e870b202d6bebf7dcbd7b",
+        "1991a3b18c78449daad9df56d9dad0dd216427fba37448566383ed7a1a4b031c"
+      ],
+      "unordered_pair_sha256": "2d0e985af78f953b660a8f446300118e3cb14418d2dd2dea3ab900a916c55d7a"
+    },
+    {
+      "association": "valid",
+      "base": "7800016f2f1b89d2d3cfea6a7da7c77096b7b927",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "2401ccb17b95e794f90fbee0cd75c4ca64ee85bce81a443144fbae7b7a351857",
+      "path": "dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "NodeBB/NodeBB",
+      "run_sha256": "9a84b6ac0b89868837cfbcc2f912d1a59c6fcd6d8a2d1937f4f39e688566e01d",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516/parallel_unaware.json.gz",
+      "seed_sha256": "f3289c4a3687a3575cbb50ea9ad150f374a04ef73faa41d4ce333d7fd63c46d6",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json",
+      "task_sha256": [
+        "f35e14e1bfee4347452805f7637de1fd3fa93141527064a9c536c0195f4d6e77",
+        "05ff8d82866acc6bcecc3673cd969b06e18b056bceaa5d78d6a692d241d48c3b"
+      ],
+      "unordered_pair_sha256": "dfdc7cc807e55fdd37951672ca320bb69439423b3d7064ce180732344a3d5d85"
+    },
+    {
+      "association": "valid",
+      "base": "46bcf7c30178f53ef427a5840c4b24717ed79fb0",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "1a619690d75f19c1d710ca1d04776780ada342b8fd8e55be1fdc9737ccd7e0bd",
+      "path": "dataset/v1/seeds/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "internetarchive/openlibrary",
+      "run_sha256": "caa8e666308119ed40e1667c1189a342146699844b2b9eb97b22ded5adb3ac1e",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866/parallel_unaware.json.gz",
+      "seed_sha256": "ba1f3dcf642a0a23e25efd4c6897b6022cbeeca9e77f6537a7db17f8d4b8baa5",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/complementary/instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866.json",
+      "task_sha256": [
+        "4b06c56f31908fae71c0f89730bf7f01234f321e23951fa8728046462515f60d",
+        "57023de389b58b245bb691181a65214bdf58d35a0e7b8fda006c30d388dd8af9"
+      ],
+      "unordered_pair_sha256": "1a619690d75f19c1d710ca1d04776780ada342b8fd8e55be1fdc9737ccd7e0bd"
+    },
+    {
+      "association": "valid",
+      "base": "0ed96dc5d33768c4b145d68d52e80e7bce3790d0",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "ed0126d7a44958b155fbb22153997ca96c55c8bd8f591585e7dc08b4f0f4e39b",
+      "path": "dataset/v1/seeds/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a.json",
+      "replay": {
+        "agent_heads": [
+          "b950da5eb3570ee4110ac8ecda1ecaa37a234fc2",
+          "b31338ec4c377719ee205aea613b15e3e45b05fb"
+        ],
+        "archive_bytes": 6520736,
+        "archive_entries": 890,
+        "archive_sha256": "e6ec773d87d7e46d8bf164f9e7b8fa79185ca6f15bc5efbd63f27f16b311dd13",
+        "archive_url": "https://codeload.github.com/flipt-io/flipt/tar.gz/0ed96dc5d33768c4b145d68d52e80e7bce3790d0",
+        "base_head": "0e12ce1187dc5d15bc16d89aae57572fdd5c485e",
+        "commit_url": "https://api.github.com/repos/flipt-io/flipt/git/commits/0ed96dc5d33768c4b145d68d52e80e7bce3790d0",
+        "expected_tree": "45aa076752423d593f8b6605909da80e93732421",
+        "label": "conflict",
+        "patch_sha256": [
+          "eb870a2bf8cb4c087fb8aac410c0c079708cf73ec9db5bcb786e53f34846f1f9",
+          "2aed1bd0758065888c8ce2bf37ae982550ae861158aa98f3a641f410931a0595"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "45aa076752423d593f8b6605909da80e93732421",
+        "status": "complete"
+      },
+      "repo": "flipt-io/flipt",
+      "run_sha256": "469bf6eb4d2831eb504dad159295b97d0ec41c0b3e7b2244568c3c419735cad3",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a/parallel_unaware.json.gz",
+      "seed_sha256": "59cd618911a2dc71dbe3be62885176e443346b85b4ab4f486134fa8e66909167",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a.json",
+      "task_sha256": [
+        "3449dd9db2b9ab4a8e8ff49c3250632570e45dfbb505b3a0c958b3bf43782e4b",
+        "c7a770d8676fb3444f4a7fc66000993c3d3e96ca6a82c1cc4f57ec8099a49790"
+      ],
+      "unordered_pair_sha256": "ed0126d7a44958b155fbb22153997ca96c55c8bd8f591585e7dc08b4f0f4e39b"
+    },
+    {
+      "association": "valid",
+      "base": "053306944695e6616f320393f865f667e984481d",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "f89bdba4eaaf691c290d6f8120b93467d573982e7c25d9e5840bf13a0e456a98",
+      "path": "dataset/v1/seeds/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e.json",
+      "replay": {
+        "agent_heads": [
+          "81e7e52bb4065e08585f1323f55e07c9551b1602",
+          "a7003df105d83071f87ff5193afa02560c9786c9"
+        ],
+        "archive_bytes": 1210024,
+        "archive_entries": 223,
+        "archive_sha256": "667685bb70be0ddfadd83df36388a1b023eb6e6f89771053c5b45047ccf2dc8f",
+        "archive_url": "https://codeload.github.com/future-architect/vuls/tar.gz/053306944695e6616f320393f865f667e984481d",
+        "base_head": "b98ead9464edcf4c73d95e467058833b4fa0f80e",
+        "commit_url": "https://api.github.com/repos/future-architect/vuls/git/commits/053306944695e6616f320393f865f667e984481d",
+        "expected_tree": "6dad00bb5e6923f96d54e9c4c1dc31588a040df8",
+        "gitlink_count": 1,
+        "label": "conflict",
+        "patch_sha256": [
+          "8c7fc0c25ade835076de1971cbc58c2fd965e59bc614b73a61b16cf2c15cf4df",
+          "73f2ef99d10b6dad5e39921f919d96d8ff27757712560bf9b7642f7e9bdabfac"
+        ],
+        "repeat_identical": true,
+        "snapshot_tree": "6dad00bb5e6923f96d54e9c4c1dc31588a040df8",
+        "status": "complete",
+        "supplemented_count": 0
+      },
+      "repo": "future-architect/vuls",
+      "run_sha256": "d37cf78d8619632feac181efcea531028ed841e24bf84168acae7e204fd26f95",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e/parallel_unaware.json.gz",
+      "seed_sha256": "eed77878e2d5867ec71c2dea4d3c8660fd890ee5cba8fc637a261f8cd1edb99b",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e.json",
+      "task_sha256": [
+        "f10db4d044872a5893abfc44731f03b734b6d7561f17da34fbdfc2d7dd3888f1",
+        "44cc0927b0ada9fd7e49221445b221474f695f40bb5f8968a07c68a3311a97a9"
+      ],
+      "unordered_pair_sha256": "7a4c4cba172159d473a54c8a905a7f0b33bf3580fab75563d61e8440e221b1d2"
+    },
+    {
+      "association": "valid",
+      "base": "5ee81338fcf7adbc1a8eda26dd8105a07825cb08",
+      "checks": {
+        "A_assignment": true,
+        "A_output": true,
+        "B_assignment": true,
+        "B_output": true,
+        "base_sha": true,
+        "distinct_prompts": true,
+        "no_messages": true,
+        "run_identity": true,
+        "separate_outputs": true,
+        "timing_source_reported": true,
+        "two_turns": true
+      },
+      "execution_revision": "unknown",
+      "pair_sha256": "5a3a09881a7288b71f577d0099f843c738b2b89bbc4b1110547831c7bd9939df",
+      "path": "dataset/v1/seeds/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a.json",
+      "replay": {
+        "reason": "ValueError",
+        "status": "unverified"
+      },
+      "repo": "ansible/ansible",
+      "run_sha256": "e61ecba48f9b93ebe490fbd121f316254d3aab6542252e179fdb9bebe5f45c6b",
+      "run_url": "https://lingyunxiao18.github.io/ParallACT/data/runs/api--claude_code--opus-4.8/v1/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a/parallel_unaware.json.gz",
+      "seed_sha256": "8e9d9a303760b1d5bbd4327a4f1d15b154dd462b55c590829b83c8e7238e3429",
+      "seed_url": "https://raw.githubusercontent.com/rm206/ParallACT_data_and_code/c212deb174fbc8980212cc1bde5b3f047941f332/dataset/v1/seeds/contradictory/instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a.json",
+      "task_sha256": [
+        "df3de27d7c2c0388661c1c2686246ff0585985e35c5dfb8dc730cfd658fa6c7b",
+        "9d8818f93489c1b9a2c6a17196d2f51f8123a3a18c8b0b208f30d63bb3c601e5"
+      ],
+      "unordered_pair_sha256": "4d0f525337f88cd1c5ed3e6af5098c4ea2ef70a7a5526a889e36a3d743b4bb06"
+    }
+  ],
+  "ended_at": "2026-11-09T03:57:39.912582+00:00",
+  "gate": "FAIL",
+  "integrity_defects": [
+    "Job 1 discarded the received partial source archive at the repository byte limit; its bytes were metered but not retained."
+  ],
+  "labels": {
+    "clean": 2,
+    "conflict": 2
+  },
+  "privacy_allowlist": true,
+  "repos": 3,
+  "selection_sha256": "7cdd8af5c03df07c607ff21a3258a0ba9c6d2377d28fdc041dc940f6483c0d31",
+  "stop_reason": null,
+  "usable": 4
+}

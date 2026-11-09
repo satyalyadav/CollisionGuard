@@ -9,6 +9,7 @@ CollisionGuard studies whether task descriptions and repository information avai
 - [Research automation and ASU Sol](docs/research/research-automation.md), with options for later experiment runs.
 - [Exploratory pilot results](docs/pilot/results.md), with the [protocol](docs/pilot/protocol.md). Opus review is complete; primary historical-evidence collection remains unfinished.
 - [ParallACT local pilot](docs/pilot/parallact-results.md), reviewed by Opus 5.5. Seven new pairs replayed; the frozen coverage gate failed because the sample included unsupported v2 runs and one whitespace false negative.
+- [V1-only follow-up pilot](docs/pilot/parallact-v1-results.md), reviewed by Opus 5.5. All twelve task/output associations passed; four merge replays completed. Local archive limits caused the failed gate. The collector needs fixes before reuse.
 - [Alternative data-source search](docs/research/data-source-search.md), reviewed by Opus 5.5. ParallACT is the first import-audit candidate; see the later reuse assessment and pilot below.
 - [Data-source audit and verdicts](docs/research/data-source-audit.md), reviewed by Opus 5.5, with complete-tree replay evidence and explicit reuse conditions.
 

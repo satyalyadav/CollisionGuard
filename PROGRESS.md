@@ -4,39 +4,34 @@ A short, living summary for context and reports. Dates use America/Phoenix time.
 
 ## Current status
 
-- The [public team repository](https://github.com/satyalyadav/CollisionGuard) is live. Student IDs and raw third-party patches are excluded. Twenty local helper tests pass.
-- The [source audit](docs/research/data-source-audit.md) recommends ParallACT for a controlled pilot. Six selected cases have repeatable full-tree merge labels.
-- The [reuse assessment](docs/research/parallact-reuse-terms.md), reviewed by Opus 5.5 at high effort, supports bounded local analysis and local model experiments with unresolved rights documented. Raw content, embeddings and model artifacts stay private; redistribution is deferred.
-- The [local pilot](docs/pilot/parallact-results.md) retained all six earlier run/seed pairs and replayed seven new pairs across five repositories. Its frozen coverage gate failed. Plan any follow-up around verified v1 run coverage; execution provenance remains unknown.
-- CooperBench's inspected outputs form a separate communicating condition. Other corpora lack verified task/base joins or paired evidence; access failures do not prove them unusable.
-- The [AIDev pilot](docs/pilot/results.md) remains inconclusive because primary historical records were not queried. No model, new agent dataset or Sol job has run. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
+- The [public team repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and factual metadata. IDs and raw third-party text/patches stay private. Twenty-five helper tests pass, including independent verification with networking disabled.
+- ParallACT supplies controlled task/output pairs. The [v1 follow-up](docs/pilot/parallact-v1-results.md) verified twelve associations and four repeated merge labels across three repositories. Its gate failed because our archive limits blocked eight replays. Opus 5.5 reviewed the evidence; corrections are in the report/addendum.
+- Before further collection, fix collector controls and distinguish source-archive limits from run-JSON limits. Reprocessing retained cases would be a sensitivity check, not a new successful pilot. Runner/site provenance remains unknown.
+- The [reuse assessment](docs/research/parallact-reuse-terms.md) supports bounded local research with unresolved rights documented. Raw content, embeddings and model artifacts stay private. No model, new agent outputs or Sol job has run.
+- CooperBench's inspected outputs form a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive because original historical records were not queried. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
 
 ### 2026-11-07: Preserve the proposal
 
-Converted the PDF to [Markdown](docs/proposal/original-proposal.md), preserving proposal content and links. Removed redundant PDF/conversion files at the user's request. The unchanged private copy remains local; the public copy removes student IDs.
+Converted the PDF to [Markdown](docs/proposal/original-proposal.md). Removed redundant conversion files as requested. The unchanged private copy remains local; the public copy removes student IDs.
 
-### 2026-11-07: Research the proposal and compute options
+### 2026-11-07: Research and audit sources
 
-Reviewed novelty, data, evaluation and automation. The contribution is prediction before either task starts; overlap prediction and scheduling have precedents. Establish valid data and baselines before automated experiments. See the [overview](docs/research/overview.md) and [automation assessment](docs/research/research-automation.md).
+Reviewed novelty, data, evaluation and automation. Prediction before either task starts is the proposed contribution. The [source audit](docs/research/data-source-audit.md) reproduced six ParallACT pairs and one CooperBench pair. CooperBench plans and communication preclude unaware-agent claims. Checked GitHub records did not form complete historical pairs; corpus access failures prevented joins. Opus confirmed the replay evidence.
 
-### 2026-11-07: Close the exploratory pilot
+### 2026-11-07: Close the AIDev pilot
 
-Sampled PR pairs and attempted Git diagnostics. Unqueried historical records leave feasibility unassessed. Opus review prompted clearer statuses, disclosure of unretained script revisions and safer reuse checks. The [report](docs/pilot/results.md) retains the limitations.
+Sampled PR pairs and attempted Git diagnostics. Unqueried historical records leave feasibility unassessed. Opus review prompted clearer statuses and disclosure of unretained script revisions.
 
-### 2026-11-07: Audit alternative sources
+### 2026-11-08: Publish and run the first import pilot
 
-Reproduced six ParallACT cases and one CooperBench case on verified source trees. CooperBench plans and communication preclude unaware-agent claims. Checked GitHub records did not form complete historical coding pairs. Corpus access failures prevented joins. Opus confirmed replay evidence; corrections are in the [audit](docs/research/data-source-audit.md).
+Published scripts, reports and metadata, then checked reuse terms. Six retention checks matched. Seven of twelve new cases replayed, with two clean and five conflict labels. Four unsupported v2 cases and a whitespace false negative prevented a pass. Fixed future whitespace matching while preserving the failed result.
 
-### 2026-11-08: Publish and decide local research scope
+### 2026-11-08: Run the v1-only follow-up
 
-Published scripts, reports and audit metadata with teammate setup instructions. Preserved private IDs locally and isolated the replay test from the original cache. Checked ParallACT's terms chain and incorporated Opus review. Continue the bounded local pilot; source-material redistribution remains unresolved.
-
-### 2026-11-08: Run the local import pilot
-
-Six retention checks matched. Seven of twelve new cases replayed twice, with two clean and five conflict labels. Opus found that four sampled v2 cases had no runs in the chosen configuration and one v1 rejection was a whitespace bug. Fixed the check for future runs; preserved the failed gate and original counts. Raw data stays private. No training or follow-up collection ran.
+All twelve associations passed; four replays completed, with two clean and two conflict labels. Two cases hit the repository download budget and six exceeded the archive decompression limit. Opus confirmed the evidence. Recorded lost-fragment, overread and checkpoint/target-history limitations without changing frozen records. Collector fixes remain necessary before reuse.
 
 ## Maintaining this log
 
-Update status when the stage or blocker changes. Add milestones for decisions and results, not routine commands. Link evidence, distinguish plans from completed work, and correct mistakes explicitly. Aim for roughly 500 words; consolidate at phase boundaries and archive only when consolidation would lose meaningful history.
+Record decisions and results, link evidence, distinguish plans from completed work and correct mistakes explicitly. Aim for roughly 500 words; consolidate at phase boundaries.
