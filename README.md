@@ -20,7 +20,7 @@ The recovery produced a small private dataset ready for baseline development. It
 
 ## Start here
 
-Clone this repository, read the progress log, then follow the linked research and audit reports. The retained JSON files contain audit metadata and outcomes, not a complete training dataset. Raw third-party patches and the private proposal copy are excluded from Git. Local paths in past run records describe the original research machine.
+Clone this repository, read the progress log, then follow the linked research and audit reports. The retained JSON files contain audit metadata and outcomes, not a complete training dataset. Raw third-party patches, the private proposal copy and `data/private/` are excluded from Git. Verified local records now live in `data/private/parallact/recovery/`. Local paths in past run records describe the original research machine.
 
 For local development, install Python 3.10 or newer, Git, and [uv](https://docs.astral.sh/uv/), then run:
 
