@@ -4,9 +4,9 @@ A short, living summary for context and reports. Dates use America/Phoenix time.
 
 ## Current status
 
-- The [public team repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and factual metadata. IDs and raw third-party text/patches stay private. Twenty-five helper tests pass, including independent verification with networking disabled.
-- ParallACT supplies controlled task/output pairs. The [v1 follow-up](docs/pilot/parallact-v1-results.md) verified twelve associations and four repeated merge labels across three repositories. Its gate failed because our archive limits blocked eight replays. Opus 5.5 reviewed the evidence; corrections are in the report/addendum.
-- Before further collection, fix collector controls and distinguish source-archive limits from run-JSON limits. Reprocessing retained cases would be a sensitivity check, not a new successful pilot. Runner/site provenance remains unknown.
+- The [public team repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and factual metadata. IDs and raw third-party text/patches stay private. Thirty-six helper tests pass; test logs are retained privately.
+- The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Private feature/target files have matching IDs and no pending rows. Opus 5.5 accepted the data and labels; documentation corrections are incorporated.
+- The recovery corrected archive limits, fragment handling, decoding, target synchronization and verified tree reconstruction. It is a post-hoc check on the same twelve v1 cases. Both failed pilots remain unchanged; runner/site provenance remains unknown.
 - The [reuse assessment](docs/research/parallact-reuse-terms.md) supports bounded local research with unresolved rights documented. Raw content, embeddings and model artifacts stay private. No model, new agent outputs or Sol job has run.
 - CooperBench's inspected outputs form a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive because original historical records were not queried. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
 
@@ -31,6 +31,10 @@ Published scripts, reports and metadata, then checked reuse terms. Six retention
 ### 2026-11-08: Run the v1-only follow-up
 
 All twelve associations passed; four replays completed, with two clean and two conflict labels. Two cases hit the repository download budget and six exceeded the archive decompression limit. Opus confirmed the evidence. Recorded lost-fragment, overread and checkpoint/target-history limitations without changing frozen records. Collector fixes remain necessary before reuse.
+
+### 2026-11-08: Recover useful local records
+
+Reused verified caches with separate JSON/archive limits. All twelve pairs now have repeatable exact-tree labels and synchronized private records. Preserved each producing revision and the interrupted first job's unknown exit status; continuation jobs exited successfully. Opus 5.5 accepted all twelve records. No model was trained.
 
 ## Maintaining this log
 

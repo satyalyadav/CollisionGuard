@@ -2,6 +2,7 @@
 
 CollisionGuard studies whether task descriptions and repository information available before coding can predict textual Git merge conflicts between two AI coding tasks. The intended use is deciding which tasks to run together.
 
+- [Successful resource recovery](docs/pilot/parallact-recovery-results.md): twelve verified task pairs across eight repositories, with seven clean and five conflict labels. Raw records remain private; see the [record format](docs/data/local-record-format.md).
 - [Project progress log](PROGRESS.md), with completed work, decisions, evidence, and planned next actions.
 - [Original proposal snapshot](docs/proposal/original-proposal.md). Public copy with student IDs removed. Keep the proposal content fixed.
 - [Research findings and next steps](docs/research/overview.md). This is the evolving assessment, separate from the original proposal.
@@ -15,7 +16,7 @@ CollisionGuard studies whether task descriptions and repository information avai
 
 The [ParallACT reuse assessment](docs/research/parallact-reuse-terms.md) recommends a bounded local research and training pilot with unresolved rights documented. Raw content and text-derived artifacts stay private.
 
-The audit reproduced selected benchmark merge outcomes. A complete training dataset has not been validated, and no model has been trained.
+The recovery produced a small private dataset ready for baseline development. It reuses the twelve known v1 cases with corrected resource limits; it is not a fresh sample or evidence of prediction accuracy. Broader data and evaluation remain necessary. No model has been trained.
 
 ## Start here
 

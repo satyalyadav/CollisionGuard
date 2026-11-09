@@ -1,0 +1,36 @@
+{
+  "denominator": 12,
+  "execution_revision": "unknown",
+  "feature_target_ids_match": true,
+  "gate": "PASS",
+  "labels": {
+    "clean": 7,
+    "conflict": 5
+  },
+  "new_body_bytes": 265324480,
+  "peer_review": "completed: data and labels accepted; documentation corrections incorporated",
+  "producer_hashes": {
+    "data/parallact-v1-pilot/selection.json": "7cdd8af5c03df07c607ff21a3258a0ba9c6d2377d28fdc041dc940f6483c0d31",
+    "docs/pilot/parallact-recovery-protocol.md": "fe6eb40212248f22a5ebcd4705a00f852594389f8ba60d941aadba385b067c21",
+    "scripts/audit_benchmark_sources.py": "2dd167ded05042ba03277b5dece347340f74260857b35318575752d2ac4e23c8",
+    "scripts/parallact_collect.py": "c014d409b06ef218f461b236921d5a9a5549aae88644bd9997ea939621bb1fba",
+    "scripts/parallact_pilot.py": "3e6c8d2750f2d275c871e17eec55db392b620036078bf7b4684b5257d323ef99",
+    "scripts/parallact_recovery.py": "63c1fd48312c49f2e534281be72c2728a2c91be6dbc27d1fe16dc163e379d36f",
+    "scripts/parallact_v1_pilot.py": "84c02db73157a8dcc17bf22d893928df31c26fc9eaf710af30f10aeb7a63cf22"
+  },
+  "repositories": [
+    "NodeBB/NodeBB",
+    "ansible/ansible",
+    "flipt-io/flipt",
+    "future-architect/vuls",
+    "gravitational/teleport",
+    "internetarchive/openlibrary",
+    "navidrome/navidrome",
+    "protonmail/webclients"
+  ],
+  "review_did_not_rerun_labels": true,
+  "reviewer": "claude-opus-5.5 high",
+  "site_revision": "unknown",
+  "usable": 12,
+  "verified_cache_read_bytes": 124370206
+}
