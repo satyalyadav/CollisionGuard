@@ -2,6 +2,8 @@
 
 The [recovery report](../pilot/parallact-recovery-results.md) identifies the private files that are ready for model development. Raw records are stored locally under `data/private/parallact/`, which Git ignores. The ready files are `data/private/parallact/recovery/features.json` and `targets.json`. Older cache paths are compatibility symlinks to this durable storage, not extra copies or backups. Teammates cloning the public repository do not receive these files.
 
+The [public-release assessment](../research/parallact-public-release.md) recommends a curated release of the twelve task pairs and calculated labels with the specified licenses and notices. The local storage path remains ignored; no raw records were uploaded during that investigation.
+
 Each feature record describes one pair and contains only these fields:
 
 | Field | Meaning |

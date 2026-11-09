@@ -2,7 +2,11 @@
 
 Checked 8 November 2026. This is a source-level assessment for the controlled pilot in the [prior audit](data-source-audit.md), not a determination of every contributor's rights.
 
-## Practical verdict
+## Updated release decision, 9 November 2026
+
+The [targeted public-release assessment](parallact-public-release.md) supersedes the blanket local-only recommendation below for the curated twelve task pairs and calculated labels. It recommends conditional release with CC presentation terms, source-specific licenses, attribution and change notices preserved. A website footer is a valid way to apply a license; its template origin does not negate the grant. The interpretation is not a new author-confirmed dataset license. Full raw patches, trajectories and source archives remain outside that decision. The earlier text below records the more conservative initial assessment.
+
+## Initial practical verdict
 
 **Proceed with a bounded local academic pilot, including local training and evaluation of the proposed logistic-regression and gradient-boosting models. Keep source material and text-derived artifacts private.** This is a research recommendation with unresolved rights recorded, not a finding that every input has an express license. A missing license is not an express prohibition, and keeping copies private does not itself supply permission.
 
