@@ -1,12 +1,12 @@
 # Project progress
 
-A short, living summary for context and reports. Dates use America/Phoenix time. 
+Summary for reports. Dates use America/Phoenix time.
 
 ## Current status
 
 - The [public repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and metadata. IDs and raw text/patches stay private. Thirty-six helper tests pass.
 - The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Matching private records live in ignored `data/private/parallact/recovery/`. Opus 5.5 accepted the data and labels; documentation corrections are incorporated.
-- The recovery corrected archive limits, fragment handling, decoding, target synchronization and verified tree reconstruction. It is a post-hoc check on the same twelve v1 cases. Both failed pilots remain unchanged; runner/site provenance remains unknown.
+- The recovery corrected archive limits, fragment handling, decoding, target synchronization and verified tree reconstruction. It is a post-hoc check on the same twelve v1 cases. Earlier failures remain; runner/site provenance is unknown.
 - The [reuse assessment](docs/research/parallact-reuse-terms.md) supports bounded local research with unresolved rights documented. Raw content, embeddings and model artifacts stay private. No model, new agent outputs or Sol job has run.
 - CooperBench's inspected outputs form a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive because original historical records were not queried. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
 
@@ -30,7 +30,7 @@ Published scripts, reports and metadata, then checked reuse terms. Six retention
 
 ### 2026-11-08: Run the v1-only follow-up
 
-All twelve associations passed; four replays completed, with two clean and two conflict labels. Two cases hit the repository download budget and six exceeded the archive decompression limit. Opus confirmed the evidence. Recorded lost-fragment, overread and checkpoint/target-history limitations without changing frozen records. Collector fixes remain necessary before reuse.
+All twelve associations passed; four replays completed, with two clean and two conflict labels. Two cases hit the repository download budget and six exceeded the archive decompression limit. Opus confirmed the evidence. Recorded collection limitations without changing frozen records. Collector fixes remain necessary before reuse.
 
 ### 2026-11-08: Recover useful local records
 
