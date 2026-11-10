@@ -4,11 +4,11 @@ Summary for reports. Dates use America/Phoenix time.
 
 ## Current status
 
-- The [public repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and the [twelve-pair dataset](data/parallact-12/README.md). Student IDs and full local workspaces stay excluded. Thirty-six replay/helper tests pass.
+- The [public repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and the [twelve-pair dataset](data/parallact-12/README.md). Student IDs and full local workspaces stay excluded.
 - The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Opus 5.5 accepted the records. The public bundle adds task statements, licenses, source notices and offline verification.
-- The recovery repaired collection controls and verified tree reconstruction. It reuses the same twelve cases; earlier failures and unknown runner/site provenance remain.
+- Recovery reuses the same twelve cases; earlier failures and unknown runner/site provenance remain.
 - The [release assessment](docs/research/parallact-public-release.md) supplies the limited release basis. The blanket private-only advice was too cautious. No prediction results have been established.
-- CooperBench's inspected outputs form a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive because original historical records were not queried. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
+- CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
 
@@ -34,7 +34,7 @@ All twelve associations passed; four replays completed, with two clean and two c
 
 ### 2026-11-08: Recover useful local records
 
-Reused verified caches with separate JSON/archive limits. All twelve pairs now have repeatable exact-tree labels and synchronized private records. Preserved producer history and the interrupted first job's unknown exit; continuations succeeded. Opus 5.5 accepted all twelve records. No model was trained.
+Reused caches with separate JSON/archive limits. All twelve pairs have repeatable exact-tree labels and synchronized records. Preserved producer history and the interrupted first job's unknown exit. Opus 5.5 accepted the records. No model was trained at this milestone.
 
 ### 2026-11-08: Preserve durable local storage
 
@@ -46,7 +46,7 @@ A targeted source check and Opus review support a curated release under existing
 
 ### 2026-11-09: Package the public dataset
 
-Released task statements and separate labels with per-record sources, component terms and full license texts. Offline verification checks the twelve pairs against recovery evidence. Original local records remain unchanged. PR1 adds prediction baselines; review found installation and evaluation changes needed before merging.
+Released task statements and labels with sources, component terms and license texts. Offline verification checks the pairs against recovery evidence; originals remain unchanged. PR1 adds TF-IDF and logistic baselines. Follow-up fixes add repository-separated evaluation, strict record validation, explicit synthetic mode and a reproducible dependency lock. All 67 tests and both runner modes pass. Commands are in the README. These runs demonstrate the workflow, not prediction accuracy.
 
 ## Maintaining this log
 
