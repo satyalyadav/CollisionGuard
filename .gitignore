@@ -1,6 +1,8 @@
+.idea/
 .venv/
 __pycache__/
 *.pyc
+*.egg-info/
 
 # Local private records and credentials
 *.private.*
