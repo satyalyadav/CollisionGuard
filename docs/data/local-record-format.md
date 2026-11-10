@@ -1,8 +1,8 @@
-# Local task-pair records
+# Task-pair records
 
-The [recovery report](../pilot/parallact-recovery-results.md) identifies the private files that are ready for model development. Raw records are stored locally under `data/private/parallact/`, which Git ignores. The ready files are `data/private/parallact/recovery/features.json` and `targets.json`. Older cache paths are compatibility symlinks to this durable storage, not extra copies or backups. Teammates cloning the public repository do not receive these files.
+The [public bundle](../../data/parallact-12/README.md) contains the twelve ready task pairs and calculated labels. Teammates receive `features.json` and `targets.json` in `data/parallact-12/` when they clone the repository. Its guide explains source credits, licenses and offline verification.
 
-The [public-release assessment](../research/parallact-public-release.md) recommends a curated release of the twelve task pairs and calculated labels with the specified licenses and notices. The local storage path remains ignored; no raw records were uploaded during that investigation.
+The [recovery report](../pilot/parallact-recovery-results.md) identifies the unchanged originals in `data/private/parallact/recovery/`. Git ignores these full local workspaces. Older cache paths are compatibility symlinks, not backups. The public bundle strips outer task whitespace and keeps run outputs, patches, archives and logs excluded, following the [release assessment](../research/parallact-public-release.md).
 
 Each feature record describes one pair and contains only these fields:
 

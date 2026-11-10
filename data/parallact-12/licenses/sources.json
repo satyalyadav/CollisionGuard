@@ -1,0 +1,134 @@
+{
+  "license_texts": [
+    {
+      "file": "CC-BY-SA-4.0.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/CC-BY-SA-4.0.txt",
+      "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966"
+    },
+    {
+      "file": "Apache-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "GPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/GPL-3.0-only.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    {
+      "file": "AGPL-3.0.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/AGPL-3.0-only.txt",
+      "sha256": "d8a6cc31abc16b6748c7a21f21611f5a1ec33f67d22ca23d7da1c19b95496bee"
+    }
+  ],
+  "upstream_notices": [
+    {
+      "repo": "gravitational/teleport",
+      "base_commit": "7b8bfe4f609a40c5a4d592b91c91d2921ed24e64",
+      "file": "gravitational__teleport-7b8bfe4f609a.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/gravitational/teleport/blob/7b8bfe4f609a40c5a4d592b91c91d2921ed24e64/LICENSE",
+      "declared_license": "Apache-2.0",
+      "sha256": "42d50d27bfa0c5ac482d9828b5b2e556f4148b57fb59d30293304088a49bcb5a"
+    },
+    {
+      "repo": "protonmail/webclients",
+      "base_commit": "03feb9230522f77f82e6c7860c2aab087624d540",
+      "file": "protonmail__webclients-03feb9230522.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/ProtonMail/WebClients/blob/03feb9230522f77f82e6c7860c2aab087624d540/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "1b3782ccad7b8614100cda30d3faf42fc39f2e97932908c543005053b654ca68"
+    },
+    {
+      "repo": "navidrome/navidrome",
+      "base_commit": "c72add516a0f260e83a289c2355b2e74071311e0",
+      "file": "navidrome__navidrome-c72add516a0f.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/navidrome/navidrome/blob/c72add516a0f260e83a289c2355b2e74071311e0/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "c61f12da7cdad526bdcbed47a4c0a603e60dbbfdaf8b66933cd088e9132c303f"
+    },
+    {
+      "repo": "NodeBB/NodeBB",
+      "base_commit": "61d17c95e573f91ab5c65d25218451e9afd07d77",
+      "file": "NodeBB__NodeBB-61d17c95e573.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/NodeBB/NodeBB/blob/61d17c95e573f91ab5c65d25218451e9afd07d77/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "repo": "protonmail/webclients",
+      "base_commit": "808897a3f701f58c9b93efb5bc79112e79fd20f9",
+      "file": "protonmail__webclients-808897a3f701.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/ProtonMail/WebClients/blob/808897a3f701f58c9b93efb5bc79112e79fd20f9/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "1b3782ccad7b8614100cda30d3faf42fc39f2e97932908c543005053b654ca68"
+    },
+    {
+      "repo": "flipt-io/flipt",
+      "base_commit": "879520526664656ad9f93925cd0b1f2220c0c3f2",
+      "file": "flipt-io__flipt-879520526664.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/flipt-io/flipt/blob/879520526664656ad9f93925cd0b1f2220c0c3f2/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repo": "gravitational/teleport",
+      "base_commit": "4d7c51b4f535cecfd139625e6af1746c46abc712",
+      "file": "gravitational__teleport-4d7c51b4f535.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/gravitational/teleport/blob/4d7c51b4f535cecfd139625e6af1746c46abc712/LICENSE",
+      "declared_license": "Apache-2.0",
+      "sha256": "42d50d27bfa0c5ac482d9828b5b2e556f4148b57fb59d30293304088a49bcb5a"
+    },
+    {
+      "repo": "NodeBB/NodeBB",
+      "base_commit": "7800016f2f1b89d2d3cfea6a7da7c77096b7b927",
+      "file": "NodeBB__NodeBB-7800016f2f1b.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/NodeBB/NodeBB/blob/7800016f2f1b89d2d3cfea6a7da7c77096b7b927/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "repo": "internetarchive/openlibrary",
+      "base_commit": "46bcf7c30178f53ef427a5840c4b24717ed79fb0",
+      "file": "internetarchive__openlibrary-46bcf7c30178.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/internetarchive/openlibrary/blob/46bcf7c30178f53ef427a5840c4b24717ed79fb0/LICENSE",
+      "declared_license": "AGPL-3.0",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "repo": "flipt-io/flipt",
+      "base_commit": "0ed96dc5d33768c4b145d68d52e80e7bce3790d0",
+      "file": "flipt-io__flipt-0ed96dc5d337.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/flipt-io/flipt/blob/0ed96dc5d33768c4b145d68d52e80e7bce3790d0/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "repo": "future-architect/vuls",
+      "base_commit": "053306944695e6616f320393f865f667e984481d",
+      "file": "future-architect__vuls-053306944695.txt",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/future-architect/vuls/blob/053306944695e6616f320393f865f667e984481d/LICENSE",
+      "declared_license": "GPL-3.0",
+      "sha256": "e85f695ee34e0be6b7a142abbfd9853f41fb06ebac620b0962b5c43202d5c403"
+    },
+    {
+      "repo": "ansible/ansible",
+      "base_commit": "5ee81338fcf7adbc1a8eda26dd8105a07825cb08",
+      "file": "ansible__ansible-5ee81338fcf7.txt",
+      "source_path": "COPYING",
+      "source_url": "https://github.com/ansible/ansible/blob/5ee81338fcf7adbc1a8eda26dd8105a07825cb08/COPYING",
+      "declared_license": "GPL-3.0",
+      "sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227"
+    }
+  ]
+}

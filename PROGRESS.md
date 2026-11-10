@@ -4,10 +4,10 @@ Summary for reports. Dates use America/Phoenix time.
 
 ## Current status
 
-- The [public repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and metadata. Student IDs and unfiltered local workspaces are excluded. Thirty-six helper tests pass.
-- The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Matching private records live in ignored `data/private/parallact/recovery/`. Opus 5.5 accepted the records.
+- The [public repository](https://github.com/satyalyadav/CollisionGuard) holds code, reports and the [twelve-pair dataset](data/parallact-12/README.md). Student IDs and full local workspaces stay excluded. Thirty-six replay/helper tests pass.
+- The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Opus 5.5 accepted the records. The public bundle adds task statements, licenses, source notices and offline verification.
 - The recovery repaired collection controls and verified tree reconstruction. It reuses the same twelve cases; earlier failures and unknown runner/site provenance remain.
-- The [release assessment](docs/research/parallact-public-release.md) recommends conditional public release of the twelve task pairs and labels with existing licenses, source notices and credit. The blanket private-only advice was too cautious. No model or new agent outputs were generated.
+- The [release assessment](docs/research/parallact-public-release.md) supplies the limited release basis. The blanket private-only advice was too cautious. No prediction results have been established.
 - CooperBench's inspected outputs form a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive because original historical records were not queried. Sol access is reported but unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
@@ -43,6 +43,10 @@ Moved all three ParallACT workspaces into ignored `data/private/parallact/`, ver
 ### 2026-11-08: Clarify public release terms
 
 A targeted source check and Opus review support a curated release under existing terms. Preserve component licenses and notices; credit alone is insufficient. No raw data was published during this investigation.
+
+### 2026-11-09: Package the public dataset
+
+Released task statements and separate labels with per-record sources, component terms and full license texts. Offline verification checks the twelve pairs against recovery evidence. Original local records remain unchanged. PR1 adds prediction baselines; review found installation and evaluation changes needed before merging.
 
 ## Maintaining this log
 

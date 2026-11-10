@@ -11,5 +11,5 @@ __pycache__/
 # Keep third-party source patches local pending redistribution checks
 data/source-audit/benchmarks/*.patch
 
-# Durable local source records; never publish raw third-party data
+# Full local workspaces; curated releases belong in separate reviewed folders
 /data/private/

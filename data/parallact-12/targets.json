@@ -1,0 +1,62 @@
+[
+  {
+    "instance_id": "instance_gravitational__teleport-ac2fb2f9b4fd1896b554d3011df23d3d71295779",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_protonmail__webclients-6e165e106d258a442ae849cdf08260329cb92d39",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_navidrome__navidrome-d21932bd1b2379b0ebca2d19e5d8bae91040268a",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_NodeBB__NodeBB-f9ce92df988db7c1ae55d9ef96d247d27478bc70-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_protonmail__webclients-a6e6f617026794e7b505d649d2a7a9cdf17658c8",
+    "label": "conflict",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_flipt-io__flipt-dae029cba7cdb98dfb1a6b416c00d324241e6063",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_gravitational__teleport-005dcb16bacc6a5d5890c4cd302ccfd4298e275d-vee9b09fb20c43af7e520f57e9239bbcf46b7113d",
+    "label": "conflict",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_internetarchive__openlibrary-03095f2680f7516fca35a58e665bf2a41f006273-v8717e18970bcdc4e0d2cea3b1527752b21e74866",
+    "label": "clean",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_flipt-io__flipt-381b90f718435c4694380b5fcd0d5cf8e3b5a25a",
+    "label": "conflict",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_future-architect__vuls-5af1a227339e46c7abf3f2815e4c636a0c01098e",
+    "label": "conflict",
+    "status": "complete"
+  },
+  {
+    "instance_id": "instance_ansible__ansible-489156378c8e97374a75a544c7c9c2c0dd8146d1-v390e508d27db7a51eece36bb6d9698b63a5b638a",
+    "label": "conflict",
+    "status": "complete"
+  }
+]
