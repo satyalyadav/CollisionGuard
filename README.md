@@ -2,7 +2,8 @@
 
 CollisionGuard studies whether task descriptions and repository information available before coding can predict textual Git merge conflicts between two AI coding tasks. The intended use is deciding which tasks to run together.
 
-- [Successful resource recovery](docs/pilot/parallact-recovery-results.md): twelve verified task pairs across eight repositories, with seven clean and five conflict labels. Raw records remain private; see the [record format](docs/data/local-record-format.md).
+- [Public task dataset](data/parallact-12/README.md): twelve verified task pairs and labels, ready to use after cloning. Includes source credits, component licenses and an offline verification command.
+- [Successful resource recovery](docs/pilot/parallact-recovery-results.md): the replay evidence behind those twelve pairs. See the [record format](docs/data/local-record-format.md).
 - [Project progress log](PROGRESS.md), with completed work, decisions, evidence, and planned next actions.
 - [Original proposal snapshot](docs/proposal/original-proposal.md). Public copy with student IDs removed. Keep the proposal content fixed.
 - [Research findings and next steps](docs/research/overview.md). This is the evolving assessment, separate from the original proposal.
@@ -16,11 +17,11 @@ CollisionGuard studies whether task descriptions and repository information avai
 
 The [ParallACT reuse assessment](docs/research/parallact-reuse-terms.md) recommends a bounded local research and training pilot with unresolved rights documented. The later [public-release assessment](docs/research/parallact-public-release.md) recommends a curated task-and-label release with the existing license conditions and source notices. The full local workspaces remain excluded from Git.
 
-The recovery produced a small private dataset ready for baseline development. It reuses the twelve known v1 cases with corrected resource limits; it is not a fresh sample or evidence of prediction accuracy. Broader data and evaluation remain necessary. No model has been trained.
+The recovery produced a small dataset ready for baseline development, now released in `data/parallact-12/`. It reuses the twelve known v1 cases with corrected resource limits; it is not a fresh sample or evidence of prediction accuracy. Broader data and evaluation remain necessary. No prediction results have been established.
 
 ## Start here
 
-Clone this repository, read the progress log, then follow the linked research and audit reports. The retained JSON files contain audit metadata and outcomes, not a complete training dataset. Raw third-party patches, the private proposal copy and `data/private/` are excluded from Git. Verified local records now live in `data/private/parallact/recovery/`. Local paths in past run records describe the original research machine.
+Clone this repository and read [the dataset guide](data/parallact-12/README.md) to use the twelve task pairs. Run `python3 scripts/export_parallact_release.py --verify` to check the public bundle without dependencies or network access. Full third-party run outputs, patches, the private proposal copy and `data/private/` remain excluded from Git. Original local records live in `data/private/parallact/recovery/`. Local paths in past run records describe the original research machine.
 
 For local development, install Python 3.10 or newer, Git, and [uv](https://docs.astral.sh/uv/), then run:
 
