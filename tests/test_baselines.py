@@ -124,15 +124,10 @@ class TestFeatureExtractor(unittest.TestCase):
         for f in feats:
             self.assertIsInstance(f, float)
 
-    def test_same_repo(self):
-        feats = self.fe.extract(TASKS[0], TASKS[1], "org/repo", "org/repo")
-        same_repo_idx = FeatureExtractor.FEATURE_NAMES.index("same_repo")
-        self.assertEqual(feats[same_repo_idx], 1.0)
-
-    def test_different_repo(self):
-        feats = self.fe.extract(TASKS[0], TASKS[1], "org/repo-a", "org/repo-b")
-        same_repo_idx = FeatureExtractor.FEATURE_NAMES.index("same_repo")
-        self.assertEqual(feats[same_repo_idx], 0.0)
+    def test_features_are_symmetric(self):
+        self.assertEqual(self.fe.extract(TASKS[0], TASKS[1], "a", "b"),
+                         self.fe.extract(TASKS[1], TASKS[0], "b", "a"))
+        self.assertNotIn("same_repo", FeatureExtractor.FEATURE_NAMES)
 
     def test_shared_tokens_range(self):
         feats = self.fe.extract(TASKS[0], TASKS[1])
@@ -210,6 +205,102 @@ class TestRunBaselineModule(unittest.TestCase):
 
         pairs, labels, repos, ids = join_data(SYNTHETIC_FEATURES, SYNTHETIC_TARGETS)
         self.assertEqual(ids, [f["instance_id"] for f in SYNTHETIC_FEATURES])
+
+
+class TestRunnerValidation(unittest.TestCase):
+    def setUp(self):
+        import copy
+        import run_baselines as runner
+        self.runner = runner
+        self.features = copy.deepcopy(runner.SYNTHETIC_FEATURES)
+        self.targets = copy.deepcopy(runner.SYNTHETIC_TARGETS)
+
+    def test_public_default_and_explicit_synthetic(self):
+        from unittest.mock import patch
+        features, targets, source = self.runner.load_data()
+        self.assertIn("public", source)
+        self.assertEqual(len(self.runner.join_data(features, targets)[0]), 12)
+        with patch.object(self.runner, "FEATURES", Path("/missing/features.json")):
+            with self.assertRaises(FileNotFoundError):
+                self.runner.load_data()
+            self.assertIn("synthetic", self.runner.load_data(True)[2])
+
+    def test_bad_joins_rejected(self):
+        import copy
+        variants = []
+        f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+        f.append(copy.deepcopy(f[0])); variants.append((f, t))
+        f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+        t.append(copy.deepcopy(t[0])); variants.append((f, t))
+        f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+        t.pop(); variants.append((f, t))
+        f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+        t[0]["instance_id"] = "extra"; variants.append((f, t))
+        for field, value in [("instance_id", " "), ("repo", None), ("repo", "bad repo"), ("task_a", ""), ("task_b", 3)]:
+            f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+            f[0][field] = value; variants.append((f, t))
+        for field, value in [("label", "unknown"), ("status", "incomplete"), ("instance_id", "")]:
+            f, t = copy.deepcopy(self.features), copy.deepcopy(self.targets)
+            t[0][field] = value; variants.append((f, t))
+        variants.extend([([], []), ([None], [None]), ({}, [])])
+        for features, targets in variants:
+            with self.subTest(features=features, targets=targets), self.assertRaises(ValueError):
+                self.runner.join_data(features, targets)
+
+    def test_each_training_fold_excludes_held_out_repository(self):
+        from unittest.mock import patch
+        pairs, labels, repos, ids = self.runner.join_data(self.features, self.targets)
+        tfidf_fits = []
+        logistic_fits = []
+        original_tfidf = TfidfBaseline.fit
+        original_logistic = LogisticRegressionBaseline.fit
+        def tfidf_fit(model, documents):
+            tfidf_fits.append(list(documents))
+            return original_tfidf(model, documents)
+        def logistic_fit(model, train_pairs, train_labels, train_repos):
+            logistic_fits.append((list(train_pairs), list(train_repos)))
+            return original_logistic(model, train_pairs, train_labels, train_repos)
+        with patch.object(TfidfBaseline, "fit", tfidf_fit), patch.object(LogisticRegressionBaseline, "fit", logistic_fit):
+            self.runner.run_tfidf_baseline(pairs, labels, repos, ids)
+            standalone_fits = tfidf_fits[:]
+            tfidf_fits.clear()
+            self.runner.run_logistic_baseline(pairs, labels, repos, ids)
+        folds = list(self.runner._folds(repos))
+        self.assertEqual(len(standalone_fits), len(folds))
+        self.assertEqual(len(logistic_fits), len(folds))
+        self.assertEqual(len(tfidf_fits), len(folds))
+        for (train, held), docs, (model_pairs, model_repos), logistic_docs in zip(folds, standalone_fits, logistic_fits, tfidf_fits):
+            expected = [text for i in train for text in pairs[i]]
+            self.assertEqual(docs, expected)
+            self.assertEqual(logistic_docs, expected)
+            self.assertEqual(model_pairs, [pairs[i] for i in train])
+            self.assertTrue(set(model_repos).isdisjoint(repos[i] for i in held))
+
+    def test_unsupported_folds_and_coverage(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        pairs = [("a", "b"), ("c", "d"), ("e", "f")]
+        repos = [("r1", "r1"), ("r2", "r2"), ("r3", "r3")]
+        output = StringIO()
+        with redirect_stdout(output):
+            scores = self.runner.run_logistic_baseline(pairs, [1, 0, 0], repos, ["1", "2", "3"])
+            tfidf = self.runner.run_tfidf_baseline(pairs[:1], [1], repos[:1], ["1"])
+        self.assertIsNone(scores[0])
+        self.assertTrue(all(score is not None for score in scores[1:]))
+        self.assertEqual(tfidf, [None])
+        self.assertIn("Coverage: 2/3", output.getvalue())
+        self.assertIn("unavailable", output.getvalue())
+
+    def test_model_rejects_invalid_arguments(self):
+        model = LogisticRegressionBaseline()
+        for pairs, labels, repos in [([], [], None), ([('a', 'b')], [0, 1], None),
+                ([('a', 'b')], [2], None), ([('a', 'b')], [0], None),
+                ([('a', '')], [0], None), ([('a', 'b')], [0], []),
+                ([('a', 'b')], [0], [(None, 'r')])]:
+            with self.subTest(pairs=pairs, labels=labels, repos=repos), self.assertRaises(ValueError):
+                model.fit(pairs, labels, repos)
+        with self.assertRaises(ValueError):
+            model.predict_scores([('a', 'b')], [])
 
 
 if __name__ == "__main__":

@@ -30,6 +30,15 @@ uv sync --locked
 uv run python -m unittest discover -s tests -v
 ```
 
-These tests check local sampling and replay helpers using small fixtures. They do not train a model or validate a dataset. The historical replay protocol pins Git 2.43.0; review that requirement before running new evidence collection. Audit scripts may download external data when invoked directly.
+Run the starting prediction methods on the public twelve-pair dataset, or explicitly choose the invented examples:
+
+```sh
+uv run --locked python src/run_baselines.py
+uv run --locked python src/run_baselines.py --synthetic
+```
+
+The runner keeps each evaluation repository out of training and fits text weights on training tasks only. It reports unsupported folds rather than inventing scores. These small runs check the workflow; they do not establish prediction accuracy.
+
+Tests cover sampling, replay helpers and prediction methods using fixtures. The historical replay protocol pins Git 2.43.0; review that requirement before new evidence collection. Audit scripts may download external data when invoked directly.
 
 No project-wide reuse license has been selected. Third-party materials retain their own terms; public access to this repository does not relicense them.

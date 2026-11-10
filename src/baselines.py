@@ -99,9 +99,8 @@ class FeatureExtractor:
         "tfidf_cosine",
         "shared_tokens",
         "len_ratio",
-        "same_repo",
-        "task_a_len",
-        "task_b_len",
+        "shorter_len",
+        "longer_len",
         "keyword_overlap",
     ]
 
@@ -134,13 +133,29 @@ class FeatureExtractor:
         la, lb = len(tokens_a) or 1, len(tokens_b) or 1
         len_ratio = min(la, lb) / max(la, lb)
 
-        same = 1.0 if repo_a and repo_b and repo_a.lower() == repo_b.lower() else 0.0
-
         kw_a = tokens_a & self.CODE_KEYWORDS
         kw_b = tokens_b & self.CODE_KEYWORDS
         kw_overlap = len(kw_a & kw_b)
 
-        return [tfidf_cos, shared, len_ratio, same, float(la), float(lb), float(kw_overlap)]
+        return [tfidf_cos, shared, len_ratio, float(min(la, lb)), float(max(la, lb)), float(kw_overlap)]
+
+
+def _validate_pairs(pairs, repos=None, allow_empty=False):
+    if not isinstance(pairs, (list, tuple)) or (not pairs and not allow_empty):
+        raise ValueError("pairs must be a nonempty sequence")
+    for pair in pairs:
+        if not isinstance(pair, (list, tuple)) or len(pair) != 2 or any(
+            not isinstance(text, str) or not text.strip() for text in pair
+        ):
+            raise ValueError("each pair must contain two nonempty task strings")
+    if repos is not None:
+        if not isinstance(repos, (list, tuple)) or len(repos) != len(pairs):
+            raise ValueError("repos must contain one pair per task pair")
+        for repo_pair in repos:
+            if not isinstance(repo_pair, (list, tuple)) or len(repo_pair) != 2 or any(
+                not isinstance(repo, str) or not repo.strip() for repo in repo_pair
+            ):
+                raise ValueError("each repo pair must contain two nonempty strings")
 
 
 class LogisticRegressionBaseline:
@@ -167,6 +182,11 @@ class LogisticRegressionBaseline:
         labels : list of int (1 = conflict, 0 = clean)
         repos : optional list of (repo_a, repo_b) tuples
         """
+        _validate_pairs(pairs, repos)
+        if not isinstance(labels, (list, tuple)) or len(labels) != len(pairs) or any(type(label) is not int or label not in (0, 1) for label in labels):
+            raise ValueError("labels must contain one binary integer per pair")
+        if set(labels) != {0, 1}:
+            raise ValueError("training labels must contain both classes")
         from sklearn.linear_model import LogisticRegression
 
         # Fit IDF on all task texts
@@ -195,6 +215,7 @@ class LogisticRegressionBaseline:
     ) -> float:
         if self._model is None:
             raise RuntimeError("Model not fitted.  Call fit() first.")
+        _validate_pairs([(task_a, task_b)], [(repo_a, repo_b)] if repo_a or repo_b else None)
         feats = self.extractor.extract(task_a, task_b, repo_a, repo_b)
         proba = self._model.predict_proba([feats])[0]
         idx = list(self._model.classes_).index(1)
@@ -205,6 +226,7 @@ class LogisticRegressionBaseline:
         pairs: List[Tuple[str, str]],
         repos: Optional[List[Tuple[str, str]]] = None,
     ) -> List[float]:
+        _validate_pairs(pairs, repos, allow_empty=True)
         return [
             self.predict_proba(
                 ta, tb,

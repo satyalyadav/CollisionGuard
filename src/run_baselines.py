@@ -1,29 +1,16 @@
-"""
-Load the private feature/target JSON files and run baselines.
+"""Run repository-held-out baseline demonstrations on the public data."""
 
-Usage
------
-    cd CollisionGuard
-    uv run python src/run_baselines.py
-
-If the private data files are absent it falls back to built-in synthetic
-examples so the pipeline can be verified without Satyal's local data.
-"""
-
+import argparse
 import json
-import os
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-
 from baselines import TfidfBaseline, LogisticRegressionBaseline
 
-
 ROOT = Path(__file__).resolve().parents[1]
-FEATURES = ROOT / "data" / "private" / "parallact" / "recovery" / "features.json"
-TARGETS = ROOT / "data" / "private" / "parallact" / "recovery" / "targets.json"
-
+FEATURES = ROOT / "data" / "parallact-12" / "features.json"
+TARGETS = ROOT / "data" / "parallact-12" / "targets.json"
 
 # Synthetic data 
 
@@ -99,133 +86,107 @@ SYNTHETIC_TARGETS = [
 ]
 
 
-def load_data():
-    """Load features and targets, falling back to synthetic data."""
-    if FEATURES.exists() and TARGETS.exists():
-        features = json.loads(FEATURES.read_text())
-        targets = json.loads(TARGETS.read_text())
-        source = "private (real ParallACT data)"
-    else:
-        features = SYNTHETIC_FEATURES
-        targets = SYNTHETIC_TARGETS
-        source = "synthetic (built-in examples)"
-    return features, targets, source
+def load_data(synthetic=False):
+    """Load the public bundle, or the explicitly requested smoke examples."""
+    if synthetic:
+        return SYNTHETIC_FEATURES, SYNTHETIC_TARGETS, "synthetic (built-in examples)"
+    return (json.loads(FEATURES.read_text(encoding="utf-8")),
+            json.loads(TARGETS.read_text(encoding="utf-8")),
+            "public ParallACT-12")
 
 
 def join_data(features, targets):
-    """Join features and targets on instance_id, return pairs and labels."""
-    label_map = {t["instance_id"]: t["label"] for t in targets}
-    pairs = []
-    labels = []
-    repos = []
-    ids = []
-    for f in features:
-        iid = f["instance_id"]
-        if iid not in label_map:
-            continue
-        pairs.append((f["task_a"], f["task_b"]))
-        labels.append(1 if label_map[iid] == "conflict" else 0)
-        repos.append((f["repo"], f["repo"]))  # same repo for both tasks
+    """Validate and join two complete lists by their exact instance IDs."""
+    def index(records, name):
+        if not isinstance(records, list) or not records:
+            raise ValueError(f"{name} must be a nonempty list")
+        result = {}
+        for record in records:
+            if not isinstance(record, dict):
+                raise ValueError(f"{name} records must be objects")
+            iid = record.get("instance_id")
+            if not isinstance(iid, str) or not iid.strip():
+                raise ValueError(f"{name} records require nonempty string IDs")
+            if iid in result:
+                raise ValueError(f"duplicate {name} ID: {iid}")
+            result[iid] = record
+        return result
+
+    feature_map = index(features, "feature")
+    target_map = index(targets, "target")
+    if feature_map.keys() != target_map.keys():
+        raise ValueError("feature and target IDs must match exactly")
+    pairs, labels, repos, ids = [], [], [], []
+    for iid, feature in feature_map.items():
+        for field in ("task_a", "task_b", "repo"):
+            value = feature.get(field)
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError(f"{iid}: {field} must be a nonempty string")
+        repo = feature["repo"]
+        if len(repo.split("/")) != 2 or any(not part or any(ch.isspace() for ch in part) for part in repo.split("/")):
+            raise ValueError(f"{iid}: repo must have the form owner/name")
+        target = target_map[iid]
+        if target.get("status") != "complete" or target.get("label") not in ("clean", "conflict"):
+            raise ValueError(f"{iid}: target must be complete with a clean or conflict label")
+        pairs.append((feature["task_a"], feature["task_b"]))
+        labels.append(int(target["label"] == "conflict"))
+        repos.append((feature["repo"], feature["repo"]))
         ids.append(iid)
     return pairs, labels, repos, ids
 
 
-def run_tfidf_baseline(pairs, labels, ids):
-    """Run the TF-IDF similarity baseline."""
-    print("\n" + "=" * 60)
-    print("BASELINE 1: TF-IDF Cosine Similarity")
-    print("=" * 60)
+def _folds(repos):
+    # Repository identifiers are case-insensitive on the source hosting service.
+    groups = [repo[0].casefold() for repo in repos]
+    for group in dict.fromkeys(groups):
+        yield ([i for i, value in enumerate(groups) if value != group],
+               [i for i, value in enumerate(groups) if value == group])
 
-    all_docs = [t for pair in pairs for t in pair]
-    model = TfidfBaseline().fit(all_docs)
 
-    print(f"\nVocabulary size: {model.vocab_size}")
-    print(f"\n{'ID':<45} {'Score':>6}  {'Label':>8}")
-    print("-" * 65)
+def _report(name, scores, labels, ids):
+    print(f"\n{name} (leave-one-repository-out)")
+    for iid, score, label in zip(ids, scores, labels):
+        rendered = "unavailable" if score is None else f"{score:.3f}"
+        print(f"{iid}: {rendered} ({'conflict' if label else 'clean'})")
+    print(f"Coverage: {sum(score is not None for score in scores)}/{len(scores)} pairs")
 
-    scores = []
-    for i, (ta, tb) in enumerate(pairs):
-        score = model.predict_score(ta, tb)
-        scores.append(score)
-        label_str = "CONFLICT" if labels[i] else "clean"
-        marker = " ←" if labels[i] else ""
-        print(f"{ids[i]:<45} {score:>6.3f}  {label_str:>8}{marker}")
 
+def run_tfidf_baseline(pairs, labels, repos, ids):
+    scores = [None] * len(pairs)
+    for train, test in _folds(repos):
+        if not train:
+            continue
+        model = TfidfBaseline().fit([text for i in train for text in pairs[i]])
+        for i in test:
+            scores[i] = model.predict_score(*pairs[i])
+    _report("TF-IDF", scores, labels, ids)
     return scores
 
 
 def run_logistic_baseline(pairs, labels, repos, ids):
-    """Run the logistic regression baseline."""
-    print("\n" + "=" * 60)
-    print("BASELINE 2: Logistic Regression (leave-one-out)")
-    print("=" * 60)
-
-    try:
-        from sklearn.linear_model import LogisticRegression
-    except ImportError:
-        print("\n  ⚠ Skipped: scikit-learn not installed")
-        return None
-
-    if len(pairs) < 4:
-        print("\n  ⚠ Too few examples for logistic regression demo")
-        return None
-
-    # Leave-one-out cross-validation 
-    scores = [0.0] * len(pairs)
-    print(f"\n{'ID':<45} {'Score':>6}  {'Label':>8}")
-    print("-" * 65)
-
-    for i in range(len(pairs)):
-        train_pairs = [pairs[j] for j in range(len(pairs)) if j != i]
-        train_labels = [labels[j] for j in range(len(pairs)) if j != i]
-        train_repos = [repos[j] for j in range(len(pairs)) if j != i]
-
-        if len(set(train_labels)) < 2:
-            scores[i] = 0.5
+    scores = [None] * len(pairs)
+    for train, test in _folds(repos):
+        if len({labels[i] for i in train}) < 2:
             continue
-
-        model = LogisticRegressionBaseline()
-        model.fit(train_pairs, train_labels, train_repos)
-        scores[i] = model.predict_proba(pairs[i][0], pairs[i][1], repos[i][0], repos[i][1])
-
-    for i in range(len(pairs)):
-        label_str = "CONFLICT" if labels[i] else "clean"
-        marker = " ←" if labels[i] else ""
-        print(f"{ids[i]:<45} {scores[i]:>6.3f}  {label_str:>8}{marker}")
-
+        model = LogisticRegressionBaseline().fit(
+            [pairs[i] for i in train], [labels[i] for i in train],
+            [repos[i] for i in train])
+        for i in test:
+            scores[i] = model.predict_proba(*pairs[i], *repos[i])
+    _report("Logistic regression", scores, labels, ids)
     return scores
 
 
-def main():
-    features, targets, source = load_data()
-    print(f"Data source: {source}")
-    print(f"Loaded {len(features)} features, {len(targets)} targets")
-
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--synthetic", action="store_true", help="use built-in smoke examples")
+    args = parser.parse_args(argv)
+    features, targets, source = load_data(args.synthetic)
     pairs, labels, repos, ids = join_data(features, targets)
-    n_conflict = sum(labels)
-    n_clean = len(labels) - n_conflict
-    print(f"Joined pairs: {len(pairs)} ({n_conflict} conflict, {n_clean} clean)")
-
-    tfidf_scores = run_tfidf_baseline(pairs, labels, ids)
-    logistic_scores = run_logistic_baseline(pairs, labels, repos, ids)
-
-    # Summary
-    print("\n" + "=" * 60)
-    print("SUMMARY")
-    print("=" * 60)
-    print(f"\nDataset: {len(pairs)} pairs ({n_conflict} conflict, {n_clean} clean)")
-    print(f"Conflict prevalence: {n_conflict / len(pairs):.1%}")
-
-    # Simple separation quality: average score for conflicts vs cleans
-    for name, scores in [("TF-IDF", tfidf_scores), ("LogReg", logistic_scores)]:
-        if scores is None:
-            continue
-        avg_conflict = sum(s for s, l in zip(scores, labels) if l == 1) / max(n_conflict, 1)
-        avg_clean = sum(s for s, l in zip(scores, labels) if l == 0) / max(n_clean, 1)
-        print(f"\n  {name}:")
-        print(f"    Mean score (conflict): {avg_conflict:.3f}")
-        print(f"    Mean score (clean):    {avg_clean:.3f}")
-        print(f"    Separation (Δ):        {avg_conflict - avg_clean:+.3f}")
+    print(f"Data source: {source}; {len(pairs)} pairs")
+    print("Demo only: this small dataset does not establish prediction accuracy.")
+    run_tfidf_baseline(pairs, labels, repos, ids)
+    run_logistic_baseline(pairs, labels, repos, ids)
 
 
 if __name__ == "__main__":
