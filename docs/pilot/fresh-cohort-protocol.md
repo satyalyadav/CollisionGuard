@@ -77,5 +77,5 @@ The first attempt (`csp-run-20261120-4f2a9c`) stopped at the requests capture. T
 
 The defect is in the recorder, not in the staging policy. `fs_inventory` now records symlinked directories without descending into them. A fixture test covers a pinned source tree with a directory symlink. The first attempt produced one clean pluggy pair under its own frozen plan; that attempt is retained privately and is not combined with this cohort.
 
-The corrected attempt is `csp-run-20261120-9b7d2e`, with a new parent commit, anchor ref `refs/research/controlled-single-project-2026-11-20-fresh-v2` and a separate evidence root. Its manifest is frozen in that root before the first launch.
+The corrected attempt is `csp-run-20261120-9b7d2e`, plan SHA-256 `d7274fbb5d1443c7bd2fea65b40247f3988b7d73ee9b50467f4b1f1784d16ee7`, parent commit `61fab1d84511550272ab1d1a69dcadfcfbfbb854`, anchor commit `1b6a81b3516b6c18884bbeff231885e5a34145e0`, ref `refs/research/controlled-single-project-2026-11-20-fresh-v2`, with a separate evidence root. Its manifest is frozen in that root before the first launch.
 
