@@ -237,7 +237,11 @@ class PilotRecorderTests(unittest.TestCase):
             private = base / "private"
             plan = install_plan(private, source, commit, tree)
             pair_tasks = [t for t in plan["tasks"] if t["pair_id"] == "pair0"]
-            with patch.object(pilot, "PRIVATE", private), patch.object(pilot, "PLAN", private / "plan.json"):
+            with (
+                patch.object(pilot, "PRIVATE", private),
+                patch.object(pilot, "PLAN", private / "plan.json"),
+                patch.object(pilot, "PUBLIC", base / "public"),
+            ):
                 for task in pair_tasks:
                     write_task_snapshot(private, task, source, commit, tree)
                     write_output(private, source, task, task["task_id"])
