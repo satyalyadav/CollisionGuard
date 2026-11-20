@@ -1,0 +1,1105 @@
+{
+  "claims": {
+    "accuracy": false,
+    "all_five_repositories_are_development_controls": true,
+    "coding_correctness_proven": false,
+    "generalization": false,
+    "held_out": false,
+    "semantic_conflict_labels": false,
+    "training_ready": false
+  },
+  "frozen_capture_reconstruction": {
+    "all_ten_derived_trees_match": true,
+    "completed_at": "2026-11-16T04:18:31.463608+00:00",
+    "evidence_sha256": "94357d831eb580c7a6b383ae5fd9d3a1c90437971e79d2ea96fea6e1bfc6a48a",
+    "method": "Materialize each frozen final tree in a new temporary worktree, seed a separate index with the upstream tree, ordinary git add -A, compare resulting tree to retained post-hoc tree. No coding worktree reads or writes."
+  },
+  "limitations": [
+    "All ten tasks are instruction-bound sibling isolation runs authored by the coordinator.",
+    "One model (opencode-go/deepseek-v4.1-flash at variant max) supplied all outputs.",
+    "The sample is small and purposive: five repositories, two tasks each.",
+    "Click A ran its focused test file twice, both reported 22 passed.",
+    "attrs A used the frozen -k fields_dict filter, which selected only one existing test and skipped its new test_instance and test_handler_non_attrs_instance tests; a separate direct sanity check ran.",
+    "attrs B first test job exited 4 with no stdout, then a second job reported 4 passed.",
+    "packaging B ran its focused selection twice, both reported 8 passed.",
+    "dateutil B ran three times: a failed marker collection exited 3 with no tests, a second run reported 9 passed with the new cases skipped, and a third run after test renaming reported 16 passed.",
+    "Repeated test, import and setup failures are retained, not corrected.",
+    "dateutil used src-layout and SCM environment workarounds and did not run typing checks.",
+    "Generated caches contribute raw conflicts. Two pairs retain repository-content conflicts under ordinary staging. The baseline-ignore audit was not used to infer labels.",
+    "This diagnostic does not prove coding correctness or semantic conflict labels."
+  ],
+  "method": {
+    "case_selection": "all five existing pairs; no case or file-category selection",
+    "config": "system/global configs disabled; hooks disabled by fresh Git dir; external filters absent from these trees; ordinary committed and generated .gitignore honored",
+    "created_at": "2026-11-16T04:13:48.666Z",
+    "derivation": "new temporary --git-dir; read-tree pinned tree; git --git-dir TEMP --work-tree ACTUAL add -A; write-tree",
+    "git_version": "git version 2.43.0",
+    "id": "posthoc-ordinary-git-staging-v1",
+    "producer_path": "/home/satyal/.t3/worktrees/Project/t3-9bc83601-b815177b5c8816fe/scripts/analyze_controlled_pilot.py",
+    "producer_sha256": "b25b0936c72d15023704470178e6b7a7d62c866d17de3892e77709371e722a46",
+    "source_mutation": "none; only read access to the coding worktrees"
+  },
+  "method_separation": {
+    "posthoc_git_visible_development_diagnostic": {
+      "description": "separate post-hoc analysis of ordinary Git-staged files from the same final source directories; it does not replace or relabel the raw captures",
+      "frozen": false,
+      "scratch_or_docs_or_binaries_included": "any nonignored file is included; no source-only filtering"
+    },
+    "raw_full_directory_capture": {
+      "description": "scripts/controlled_single_project.py collected every source directory file, including ignored pytest caches and pyc; those raw labels are conflict and remain unchanged",
+      "frozen": true,
+      "labels_reported_here_from": "replay-<repo>.log"
+    }
+  },
+  "original_preregistered_gate": {
+    "assessment": "Formal provenance/replay gate passed. Raw labels measure Git merge conflicts under full-directory capture including generated files. Ordinary Git staging defines a different, post-hoc development policy.",
+    "passes": true,
+    "qualifying_pairs": 5,
+    "qualifying_repositories": 5,
+    "raw_label_counts": {
+      "clean": 0,
+      "conflict": 5
+    },
+    "status": "passed"
+  },
+  "pairs": [
+    {
+      "pair_id": "csp-pair-e308d29f9e78ab7d",
+      "posthoc_git_visible": {
+        "conflict_paths": [],
+        "identical_repeats": true,
+        "merge_detail": null,
+        "merge_status": "clean",
+        "merge_tree": "3c1b14da04b35fa76f53ebb3be9486857576626a",
+        "tasks": [
+          {
+            "after_inventory_sha256": "d1aca4e7533d907f08bd305aeb55ee1a8b319640b8d9141251cdc1ed91cff30a",
+            "base_tree": "9f278790733eb087a591b95189e188094c3ac14f",
+            "before_inventory_sha256": "d1aca4e7533d907f08bd305aeb55ee1a8b319640b8d9141251cdc1ed91cff30a",
+            "captured_at": "2026-11-16T02:59:11.797Z",
+            "captured_final_tree": "d9d7e48e95786f6bf71f96b8cc3447985bb3a5a4",
+            "changed_paths": [
+              {
+                "path": "CHANGES.md",
+                "status": "M"
+              },
+              {
+                "path": "docs/utils.md",
+                "status": "M"
+              },
+              {
+                "path": "src/click/utils.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_utils/test_get_app_dir.py",
+                "status": "A"
+              }
+            ],
+            "collected_at": "2026-11-16T03:02:14.894Z",
+            "derived_path_count": 180,
+            "derived_tree": "febb736e4866c0a1df0d41634027eb437d4e5069",
+            "derived_tree_size_bytes": 1658355,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 7162,
+              "patch_sha256": "da31fba63ee029bed183a9e208633a93011d9dedcebae3c71eb9756d7c1e2e78",
+              "replayed_tree": "febb736e4866c0a1df0d41634027eb437d4e5069"
+            },
+            "repo_id": "click",
+            "source_prefix": "controlled_sources/click",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-0cd919aad60df0ca",
+            "validation": {
+              "captured_paths": 200,
+              "content_matches_capture": true,
+              "derived_paths": 180,
+              "excluded_count": 20,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/click/__pycache__/__init__.cpython-312.pyc",
+                "src/click/__pycache__/_compat.cpython-312.pyc",
+                "src/click/__pycache__/_utils.cpython-312.pyc",
+                "src/click/__pycache__/core.cpython-312.pyc",
+                "src/click/__pycache__/decorators.cpython-312.pyc",
+                "src/click/__pycache__/exceptions.cpython-312.pyc",
+                "src/click/__pycache__/formatting.cpython-312.pyc",
+                "src/click/__pycache__/globals.cpython-312.pyc",
+                "src/click/__pycache__/parser.cpython-312.pyc",
+                "src/click/__pycache__/termui.cpython-312.pyc",
+                "src/click/__pycache__/testing.cpython-312.pyc",
+                "src/click/__pycache__/types.cpython-312.pyc",
+                "src/click/__pycache__/utils.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/test_utils/__pycache__/__init__.cpython-312.pyc",
+                "tests/test_utils/__pycache__/test_get_app_dir.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          },
+          {
+            "after_inventory_sha256": "6289b22f17deea80496224079b06ece66669b17859df09e852d13c2ac794afbf",
+            "base_tree": "9f278790733eb087a591b95189e188094c3ac14f",
+            "before_inventory_sha256": "6289b22f17deea80496224079b06ece66669b17859df09e852d13c2ac794afbf",
+            "captured_at": "2026-11-16T03:03:20.428Z",
+            "captured_final_tree": "35031fa2a30200479fbef701ce1a3750dae57b27",
+            "changed_paths": [
+              {
+                "path": "src/click/utils.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_utils/test_echo.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:05:44.029Z",
+            "derived_path_count": 179,
+            "derived_tree": "a1255722f485f89244be3f2d2924ccd39db09dc2",
+            "derived_tree_size_bytes": 1654762,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 2327,
+              "patch_sha256": "80a1d451a3903907ff64235995300b59e660844a8844135f7228345b93d205c8",
+              "replayed_tree": "a1255722f485f89244be3f2d2924ccd39db09dc2"
+            },
+            "repo_id": "click",
+            "source_prefix": "controlled_sources/click",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-cf78f5165ef25613",
+            "validation": {
+              "captured_paths": 200,
+              "content_matches_capture": true,
+              "derived_paths": 179,
+              "excluded_count": 21,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/click/__pycache__/__init__.cpython-312.pyc",
+                "src/click/__pycache__/_compat.cpython-312.pyc",
+                "src/click/__pycache__/_termui_impl.cpython-312.pyc",
+                "src/click/__pycache__/_utils.cpython-312.pyc",
+                "src/click/__pycache__/core.cpython-312.pyc",
+                "src/click/__pycache__/decorators.cpython-312.pyc",
+                "src/click/__pycache__/exceptions.cpython-312.pyc",
+                "src/click/__pycache__/formatting.cpython-312.pyc",
+                "src/click/__pycache__/globals.cpython-312.pyc",
+                "src/click/__pycache__/parser.cpython-312.pyc",
+                "src/click/__pycache__/termui.cpython-312.pyc",
+                "src/click/__pycache__/testing.cpython-312.pyc",
+                "src/click/__pycache__/types.cpython-312.pyc",
+                "src/click/__pycache__/utils.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/test_utils/__pycache__/__init__.cpython-312.pyc",
+                "tests/test_utils/__pycache__/test_echo.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          }
+        ]
+      },
+      "raw_full_directory_capture": {
+        "final_source_trees": [
+          "d9d7e48e95786f6bf71f96b8cc3447985bb3a5a4",
+          "35031fa2a30200479fbef701ce1a3750dae57b27"
+        ],
+        "label": "conflict",
+        "merge_repeats_identical": true,
+        "starting_snapshots_equal": true,
+        "tasks": [
+          {
+            "final_source_tree": "d9d7e48e95786f6bf71f96b8cc3447985bb3a5a4",
+            "task_id": "csp-task-0cd919aad60df0ca"
+          },
+          {
+            "final_source_tree": "35031fa2a30200479fbef701ce1a3750dae57b27",
+            "task_id": "csp-task-cf78f5165ef25613"
+          }
+        ]
+      },
+      "repo_id": "click",
+      "task_ids": [
+        "csp-task-0cd919aad60df0ca",
+        "csp-task-cf78f5165ef25613"
+      ]
+    },
+    {
+      "pair_id": "csp-pair-498b338d2e5358d3",
+      "posthoc_git_visible": {
+        "conflict_paths": [
+          "CHANGES.rst"
+        ],
+        "identical_repeats": true,
+        "merge_detail": null,
+        "merge_status": "conflict",
+        "merge_tree": "f2184c31de03e73183f7ca0de00be8aee7c2352f",
+        "tasks": [
+          {
+            "after_inventory_sha256": "d14c5782f76b79bc329d220edfc1185017d8bb76337d429c770dc937b18e022f",
+            "base_tree": "ef4287f82d8234404b58c7b29d38197e1f38e207",
+            "before_inventory_sha256": "d14c5782f76b79bc329d220edfc1185017d8bb76337d429c770dc937b18e022f",
+            "captured_at": "2026-11-16T03:07:27.031Z",
+            "captured_final_tree": "f2048e9db7ccfe0d7072968a1345323251e56b3f",
+            "changed_paths": [
+              {
+                "path": "CHANGES.rst",
+                "status": "M"
+              },
+              {
+                "path": "src/itsdangerous/encoding.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_itsdangerous/test_encoding.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:10:31.585Z",
+            "derived_path_count": 50,
+            "derived_tree": "0c1a8bfb3daa63424a93ee880d2621591b0e2ec1",
+            "derived_tree_size_bytes": 285712,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 5055,
+              "patch_sha256": "1516e06f3ddb20c70a46864829c8d9c9995ca7ad0fefdfc07a81b5caa2b22511",
+              "replayed_tree": "0c1a8bfb3daa63424a93ee880d2621591b0e2ec1"
+            },
+            "repo_id": "itsdangerous",
+            "source_prefix": "controlled_sources/itsdangerous",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-3bad5d8a1757bfd2",
+            "validation": {
+              "captured_paths": 64,
+              "content_matches_capture": true,
+              "derived_paths": 50,
+              "excluded_count": 14,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/itsdangerous/__pycache__/__init__.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/_json.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/encoding.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/exc.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/serializer.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/signer.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/timed.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/url_safe.cpython-312.pyc",
+                "tests/test_itsdangerous/__pycache__/__init__.cpython-312.pyc",
+                "tests/test_itsdangerous/__pycache__/test_encoding.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          },
+          {
+            "after_inventory_sha256": "46ee94fe3aad08313ef2530acbd8c1515295fab715caa68fb102a4d9f3c623cd",
+            "base_tree": "ef4287f82d8234404b58c7b29d38197e1f38e207",
+            "before_inventory_sha256": "46ee94fe3aad08313ef2530acbd8c1515295fab715caa68fb102a4d9f3c623cd",
+            "captured_at": "2026-11-16T03:11:55.676Z",
+            "captured_final_tree": "8bbb42f64758a5a88cc1df209b33d1dcd3e8d0ac",
+            "changed_paths": [
+              {
+                "path": "CHANGES.rst",
+                "status": "M"
+              },
+              {
+                "path": "src/itsdangerous/encoding.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_itsdangerous/test_encoding.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:14:01.679Z",
+            "derived_path_count": 50,
+            "derived_tree": "b9dadde754cb8c2176e689cebbdeb722ba96758e",
+            "derived_tree_size_bytes": 283173,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 1795,
+              "patch_sha256": "3458f68e7305035816206c25bd7f7f7b9d6ccf496e4f3fbb73a679289327aa66",
+              "replayed_tree": "b9dadde754cb8c2176e689cebbdeb722ba96758e"
+            },
+            "repo_id": "itsdangerous",
+            "source_prefix": "controlled_sources/itsdangerous",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-75be5e20df65584a",
+            "validation": {
+              "captured_paths": 64,
+              "content_matches_capture": true,
+              "derived_paths": 50,
+              "excluded_count": 14,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/itsdangerous/__pycache__/__init__.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/_json.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/encoding.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/exc.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/serializer.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/signer.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/timed.cpython-312.pyc",
+                "src/itsdangerous/__pycache__/url_safe.cpython-312.pyc",
+                "tests/test_itsdangerous/__pycache__/__init__.cpython-312.pyc",
+                "tests/test_itsdangerous/__pycache__/test_encoding.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          }
+        ]
+      },
+      "raw_full_directory_capture": {
+        "final_source_trees": [
+          "f2048e9db7ccfe0d7072968a1345323251e56b3f",
+          "8bbb42f64758a5a88cc1df209b33d1dcd3e8d0ac"
+        ],
+        "label": "conflict",
+        "merge_repeats_identical": true,
+        "starting_snapshots_equal": true,
+        "tasks": [
+          {
+            "final_source_tree": "f2048e9db7ccfe0d7072968a1345323251e56b3f",
+            "task_id": "csp-task-3bad5d8a1757bfd2"
+          },
+          {
+            "final_source_tree": "8bbb42f64758a5a88cc1df209b33d1dcd3e8d0ac",
+            "task_id": "csp-task-75be5e20df65584a"
+          }
+        ]
+      },
+      "repo_id": "itsdangerous",
+      "task_ids": [
+        "csp-task-3bad5d8a1757bfd2",
+        "csp-task-75be5e20df65584a"
+      ]
+    },
+    {
+      "pair_id": "csp-pair-dd4ecebb1da0e148",
+      "posthoc_git_visible": {
+        "conflict_paths": [],
+        "identical_repeats": true,
+        "merge_detail": null,
+        "merge_status": "clean",
+        "merge_tree": "3cbd9ce68069141da1e5f8af0ede5edce27927e6",
+        "tasks": [
+          {
+            "after_inventory_sha256": "80c77a3176463eeca2dfe36dcd9dafc1f16d763644ccc257b0033129dd100d3a",
+            "base_tree": "f03d83ddabaad2ea3700f305b96db2240843f46d",
+            "before_inventory_sha256": "80c77a3176463eeca2dfe36dcd9dafc1f16d763644ccc257b0033129dd100d3a",
+            "captured_at": "2026-11-16T03:20:38.003Z",
+            "captured_final_tree": "5a51b862451a5e7a8b10a8ff267fc161f1a3a2b9",
+            "changed_paths": [
+              {
+                "path": "src/attr/_next_gen.py",
+                "status": "M"
+              },
+              {
+                "path": "src/attrs/__init__.pyi",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_next_gen.py",
+                "status": "M"
+              },
+              {
+                "path": "typing_tests/baseline.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:24:04.210Z",
+            "derived_path_count": 143,
+            "derived_tree": "bcc972c80efa02eeec0676860d550e39fc90ae68",
+            "derived_tree_size_bytes": 2233232,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 4063,
+              "patch_sha256": "4cee9082942b1a4d4a54b5a96f1d0391c4f20b25eb49e65072c3078f938694ae",
+              "replayed_tree": "bcc972c80efa02eeec0676860d550e39fc90ae68"
+            },
+            "repo_id": "attrs",
+            "source_prefix": "controlled_sources/attrs",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-6903a4ea4d8ff691",
+            "validation": {
+              "captured_paths": 165,
+              "content_matches_capture": true,
+              "derived_paths": 143,
+              "excluded_count": 22,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/attr/__pycache__/__init__.cpython-312.pyc",
+                "src/attr/__pycache__/_cmp.cpython-312.pyc",
+                "src/attr/__pycache__/_compat.cpython-312.pyc",
+                "src/attr/__pycache__/_config.cpython-312.pyc",
+                "src/attr/__pycache__/_funcs.cpython-312.pyc",
+                "src/attr/__pycache__/_make.cpython-312.pyc",
+                "src/attr/__pycache__/_next_gen.cpython-312.pyc",
+                "src/attr/__pycache__/_version_info.cpython-312.pyc",
+                "src/attr/__pycache__/exceptions.cpython-312.pyc",
+                "src/attr/__pycache__/filters.cpython-312.pyc",
+                "src/attr/__pycache__/setters.cpython-312.pyc",
+                "src/attrs/__pycache__/__init__.cpython-312.pyc",
+                "src/attrs/__pycache__/exceptions.cpython-312.pyc",
+                "src/attrs/__pycache__/filters.cpython-312.pyc",
+                "src/attrs/__pycache__/setters.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/test_next_gen.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          },
+          {
+            "after_inventory_sha256": "df908bd35b797d36bad0492b3473ea19199ab51964508106757fedd987886b7d",
+            "base_tree": "f03d83ddabaad2ea3700f305b96db2240843f46d",
+            "before_inventory_sha256": "df908bd35b797d36bad0492b3473ea19199ab51964508106757fedd987886b7d",
+            "captured_at": "2026-11-16T03:15:23.582Z",
+            "captured_final_tree": "e6b29a042a04d2ae3a5c4315b1e78d54f2e62722",
+            "changed_paths": [
+              {
+                "path": "docs/api.rst",
+                "status": "M"
+              },
+              {
+                "path": "src/attr/__init__.pyi",
+                "status": "M"
+              },
+              {
+                "path": "src/attr/_make.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_make.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:19:32.996Z",
+            "derived_path_count": 143,
+            "derived_tree": "c871003c3e5a048215ba2c5ed69ef4e8dcda13ef",
+            "derived_tree_size_bytes": 2232304,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 4063,
+              "patch_sha256": "0061a3ed2bd3f7fb5f6d608e2e0a9bb0cbc6241628fedae71114b551277a003d",
+              "replayed_tree": "c871003c3e5a048215ba2c5ed69ef4e8dcda13ef"
+            },
+            "repo_id": "attrs",
+            "source_prefix": "controlled_sources/attrs",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-ba0289ad5a8171e3",
+            "validation": {
+              "captured_paths": 189,
+              "content_matches_capture": true,
+              "derived_paths": 143,
+              "excluded_count": 46,
+              "excluded_paths": [
+                ".hypothesis/.gitignore",
+                ".hypothesis/constants/18f9d68faadb9255",
+                ".hypothesis/constants/1d7218e3fd5d977e",
+                ".hypothesis/constants/22172acb4b0c0058",
+                ".hypothesis/constants/22795272831e907b",
+                ".hypothesis/constants/232742038bb1ae13",
+                ".hypothesis/constants/27df4c63ebdac7fe",
+                ".hypothesis/constants/4914c03923797479",
+                ".hypothesis/constants/53893594f7e044d5",
+                ".hypothesis/constants/554c06fad6971563",
+                ".hypothesis/constants/63db888a7fcf245a",
+                ".hypothesis/constants/67b0a8ccf18bf5d2",
+                ".hypothesis/constants/7882d1e7de023978",
+                ".hypothesis/constants/825312f2bab16e5e",
+                ".hypothesis/constants/9b22c60f4666d20e",
+                ".hypothesis/constants/b2ac3b6fb0feb994",
+                ".hypothesis/constants/c5f461d70a0eaaf5",
+                ".hypothesis/constants/cf4ec727760e9090",
+                ".hypothesis/constants/e4e725ef97b6a148",
+                ".hypothesis/unicode_data/15.0.0/charmap.json.gz",
+                ".hypothesis/unicode_data/15.0.0/codec-v2-utf-8.json.gz",
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/attr/__pycache__/__init__.cpython-312.pyc",
+                "src/attr/__pycache__/_cmp.cpython-312.pyc",
+                "src/attr/__pycache__/_compat.cpython-312.pyc",
+                "src/attr/__pycache__/_config.cpython-312.pyc",
+                "src/attr/__pycache__/_funcs.cpython-312.pyc",
+                "src/attr/__pycache__/_make.cpython-312.pyc",
+                "src/attr/__pycache__/_next_gen.cpython-312.pyc",
+                "src/attr/__pycache__/_version_info.cpython-312.pyc",
+                "src/attr/__pycache__/converters.cpython-312.pyc",
+                "src/attr/__pycache__/exceptions.cpython-312.pyc",
+                "src/attr/__pycache__/filters.cpython-312.pyc",
+                "src/attr/__pycache__/setters.cpython-312.pyc",
+                "src/attrs/__pycache__/__init__.cpython-312.pyc",
+                "src/attrs/__pycache__/exceptions.cpython-312.pyc",
+                "src/attrs/__pycache__/filters.cpython-312.pyc",
+                "src/attrs/__pycache__/setters.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/strategies.cpython-312.pyc",
+                "tests/__pycache__/test_make.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/utils.cpython-312.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          }
+        ]
+      },
+      "raw_full_directory_capture": {
+        "final_source_trees": [
+          "e6b29a042a04d2ae3a5c4315b1e78d54f2e62722",
+          "5a51b862451a5e7a8b10a8ff267fc161f1a3a2b9"
+        ],
+        "label": "conflict",
+        "merge_repeats_identical": true,
+        "starting_snapshots_equal": true,
+        "tasks": [
+          {
+            "final_source_tree": "5a51b862451a5e7a8b10a8ff267fc161f1a3a2b9",
+            "task_id": "csp-task-6903a4ea4d8ff691"
+          },
+          {
+            "final_source_tree": "e6b29a042a04d2ae3a5c4315b1e78d54f2e62722",
+            "task_id": "csp-task-ba0289ad5a8171e3"
+          }
+        ]
+      },
+      "repo_id": "attrs",
+      "task_ids": [
+        "csp-task-6903a4ea4d8ff691",
+        "csp-task-ba0289ad5a8171e3"
+      ]
+    },
+    {
+      "pair_id": "csp-pair-3a67e8e1250dad67",
+      "posthoc_git_visible": {
+        "conflict_paths": [
+          "CHANGELOG.rst",
+          "tests/test_utils.py"
+        ],
+        "identical_repeats": true,
+        "merge_detail": null,
+        "merge_status": "conflict",
+        "merge_tree": "5cdd9a786dea13ce203a6ac8f603deaa7ddaf03b",
+        "tasks": [
+          {
+            "after_inventory_sha256": "d474f13af0c23aca6a4aa172602fb4db202fe059959bfde950a031cc0095b774",
+            "base_tree": "85c13f4c4e3eda5334b389b1501e1995727ff685",
+            "before_inventory_sha256": "d474f13af0c23aca6a4aa172602fb4db202fe059959bfde950a031cc0095b774",
+            "captured_at": "2026-11-16T03:25:07.081Z",
+            "captured_final_tree": "df7163d2fd8032b884dcef2516c759fc5efc1f00",
+            "changed_paths": [
+              {
+                "path": "CHANGELOG.rst",
+                "status": "M"
+              },
+              {
+                "path": "src/packaging/utils.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_utils.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:27:47.114Z",
+            "derived_path_count": 145,
+            "derived_tree": "a07caf04245b04ca0a7eb7d9b0447cd0323f21d6",
+            "derived_tree_size_bytes": 1750787,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 3401,
+              "patch_sha256": "3ad802eae27a5c374cb2c1354fe1dafc18f3da00cd639a0c7f96d71dc51e9007",
+              "replayed_tree": "a07caf04245b04ca0a7eb7d9b0447cd0323f21d6"
+            },
+            "repo_id": "packaging",
+            "source_prefix": "controlled_sources/packaging",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-10db3fd9e26e36e3",
+            "validation": {
+              "captured_paths": 164,
+              "content_matches_capture": true,
+              "derived_paths": 145,
+              "excluded_count": 19,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/packaging/__pycache__/__init__.cpython-312.pyc",
+                "src/packaging/__pycache__/_elffile.cpython-312.pyc",
+                "src/packaging/__pycache__/_manylinux.cpython-312.pyc",
+                "src/packaging/__pycache__/_musllinux.cpython-312.pyc",
+                "src/packaging/__pycache__/_parser.cpython-312.pyc",
+                "src/packaging/__pycache__/_ranges.cpython-312.pyc",
+                "src/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+                "src/packaging/__pycache__/markers.cpython-312.pyc",
+                "src/packaging/__pycache__/specifiers.cpython-312.pyc",
+                "src/packaging/__pycache__/tags.cpython-312.pyc",
+                "src/packaging/__pycache__/utils.cpython-312.pyc",
+                "src/packaging/__pycache__/version.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/test_utils.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          },
+          {
+            "after_inventory_sha256": "448d1a4434e44ed94c046c0f93e09d59bd99e6bc5b3301df2d2d22eca418a67b",
+            "base_tree": "85c13f4c4e3eda5334b389b1501e1995727ff685",
+            "before_inventory_sha256": "448d1a4434e44ed94c046c0f93e09d59bd99e6bc5b3301df2d2d22eca418a67b",
+            "captured_at": "2026-11-16T03:28:59.493Z",
+            "captured_final_tree": "55de68366c1d5e7ed97fb70913825c12b7bd75c8",
+            "changed_paths": [
+              {
+                "path": "CHANGELOG.rst",
+                "status": "M"
+              },
+              {
+                "path": "src/packaging/utils.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_utils.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:33:08.174Z",
+            "derived_path_count": 145,
+            "derived_tree": "165f4ac1da5dfa402b05464cd4c9363f53b2b881",
+            "derived_tree_size_bytes": 1751422,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 5975,
+              "patch_sha256": "e409b5e54fa881b7fc4cfbf13ecfd4a45115f279d4b630bc2d45faa1a472d7c9",
+              "replayed_tree": "165f4ac1da5dfa402b05464cd4c9363f53b2b881"
+            },
+            "repo_id": "packaging",
+            "source_prefix": "controlled_sources/packaging",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-2b01ab3320956689",
+            "validation": {
+              "captured_paths": 164,
+              "content_matches_capture": true,
+              "derived_paths": 145,
+              "excluded_count": 19,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/packaging/__pycache__/__init__.cpython-312.pyc",
+                "src/packaging/__pycache__/_elffile.cpython-312.pyc",
+                "src/packaging/__pycache__/_manylinux.cpython-312.pyc",
+                "src/packaging/__pycache__/_musllinux.cpython-312.pyc",
+                "src/packaging/__pycache__/_parser.cpython-312.pyc",
+                "src/packaging/__pycache__/_ranges.cpython-312.pyc",
+                "src/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+                "src/packaging/__pycache__/markers.cpython-312.pyc",
+                "src/packaging/__pycache__/specifiers.cpython-312.pyc",
+                "src/packaging/__pycache__/tags.cpython-312.pyc",
+                "src/packaging/__pycache__/utils.cpython-312.pyc",
+                "src/packaging/__pycache__/version.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/test_utils.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          }
+        ]
+      },
+      "raw_full_directory_capture": {
+        "final_source_trees": [
+          "df7163d2fd8032b884dcef2516c759fc5efc1f00",
+          "55de68366c1d5e7ed97fb70913825c12b7bd75c8"
+        ],
+        "label": "conflict",
+        "merge_repeats_identical": true,
+        "starting_snapshots_equal": true,
+        "tasks": [
+          {
+            "final_source_tree": "df7163d2fd8032b884dcef2516c759fc5efc1f00",
+            "task_id": "csp-task-10db3fd9e26e36e3"
+          },
+          {
+            "final_source_tree": "55de68366c1d5e7ed97fb70913825c12b7bd75c8",
+            "task_id": "csp-task-2b01ab3320956689"
+          }
+        ]
+      },
+      "repo_id": "packaging",
+      "task_ids": [
+        "csp-task-10db3fd9e26e36e3",
+        "csp-task-2b01ab3320956689"
+      ]
+    },
+    {
+      "pair_id": "csp-pair-ca9d8edc2f182f15",
+      "posthoc_git_visible": {
+        "conflict_paths": [],
+        "identical_repeats": true,
+        "merge_detail": null,
+        "merge_status": "clean",
+        "merge_tree": "44d9ebec7467d30a9c3172f3faf337bb8e9ee76b",
+        "tasks": [
+          {
+            "after_inventory_sha256": "f1f481f2e6fb52d47f448228e137c651cd4ebf402519037790728c4632b16e1f",
+            "base_tree": "da9176cc76597098f4b2927996f52d3b8cf0b9aa",
+            "before_inventory_sha256": "f1f481f2e6fb52d47f448228e137c651cd4ebf402519037790728c4632b16e1f",
+            "captured_at": "2026-11-16T03:42:57.056Z",
+            "captured_final_tree": "3d446b8aefc40eb1aa28a641d9db152b721c8806",
+            "changed_paths": [
+              {
+                "path": "src/dateutil/parser/isoparser.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_isoparser.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:47:18.675Z",
+            "derived_path_count": 90,
+            "derived_tree": "5ee21c0a8c5234f7a1615ce519baf5691aefc3d3",
+            "derived_tree_size_bytes": 1125108,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 2442,
+              "patch_sha256": "7263be832c832ca75a8327c0b81f98a17c37fafb99461e761f29108c76a68121",
+              "replayed_tree": "5ee21c0a8c5234f7a1615ce519baf5691aefc3d3"
+            },
+            "repo_id": "dateutil",
+            "source_prefix": "controlled_sources/dateutil",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-6f9a281257838602",
+            "validation": {
+              "captured_paths": 112,
+              "content_matches_capture": true,
+              "derived_paths": 90,
+              "excluded_count": 22,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/dateutil/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/__pycache__/_common.cpython-312.pyc",
+                "src/dateutil/__pycache__/_tzdata_impl.cpython-312.pyc",
+                "src/dateutil/__pycache__/relativedelta.cpython-312.pyc",
+                "src/dateutil/parser/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/parser/__pycache__/_parser.cpython-312.pyc",
+                "src/dateutil/parser/__pycache__/isoparser.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_common.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_factories.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_tzfile.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_tzpath.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/tz.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/win.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/_common.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/test_isoparser.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          },
+          {
+            "after_inventory_sha256": "88e9ef082188268be9c9b6abada2332cc221e4329e0c2c4409619f7132548398",
+            "base_tree": "da9176cc76597098f4b2927996f52d3b8cf0b9aa",
+            "before_inventory_sha256": "88e9ef082188268be9c9b6abada2332cc221e4329e0c2c4409619f7132548398",
+            "captured_at": "2026-11-16T03:48:39.387Z",
+            "captured_final_tree": "b2a26e3e1e4b88acc43eb72943991bca3b9b2f93",
+            "changed_paths": [
+              {
+                "path": "src/dateutil/parser/isoparser.py",
+                "status": "M"
+              },
+              {
+                "path": "tests/test_isoparser.py",
+                "status": "M"
+              }
+            ],
+            "collected_at": "2026-11-16T03:55:52.802Z",
+            "derived_path_count": 90,
+            "derived_tree": "06f51ed9228b89411d2adbdc4d6a2ff6f74e6123",
+            "derived_tree_size_bytes": 1127203,
+            "detail": null,
+            "inventory_unchanged_during_analysis": true,
+            "patch_replay": {
+              "ok": true,
+              "patch_bytes": 5487,
+              "patch_sha256": "85e6e9fca8cf45767214d831a96e70732ef0454b1e4c58f39d29d634b9da5a56",
+              "replayed_tree": "06f51ed9228b89411d2adbdc4d6a2ff6f74e6123"
+            },
+            "repo_id": "dateutil",
+            "source_prefix": "controlled_sources/dateutil",
+            "source_present": true,
+            "status": "ok",
+            "task_id": "csp-task-b6f1e1efae86453a",
+            "validation": {
+              "captured_paths": 114,
+              "content_matches_capture": true,
+              "derived_paths": 90,
+              "excluded_count": 24,
+              "excluded_paths": [
+                ".pytest_cache/.gitignore",
+                ".pytest_cache/CACHEDIR.TAG",
+                ".pytest_cache/README.md",
+                ".pytest_cache/v/cache/nodeids",
+                "src/dateutil/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/__pycache__/_common.cpython-312.pyc",
+                "src/dateutil/__pycache__/_tzdata_impl.cpython-312.pyc",
+                "src/dateutil/__pycache__/_version.cpython-312.pyc",
+                "src/dateutil/__pycache__/relativedelta.cpython-312.pyc",
+                "src/dateutil/_version.py",
+                "src/dateutil/parser/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/parser/__pycache__/_parser.cpython-312.pyc",
+                "src/dateutil/parser/__pycache__/isoparser.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/__init__.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_common.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_factories.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_tzfile.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/_tzpath.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/tz.cpython-312.pyc",
+                "src/dateutil/tz/__pycache__/win.cpython-312.pyc",
+                "tests/__pycache__/__init__.cpython-312.pyc",
+                "tests/__pycache__/_common.cpython-312.pyc",
+                "tests/__pycache__/conftest.cpython-312-pytest-9.2.0.pyc",
+                "tests/__pycache__/test_isoparser.cpython-312-pytest-9.2.0.pyc"
+              ],
+              "included_all_present_in_capture": true,
+              "issues": [],
+              "ok": true
+            }
+          }
+        ]
+      },
+      "raw_full_directory_capture": {
+        "final_source_trees": [
+          "3d446b8aefc40eb1aa28a641d9db152b721c8806",
+          "b2a26e3e1e4b88acc43eb72943991bca3b9b2f93"
+        ],
+        "label": "conflict",
+        "merge_repeats_identical": true,
+        "starting_snapshots_equal": true,
+        "tasks": [
+          {
+            "final_source_tree": "3d446b8aefc40eb1aa28a641d9db152b721c8806",
+            "task_id": "csp-task-6f9a281257838602"
+          },
+          {
+            "final_source_tree": "b2a26e3e1e4b88acc43eb72943991bca3b9b2f93",
+            "task_id": "csp-task-b6f1e1efae86453a"
+          }
+        ]
+      },
+      "repo_id": "dateutil",
+      "task_ids": [
+        "csp-task-6f9a281257838602",
+        "csp-task-b6f1e1efae86453a"
+      ]
+    }
+  ],
+  "protocol_version": "controlled-single-project-posthoc-git-visible-1",
+  "reporting_amendment": {
+    "at": "2026-11-16T04:19:40.960478+00:00",
+    "current_script_sha256": "6e1ca41022bb17ada952205d83962844d55d8ab63d2644a8c92bce2e31759c01",
+    "description": "Root corrected reporting text after independent review; numerical labels, trees and hashes unchanged. Original producer and public export retained privately."
+  },
+  "summary": {
+    "pairs_analyzed": 5,
+    "posthoc_clean": 3,
+    "posthoc_conflict": 2,
+    "posthoc_error": 0,
+    "raw_full_directory_label_counts": {
+      "conflict": 5
+    }
+  },
+  "targeted_test_audit": {
+    "csp-task-0cd919aad60df0ca": {
+      "jobs": [
+        {
+          "job_file": "20261116T030052.978Z.json",
+          "returncode": 0,
+          "summary_line": "============================== 22 passed in 0.20s =============================="
+        },
+        {
+          "job_file": "20261116T030121.897Z.json",
+          "returncode": 0,
+          "summary_line": "============================== 22 passed in 0.20s =============================="
+        }
+      ],
+      "repo_id": "click"
+    },
+    "csp-task-10db3fd9e26e36e3": {
+      "jobs": [
+        {
+          "job_file": "20261116T032704.900Z.json",
+          "returncode": 0,
+          "summary_line": "====================== 11 passed, 71 deselected in 0.15s ======================="
+        }
+      ],
+      "repo_id": "packaging"
+    },
+    "csp-task-2b01ab3320956689": {
+      "jobs": [
+        {
+          "job_file": "20261116T033136.676Z.json",
+          "returncode": 0,
+          "summary_line": "======================= 8 passed, 77 deselected in 0.17s ======================="
+        },
+        {
+          "job_file": "20261116T033214.701Z.json",
+          "returncode": 0,
+          "summary_line": "======================= 8 passed, 77 deselected in 0.11s ======================="
+        }
+      ],
+      "repo_id": "packaging"
+    },
+    "csp-task-3bad5d8a1757bfd2": {
+      "jobs": [
+        {
+          "job_file": "20261116T030937.385Z.json",
+          "returncode": 0,
+          "summary_line": "============================== 40 passed in 0.16s =============================="
+        }
+      ],
+      "repo_id": "itsdangerous"
+    },
+    "csp-task-6903a4ea4d8ff691": {
+      "jobs": [
+        {
+          "job_file": "20261116T032235.349Z.json",
+          "returncode": 4,
+          "summary_line": null
+        },
+        {
+          "job_file": "20261116T032252.508Z.json",
+          "returncode": 0,
+          "summary_line": "======================= 4 passed, 35 deselected in 0.17s ======================="
+        }
+      ],
+      "repo_id": "attrs"
+    },
+    "csp-task-6f9a281257838602": {
+      "jobs": [
+        {
+          "job_file": "20261116T034503.035Z.json",
+          "returncode": 0,
+          "summary_line": "====================== 9 passed, 582 deselected in 0.29s ======================="
+        }
+      ],
+      "repo_id": "dateutil"
+    },
+    "csp-task-75be5e20df65584a": {
+      "jobs": [
+        {
+          "job_file": "20261116T031318.079Z.json",
+          "returncode": 0,
+          "summary_line": "============================== 11 passed in 0.07s =============================="
+        }
+      ],
+      "repo_id": "itsdangerous"
+    },
+    "csp-task-b6f1e1efae86453a": {
+      "jobs": [
+        {
+          "job_file": "20261116T035155.583Z.json",
+          "returncode": 3,
+          "summary_line": "============================ no tests ran in 0.20s ============================="
+        },
+        {
+          "job_file": "20261116T035213.525Z.json",
+          "returncode": 0,
+          "summary_line": "====================== 9 passed, 596 deselected in 0.16s ======================="
+        },
+        {
+          "job_file": "20261116T035424.175Z.json",
+          "returncode": 0,
+          "summary_line": "====================== 16 passed, 589 deselected in 0.21s ======================"
+        }
+      ],
+      "repo_id": "dateutil"
+    },
+    "csp-task-ba0289ad5a8171e3": {
+      "jobs": [
+        {
+          "job_file": "20261116T031834.921Z.json",
+          "returncode": 0,
+          "summary_line": "====================== 1 passed, 280 deselected in 5.59s ======================="
+        }
+      ],
+      "repo_id": "attrs"
+    },
+    "csp-task-cf78f5165ef25613": {
+      "jobs": [
+        {
+          "job_file": "20261116T030447.192Z.json",
+          "returncode": 0,
+          "summary_line": "============================== 7 passed in 0.21s ==============================="
+        }
+      ],
+      "repo_id": "click"
+    }
+  }
+}

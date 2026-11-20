@@ -1,0 +1,35 @@
+{
+  "commit": "4aae68ae53477d05010a509f1f1e3f02e61b1831",
+  "dataset_card_scaffold": "OpenHands (v0.54.0) with Qwen3-Coder-480B-A35B-Instruct",
+  "dataset_card_sha256": "90fa586c747d9ed1022c28847439489576049cde7de1fdfb80d24b2a0ae77b32",
+  "dataset_card_url": "https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories/blob/35455389ab51bf5e2306bfd436ef72d0f98bf882/README.md",
+  "limits": [
+    "The dataset card names a version, not an image digest or runner commit, so no published image is bound to the original run.",
+    "That the nebius SWE-rebench runs used this stock runner file unmodified is not established.",
+    "git reset --hard does not remove untracked files, and the runtime workspace copy step was not traced."
+  ],
+  "reads": "The stock runner resets the tracked tree with git reset --hard, stages all files with git add -A, and writes git diff --cached against instance base_commit, so scratch files and .openhands files enter the patch.",
+  "source_lines_matching": {
+    "binary_diff_removed": [
+      592
+    ],
+    "diff_against_declared_base": [
+      549
+    ],
+    "reset": [
+      373
+    ],
+    "stage_all": [
+      524
+    ],
+    "workspace_cd": [
+      363,
+      447,
+      462,
+      477
+    ]
+  },
+  "source_sha256": "1a556d8fe404a1de2360ca734e88bd1c4520e34a2c3d55ce326a642566f2eee0",
+  "source_url": "https://github.com/All-Hands-AI/OpenHands/blob/4aae68ae53477d05010a509f1f1e3f02e61b1831/evaluation/benchmarks/swe_bench/run_infer.py",
+  "tag": "0.54.0"
+}

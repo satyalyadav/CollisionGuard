@@ -1,0 +1,149 @@
+{
+  "candidate_pairs": 144,
+  "candidate_repositories": 76,
+  "cases": [
+    {
+      "base_commit": "d6a65ebad5d5f0866446c4a6670ac485a7f0e07f",
+      "case_id": "aio-libs__yarl-1413+yarl-1414",
+      "first_trace_row_offsets": [
+        8209,
+        8309
+      ],
+      "instances": [
+        "aio-libs__yarl-1413",
+        "aio-libs__yarl-1414"
+      ],
+      "pair_sha256": "ca9e1764f4ecf1cab5fc9b8dcc606f07beeb8c82eb3127ded84d17271c41a2f8",
+      "repo": "aio-libs/yarl",
+      "role": "development_control",
+      "task_row_offsets": [
+        3443,
+        3444
+      ]
+    },
+    {
+      "base_commit": "c74b47141fa02df4a414c7ff5b98eefe6b69620d",
+      "case_id": "Unidata__MetPy-2006+MetPy-2007",
+      "first_trace_row_offsets": [
+        4850,
+        5399
+      ],
+      "instances": [
+        "Unidata__MetPy-2006",
+        "Unidata__MetPy-2007"
+      ],
+      "pair_sha256": "00c668b3742b27229fb877bd1f82045fc5dc4ced32cebe23be39c825124d8d98",
+      "repo": "Unidata/MetPy",
+      "role": "fresh",
+      "task_row_offsets": [
+        3035,
+        3036
+      ]
+    },
+    {
+      "base_commit": "e8237a0981158ea7a7bce7153acefced7905f677",
+      "case_id": "conan-io__conan-10941+conan-10943",
+      "first_trace_row_offsets": [
+        4353,
+        3673
+      ],
+      "instances": [
+        "conan-io__conan-10941",
+        "conan-io__conan-10943"
+      ],
+      "pair_sha256": "031202757acdb0ddddca64cd49d2cd8e1a0bc13d37c93b69279d4d599ca7bfb3",
+      "repo": "conan-io/conan",
+      "role": "fresh",
+      "task_row_offsets": [
+        5546,
+        5547
+      ]
+    },
+    {
+      "base_commit": "4e98eec7d3a3e917fc1364a80e4b46017370f595",
+      "case_id": "wright-group__attune-122+attune-123",
+      "first_trace_row_offsets": [
+        4405,
+        22479
+      ],
+      "instances": [
+        "wright-group__attune-122",
+        "wright-group__attune-123"
+      ],
+      "pair_sha256": "06952fa484a4929f4195193c77e61e5f4ab188346ff9709f659ea528436714cd",
+      "repo": "wright-group/attune",
+      "role": "fresh",
+      "task_row_offsets": [
+        20680,
+        20681
+      ]
+    },
+    {
+      "base_commit": "1dabbf67426ad6243f7b6d791d3d38dbb68ab33e",
+      "case_id": "numba__numba-5624+numba-5627",
+      "first_trace_row_offsets": [
+        6968,
+        14408
+      ],
+      "instances": [
+        "numba__numba-5624",
+        "numba__numba-5627"
+      ],
+      "pair_sha256": "08e1b7498e1cc49e4e9b23be7b829dd1a65737748de4e74a6ed7f70ab88c1e14",
+      "repo": "numba/numba",
+      "role": "fresh",
+      "task_row_offsets": [
+        13026,
+        13027
+      ]
+    },
+    {
+      "base_commit": "964d89fa8ace65181402f69ca2482d83b84600f8",
+      "case_id": "matthewwithanm__python-markdownify-120+python-markdownify-150",
+      "first_trace_row_offsets": [
+        4310,
+        8188
+      ],
+      "instances": [
+        "matthewwithanm__python-markdownify-120",
+        "matthewwithanm__python-markdownify-150"
+      ],
+      "pair_sha256": "0f66b2d6b446b61361df3cadc28b3ecae7226a84d29e422150836e1d6c0bf635",
+      "repo": "matthewwithanm/python-markdownify",
+      "role": "fresh",
+      "task_row_offsets": [
+        11457,
+        11458
+      ]
+    }
+  ],
+  "eligible_repositories_after_exclusion": 75,
+  "excluded_repositories": [
+    "aio-libs/yarl",
+    "ansible/ansible",
+    "apache/cassandra",
+    "apache/hive",
+    "apache/maven",
+    "apache/maven-release",
+    "armmbed/mbed-tools",
+    "connectbot/connectbot",
+    "dottxt-ai/outlines",
+    "element-hq/element-web",
+    "flipt-io/flipt",
+    "future-architect/vuls",
+    "gravitational/teleport",
+    "internetarchive/openlibrary",
+    "jdbi/jdbi",
+    "mongodb/mongo-java-driver",
+    "navidrome/navidrome",
+    "nodebb/nodebb",
+    "plasmafair/sdf-xarray",
+    "protonmail/webclients",
+    "stanfordnlp/dspy"
+  ],
+  "frozen_utc": "2026-11-15T22:04:27+00:00",
+  "rule": "protocol docs/pilot/swe-rebench-protocol.md, Case selection",
+  "seed": 572,
+  "task_revision": "89cdfbab4ab1bd8f5a658bb212d1b63624f4f881",
+  "trace_revision": "35455389ab51bf5e2306bfd436ef72d0f98bf882"
+}

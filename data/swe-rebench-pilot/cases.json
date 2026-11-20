@@ -1,0 +1,636 @@
+[
+  {
+    "base_commit": "d6a65ebad5d5f0866446c4a6670ac485a7f0e07f",
+    "case_id": "aio-libs__yarl-1413+yarl-1414",
+    "contradictions": [],
+    "declared_base": {
+      "archive_bytes": 159533,
+      "archive_sha256": "fddf0276112d17b4aaa9d189355997a7c6b201eac3df485db030ebded5feccd5",
+      "artifact_only_conflict": false,
+      "conflict_detail": [],
+      "conflict_paths": [],
+      "diagnostic_label": "clean",
+      "expected_tree": "51ecc8184b9c44c746ad30b81ab994864f040479",
+      "initial_archive_tree": null,
+      "merge_exit": 0,
+      "omitted_files": null,
+      "repair_error": null,
+      "repeat_identical": true,
+      "replay_status": "complete",
+      "rewritten_files": null,
+      "snapshot_tree": "51ecc8184b9c44c746ad30b81ab994864f040479",
+      "tree_verified": true
+    },
+    "exclusion": null,
+    "instances": [
+      "aio-libs__yarl-1413",
+      "aio-libs__yarl-1414"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      true,
+      false
+    ],
+    "patch_sha256": [
+      "6f81309761790ef6136565fb8d2beb524dc9c7085038e71f396fa10a67b4831c",
+      "85a2008d2417c35a6c7e5e5dbd93b81865d2519b56c8fb24781ae7ff52d62e10"
+    ],
+    "patch_sha256_replayed": [
+      "bd100525b56040caae0afd1097066c3591e6ac1c9570429fa15dafa92c343203",
+      "b19314f0d8e7c5f720b701d7558f73c9d2060c1670530f77ea6f8345ca1e5250"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "aio-libs/yarl",
+    "role": "development_control",
+    "snapshot": {
+      "distinct_image_digests": 2,
+      "images": [
+        {
+          "compressed_bytes": 1292785950,
+          "config_created": "2025-08-05T17:17:07.351584629Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T17:17:45.598634Z",
+          "image": "swerebench/sweb.eval.x86_64.aio-libs_1776_yarl-1413",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:aaa6bf44802d51bada5196db5c0f7c1da44acc9813bc9e10feb5f7122ddb35ef",
+          "tag_resolved_digest": "sha256:aaa6bf44802d51bada5196db5c0f7c1da44acc9813bc9e10feb5f7122ddb35ef"
+        },
+        {
+          "compressed_bytes": 1292796410,
+          "config_created": "2025-08-05T17:50:08.125942548Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T17:50:53.710817Z",
+          "image": "swerebench/sweb.eval.x86_64.aio-libs_1776_yarl-1414",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:ff4842cba5601aa7eb4db5fb0ab8082b76fa12eb74ea68fc66c1515b74ff4496",
+          "tag_resolved_digest": "sha256:ff4842cba5601aa7eb4db5fb0ab8082b76fa12eb74ea68fc66c1515b74ff4496"
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "image_over_budget:swerebench/sweb.eval.x86_64.aio-libs_1776_yarl-1413",
+        "image_over_budget:swerebench/sweb.eval.x86_64.aio-libs_1776_yarl-1414"
+      ],
+      "status": "unavailable"
+    }
+  },
+  {
+    "base_commit": "c74b47141fa02df4a414c7ff5b98eefe6b69620d",
+    "case_id": "Unidata__MetPy-2006+MetPy-2007",
+    "contradictions": [],
+    "exclusion": "capacity:previously stopped at cap, not refetched: body exceeded limit",
+    "instances": [
+      "Unidata__MetPy-2006",
+      "Unidata__MetPy-2007"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      false,
+      false
+    ],
+    "patch_sha256": [
+      "2cbfa27fcb93555b8ecb3af26ba08e21e9ebf0cc8137150f9a47c7641d0098bc",
+      "f70ff89cf316a9c1d465413ef498b09c0b4e0fcdb3502be3042873fd01db86dc"
+    ],
+    "patch_sha256_replayed": [
+      "f0026f9c7084187647840a00eb44486b9f4b34be077da0a84db30c7db1eb77d5",
+      "94af08566036826215f79d0bc3eb40a275b26f10399efcb99015b8ef96d5e4e4"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "Unidata/MetPy",
+    "role": "fresh",
+    "snapshot": {
+      "distinct_image_digests": 0,
+      "images": [
+        {
+          "compressed_bytes": null,
+          "config_created": null,
+          "error": "no image declared in task record",
+          "history_mentions_repo_clone": null,
+          "hub_tag_last_pushed": null,
+          "image": null,
+          "largest_layer": null,
+          "layer_count": null,
+          "layer_inspection": null,
+          "layers_over_64MiB_cap": null,
+          "platform_manifest_digest": null,
+          "tag_resolved_digest": null
+        },
+        {
+          "compressed_bytes": null,
+          "config_created": null,
+          "error": "no image declared in task record",
+          "history_mentions_repo_clone": null,
+          "hub_tag_last_pushed": null,
+          "image": null,
+          "largest_layer": null,
+          "layer_count": null,
+          "layer_inspection": null,
+          "layers_over_64MiB_cap": null,
+          "platform_manifest_digest": null,
+          "tag_resolved_digest": null
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "no_image_declared:Unidata__MetPy-2006",
+        "no_image_declared:Unidata__MetPy-2007"
+      ],
+      "status": "unavailable"
+    }
+  },
+  {
+    "base_commit": "e8237a0981158ea7a7bce7153acefced7905f677",
+    "case_id": "conan-io__conan-10941+conan-10943",
+    "contradictions": [],
+    "declared_base": {
+      "archive_bytes": 1479341,
+      "archive_sha256": "84a7e4d93dded721840ec43e59ade3fa45f8aaa7bea6b95113d3187382a3fa56",
+      "artifact_only_conflict": false,
+      "conflict_detail": [
+        {
+          "harness_artifact": false,
+          "in_reference_patches": true,
+          "in_test_patches": false,
+          "new_file_in_both_outputs": false,
+          "path": "conan/tools/cmake/toolchain/toolchain.py"
+        }
+      ],
+      "conflict_paths": [
+        "conan/tools/cmake/toolchain/toolchain.py"
+      ],
+      "diagnostic_label": "conflict",
+      "expected_tree": "5f8656d757c337830a406081ab778933f9d8da5a",
+      "initial_archive_tree": null,
+      "merge_exit": 1,
+      "omitted_files": null,
+      "repair_error": null,
+      "repeat_identical": true,
+      "replay_status": "complete",
+      "rewritten_files": null,
+      "snapshot_tree": "5f8656d757c337830a406081ab778933f9d8da5a",
+      "tree_verified": true
+    },
+    "exclusion": null,
+    "instances": [
+      "conan-io__conan-10941",
+      "conan-io__conan-10943"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      false,
+      false
+    ],
+    "patch_sha256": [
+      "53dadfe3885479c24a5dea56a95f4143f94c7fa6d84e44fe267537562c7ac0ba",
+      "98b8beddaf9989f0279a9e4d6bf9711293fb9724a190eb5bba042872f6522af1"
+    ],
+    "patch_sha256_replayed": [
+      "1c4a318604d2b21c8b2ed6d37b0056b5c5ae4c265e9e9939158e299f4765d09f",
+      "7be0a5d0cc189b6339f828742e4a205e73bbec1291450b5c51bc7c232809fd68"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "conan-io/conan",
+    "role": "fresh",
+    "snapshot": {
+      "distinct_image_digests": 2,
+      "images": [
+        {
+          "compressed_bytes": 1319250633,
+          "config_created": "2025-08-05T18:12:13.250030969Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T18:12:56.946156Z",
+          "image": "swerebench/sweb.eval.x86_64.conan-io_1776_conan-10941",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:e5ac475386c5cc6e4ec9e8dd1aaf99c7ed50599f9c7413c9977b71116f668609",
+          "tag_resolved_digest": "sha256:e5ac475386c5cc6e4ec9e8dd1aaf99c7ed50599f9c7413c9977b71116f668609"
+        },
+        {
+          "compressed_bytes": 1319348165,
+          "config_created": "2025-08-05T17:48:35.362130255Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T17:49:13.378756Z",
+          "image": "swerebench/sweb.eval.x86_64.conan-io_1776_conan-10943",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:30edd8e49bb72f80f941025b06c3a2e6c7a8d23e145f8a7f1bd1985a6545edf4",
+          "tag_resolved_digest": "sha256:30edd8e49bb72f80f941025b06c3a2e6c7a8d23e145f8a7f1bd1985a6545edf4"
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "image_over_budget:swerebench/sweb.eval.x86_64.conan-io_1776_conan-10941",
+        "image_over_budget:swerebench/sweb.eval.x86_64.conan-io_1776_conan-10943"
+      ],
+      "status": "unavailable"
+    }
+  },
+  {
+    "base_commit": "4e98eec7d3a3e917fc1364a80e4b46017370f595",
+    "case_id": "wright-group__attune-122+attune-123",
+    "contradictions": [],
+    "declared_base": {
+      "archive_bytes": 4415153,
+      "archive_sha256": "532a962767e0119bf4f558d38bc5c927c36d70b8e48a6e0850d552ce8cf31303",
+      "artifact_only_conflict": false,
+      "conflict_detail": [],
+      "conflict_paths": [],
+      "diagnostic_label": "clean",
+      "expected_tree": "be47c63b62177180d78d6f139ba3a083850d79d4",
+      "initial_archive_tree": null,
+      "merge_exit": 0,
+      "omitted_files": null,
+      "repair_error": null,
+      "repeat_identical": true,
+      "replay_status": "complete",
+      "rewritten_files": null,
+      "snapshot_tree": "be47c63b62177180d78d6f139ba3a083850d79d4",
+      "tree_verified": true
+    },
+    "exclusion": null,
+    "instances": [
+      "wright-group__attune-122",
+      "wright-group__attune-123"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      false,
+      false
+    ],
+    "patch_sha256": [
+      "d951b0eb2ac0271d54632ada20ba52d71b44643b44d5e597ddf0487872265b64",
+      "1670fe1db751d6ccea2d6faf481e7c336583e6032c2c0e0da893019742e1c832"
+    ],
+    "patch_sha256_replayed": [
+      "813484cd44683728370367bbf924833526602a7a16c9e07afd7112df2adecb00",
+      "7bcc29f21b396da8cecc222b28fb71f2c3fcb7576b74132724f7035ba4a80a9d"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "wright-group/attune",
+    "role": "fresh",
+    "snapshot": {
+      "distinct_image_digests": 2,
+      "images": [
+        {
+          "compressed_bytes": 1629279559,
+          "config_created": "2025-08-05T18:21:26.323912826Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T18:22:16.442551Z",
+          "image": "swerebench/sweb.eval.x86_64.wright-group_1776_attune-122",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:e7bc82c7fa330bab5c94146ad2b6e7c9e615032ff1076c16ce40f683cf2a3cfc",
+          "tag_resolved_digest": "sha256:e7bc82c7fa330bab5c94146ad2b6e7c9e615032ff1076c16ce40f683cf2a3cfc"
+        },
+        {
+          "compressed_bytes": 2525060595,
+          "config_created": "2025-08-05T16:54:04.492702727Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T16:55:33.865254Z",
+          "image": "swerebench/sweb.eval.x86_64.wright-group_1776_attune-123",
+          "largest_layer": 1178086244,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:d94287ce5f9b68028188e0a1c8292b9593fbf4439cd0746b1722b93308648d56",
+          "tag_resolved_digest": "sha256:d94287ce5f9b68028188e0a1c8292b9593fbf4439cd0746b1722b93308648d56"
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "image_over_budget:swerebench/sweb.eval.x86_64.wright-group_1776_attune-122",
+        "image_over_budget:swerebench/sweb.eval.x86_64.wright-group_1776_attune-123"
+      ],
+      "status": "unavailable"
+    }
+  },
+  {
+    "base_commit": "1dabbf67426ad6243f7b6d791d3d38dbb68ab33e",
+    "case_id": "numba__numba-5624+numba-5627",
+    "contradictions": [],
+    "declared_base": {
+      "archive_bytes": 2405049,
+      "archive_sha256": "0dc75e816b657782b0ee9300ad3feee4051b32b97d9dc365a0333b96e37ff4d6",
+      "artifact_only_conflict": false,
+      "conflict_detail": [
+        {
+          "harness_artifact": false,
+          "in_reference_patches": false,
+          "in_test_patches": false,
+          "new_file_in_both_outputs": true,
+          "path": "reproduce_issue.py"
+        }
+      ],
+      "conflict_paths": [
+        "reproduce_issue.py"
+      ],
+      "diagnostic_label": "conflict",
+      "expected_tree": "4315e290821fc6c95d4fb59ab39b1798d7d1989e",
+      "initial_archive_tree": "c5316834aeb0145afadf276d8fc698258ed200fd",
+      "merge_exit": 1,
+      "omitted_files": 0,
+      "repair_error": null,
+      "repeat_identical": true,
+      "replay_status": "complete",
+      "rewritten_files": 1,
+      "snapshot_tree": "4315e290821fc6c95d4fb59ab39b1798d7d1989e",
+      "tree_verified": true
+    },
+    "exclusion": null,
+    "instances": [
+      "numba__numba-5624",
+      "numba__numba-5627"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      true,
+      false
+    ],
+    "patch_sha256": [
+      "4642cc730d3e8540eb2b9c403a07fba648957d4e748e4a30e1056c47c4a73955",
+      "4ea611672142ae420bf8aeee9a7750128ae99fd133825ef45bd502833cc0a846"
+    ],
+    "patch_sha256_replayed": [
+      "9cbc7733fd3b292e534508050faeed662f250bc64e68621a7f459c34d00e9bd4",
+      "e3795847095264f598022c067986ae1b48f52967ce7b991c8bdf3506cffdb6df"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "numba/numba",
+    "role": "fresh",
+    "snapshot": {
+      "distinct_image_digests": 2,
+      "images": [
+        {
+          "compressed_bytes": 1620099341,
+          "config_created": "2025-08-05T19:19:17.847906983Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T19:19:58.713441Z",
+          "image": "swerebench/sweb.eval.x86_64.numba_1776_numba-5624",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:c9ab63fa4a23dad4f280cfaa7bd4baf1b427382cd86ffa3821d14f6c1b3cb7cb",
+          "tag_resolved_digest": "sha256:c9ab63fa4a23dad4f280cfaa7bd4baf1b427382cd86ffa3821d14f6c1b3cb7cb"
+        },
+        {
+          "compressed_bytes": 1620117064,
+          "config_created": "2025-08-05T17:40:06.738219074Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T17:40:50.624869Z",
+          "image": "swerebench/sweb.eval.x86_64.numba_1776_numba-5627",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:115fb6f0e2966833571c3f10b72d364af0a5f437b019d788818937644788885e",
+          "tag_resolved_digest": "sha256:115fb6f0e2966833571c3f10b72d364af0a5f437b019d788818937644788885e"
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "image_over_budget:swerebench/sweb.eval.x86_64.numba_1776_numba-5624",
+        "image_over_budget:swerebench/sweb.eval.x86_64.numba_1776_numba-5627"
+      ],
+      "status": "unavailable"
+    }
+  },
+  {
+    "base_commit": "964d89fa8ace65181402f69ca2482d83b84600f8",
+    "case_id": "matthewwithanm__python-markdownify-120+python-markdownify-150",
+    "contradictions": [],
+    "declared_base": {
+      "archive_bytes": 14700,
+      "archive_sha256": "8f85d3f5847e647e517eec822a7c95b040591d7d1a5e11643c1bef64876a7993",
+      "artifact_only_conflict": false,
+      "conflict_detail": [
+        {
+          "harness_artifact": false,
+          "in_reference_patches": false,
+          "in_test_patches": false,
+          "new_file_in_both_outputs": true,
+          "path": "demo_fix.py"
+        },
+        {
+          "harness_artifact": false,
+          "in_reference_patches": false,
+          "in_test_patches": false,
+          "new_file_in_both_outputs": true,
+          "path": "reproduce_issue.py"
+        }
+      ],
+      "conflict_paths": [
+        "demo_fix.py",
+        "reproduce_issue.py"
+      ],
+      "diagnostic_label": "conflict",
+      "expected_tree": "b403b726aa5311ed35aa5358cd103b9997d9a25f",
+      "initial_archive_tree": null,
+      "merge_exit": 1,
+      "omitted_files": null,
+      "repair_error": null,
+      "repeat_identical": true,
+      "replay_status": "complete",
+      "rewritten_files": null,
+      "snapshot_tree": "b403b726aa5311ed35aa5358cd103b9997d9a25f",
+      "tree_verified": true
+    },
+    "exclusion": null,
+    "instances": [
+      "matthewwithanm__python-markdownify-120",
+      "matthewwithanm__python-markdownify-150"
+    ],
+    "join": {
+      "ok": true,
+      "problems": [
+        [],
+        []
+      ]
+    },
+    "patch_has_artifact_paths": [
+      true,
+      false
+    ],
+    "patch_sha256": [
+      "91c8f30ebad509a5b7a616ba9c1bbd732d550661b1a61fd1743b68a625eb5fec",
+      "a4519caaa141537ccac9288095d82f09a2cc8a620dbc3541b1a538862e19f613"
+    ],
+    "patch_sha256_replayed": [
+      "8217d6add011b4e8d0f7e06b4841e74ee3314f6eac7d89cbf871029b4936e6ff",
+      "93a97a4a25b7b8e673af2587fc38e06931cbd32eb187ff0d86c468a34fb16b21"
+    ],
+    "patch_trailing_lf_appended": [
+      true,
+      true
+    ],
+    "primary_label": null,
+    "repo": "matthewwithanm/python-markdownify",
+    "role": "fresh",
+    "snapshot": {
+      "distinct_image_digests": 2,
+      "images": [
+        {
+          "compressed_bytes": 1240499224,
+          "config_created": "2025-08-05T17:52:38.620593678Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T17:53:15.324139Z",
+          "image": "swerebench/sweb.eval.x86_64.matthewwithanm_1776_python-markdownify-120",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:7ece6d9a52c5a16d3f16e8ba9a178267ce6d66fb109bab3157742a8a6c3e5819",
+          "tag_resolved_digest": "sha256:7ece6d9a52c5a16d3f16e8ba9a178267ce6d66fb109bab3157742a8a6c3e5819"
+        },
+        {
+          "compressed_bytes": 1254361206,
+          "config_created": "2025-08-05T18:58:22.881422247Z",
+          "error": null,
+          "history_mentions_repo_clone": true,
+          "hub_tag_last_pushed": "2025-08-05T18:58:58.453044Z",
+          "image": "swerebench/sweb.eval.x86_64.matthewwithanm_1776_python-markdownify-150",
+          "largest_layer": 592126112,
+          "layer_count": 6,
+          "layer_inspection": "not_attempted_image_over_128MiB_budget",
+          "layers_over_64MiB_cap": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "platform_manifest_digest": "sha256:b7a872011ca4dae17c9ed122a4e79beac4218fd94b34f02b34211c8181b0dc0b",
+          "tag_resolved_digest": "sha256:b7a872011ca4dae17c9ed122a4e79beac4218fd94b34f02b34211c8181b0dc0b"
+        }
+      ],
+      "original_snapshot_verified": false,
+      "published_snapshot_verified": null,
+      "reasons": [
+        "image_over_budget:swerebench/sweb.eval.x86_64.matthewwithanm_1776_python-markdownify-120",
+        "image_over_budget:swerebench/sweb.eval.x86_64.matthewwithanm_1776_python-markdownify-150"
+      ],
+      "status": "unavailable"
+    }
+  }
+]

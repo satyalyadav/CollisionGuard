@@ -8,6 +8,7 @@ Summary for reports. Dates use America/Phoenix time.
 - The [resource recovery](docs/pilot/parallact-recovery-results.md) produced twelve verified pairs across eight repositories, with seven clean and five conflict labels. Opus 5.5 accepted the records. The public bundle adds task statements, licenses, source notices and offline verification.
 - Recovery reuses the same twelve cases; earlier failures and unknown runner/site provenance remain.
 - The [release assessment](docs/research/parallact-public-release.md) supplies the limited release basis. The blanket private-only advice was too cautious. No prediction results have been established.
+- The [controlled single-project pilot](docs/pilot/controlled-single-project-results.md) built five verified common-start task pairs from one parent anchor. Raw full-directory capture labeled all five as conflicts because ignored pytest caches and bytecode were force-included. Ordinary Git staging of the same outputs gives three clean and two conflicts. Those five repositories are development examples.
 - CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
@@ -47,6 +48,14 @@ A targeted source check and Opus review support a curated release under existing
 ### 2026-11-09: Package the public dataset
 
 Released task statements and labels with sources, component terms and license texts. Offline verification checks the pairs against recovery evidence; originals remain unchanged. PR1 adds TF-IDF and logistic baselines. Follow-up fixes add repository-separated evaluation, strict record validation, explicit synthetic mode and a reproducible dependency lock. All 67 tests and both runner modes pass. Commands are in the README. These runs demonstrate the workflow, not prediction accuracy.
+
+### 2026-11-16: Controlled single-project pilot
+
+Built one private parent anchor holding five pinned upstream trees, then ran ten DeepSeek V4.1 Flash coding tasks, two per repository, each in an isolated T3 worktree. All ten starts matched the pinned source tree and all five pairs replayed twice with identical results. The frozen full-directory capture labeled every pair `conflict`, because `git add --force` admitted pytest caches and bytecode. A separately named post-hoc analysis staged the same final directories as ordinary Git files: three clean merges and two conflicts (`CHANGES.rst` in itsdangerous; `CHANGELOG.rst` and `tests/test_utils.py` in packaging). The post-hoc labels are diagnostic, not replacements. See the [protocol](docs/pilot/controlled-single-project-protocol.md), [results](docs/pilot/controlled-single-project-results.md) and [public summary](data/controlled-single-project/posthoc-git-visible.json).
+
+### 2026-11-20: Commit the pilot record and freeze an ordinary-staging collector
+
+Committed the controlled, SWE-rebench and source-search scripts, tests, protocols, results and decision logs, and archived the oral report source under `docs/archive/2026-11-oral-report/`. Removed the generated report and presentation files. The collector now takes its staging policy from the frozen plan: `full-directory-v3` reproduces the old force-add captures, and `ordinary-git-staging-v1` lets the repository's own ignore rules decide. A fresh cohort is collected under the new policy before any prediction run.
 
 ## Maintaining this log
 

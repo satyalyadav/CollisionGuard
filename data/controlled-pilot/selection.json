@@ -1,0 +1,323 @@
+{
+  "coding_selection": {
+    "effort_option": null,
+    "fast": false,
+    "model": "claude-haiku-5.5",
+    "options": [
+      {
+        "id": "mode",
+        "value": "vibe"
+      }
+    ],
+    "priority": false,
+    "processing": "standard",
+    "provider": "kiro"
+  },
+  "frozen_at": "2026-11-15T23:29:28Z",
+  "pairs": [
+    {
+      "pair_id": "pair-click-b2b0be6b",
+      "repo_id": "click",
+      "task_ids": [
+        "task-513450bd81ebd217",
+        "task-8a66c8bbd1593d41"
+      ]
+    },
+    {
+      "pair_id": "pair-itsdangerous-17ea5a9b",
+      "repo_id": "itsdangerous",
+      "task_ids": [
+        "task-4193b88824d4d527",
+        "task-98bb9eb65d5e45ce"
+      ]
+    },
+    {
+      "pair_id": "pair-attrs-6d0628e7",
+      "repo_id": "attrs",
+      "task_ids": [
+        "task-d30718c55a5c1a77",
+        "task-a99166d0d48bd4a9"
+      ]
+    },
+    {
+      "pair_id": "pair-packaging-bc957ca7",
+      "repo_id": "packaging",
+      "task_ids": [
+        "task-d3bb218eaea3424f",
+        "task-f840ef1bd5bb1d52"
+      ]
+    },
+    {
+      "pair_id": "pair-dateutil-f95db6b9",
+      "repo_id": "dateutil",
+      "task_ids": [
+        "task-402d335a3eb3007a",
+        "task-1ffc4dd4af4515dc"
+      ]
+    }
+  ],
+  "plan_sha256": "0a888d174ef3faaca089ca97f25ec4acc44523ac0e4b09eb1e9a6fb364a2718c",
+  "producer_sha256": "ad9f5017220d87b179c2ae50dd9d747009bedf903cff51106c7f44691826a790",
+  "protocol_version": "controlled-pilot-1",
+  "repositories": [
+    {
+      "canonical_name": "pallets/click",
+      "commit": "e38188e9e205005d5af5f9e59df51904c984586a",
+      "default_branch": "main",
+      "identity_resolution": null,
+      "license_spdx": "BSD-3-Clause",
+      "repo_id": "click",
+      "requested_name": "pallets/click",
+      "source_project_id": "mcp:e9eea9b4-dc97-4c63-9715-8f437caf0bcf",
+      "source_url": "https://github.com/pallets/click",
+      "stars_at_pin": 17826,
+      "tree": "9f278790733eb087a591b95189e188094c3ac14f",
+      "visibility": "public"
+    },
+    {
+      "canonical_name": "pallets/itsdangerous",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "default_branch": "main",
+      "identity_resolution": null,
+      "license_spdx": "BSD-3-Clause",
+      "repo_id": "itsdangerous",
+      "requested_name": "pallets/itsdangerous",
+      "source_project_id": "mcp:e0640063-3266-4185-8dcf-14ed71cc824f",
+      "source_url": "https://github.com/pallets/itsdangerous",
+      "stars_at_pin": 3143,
+      "tree": "ef4287f82d8234404b58c7b29d38197e1f38e207",
+      "visibility": "public"
+    },
+    {
+      "canonical_name": "python-attrs/attrs",
+      "commit": "2a1fb86d44816afcc60e86d57956ce3604820326",
+      "default_branch": "main",
+      "identity_resolution": null,
+      "license_spdx": "MIT",
+      "repo_id": "attrs",
+      "requested_name": "python-attrs/attrs",
+      "source_project_id": "mcp:5acaf684-a062-4332-bb45-7ee27f2f1835",
+      "source_url": "https://github.com/python-attrs/attrs",
+      "stars_at_pin": 5863,
+      "tree": "f03d83ddabaad2ea3700f305b96db2240843f46d",
+      "visibility": "public"
+    },
+    {
+      "canonical_name": "pypa/packaging",
+      "commit": "5a7d3386d2777180a381eb947f21293124ce8df5",
+      "default_branch": "main",
+      "identity_resolution": null,
+      "license_spdx": "NOASSERTION",
+      "repo_id": "packaging",
+      "requested_name": "pypa/packaging",
+      "source_project_id": "mcp:04ff8fe8-55bc-4fea-a4cc-6ffc6cb83e0e",
+      "source_url": "https://github.com/pypa/packaging",
+      "stars_at_pin": 758,
+      "tree": "85c13f4c4e3eda5334b389b1501e1995727ff685",
+      "visibility": "public"
+    },
+    {
+      "canonical_name": "dateutil/dateutil",
+      "commit": "a78cbd81d5d03b5f126eb36edb92bca78972c804",
+      "default_branch": "master",
+      "identity_resolution": {
+        "api_url": "https://api.github.com/repos/python-dateutil/dateutil",
+        "final_url": "https://api.github.com/repos/python-dateutil/dateutil",
+        "http_status": 404,
+        "requested_name": "python-dateutil/dateutil",
+        "resolution": "official current repository is dateutil/dateutil",
+        "response_sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9"
+      },
+      "license_spdx": "NOASSERTION",
+      "repo_id": "dateutil",
+      "requested_name": "python-dateutil/dateutil",
+      "source_project_id": "mcp:6c586ca1-557c-4eec-960d-643c0115beb7",
+      "source_url": "https://github.com/dateutil/dateutil",
+      "stars_at_pin": 2647,
+      "tree": "da9176cc76597098f4b2927996f52d3b8cf0b9aa",
+      "visibility": "public"
+    }
+  ],
+  "tasks": [
+    {
+      "focused_test_command": "pytest tests/test_utils/test_get_app_dir.py",
+      "focused_test_target": "tests/test_utils/test_get_app_dir.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-click-b2b0be6b",
+      "prompt_sha256": "7a721f68d637cdbd7b9ae6e7484cc7a2048a7d609e1e725e73aa4670bc021d58",
+      "repo_id": "click",
+      "task_id": "task-513450bd81ebd217"
+    },
+    {
+      "focused_test_command": "pytest tests/test_utils/test_echo.py",
+      "focused_test_target": "tests/test_utils/test_echo.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-click-b2b0be6b",
+      "prompt_sha256": "656e3ecf1613ee7b850b56e56146e0a328d2a3c5840db08e4d0e55fd12ed4241",
+      "repo_id": "click",
+      "task_id": "task-8a66c8bbd1593d41"
+    },
+    {
+      "focused_test_command": "pytest tests/test_itsdangerous/test_encoding.py",
+      "focused_test_target": "tests/test_itsdangerous/test_encoding.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-itsdangerous-17ea5a9b",
+      "prompt_sha256": "6d331b94cf1d5ec2e14c10523f910fff64160e52c4b2353bb2301c64aabcaef2",
+      "repo_id": "itsdangerous",
+      "task_id": "task-4193b88824d4d527"
+    },
+    {
+      "focused_test_command": "pytest tests/test_itsdangerous/test_encoding.py",
+      "focused_test_target": "tests/test_itsdangerous/test_encoding.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-itsdangerous-17ea5a9b",
+      "prompt_sha256": "31a6a77f3f438295c0786c58171e32d6ab1ec8405befcb8cb081c2af9f3dc427",
+      "repo_id": "itsdangerous",
+      "task_id": "task-98bb9eb65d5e45ce"
+    },
+    {
+      "focused_test_command": "pytest tests/test_make.py -k fields_dict",
+      "focused_test_target": "tests/test_make.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-attrs-6d0628e7",
+      "prompt_sha256": "60e61a0ade0103f864f0c8c056234549fbeea49a4d6db7f8195898aab4dd7668",
+      "repo_id": "attrs",
+      "task_id": "task-d30718c55a5c1a77"
+    },
+    {
+      "focused_test_command": "pytest tests/test_next_gen.py -k asdict",
+      "focused_test_target": "tests/test_next_gen.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-attrs-6d0628e7",
+      "prompt_sha256": "87e248d5f5735f56a7f5876a198ac7d232b3c291c1b42bfdd32da5f4857c44ab",
+      "repo_id": "attrs",
+      "task_id": "task-a99166d0d48bd4a9"
+    },
+    {
+      "focused_test_command": "pytest tests/test_utils.py -k parse_wheel_filename",
+      "focused_test_target": "tests/test_utils.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-packaging-bc957ca7",
+      "prompt_sha256": "a9a8b83a238cf7a44b3a0f1476ca3f093320c75a9ff200febaadd9ff99a593db",
+      "repo_id": "packaging",
+      "task_id": "task-d3bb218eaea3424f"
+    },
+    {
+      "focused_test_command": "pytest tests/test_utils.py -k parse_sdist_filename",
+      "focused_test_target": "tests/test_utils.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-packaging-bc957ca7",
+      "prompt_sha256": "9a2bcbbef2008937ea64315556dd9b3e135b5c9b38f3eb46d6e50a2c3e570bff",
+      "repo_id": "packaging",
+      "task_id": "task-f840ef1bd5bb1d52"
+    },
+    {
+      "focused_test_command": "pytest tests/test_isoparser.py -k 'byte_sep or invalid_sep'",
+      "focused_test_target": "tests/test_isoparser.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-dateutil-f95db6b9",
+      "prompt_sha256": "ee69f52dfe23543ea7a8422e3d6737e5978349ac7dcba478918988de1fe6b7ca",
+      "repo_id": "dateutil",
+      "task_id": "task-402d335a3eb3007a"
+    },
+    {
+      "focused_test_command": "pytest tests/test_isoparser.py -k fractional",
+      "focused_test_target": "tests/test_isoparser.py",
+      "model": {
+        "model": "claude-haiku-5.5",
+        "options": [
+          {
+            "id": "mode",
+            "value": "vibe"
+          }
+        ],
+        "provider": "kiro"
+      },
+      "pair_id": "pair-dateutil-f95db6b9",
+      "prompt_sha256": "9cb693e70568d7d0f9c727a49ea37e464669d078e9ed799b21c79982a03ec8cb",
+      "repo_id": "dateutil",
+      "task_id": "task-1ffc4dd4af4515dc"
+    }
+  ]
+}

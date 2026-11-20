@@ -14,10 +14,12 @@ CollisionGuard studies whether task descriptions and repository information avai
 - [V1-only follow-up pilot](docs/pilot/parallact-v1-results.md), reviewed by Opus 5.5. All twelve task/output associations passed; four merge replays completed. Local archive limits caused the failed gate. The collector needs fixes before reuse.
 - [Alternative data-source search](docs/research/data-source-search.md), reviewed by Opus 5.5. ParallACT is the first import-audit candidate; see the later reuse assessment and pilot below.
 - [Data-source audit and verdicts](docs/research/data-source-audit.md), reviewed by Opus 5.5, with complete-tree replay evidence and explicit reuse conditions.
+- [Controlled single-project pilot](docs/pilot/controlled-single-project-results.md), with the [protocol](docs/pilot/controlled-single-project-protocol.md). Five repositories and ten coding tasks produced five verified common-start pairs. Ordinary Git staging gave three clean and two conflicts; this is construction evidence, not prediction accuracy.
+- [Controlled five-project pilot](docs/pilot/controlled-results.md) and [SWE-rebench analysis](docs/research/swe-rebench-verification-2026-11.md), plus the [broader data search](docs/research/broader-data-search-2026-11.md) and [agent-log verification](docs/research/agentlogs-verification-2026-11.md). These record why the project chose constructed pairs over reuse of existing corpora.
 
 The [ParallACT reuse assessment](docs/research/parallact-reuse-terms.md) recommends a bounded local research and training pilot with unresolved rights documented. The later [public-release assessment](docs/research/parallact-public-release.md) recommends a curated task-and-label release with the existing license conditions and source notices. The full local workspaces remain excluded from Git.
 
-The recovery produced a small dataset ready for baseline development, now released in `data/parallact-12/`. It reuses the twelve known v1 cases with corrected resource limits; it is not a fresh sample or evidence of prediction accuracy. Broader data and evaluation remain necessary. No prediction results have been established.
+The recovery produced a small dataset ready for baseline development, now released in `data/parallact-12/`. It reuses the twelve known v1 cases with corrected resource limits; it is not a fresh sample or evidence of prediction accuracy. The controlled single-project pilot adds five verified common-start pairs built from pinned public repositories, and shows that capture policy changes the labels. Broader data and evaluation remain necessary. No prediction results have been established.
 
 ## Start here
 

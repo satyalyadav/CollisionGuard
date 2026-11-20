@@ -1,0 +1,46 @@
+{
+  "access_or_capacity_exclusions_fresh": 1,
+  "artifact_only_conflicts": 0,
+  "budget": {
+    "cached_bytes": 13963299,
+    "limit_bytes": 536870912,
+    "received_bytes": 79788069,
+    "requests": 81
+  },
+  "cases_total": 6,
+  "contradictions": 0,
+  "declared_base_diagnostic_fresh": {
+    "clean": 1,
+    "conflict": 3
+  },
+  "declared_base_diagnostic_labels": {
+    "clean": 2,
+    "conflict": 3
+  },
+  "development_control_cases": 1,
+  "expansion_gate": {
+    "checks": {
+      "at_least_3_primary_fresh": false,
+      "at_least_3_repos": false,
+      "at_most_1_access_or_capacity_exclusion": true,
+      "no_contradictions": true
+    },
+    "passes": false
+  },
+  "fresh_cases": 5,
+  "original_snapshot_verified": 0,
+  "other_exclusions": 0,
+  "published_snapshot_verified": 0,
+  "repositories": [
+    "Unidata/MetPy",
+    "aio-libs/yarl",
+    "conan-io/conan",
+    "matthewwithanm/python-markdownify",
+    "numba/numba",
+    "wright-group/attune"
+  ],
+  "snapshot_unavailable": 6,
+  "strict_primary_all": 0,
+  "strict_primary_fresh": 0,
+  "strict_primary_fresh_repos": 0
+}

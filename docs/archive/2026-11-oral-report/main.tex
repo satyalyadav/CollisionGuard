@@ -1,0 +1,171 @@
+\documentclass[sigconf,authorversion,nonacm]{acmart}
+\settopmatter{printacmref=false,printfolios=true}
+\setcopyright{none}
+\usepackage{tabularx}
+
+\title[CollisionGuard progress report]{CollisionGuard: Pre-execution Conflict Forecasting for Parallel Coding Agents}
+\subtitle{CSE 572, Group 39: Progress report}
+\author{Sourish Tiwari}
+\affiliation{\institution{Arizona State University}\city{Tempe}\state{Arizona}\country{USA}}
+\author{Satyal Yadav}
+\affiliation{\institution{Arizona State University}\city{Tempe}\state{Arizona}\country{USA}}
+\author{Yin Yao}
+\affiliation{\institution{Arizona State University}\city{Tempe}\state{Arizona}\country{USA}}
+\author{Kishore Kumar Varukolu}
+\affiliation{\institution{Arizona State University}\city{Tempe}\state{Arizona}\country{USA}}
+\renewcommand{\shortauthors}{Tiwari et al.}
+
+\begin{document}
+\begin{abstract}
+Parallel coding agents can produce changes that conflict when integrated. CollisionGuard investigates whether this risk can be estimated before either task starts, using initial task descriptions and repository information available at dispatch. Our completed work establishes the data requirements, tests historical pull requests as a discovery source, and validates a small controlled benchmark. An AIDev pilot identified 1,471,903 retrospective candidate pairs and sampled 20 across 12 repositories, but could not supply verified pre-start records within the project window, so the pilot moved to ParallACT's independently motivated task pairs under the \texttt{parallel\_unaware} condition. That route yielded 12 task pairs across eight repositories, with seven clean and five conflicting Git merge outcomes reproduced on verified base trees. ParallACT supplies the task text and agent patches; our contribution is the pair selection, base reconstruction, labels, and prediction methods. We released statements, labels, and provenance, and implemented TF-IDF similarity and logistic-regression baselines with repository-separated demonstration runs. These runs check the workflow; they do not establish predictive accuracy. We describe the remaining data expansion, model comparisons, and conditional file-footprint and scheduling experiments. The current result is a reproducible development dataset and evaluation workflow, with generalization and scheduling benefit still unmeasured.
+\end{abstract}
+
+\ccsdesc[500]{Computing methodologies~Supervised learning}
+\ccsdesc[300]{Software and its engineering~Software configuration management}
+\keywords{coding agents, merge conflicts, pre-execution prediction, data leakage, repository-held-out evaluation}
+\maketitle
+
+\section{Introduction}
+AI coding agents increasingly implement features and maintenance tasks in shared repositories. Running independent agents concurrently can shorten completion time, but the resulting edits may require manual integration. A scheduler that recognizes risky task combinations before execution could stagger those tasks while preserving concurrency for other work. The useful prediction point is therefore before either agent writes code, when the scheduler has task descriptions and an existing repository snapshot, but no resulting patches.
+
+CollisionGuard asks whether those initial inputs contain enough information to rank the risk of a Git merge conflict between two tasks. This differs from checking whether already-written patches merge. An exact merge operation is available after both changes exist; at dispatch, the changed files and code are unknown. Text similarity may provide a cheap warning signal, but similar tasks can produce compatible edits, while tasks described with different words can touch the same implementation. The project compares direct task-text models with a proposed intermediate prediction of likely changed files.
+
+We define the present target as a \emph{Git-reported merge conflict} under a pinned replay procedure. This includes content, rename, and modify/delete conflicts. A clean result means Git can integrate the selected patches automatically; it does not establish that the combined program behaves correctly or satisfies both tasks. We do not currently evaluate semantic incompatibilities that merge without a Git conflict.
+
+The main mid-project challenge has been constructing examples that respect the prediction time. Retrospective pull-request metadata is abundant, but a completed PR description may summarize work already performed. An issue linked after implementation may not be the original assignment, and overlapping PR-open windows do not establish simultaneous agent execution. A classifier using those fields could appear successful while learning information unavailable to a real scheduler.
+
+The data route therefore changed. Historical pull requests remain the preferred evidence because they represent naturally arriving work, but our AIDev pilot could not produce records that met the pre-start boundary within the available time. We adopted a controlled benchmark as a development pilot instead: twelve ParallACT v1 pairs whose two agents were recorded as \texttt{parallel\_unaware}~\cite{parallact2026}. The prediction question is unchanged, but the evidence now describes a controlled benchmark rather than naturally arriving tasks, and the two must not be pooled as if they carried the same guarantees. ParallACT supplies the task text and the agent patches; our work is the pair selection, base reconstruction, merge labels, and prediction methods.
+
+Our completed contributions are a documented pre-execution data boundary, an AIDev feasibility pilot, a validated 12-pair ParallACT development set, and an implemented baseline workflow. The original proposal remains the research direction, but the evidence supports a narrower current claim: we can associate selected benchmark task statements with repeatable local merge labels. Larger independent data, reliable predictive comparisons, and scheduling gains remain future work.
+
+\section{Related Work}
+\subsection{Conflict detection and prediction}
+Brun et al.'s Crystal system detects collaboration conflicts by speculatively integrating existing changes~\cite{brun2011}. It motivates early warnings but operates after developers have produced code. Owhadi-Kareshk et al. predict conflicts using Git-derived features from historical merge scenarios~\cite{owhadi2019}. Their setting provides a direct classification precedent, but observed branch history and changed-file information cannot be copied into a model whose prediction precedes both implementations.
+
+Earlier work also limits broad novelty claims about file prediction or scheduling. Rocha and Borba estimate conflict risk using task interfaces derived from acceptance tests~\cite{rocha2023}. Their risk target is shared changed files, whereas our proposed target is the result of a Git merge. Cassandra uses task and file information to schedule development work and reduce expected conflicts~\cite{kasi2013}. CollisionGuard therefore does not claim that forecasting overlapping work or conflict-aware scheduling is new. The intended contribution is an evaluation of task-text prediction under an explicit pre-start information boundary, followed by an assessment of its practical concurrency cost.
+
+\subsection{Agent datasets and controlled benchmarks}
+AIDev supplies agent-authored PR activity, issue associations, and repository metadata~\cite{aidev2026}. It is useful for discovering candidate task pairs, but each historical example still needs evidence of its initial assignment, available repository state, and resulting agent output. The published concurrent-agent PR study supplies additional retrospective context~\cite{xu2026}. Its existing-head setting is different from predicting before coding begins, so we do not treat its conflict statistics as CollisionGuard model results.
+
+MergeGym is the closest agent-specific comparison~\cite{mergegym2026}. Its scope track predicts whether two pull requests will eventually share an authored file from title, body, and metadata available when a PR opens. Its lineage track predicts replayed textual conflicts from authored files and merge-base-to-head history, reaching AUROC 0.882 and average precision 0.661 with a 12-feature logistic model, and 0.902 and 0.701 with a random forest, on an enriched repository-held-out set. Its frozen-label scheduler de-overlaps a median 91.7\% of labeled scope collisions at 65.0\% makespan inflation over 97 repository streams. These results frame our work in two ways. First, PR text carries some signal about eventual file overlap: its TF-IDF scope model reaches pooled AUROC 0.644 and a zero-shot LLM 0.704. Second, none of its numbers is a pre-start Git-conflict result: PR opening does not establish that coding had not begun, the lineage features exist only after changes do, and the scheduling figure is simulated de-overlap rather than prevented conflicts. Our comparison will therefore match input timing and target before comparing scores.
+
+CooperBench studies paired coding tasks and agent coordination~\cite{cooperbench2026}. Our inspected original trajectories included partner-aware planning and communication. Those inspected cases belong to a separate interaction condition and cannot silently serve as unaware independent-agent examples. This observation concerns the records we checked, rather than every possible CooperBench configuration.
+
+ParallACT studies independently motivated coding tasks while varying execution order, awareness, visibility, and communication~\cite{parallact2026}. We selected a bounded set of v1 records with distinct assignments, separate agent patches, and no messages between the agents. Task A is presented in ParallACT as derived from SWE-bench Pro~\cite{swebenchpro}. These records offer a controlled development setting, but their construction and selection differ from naturally arriving tasks. Our local labels concern the retained patches, and do not establish representative real-world conflict rates.
+
+\section{Data}
+\subsection{Prediction unit and admissible information}
+An example is a pair of tasks in the same repository, together with the repository snapshot available before execution. The predictor receives the initial task statements and any explicitly permitted pre-start context. IDs and commit hashes identify records and support reproducibility; they are not model features. Completed PR descriptions, generated patches, eventual changed files, merge diagnostics, and label-provenance fields are excluded from inference inputs.
+
+The natural-history and controlled-benchmark routes require different evidence. Historical PRs need versioned task text and task-to-run associations at a defensible decision time. Controlled examples need identifiable initial assignments, a shared base, separate outputs, and a documented interaction condition. Passing a local benchmark replay check does not retrospectively validate a historical AIDev pair.
+
+\subsection{AIDev discovery pilot}
+The pilot used pinned AIDev revision \href{https://huggingface.co/datasets/hao-li/AIDev/tree/b8dc67df93e7c11f6f20c84129db7232eb1ec253}{\texttt{b8dc67df93e7}}. Its PR table contained 361,296 rows; 70,335 were issue-linked, and 70,334 retained nonempty clipped PR windows. Joining same-repository rows with overlapping retrospective windows and disjoint linked issues produced 1,471,903 candidate pairs. A seeded, capped sample selected 20 pairs across 12 repositories without repeated PRs or shared linked issues~\cite{pilotresults}.
+
+The pilot retained source IDs, revision and text hashes, issue-link metadata, and sampling records. It did not query complete task edit histories, original readiness or dispatch records, or original run-output heads. Consequently, all 20 primary examples remain unverified. The outcome is that feasibility was not assessed under the strict evidence criteria, rather than that no admissible pairs exist. Candidate-pair abundance alone is not a usable training-set size.
+
+\subsection{ParallACT pilot dataset and label validation}
+After an earlier source audit replayed six other ParallACT pairs, we selected twelve v1 cases that exclude them as a development pilot. Each retained case carries two distinct task assignments, separate non-reference agent patches, and a recorded \texttt{parallel\_unaware} interaction condition; run identity and message records confirm that the two agents exchanged no messages. ParallACT supplies the assignments and the agent outputs. Our work is selecting and validating the pairs, reconstructing the base trees, computing merge labels, and testing them.
+
+The pilot set contains 12 usable pairs across eight repositories, with seven labels clean and five conflicting. Table~\ref{tab:repos} reports the full distribution. The public bundle separates initial statements in \texttt{features.json} from outcomes in \texttt{targets.json}; both contain matching unique IDs~\cite{recoveryresults,publicdataset}.
+
+\begin{table}[t]
+\caption{The ParallACT pilot set. These counts describe the selected cases, not a population conflict rate.}
+\label{tab:repos}
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Repository & Pairs & Clean & Conflict\\
+\midrule
+gravitational/teleport & 2 & 1 & 1\\
+protonmail/webclients & 2 & 1 & 1\\
+NodeBB/NodeBB & 2 & 2 & 0\\
+flipt-io/flipt & 2 & 1 & 1\\
+navidrome/navidrome & 1 & 1 & 0\\
+internetarchive/openlibrary & 1 & 1 & 0\\
+future-architect/vuls & 1 & 0 & 1\\
+ansible/ansible & 1 & 0 & 1\\
+\midrule
+Total & 12 & 7 & 5\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Validation checked a complete base tree against the pinned Git tree, applied each patch independently, and required identical outcomes from two merge executions. Task wording was matched to the retained source evidence. Recovering the final case required replacing one archive entry and restoring two Gitlinks; those repairs, the transfer limits, and the earlier failed collection attempts are recorded with the result~\cite{recoveryresults}. The ParallACT site and execution revisions remain unknown, so we treat the set as a bounded benchmark pilot rather than a fully verified natural-history dataset.
+
+The released bundle contains statements, labels, source notices, component licenses, and hashes. Agent trajectories, patches, and full repository workspaces remain outside that bundle. The collection's licensing notice does not relicense the CollisionGuard repository or erase component terms. The 12 pairs are a development set reused after earlier collection failures, not an untouched test sample. They contain no changed-file supervision for training the proposed footprint model. The \texttt{parallel\_unaware} label describes the recorded condition; it does not turn these cases into a representative sample of independent real-world agent work.
+
+\section{Methods}
+\subsection{Implemented text baselines}
+The starting unsupervised baseline tokenizes the two task statements, fits inverse-document-frequency weights on training task text, and scores their TF-IDF cosine similarity. This is a lexical similarity score, not a calibrated probability of conflict. A threshold would convert it to a binary warning; a future evaluation must choose that threshold using development data only.
+
+The implemented supervised baseline is class-weighted logistic regression over six symmetric pair features: TF-IDF cosine, token-set Jaccard similarity, shorter-to-longer token-set size ratio, the smaller and larger token-set sizes, and the count of shared code-related keywords. It uses balanced class weights, a fixed random seed, and at most 1,000 optimization iterations. Repository identity is used for splitting and record checks, rather than as a predictor. The first implementation is intentionally small enough to inspect and compare with a prevalence-only reference.
+
+The demonstration runner leaves one repository out at a time. With this dataset, each held-out group has one or two pairs, leaving 11 or 10 training pairs. It refits text weights and the classifier inside each training fold, so the held-out repository does not contribute its task vocabulary statistics or labels to fitting. A fold without sufficient training classes is reported as unavailable instead of receiving an invented score. These demonstrations establish that the workflow executes; they are too small and previously inspected to support a final performance claim.
+
+\subsection{Planned direct and two-stage models}
+With more admissible data, we will compare four predictors on the same examples and splits: training prevalence, text similarity, logistic regression, and gradient boosting. We may add similarity between task embeddings if we can reproduce it within the available compute budget. Agent and timing features require evidence of availability at dispatch. A separate comparison will use task text alone.
+
+The proposed two-stage model first ranks repository files for each task using only its initial description and the pre-start snapshot. It then converts the two predicted footprints into overlap features for a conflict classifier. Eventual changed files may supervise the first stage, but may not replace its predictions during evaluation. For an unseen repository, the candidate files must come from that repository's own pre-start tree, rather than a classifier's fixed list of training path IDs. Files created later require a separate coverage analysis.
+
+Second-stage training will use footprint predictions produced out of fold, so the footprint model cannot memorize eventual changed files. We will compare a simple task-to-path retrieval baseline before adding a learned file scorer. The public data contain no footprint targets, so this stage is conditional on collecting that supervision.
+
+\subsection{Replay target and reproducibility}
+The label records whether Git reports a merge conflict for the two selected patches on the reconstructed common base. The replay protocol pins Git 2.43.0 and records the inputs, base tree, patch hashes, and repeated outcomes. A nonzero operational failure, missing object, or uncertain base is unavailable evidence, not a negative example. Clean replay also does not imply a successful build or behavioral correctness, because repository code and tests were not executed during source reconstruction.
+
+Our feature and target files join only by instance ID. The source ledger is audit material and is kept out of the model input. Validation checks reject missing or duplicated IDs, mismatched records, empty statements, and unsupported label statuses. These controls address preventable record errors; they cannot recover an unknown upstream runner revision or make the selected sample representative.
+
+\subsection{Evaluation and scheduling plan}
+For expanded data, we will freeze repository-disjoint development and test groups before tuning. Repeated tasks, PRs, and linked task families must not cross groups. All learned preprocessing, calibration, hyperparameters, and decision thresholds belong inside training or development partitions. Where historical timestamps are trustworthy, we will additionally test forward in time. With only eight repositories and 12 known cases, we have not designated an independent final test set.
+
+The planned primary ranking metric is average precision, accompanied by prevalence and a precision-recall curve. We distinguish average precision from trapezoidal PR-AUC rather than use their names interchangeably. At a threshold fixed on development data, we will report confusion counts, precision, recall, and F1, with Brier score and calibration plots for probability quality. Repository-level uncertainty will accompany pooled scores where the sample supports it.
+
+Scheduling experiments require task arrivals, durations, agent capacity, and enough pair labels to define competing policies. Under a common workload, we plan to compare unrestricted parallelism, FIFO serialization, and a learned risk threshold. Outcomes will include conflict-labeled pairs run concurrently, missed-conflict fraction, retained concurrency, waiting time, and makespan. Historical durations would be simulation inputs, never pre-start model features. If reliable durations are unavailable, we will state synthetic duration assumptions and vary them explicitly.
+
+A frozen-label simulation assumes that changing the schedule leaves task outputs and durations fixed. In reality, an agent started later may see a new base and produce a different patch. Any simulated gain will therefore be described as reduced concurrent exposure to fixed replay labels, not a demonstrated causal reduction in real merge conflicts. If workload evidence remains insufficient, retrospective model evaluation will take priority over an unsupported scheduler claim.
+
+\section{Results}
+\subsection{Completed data-feasibility results}
+Table~\ref{tab:milestones} separates historical discovery from the controlled pilot result. In the AIDev diagnostic work, 11 of 20 Git fetch attempts obtained objects and nine stopped at configured transfer caps. Seven fetched histories did not expose a common base at depth 50. Four provisional checks returned three clean and one conflicting result, but shallow history and unverified original-run provenance prevented their admission as labels. No AIDev pair currently supplies a verified pre-start training example~\cite{pilotresults}.
+
+\begin{table}[t]
+\caption{Completed milestones and the claim each supports. The two source populations are separate.}
+\label{tab:milestones}
+\centering
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.20\columnwidth}>{\raggedright\arraybackslash}p{0.25\columnwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Milestone & Observed result & Supported conclusion\\
+\midrule
+AIDev discovery & 1,471,903 candidates; 20 sampled & Primary input validity remains unassessed.\\
+Source audit & 6 ParallACT cases replayed & Controlled import was technically plausible.\\
+ParallACT pilot set & 12 pairs; 8 repositories; 7 clean, 5 conflict & These patches have repeatable exact-base Git labels.\\
+Baselines & TF-IDF and logistic regression & Demonstrations keep test repositories out of training.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The twelve cases come from a collection that earlier failed on resource limits. All 12 now have valid local task/output associations and repeatable exact-tree labels without any change to the frozen selection~\cite{recoveryresults}. This does not turn the earlier failed collections into successful ones.
+
+\subsection{Example interpretation}
+One conflicting Flipt pair combines a request to allow additional Fern SDK CORS headers with a request to make the server's CORS allowlist configurable. Both assignments concern the same behavior, and replay of the retained patches reports a conflict. A clean Open Library pair combines correcting source-work reindexing after moving editions with deduplicating Solr updates within a polling cycle. The retained patches merge automatically despite related indexing terminology~\cite{publicdataset}. These examples motivate checking outcomes rather than labeling every similar task pair as conflicting. They do not establish which text features will generalize.
+
+\subsection{Engineering and experimental status}
+The repository now includes the public 12-pair bundle, offline verification, data loaders, replay and sampling utilities, baseline implementations, and a locked dependency specification. The progress log records 67 passing tests and successful public-data and explicitly synthetic runner modes at the packaging milestone~\cite{projectprogress}. Those checks concern local utilities and the demonstration workflow. They do not validate all historical metadata, execute third-party application tests, or establish model accuracy.
+
+The baseline runner prints repository-held-out scores and coverage for inspection. On these twelve reused examples, held-out TF-IDF scores span 0.170--0.417 for clean pairs and 0.162--0.568 for conflicting pairs, and logistic-regression scores span 0.017--0.646 and 0.001--1.000. The ranges overlap, so these demonstrations show that the workflow runs, not a performance metric. We do not present those scores as an independent benchmark result, a reliable precision-recall improvement, or a scheduling gain. Gradient boosting, learned footprint prediction, calibrated conflict probabilities, and scheduling simulation remain uncompleted experiments. This is more precise than saying that no code or model fitting exists: the baseline workflow is implemented, while scientific predictive performance remains unestablished.
+
+\section{Discussion}
+The main lesson is that source availability, input validity, and reproducible labels are separate requirements. A large retrospective overlap query supplied candidate pairs, but could not prove what either agent knew before execution. The benchmark route supplied more inspectable task and patch associations, but introduced a selected, controlled population. Pooling these records without preserving their different evidence would obscure the actual research question.
+
+Twelve pairs are useful for exercising validation, joins, feature extraction, and grouped fitting. They are insufficient for confident model selection, calibration, or population estimates. Eight repositories do not remove that limitation because several contain only one case. Because these cases were selected during a collection that failed on resource limits, they cannot become an untouched test set. The next dataset must add independent examples and retain exclusion reasons, label counts, repository counts, and task-family relationships.
+
+The broad Git-conflict target deliberately narrows the original textual-conflict wording to what the replay evidence establishes, without silently counting rename or deletion conflicts as text-only hunk conflicts. A clean label still means automatic integration, not semantic task compatibility.
+
+The next milestone, due before the final report, is to assemble and freeze an independent evaluation set before any tuning: at least 40 verified pairs spanning at least 12 repositories, none reused from the current twelve or the six audited cases, drawn from the remaining ParallACT repositories and, where the pre-start boundary can be met, from AIDev. Development and test groups stay repository-disjoint and are fixed in advance. We will evaluate the prevalence-only, similarity, and logistic baselines first, then test whether gradient boosting adds value. Footprint prediction proceeds only if changed-file targets and sufficient snapshot coverage can be obtained. Scheduling follows only if task streams and duration assumptions can be justified. Because MergeGym's scope and lineage results use different input timing and targets, on 5,387 and 497 held-out pairs respectively, our eventual comparison will state the timing and target behind each number instead of ranking scores across settings. If the collection conditions remain unmet, the final report will state the limited result and explain the failed assumptions instead of treating workflow execution as predictive success.
+
+\section{Conclusion}
+We completed an AIDev feasibility pilot, released 12 ParallACT \texttt{parallel\_unaware} pairs with repeatable Git labels, and implemented text baselines that hold out repositories during evaluation. Predictive performance remains unestablished. Next, we will collect independent examples, freeze a repository-disjoint split, and compare direct predictors. Footprint and scheduling experiments require additional supervision and workload evidence.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

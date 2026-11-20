@@ -1,0 +1,6 @@
+ts	phase	decision	why	evidence	result
+2026-11-15T21:42:02Z	start	Started bounded AgentLogs verification	Freeze selection and request limits before inspecting logs	data/private/research/agentlogs-verification-2026-11/run.txt	open
+2026-11-15T21:42:35Z	sample	Selected first five new repositories in rows 0 to 99	Keep a metadata-only rule before opening logs	data/private/research/agentlogs-verification-2026-11/selection.txt	Two repositories have distinct-task candidates
+2026-11-15T21:44:46Z	evidence	Read two contiguous Connectbot log segments and resolved their logged commits	Test execution and output provenance using original records	data/private/research/agentlogs-verification-2026-11/ledger.jsonl	Distinct commit parent trees do not prove initial checkouts
+2026-11-15T21:44:46Z	access	Used bounded row fetch after filters failed	Recover directly accessible session logs without scanning the full table	data/private/research/agentlogs-verification-2026-11/ledger.jsonl	Cassandra logs remain unlocated
+2026-11-15T21:45:30Z	conclusion	Recommended moving AgentLogs out of immediate priority	The small sample has no established pair and key execution evidence remains unresolved	docs/research/agentlogs-verification-2026-11.md	Sample negative and access-limited, not corpus-wide

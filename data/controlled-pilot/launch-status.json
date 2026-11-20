@@ -1,0 +1,13 @@
+{
+  "coding_run_usage": "unavailable: no coding run started",
+  "expected_coding_tasks": 10,
+  "feasibility_gate_passes": null,
+  "launched_coding_tasks": 0,
+  "observed_at": "2026-11-16T02:17:49+00:00",
+  "pair_attempts": 0,
+  "pairs_in_denominator": 5,
+  "plan_sha256": "0a888d174ef3faaca089ca97f25ec4acc44523ac0e4b09eb1e9a6fb364a2718c",
+  "qualifying_pairs": 0,
+  "task_creation_status": "direct root submission rejected before child creation",
+  "status": "blocked_root_direct_cross_project"
+}
