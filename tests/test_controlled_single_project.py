@@ -38,13 +38,17 @@ def make_parent(base: Path) -> Path:
     return parent
 
 
-def make_source(base: Path, repo_id: str, body: str) -> dict:
+def make_source(base: Path, repo_id: str, body: str, *, dir_symlink: bool = False) -> dict:
     source = base / f"source-{repo_id}"
     init_repo(source)
     (source / "lib.py").write_text(body, encoding="utf-8")
     (source / "LICENSE").write_text(f"fixture license for {repo_id}\n", encoding="utf-8")
     (source / "tests").mkdir()
     (source / "tests" / "test_lib.py").write_text("def test_ok():\n    assert True\n", encoding="utf-8")
+    if dir_symlink:
+        (source / "real").mkdir()
+        (source / "real" / "ca.crt").write_text("fixture certificate\n", encoding="utf-8")
+        (source / "tests" / "ca").symlink_to("../real")
     run(["git", "-C", str(source), "add", "-A"])
     run(["git", "-C", str(source), "commit", "-qm", "pin"])
     return {
@@ -335,9 +339,9 @@ class CaptureTests(unittest.TestCase):
 
 
 class CollectTests(unittest.TestCase):
-    def make_fixture(self, base: Path) -> tuple[Path, Path, dict]:
+    def make_fixture(self, base: Path, *, dir_symlink: bool = False) -> tuple[Path, Path, dict]:
         parent = make_parent(base)
-        pins = [make_source(base, "alpha", "one\ntwo\nthree\nfour\nfive\n")]
+        pins = [make_source(base, "alpha", "one\ntwo\nthree\nfour\nfive\n", dir_symlink=dir_symlink)]
         evidence, provenance = build_anchor(base, parent, pins, "refs/research/fixture-collect")
         csp.dump_json(
             evidence / "run.json",
@@ -405,6 +409,18 @@ class CollectTests(unittest.TestCase):
             self.assertFalse(record["nonempty"])
             self.assertTrue(record["source_tree_unchanged"])
             self.assertEqual(record["patch_bytes"], 0)
+            self.assertTrue(record["replay_ok"])
+
+    def test_directory_symlinks_are_inventoried_and_captured(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            evidence, worktree, task = self.make_fixture(base, dir_symlink=True)
+            change_line(worktree, task["source_prefix"], 1, "TWO")
+            record = collect_for(task, worktree, evidence)
+            self.assertTrue(record["verdict"]["ok"], record["verdict"]["problems"])
+            rows = {row["path"]: row for row in record["final_inventory"]}
+            self.assertIn("tests/ca", rows)
+            self.assertEqual(rows["tests/ca"]["mode"], "120000")
             self.assertTrue(record["replay_ok"])
 
     def test_collection_refuses_an_invalid_start_capture(self):

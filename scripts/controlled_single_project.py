@@ -32,7 +32,7 @@ HELPER_PATH = "scripts/controlled_single_project.py"
 DEFAULT_EVIDENCE_ROOT = Path(
     os.environ.get(
         "CSP_CANONICAL_EVIDENCE_ROOT",
-        "/home/satyal/cse-572/Project/data/private/research/controlled-single-project-fresh-2026-11-20",
+        "/home/satyal/cse-572/Project/data/private/research/controlled-single-project-fresh-2026-11-20-v2",
     )
 )
 CAPTURE_POLICIES = {
@@ -358,6 +358,18 @@ def fs_inventory(root: Path, *, hash_files: bool) -> list[dict[str, Any]]:
     entries: list[dict[str, Any]] = []
     for dirpath, dirnames, filenames in os.walk(root, followlinks=False):
         dirnames[:] = sorted(name for name in dirnames if name != ".git")
+        for name in list(dirnames):
+            path = Path(dirpath) / name
+            if path.is_symlink():
+                dirnames.remove(name)
+                entries.append(
+                    {
+                        "path": path.relative_to(root).as_posix(),
+                        "mode": "120000",
+                        "type": "symlink",
+                        "target": os.readlink(path),
+                    }
+                )
         for name in sorted(filenames):
             path = Path(dirpath) / name
             rel = path.relative_to(root).as_posix()

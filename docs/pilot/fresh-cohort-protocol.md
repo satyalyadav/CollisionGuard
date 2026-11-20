@@ -70,3 +70,12 @@ The design remains instruction-bound sibling isolation with coordinator-authored
 ## Freeze state
 
 The anchor ref is `refs/research/controlled-single-project-2026-11-20-fresh-v1`; the parent commit is `6b7c1dbd20da30b50fb7244572e39cc4e739f798`. The recorder hash, test hash, spec hash and prompt hashes are recorded in the private freeze manifest before the first launch. No coding output existed at freeze time.
+
+## Amendment: first attempt stopped by a symlink inventory defect
+
+The first attempt (`csp-run-20261120-4f2a9c`) stopped at the requests capture. The pinned requests tree contains two directory symlinks, `tests/certs/mtls/client/ca` and `tests/certs/valid/ca`. The recorder's filesystem inventory walked directories with `os.walk(followlinks=False)`, which reports symlinks to directories under `dirnames`, so both paths were recorded as missing on disk. The capture correctly refused to proceed; no requests files were edited.
+
+The defect is in the recorder, not in the staging policy. `fs_inventory` now records symlinked directories without descending into them. A fixture test covers a pinned source tree with a directory symlink. The first attempt produced one clean pluggy pair under its own frozen plan; that attempt is retained privately and is not combined with this cohort.
+
+The corrected attempt is `csp-run-20261120-9b7d2e`, with a new parent commit, anchor ref `refs/research/controlled-single-project-2026-11-20-fresh-v2` and a separate evidence root. Its manifest is frozen in that root before the first launch.
+
