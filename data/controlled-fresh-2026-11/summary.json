@@ -1,0 +1,446 @@
+{
+  "protocol_version": "controlled-single-project-2",
+  "run_id": "csp-run-20261120-9b7d2e",
+  "plan_sha256": "d7274fbb5d1443c7bd2fea65b40247f3988b7d73ee9b50467f4b1f1784d16ee7",
+  "producer_sha256": "f53f3ca011192ebe1ca93e05cb75540d25ce74ee8fe08132535ced36e06b98b5",
+  "capture_policy": "ordinary-git-staging-v1",
+  "frozen_at": "2026-11-20T22:32:55.733Z",
+  "anchor": {
+    "commit": "1b6a81b3516b6c18884bbeff231885e5a34145e0",
+    "tree": "d33b1ee4f9f514b33a6227a2f7df1ae3d6f3b303",
+    "parent_commit": "61fab1d84511550272ab1d1a69dcadfcfbfbb854"
+  },
+  "repositories": [
+    {
+      "repo_id": "pluggy",
+      "canonical_name": "pytest-dev/pluggy",
+      "default_branch": "main",
+      "upstream_commit": "93de545c3a31880feaf0f6bb8870b30d602cf681",
+      "upstream_tree": "8f60ba3a590b47405612c86938cb016f62c34ebd",
+      "license_spdx": "MIT",
+      "stars_at_pin": 1717
+    },
+    {
+      "repo_id": "requests",
+      "canonical_name": "psf/requests",
+      "default_branch": "main",
+      "upstream_commit": "3c7baaa05ab4aa49cc819ce3a819d260de19c157",
+      "upstream_tree": "0c8b989695d73c087123936657c0fbfe3034471f",
+      "license_spdx": "Apache-2.0",
+      "stars_at_pin": 54733
+    },
+    {
+      "repo_id": "httpx",
+      "canonical_name": "encode/httpx",
+      "default_branch": "master",
+      "upstream_commit": "7cff5f79bc78649bbcd3fd9aa7a74c86e0f63016",
+      "upstream_tree": "bd96f1f1df8ba79defc46792d1044cd4abd96b7b",
+      "license_spdx": "BSD-3-Clause",
+      "stars_at_pin": 15817
+    },
+    {
+      "repo_id": "urllib3",
+      "canonical_name": "urllib3/urllib3",
+      "default_branch": "main",
+      "upstream_commit": "d9f9b0ad5b99247e06aa9a50b7a5747aa5c2e35d",
+      "upstream_tree": "97e7a7bad2bb3113e2a0ae930cd9480b94ab481c",
+      "license_spdx": "MIT",
+      "stars_at_pin": 4085
+    },
+    {
+      "repo_id": "jsonschema",
+      "canonical_name": "python-jsonschema/jsonschema",
+      "default_branch": "main",
+      "upstream_commit": "64b62de5df4ec52d7679c770427329e86a22c395",
+      "upstream_tree": "1c501a4dab7aeaa13407bcc7affe70a3da0d0a1f",
+      "license_spdx": "MIT",
+      "stars_at_pin": 4998
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "csp-pair-aaee6437b3bf1ca3",
+      "repo_id": "pluggy",
+      "task_ids": [
+        "csp-task-1f4f48ba0db8aff0",
+        "csp-task-7d4a9b669f5e12b4"
+      ],
+      "label": "conflict",
+      "qualifies": true,
+      "attempted": true,
+      "starting_snapshots_equal": true,
+      "merge_repeats_identical": true,
+      "changed_paths": [
+        [
+          "docs/index.rst",
+          "src/pluggy/_manager.py",
+          "testing/test_pluginmanager.py"
+        ],
+        [
+          "src/pluggy/_manager.py",
+          "testing/test_pluginmanager.py"
+        ]
+      ],
+      "final_source_trees": [
+        "055bbd17761f02cfb719fa1613bd07b385c43860",
+        "c5f55a4d94713223d4b3116ca8b690f5752b29b9"
+      ],
+      "conflict_paths": [
+        "src/pluggy/_manager.py"
+      ],
+      "patch_sha256": [
+        "d119388e0e219efccd09e8ac2bc550a4e09a54bf5c738922fe5be7e56e9bcac2",
+        "e596a64f20d5c67e2527c875d8a1439e138700f450b7938314a01305293dab0a"
+      ],
+      "artifacts": [
+        [],
+        []
+      ]
+    },
+    {
+      "pair_id": "csp-pair-0353590eb1f6b423",
+      "repo_id": "requests",
+      "task_ids": [
+        "csp-task-a110a2d22537f121",
+        "csp-task-c65d9d2f12fb1547"
+      ],
+      "label": "conflict",
+      "qualifies": true,
+      "attempted": true,
+      "starting_snapshots_equal": true,
+      "merge_repeats_identical": true,
+      "changed_paths": [
+        [
+          "src/requests/utils.py",
+          "tests/test_utils.py"
+        ],
+        [
+          "src/requests/utils.py",
+          "tests/test_utils.py"
+        ]
+      ],
+      "final_source_trees": [
+        "480435b82e17d85ce8391489e8aae602d98a265d",
+        "c24bf5fd129b3f043022165e8628e2446e253193"
+      ],
+      "conflict_paths": [
+        "src/requests/utils.py"
+      ],
+      "patch_sha256": [
+        "e17b31ae147c4ad52234f3ef0577ddb75db46f84f9bb3e97f897ed284d7ff399",
+        "c2032e14366f3450a819a7b1d446334aeb4fd6bbfc23f7ac315f2754b2f8eaad"
+      ],
+      "artifacts": [
+        [],
+        []
+      ]
+    },
+    {
+      "pair_id": "csp-pair-561b5869bd6f0397",
+      "repo_id": "httpx",
+      "task_ids": [
+        "csp-task-938b645a2e3980ca",
+        "csp-task-a45a1d67fe92d48a"
+      ],
+      "label": "conflict",
+      "qualifies": true,
+      "attempted": true,
+      "starting_snapshots_equal": true,
+      "merge_repeats_identical": true,
+      "changed_paths": [
+        [
+          "httpx/_utils.py",
+          "tests/test_utils.py"
+        ],
+        [
+          "httpx/_utils.py",
+          "tests/test_utils.py"
+        ]
+      ],
+      "final_source_trees": [
+        "d2166cda956ae4430dea3bc794030e304b6c1945",
+        "b0a317d5f802d010a58939040361e3ba1a9af1f2"
+      ],
+      "conflict_paths": [
+        "httpx/_utils.py",
+        "tests/test_utils.py"
+      ],
+      "patch_sha256": [
+        "d603c183a604505657d9115d7abf7980ca4789784880cec64f052200a8f1bbd8",
+        "aa409b7e87d02cde49b852afeb7615e6f75e611f129856f72af6e3dfb355f910"
+      ],
+      "artifacts": [
+        [],
+        []
+      ]
+    },
+    {
+      "pair_id": "csp-pair-4d4bce4963b46dac",
+      "repo_id": "urllib3",
+      "task_ids": [
+        "csp-task-15eb03e605d75284",
+        "csp-task-31cd91a1c8967620"
+      ],
+      "label": "conflict",
+      "qualifies": true,
+      "attempted": true,
+      "starting_snapshots_equal": true,
+      "merge_repeats_identical": true,
+      "changed_paths": [
+        [
+          "src/urllib3/util/util.py",
+          "test/test_util.py"
+        ],
+        [
+          "src/urllib3/util/util.py",
+          "test/test_util.py"
+        ]
+      ],
+      "final_source_trees": [
+        "a8a0bcc796f01842cb67e2f3ed4a088c42a02af0",
+        "16f5cdeccdb3a1949b214dcf9f7b7bf5a6c891fb"
+      ],
+      "conflict_paths": [
+        "src/urllib3/util/util.py",
+        "test/test_util.py"
+      ],
+      "patch_sha256": [
+        "853670fb1c8067cdb70959da662f2abf3303b3e95aca8ff4fa55be215c175abd",
+        "ad3d6b1277cca5879d2c4f4fbbb10e0adc176849b536174e0eb473a5082c6366"
+      ],
+      "artifacts": [
+        [],
+        []
+      ]
+    },
+    {
+      "pair_id": "csp-pair-88ba07ab67ac5a9e",
+      "repo_id": "jsonschema",
+      "task_ids": [
+        "csp-task-3cf8411dac577d7c",
+        "csp-task-c4054ce9ace89016"
+      ],
+      "label": "conflict",
+      "qualifies": true,
+      "attempted": true,
+      "starting_snapshots_equal": true,
+      "merge_repeats_identical": true,
+      "changed_paths": [
+        [
+          "jsonschema/_utils.py",
+          "jsonschema/tests/test_utils.py"
+        ],
+        [
+          "jsonschema/_utils.py",
+          "jsonschema/tests/test_utils.py"
+        ]
+      ],
+      "final_source_trees": [
+        "2cece94fdccc114c5a029b37d5bab0bd796a5597",
+        "fb6f9da9bec9692c685a283237120a38bf05b991"
+      ],
+      "conflict_paths": [
+        "jsonschema/_utils.py",
+        "jsonschema/tests/test_utils.py"
+      ],
+      "patch_sha256": [
+        "0011718fea3394adbeb85d6df16f99b8905b6e897195e566fa592020b672fbc4",
+        "d71f67267ccfa09cd23c0ef65e0fed82dcaccacb8f23d20e406afaf152aa910d"
+      ],
+      "artifacts": [
+        [],
+        []
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "csp-task-7d4a9b669f5e12b4",
+      "pair_id": "csp-pair-aaee6437b3bf1ca3",
+      "repo_id": "pluggy",
+      "arm": "A",
+      "prompt_sha256": "b27e6da4669cdbb4621121798edb0489ade320693c37c9e0b85cb25033ac61df",
+      "changed_paths": [
+        "docs/index.rst",
+        "src/pluggy/_manager.py",
+        "testing/test_pluginmanager.py"
+      ],
+      "final_source_tree": "055bbd17761f02cfb719fa1613bd07b385c43860",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 19,
+      "duration_seconds": 208.743,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-1f4f48ba0db8aff0",
+      "pair_id": "csp-pair-aaee6437b3bf1ca3",
+      "repo_id": "pluggy",
+      "arm": "B",
+      "prompt_sha256": "78d1254697d91587c0c8feb8344b4d8e00b05e17a94de569da1fa136dc733a92",
+      "changed_paths": [
+        "src/pluggy/_manager.py",
+        "testing/test_pluginmanager.py"
+      ],
+      "final_source_tree": "c5f55a4d94713223d4b3116ca8b690f5752b29b9",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 19,
+      "duration_seconds": 86.189,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-c65d9d2f12fb1547",
+      "pair_id": "csp-pair-0353590eb1f6b423",
+      "repo_id": "requests",
+      "arm": "A",
+      "prompt_sha256": "fa70d3d02e2696d0687372e972bce9d0d36208bb1505496ccb812a7660569561",
+      "changed_paths": [
+        "src/requests/utils.py",
+        "tests/test_utils.py"
+      ],
+      "final_source_tree": "480435b82e17d85ce8391489e8aae602d98a265d",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 26,
+      "duration_seconds": 115.222,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-a110a2d22537f121",
+      "pair_id": "csp-pair-0353590eb1f6b423",
+      "repo_id": "requests",
+      "arm": "B",
+      "prompt_sha256": "7e8751cfcc36d2e6de9e6e2c01448ad4d4630da92bce9dbad5bf6e728e1fd36d",
+      "changed_paths": [
+        "src/requests/utils.py",
+        "tests/test_utils.py"
+      ],
+      "final_source_tree": "c24bf5fd129b3f043022165e8628e2446e253193",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 26,
+      "duration_seconds": 130.764,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-a45a1d67fe92d48a",
+      "pair_id": "csp-pair-561b5869bd6f0397",
+      "repo_id": "httpx",
+      "arm": "A",
+      "prompt_sha256": "0211095f41f5e13ea18399648563a0de2532f627d4979d3ce5d5ca5e56f46b1a",
+      "changed_paths": [
+        "httpx/_utils.py",
+        "tests/test_utils.py"
+      ],
+      "final_source_tree": "d2166cda956ae4430dea3bc794030e304b6c1945",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 31,
+      "duration_seconds": 102.586,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-938b645a2e3980ca",
+      "pair_id": "csp-pair-561b5869bd6f0397",
+      "repo_id": "httpx",
+      "arm": "B",
+      "prompt_sha256": "7ad23b0686c3cf04de138026a074081ebcc59c27396a56f4ced53706f1475290",
+      "changed_paths": [
+        "httpx/_utils.py",
+        "tests/test_utils.py"
+      ],
+      "final_source_tree": "b0a317d5f802d010a58939040361e3ba1a9af1f2",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 31,
+      "duration_seconds": 139.796,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-31cd91a1c8967620",
+      "pair_id": "csp-pair-4d4bce4963b46dac",
+      "repo_id": "urllib3",
+      "arm": "A",
+      "prompt_sha256": "a26d06a92f5e9716c36c603f6c5a367193e8e231904feaf2624ca609bc721ba0",
+      "changed_paths": [
+        "src/urllib3/util/util.py",
+        "test/test_util.py"
+      ],
+      "final_source_tree": "a8a0bcc796f01842cb67e2f3ed4a088c42a02af0",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 44,
+      "duration_seconds": 194.668,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-15eb03e605d75284",
+      "pair_id": "csp-pair-4d4bce4963b46dac",
+      "repo_id": "urllib3",
+      "arm": "B",
+      "prompt_sha256": "3463ff0d032d324a177b7d904796f9131941e97007da52f8f90fe5214ce623d6",
+      "changed_paths": [
+        "src/urllib3/util/util.py",
+        "test/test_util.py"
+      ],
+      "final_source_tree": "16f5cdeccdb3a1949b214dcf9f7b7bf5a6c891fb",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 44,
+      "duration_seconds": 191.685,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-c4054ce9ace89016",
+      "pair_id": "csp-pair-88ba07ab67ac5a9e",
+      "repo_id": "jsonschema",
+      "arm": "A",
+      "prompt_sha256": "92f963cfb1196df629a030eb5ed26bdba7b740ed8a0117ca999bda66391b3341",
+      "changed_paths": [
+        "jsonschema/_utils.py",
+        "jsonschema/tests/test_utils.py"
+      ],
+      "final_source_tree": "2cece94fdccc114c5a029b37d5bab0bd796a5597",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 16,
+      "duration_seconds": 112.508,
+      "within_limits": true
+    },
+    {
+      "task_id": "csp-task-3cf8411dac577d7c",
+      "pair_id": "csp-pair-88ba07ab67ac5a9e",
+      "repo_id": "jsonschema",
+      "arm": "B",
+      "prompt_sha256": "0df570f67fcb44328df24eefd6cac356a9f35b38559fc309cbafe752d03a5bd9",
+      "changed_paths": [
+        "jsonschema/_utils.py",
+        "jsonschema/tests/test_utils.py"
+      ],
+      "final_source_tree": "fb6f9da9bec9692c685a283237120a38bf05b991",
+      "replay_ok": true,
+      "artifacts": [],
+      "filesystem_only_count": 16,
+      "duration_seconds": 99.704,
+      "within_limits": true
+    }
+  ],
+  "feasibility_gate": {
+    "all_five_pairs_attempted": true,
+    "label_counts": {
+      "clean": 0,
+      "conflict": 5
+    },
+    "passes": true,
+    "qualifying_pairs": 5,
+    "qualifying_repositories": 5,
+    "status": "passed"
+  },
+  "limits": [
+    "Coordinator-authored tasks; both tasks in a pair edit the same module and test file.",
+    "One model, five repositories, two tasks each; purposive development sample.",
+    "Instruction-bound sibling isolation, not a filesystem sandbox.",
+    "No prediction, held-out or accuracy claim."
+  ]
+}

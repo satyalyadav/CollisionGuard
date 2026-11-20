@@ -9,6 +9,7 @@ Summary for reports. Dates use America/Phoenix time.
 - Recovery reuses the same twelve cases; earlier failures and unknown runner/site provenance remain.
 - The [release assessment](docs/research/parallact-public-release.md) supplies the limited release basis. The blanket private-only advice was too cautious. No prediction results have been established.
 - The [controlled single-project pilot](docs/pilot/controlled-single-project-results.md) built five verified common-start task pairs from one parent anchor. Raw full-directory capture labeled all five as conflicts because ignored pytest caches and bytecode were force-included. Ordinary Git staging of the same outputs gives three clean and two conflicts. Those five repositories are development examples.
+- The [fresh cohort](docs/pilot/fresh-cohort-results.md) built five more verified pairs from repositories outside the earlier pilots, with ordinary Git staging frozen before coding. All five pairs qualified and all five conflicted; both tasks in each pair edited the same module and test file. This is a purposive construction, not a conflict base rate.
 - CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
@@ -55,7 +56,11 @@ Built one private parent anchor holding five pinned upstream trees, then ran ten
 
 ### 2026-11-20: Commit the pilot record and freeze an ordinary-staging collector
 
-Committed the controlled, SWE-rebench and source-search scripts, tests, protocols, results and decision logs, and archived the oral report source under `docs/archive/2026-11-oral-report/`. Removed the generated report and presentation files. The collector now takes its staging policy from the frozen plan: `full-directory-v3` reproduces the old force-add captures, and `ordinary-git-staging-v1` lets the repository's own ignore rules decide. A fresh cohort is collected under the new policy before any prediction run.
+Committed the controlled, SWE-rebench and source-search scripts, tests, protocols, results and decision logs, and archived the oral report source under `docs/archive/2026-11-oral-report/`. Removed the generated report and presentation files. The collector now takes its staging policy from the frozen plan: `full-directory-v3` reproduces the old force-add captures, and `ordinary-git-staging-v1` lets the repository's own ignore rules decide.
+
+### 2026-11-20: Collect the fresh cohort
+
+Ran ten coding tasks on pluggy, requests, httpx, urllib3 and jsonschema, none of them used in the earlier controlled pilots or the public twelve. The first attempt stopped at the requests capture because the filesystem inventory could not see directory symlinks; the recorder was corrected, a fixture test was added, and the cohort was refrozen from a new anchor. In the corrected run every start matched its pinned tree, every patch replayed twice, and the feasibility gate passed. All five pairs conflicted under ordinary Git staging. Both tasks in each pair edited the same module and test file, so the five-of-five result describes this construction, not a base rate. See the [protocol](docs/pilot/fresh-cohort-protocol.md), [results](docs/pilot/fresh-cohort-results.md) and [public summary](data/controlled-fresh-2026-11/summary.json). No prediction run has used this data.
 
 ## Maintaining this log
 
