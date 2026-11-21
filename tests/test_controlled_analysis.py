@@ -87,6 +87,8 @@ class ControlledAnalysisTests(unittest.TestCase):
             "see --rootdir=/home/example/file.py",
             "see //server/share/file.py",
             'see "/ foo/it\'s/file.py"',
+            "see user@/home/example/file.py",
+            "see cmd|/home/example/file.py",
         ]:
             self.assertEqual(analysis.public_text(value), "<redacted>")
         for value in [
@@ -97,6 +99,7 @@ class ControlledAnalysisTests(unittest.TestCase):
             "**/test_*.py",
             "*/foo.py",
             "see https://example.com/home",
+            "see https://example.com/?next=/home",
         ]:
             self.assertEqual(analysis.public_text(value), value)
 

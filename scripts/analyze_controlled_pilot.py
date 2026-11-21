@@ -54,10 +54,12 @@ def public_producer_path(path: Path) -> str:
     return f"{parent}/{path.name}" if parent else path.name
 
 
+URL_RE = re.compile(r"""\bhttps?://[^\s"'`]+""")
+XML_TAG_RE = re.compile(r"<[^>]*>")
 QUOTED_ABSOLUTE_RE = re.compile(r'''"/[^"]*"|'/[^']*'|`/[^`]*`''')
 BARE_ABSOLUTE_RE = re.compile(
     r'''(?:(?<![\w])[A-Za-z]:[\\/]|\\\\[^\s\\]+\\'''
-    r'''|(?:^|(?<=[\s=(\[{,;]))//?[^\s"'`]+|(?<=:)/(?!/)[^\s"'`]+)''')
+    r'''|(?:^|(?<=[\s=:@|(\[{,;]))//?[^\s"'`]+)''')
 
 
 def public_basename(value: str) -> str:
@@ -67,7 +69,8 @@ def public_basename(value: str) -> str:
 
 def has_absolute_path(value: str) -> bool:
     """Return True when the text contains a Windows, UNC or POSIX absolute path."""
-    return bool(QUOTED_ABSOLUTE_RE.search(value) or BARE_ABSOLUTE_RE.search(value))
+    text = XML_TAG_RE.sub(" ", URL_RE.sub(" ", value))
+    return bool(QUOTED_ABSOLUTE_RE.search(text) or BARE_ABSOLUTE_RE.search(text))
 
 
 def public_text(value: str) -> str:
