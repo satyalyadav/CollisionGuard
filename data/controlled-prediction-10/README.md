@@ -4,7 +4,8 @@ This folder holds the public side of the ten-pair prediction check. The full tab
 
 - `summary.json` reports the pair count, label counts, cohort counts, repository names and input hashes.
 - `results.json` reports per-pair scores and aggregate metrics. It contains no task text and no local paths.
-- The method, results and limits are in [the report](../../docs/pilot/controlled-prediction-results.md).
+- `file-predictor.json` reports file-prediction recall, overlap scores and blend scores for the path-only predictor. It contains no task text, no predicted file lists and no local paths.
+- The method, results and limits are in [the report](../../docs/pilot/controlled-prediction-results.md) and [the file-predictor report](../../docs/pilot/file-predictor-results.md).
 
 The table covers five controlled-v3 pairs (3 clean, 2 conflict) and five fresh-cohort pairs (all conflict). Ten pairs cannot establish prediction accuracy. The scores check the workflow only.
 

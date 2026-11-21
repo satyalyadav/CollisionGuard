@@ -11,6 +11,7 @@ Summary for reports. Dates use America/Phoenix time.
 - The [controlled single-project pilot](docs/pilot/controlled-single-project-results.md) built five verified common-start task pairs from one parent anchor. Raw full-directory capture labeled all five as conflicts because ignored pytest caches and bytecode were force-included. Ordinary Git staging of the same outputs gives three clean and two conflicts. Those five repositories are development examples.
 - The [fresh cohort](docs/pilot/fresh-cohort-results.md) built five more verified pairs from repositories outside the earlier pilots, with ordinary Git staging frozen before coding. All five pairs qualified and all five conflicted; both tasks in each pair edited the same module and test file. This is a purposive construction, not a conflict base rate.
 - The [first prediction check](docs/pilot/controlled-prediction-results.md) scores the ten constructed pairs with the existing baselines. TF-IDF average precision is 0.948, but the construction and task text both name the target module and test file, so the score cannot be separated from the construction. Logistic regression is below the no-skill AP. No accuracy claim follows.
+- The [file predictor check](docs/pilot/file-predictor-results.md) finds about 62 percent of changed files with raw task text and 30 percent with paths removed. Its overlap score is 0.819, below the text-only 0.948, and adding it to the text score does not help. It also misses changelog conflicts. No accuracy claim follows.
 - CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
@@ -66,6 +67,10 @@ Ran ten coding tasks on pluggy, requests, httpx, urllib3 and jsonschema, none of
 ### 2026-11-20: Run the first prediction check
 
 Built a ten-pair table from the two constructed cohorts, keeping task text in the ignored private data root. The table has 3 clean and 7 conflict labels across ten repositories. Ran TF-IDF cosine and logistic regression with leave-one-repository-out folds; the leakage audit passed for all ten folds. TF-IDF average precision is 0.948, but the construction and task text both name the target module and test file, so the score cannot be separated from the construction. Removing explicit paths leaves 0.909; the run cannot isolate wording from the paired authorship. Logistic regression is 0.685, below the no-skill AP of 0.700. Added a builder, a runner and eleven tests. See the [results](docs/pilot/controlled-prediction-results.md), [public summary](data/controlled-prediction-10/summary.json) and [scores](data/controlled-prediction-10/results.json). No accuracy result.
+
+### 2026-11-21: Test the file predictor on the ten pairs
+
+Merged the path-only file predictor from PR 2 and evaluated it on the ten constructed pairs. At top five it recalled 62 percent of changed files with raw task text and 30 percent with explicit paths removed. Its predicted overlap scored 0.819 average precision, below the text-only 0.948; equal and text-heavy blends did not improve the text score. The overlap-positive rule caught all seven conflicts but also flagged two clean pairs, and the predictor missed the changelog conflicts in itsdangerous and packaging. Added the evaluation script, five tests and public results. See the [results](docs/pilot/file-predictor-results.md) and [public output](data/controlled-prediction-10/file-predictor.json). No accuracy result.
 
 ## Maintaining this log
 
