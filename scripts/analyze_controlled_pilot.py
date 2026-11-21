@@ -55,7 +55,7 @@ def public_producer_path(path: Path) -> str:
 
 
 ABSOLUTE_MARKER_RE = re.compile(
-    r"(?:[A-Za-z]:[\\/]|\\\\[^\\\s]+\\|(?<![\w.])/(?:[A-Za-z0-9_.-]+/)+)")
+    r"(?:[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|(?<![\w.])/[^\s]+)")
 
 
 def public_basename(value: str) -> str:
