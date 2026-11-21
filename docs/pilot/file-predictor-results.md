@@ -30,7 +30,7 @@ Public results: [file-predictor.json](../../data/controlled-prediction-10/file-p
 | Text-heavy blend AP | 0.948 |
 | Path-stripped overlap AP | 0.768 |
 
-The `overlap > 0` rule flagged nine pairs. All seven conflicts were among them, along with two clean pairs, so it missed no conflict and produced two false positives on this set.
+The `overlap > 0` rule flagged nine pairs using the unfiltered top-five lists. All seven conflicts were among them, along with two clean pairs, so it missed no conflict and produced two false positives on this set. Applying the existing overlap helper's default 0.1 similarity cutoff flags four of seven conflicts and the same two clean pairs.
 
 Per-pair values:
 
@@ -53,15 +53,15 @@ The path-only predictor finds about 62 percent of the files each task changed wh
 
 The predicted overlap ranks conflicts worse than the text score alone, 0.819 against 0.948. Adding it to the text score does not help. The equal blend falls to 0.933, and the text-heavy blend stays at 0.948.
 
-Removing explicit paths drops mean recall from 0.621 to 0.296. The predictor leans heavily on the task naming the file. For requests, httpx, urllib3 and jsonschema, recall falls to zero once the paths are removed, because the remaining words do not match the path text.
+Removing explicit paths drops mean recall from 0.621 to 0.296. The ablation removes 20 path tokens from the five fresh statements and none from the earlier five, so this pooled drop mixes a changed fresh cohort with an unchanged earlier cohort. The predictor leans heavily on the task naming the file. For requests, httpx, urllib3 and jsonschema, recall falls to zero once the paths are removed, because the remaining words do not match the path text.
 
-File overlap is also not the same as conflict. Dateutil is clean even though both tasks changed the same files and the predictor saw full overlap. Packaging is a conflict with full predicted overlap. Itsdangerous and packaging conflict in changelog files that the predictor never ranks, so conflict-path recall is zero for both.
+File overlap is also not the same as conflict. Dateutil is clean even though both tasks changed the same files (actual overlap 1.00) and the predictor saw substantial overlap (0.67). Packaging is a conflict with full predicted and actual overlap. Itsdangerous and packaging conflict in changelog files that the predictor never ranks, and packaging also misses the conflicting `tests/test_utils.py` in its top five, so conflict-path recall is zero for both.
 
 The `overlap > 0` rule looks good on this set, but seven positives and two false positives are too few to trust. It is a screening idea, not a result.
 
 ## Limits
 
-- Ten pairs, one model, constructed labels. The fresh cohort was designed to overlap.
+- Ten pairs, one model, constructed labels. The fresh cohort was designed to overlap, and all five fresh pairs conflicted.
 - The predictor sees only file paths, not file contents, imports or test names.
 - Top five was chosen before the run and not tuned.
 - The task text often names the target file, which makes the raw recall optimistic.

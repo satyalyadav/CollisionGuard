@@ -70,7 +70,7 @@ Built a ten-pair table from the two constructed cohorts, keeping task text in th
 
 ### 2026-11-21: Test the file predictor on the ten pairs
 
-Merged the path-only file predictor from PR 2 and evaluated it on the ten constructed pairs. At top five it recalled 62 percent of changed files with raw task text and 30 percent with explicit paths removed. Its predicted overlap scored 0.819 average precision, below the text-only 0.948; equal and text-heavy blends did not improve the text score. The overlap-positive rule caught all seven conflicts but also flagged two clean pairs, and the predictor missed the changelog conflicts in itsdangerous and packaging. Added the evaluation script, five tests and public results. See the [results](docs/pilot/file-predictor-results.md) and [public output](data/controlled-prediction-10/file-predictor.json). No accuracy result.
+Merged the path-only file predictor from PR 2 and evaluated it on the ten constructed pairs. At top five it recalled 62 percent of changed files with raw task text and 30 percent with explicit paths removed. Its predicted overlap scored 0.819 average precision, below the text-only 0.948; equal and text-heavy blends did not improve the text score. The overlap-positive rule caught all seven conflicts but also flagged two clean pairs, and the predictor missed the changelog conflicts in itsdangerous and packaging. Added the evaluation script, eleven tests and public results. See the [results](docs/pilot/file-predictor-results.md) and [public output](data/controlled-prediction-10/file-predictor.json). No accuracy result.
 
 ## Maintaining this log
 

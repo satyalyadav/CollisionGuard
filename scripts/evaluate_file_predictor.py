@@ -23,7 +23,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_controlled_prediction import verify_table
+from build_controlled_prediction import (
+    _check_plan_digest,
+    _sha256_file,
+    verify_table,
+)
 from evaltools.metrics import average_precision, pr_auc_trapezoid
 from file_predictor import predict_files_tfidf
 from run_controlled_predictions import _strip_paths
@@ -43,11 +47,41 @@ def _load(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _anchors():
+def _plans():
     return {
-        "controlled-v3": _load(V3_PLAN)["anchor"]["commit"],
-        "fresh-2026-11": _load(FRESH_PLAN)["anchor"]["commit"],
+        "controlled-v3": {"plan": _load(V3_PLAN), "path": V3_PLAN},
+        "fresh-2026-11": {"plan": _load(FRESH_PLAN), "path": FRESH_PLAN},
     }
+
+
+def _anchors(plans):
+    return {cohort: entry["plan"]["anchor"]["commit"]
+            for cohort, entry in plans.items()}
+
+
+def validate_inputs(table, text_results, plans):
+    """Reject scores or plans that do not belong to this exact table."""
+    if text_results.get("table_sha256") != table.get("table_sha256"):
+        raise ValueError("text results were produced from a different table")
+    pair_ids = [pair["instance_id"] for pair in table["pairs"]]
+    if len(set(pair_ids)) != len(pair_ids):
+        raise ValueError("duplicate pair ids in the table")
+    score_rows = text_results.get("scores", [])
+    score_ids = [row["instance_id"] for row in score_rows]
+    if len(set(score_ids)) != len(score_ids):
+        raise ValueError("duplicate pair ids in the text results")
+    if set(score_ids) != set(pair_ids):
+        raise ValueError("text results and table pair ids differ")
+    sources = {source["cohort"]: source for source in table.get("sources", [])}
+    for cohort, entry in plans.items():
+        source = sources.get(cohort)
+        if source is None:
+            raise ValueError(f"table has no source for {cohort}")
+        _check_plan_digest(entry["plan"])
+        if entry["plan"]["plan_sha256"] != source["plan_sha256"]:
+            raise ValueError(f"{cohort}: plan digest does not match the table")
+        if _sha256_file(entry["path"]) != source["plan_file_sha256"]:
+            raise ValueError(f"{cohort}: plan file does not match the table")
 
 
 def git_files(anchor, repo_id):
@@ -237,8 +271,10 @@ def main(argv=None):
     table = _load(args.table)
     verify_table(table)
     text_results = _load(TEXT_RESULTS)
+    plans = _plans()
+    validate_inputs(table, text_results, plans)
     text_scores = {row["instance_id"]: row["tfidf"] for row in text_results["scores"]}
-    anchors = _anchors()
+    anchors = _anchors(plans)
     rows, summary = evaluate(table, anchors, text_scores, top_k=args.top_k)
 
     private = dict(summary, table_sha256=table["table_sha256"],

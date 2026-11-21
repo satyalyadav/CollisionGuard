@@ -1,6 +1,8 @@
 """Tests for the file-predictor evaluation."""
 
+import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -8,6 +10,7 @@ from unittest import mock
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import build_controlled_prediction as builder
 import evaluate_file_predictor as evaluation
 
 
@@ -110,6 +113,61 @@ class EvaluateTest(unittest.TestCase):
                 "Edit src/foo.py now", ["src/foo.py"], top_k=1, strip_paths=True)
         self.assertNotIn("src/foo.py", result[0][0])
         self.assertTrue(result[0][0].startswith("Edit"))
+
+
+class InputValidationTest(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.directory = Path(self.temp.name)
+        plan = {"anchor": {"commit": "abc"}, "run_id": "r"}
+        plan["plan_sha256"] = builder._sha256_bytes(builder._canonical_json(plan))
+        self.plan_path = self.directory / "plan.json"
+        self.plan_path.write_text(json.dumps(plan), encoding="utf-8")
+        self.table = {
+            "table_sha256": "table",
+            "pairs": [{"instance_id": "p1"}],
+            "sources": [{
+                "cohort": "c",
+                "plan_sha256": plan["plan_sha256"],
+                "plan_file_sha256": builder._sha256_file(self.plan_path),
+            }],
+        }
+        self.text = {
+            "table_sha256": "table",
+            "scores": [{"instance_id": "p1", "tfidf": 0.5}],
+        }
+        self.plans = {"c": {"plan": plan, "path": self.plan_path}}
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def test_matching_inputs_pass(self):
+        evaluation.validate_inputs(self.table, self.text, self.plans)
+
+    def test_stale_table_hash_is_rejected(self):
+        self.text["table_sha256"] = "other"
+        with self.assertRaises(ValueError):
+            evaluation.validate_inputs(self.table, self.text, self.plans)
+
+    def test_duplicate_score_ids_are_rejected(self):
+        self.text["scores"].append(dict(self.text["scores"][0]))
+        with self.assertRaises(ValueError):
+            evaluation.validate_inputs(self.table, self.text, self.plans)
+
+    def test_missing_score_is_rejected(self):
+        self.text["scores"] = []
+        with self.assertRaises(ValueError):
+            evaluation.validate_inputs(self.table, self.text, self.plans)
+
+    def test_plan_source_digest_mismatch_is_rejected(self):
+        self.table["sources"][0]["plan_sha256"] = "other"
+        with self.assertRaises(ValueError):
+            evaluation.validate_inputs(self.table, self.text, self.plans)
+
+    def test_plan_file_hash_mismatch_is_rejected(self):
+        self.table["sources"][0]["plan_file_sha256"] = "other"
+        with self.assertRaises(ValueError):
+            evaluation.validate_inputs(self.table, self.text, self.plans)
 
 
 if __name__ == "__main__":
