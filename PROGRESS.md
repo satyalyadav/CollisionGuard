@@ -15,6 +15,9 @@ Summary for reports. Dates use America/Phoenix time.
 - The [natural-mix cohort](docs/pilot/natural-cohort-results.md) uses 666 real co-active AI-agent PR pairs from a CC-BY replication package, joined to AIDev text; outcomes were not designed here. PR titles alone give AUC 0.524 and AP 0.267 against 0.227 prevalence, so the constructed 0.948 does not transfer. The path-only file predictor on 652 pairs reaches overlap AUC 0.553 against text 0.525; the fixed blend gains 0.014 AP with a paired interval of -0.014 to +0.047. On the 165-pair strict-issue subset, overlap is a below-0.5 point estimate. Twenty replay labels agreed. The cohort challenges the model; no reliable file-overlap gain is established.
 - CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
+- The [product prototype](docs/product/README.md) ranks two tasks before coding with task-type, repository and agent-pair features. Repository-grouped CV gives AP 0.356 and AUC 0.648; the issue-title transfer check is 0.582. The top 10 percent band has a 46.3 percent conflict rate against a 22.1 percent base. The CLI and calibrated model card are in the repo. It is a weak triage tool, not a safety guarantee.
+- The [Hugging Face-ready export](data/natural-cohort-2026-11/hf/README.md) publishes 673 pairs with labels, metadata and fixed folds; task text stays private and is rejoined from AIDev.
+
 ## Milestones
 
 ### 2026-11-07: Preserve the proposal
@@ -82,6 +85,12 @@ Label replay agreed 20/20 on a fixed sample. Text-only results under repository-
 Fetched the true merge base, base tree and changed paths for all 666 title-eligible pairs (662 ok, four unavailable, five truncated trees, five truncated file lists). An equal target-base shortcut had produced wrong trees for 20 of 108 refreshed rows; all were corrected. The path-only file predictor scored 652 pairs: mean footprint recall 0.225, predicted-overlap AUC 0.553, text AUC 0.525, actual-path reference AUC 0.673. The fixed equal blend gains 0.014 AP, paired interval -0.014 to +0.047. On the strict-issue subset (165 pairs), overlap AUC is 0.463 and the blend does not beat text. The cohort challenges the model rather than confirming it.
 
 Reviews: Sol 6.2 high found the manifest and merge-base errors and asked for paired gains and better attrition reporting; ASU GLM-5.3 reproduced the source's headline numbers and flagged final-head labels and the strict subset; ASU MiMo-2.6 rejected CooperBench as engineered data. Added six scripts, four test modules, the protocol, results and public summaries. No accuracy claim follows.
+
+### 2026-11-21: Build the product prototype and public cohort export
+
+Built a pre-start risk model and CLI. Features are task-type keyword counts, repository language and size, agent identities and pairing, and task lengths; no diffs or changed files. A logistic regression with isotonic calibration reaches AP 0.356 and AUC 0.648 under repository-grouped cross-validation on 652 natural pairs. Forward-time AUC is 0.625. On 165 strict-issue pairs from unseen repositories, issue-title transfer AUC is 0.582. The top 10 percent band has a 46.3 percent conflict rate against a 22.1 percent base and captures 20.1 percent of conflicts; the top 30 percent captures 48.6 percent at 35.9 percent precision. The CLI reports a band, percentile, historical band rate, likely and shared files, and top factors.
+
+Added a bounded auto-research loop that tunes on folds 0-3 and checks fold 4 once. It selected the full feature set; fold 4 AP is 0.412 and AUC 0.708, but fold 4 was already inspected in exploratory work, so this is a check rather than a sealed test. Added the package, training script, tests, product guide, model card and a Hugging Face-ready 673-row export with fixed repository-grouped folds. Task text stays private. The model is a weak triage prior, not a reliable conflict warning.
 
 ## Maintaining this log
 
