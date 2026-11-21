@@ -54,8 +54,9 @@ def public_producer_path(path: Path) -> str:
     return f"{parent}/{path.name}" if parent else path.name
 
 
-ABSOLUTE_MARKER_RE = re.compile(
-    r"(?:[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|(?<![\w.])/[^\s]+)")
+QUOTED_ABSOLUTE_RE = re.compile(r"""(["'`])/[^"'`]*\1""")
+UNQUOTED_ABSOLUTE_RE = re.compile(
+    r"(?:(?<![\w])[A-Za-z]:[\\/]|\\\\[^\s\\]+\\|(?<![\w.*?<=/])/(?![/*?>!\s])[^\s]+)")
 
 
 def public_basename(value: str) -> str:
@@ -63,9 +64,14 @@ def public_basename(value: str) -> str:
     return value.replace("\\", "/").rstrip("/").rsplit("/", 1)[-1]
 
 
+def has_absolute_path(value: str) -> bool:
+    """Return True when the text contains a Windows, UNC or POSIX absolute path."""
+    return bool(QUOTED_ABSOLUTE_RE.search(value) or UNQUOTED_ABSOLUTE_RE.search(value))
+
+
 def public_text(value: str) -> str:
     """Drop a log line that contains any absolute path marker."""
-    return "<redacted>" if ABSOLUTE_MARKER_RE.search(value) else value
+    return "<redacted>" if has_absolute_path(value) else value
 
 
 def canonical_json(value) -> bytes:

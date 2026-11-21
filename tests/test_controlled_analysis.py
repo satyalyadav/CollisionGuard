@@ -81,11 +81,21 @@ class ControlledAnalysisTests(unittest.TestCase):
             "see /my dir/file.py",
             "see /données/file.py",
             "see /foo.py",
+            'see "/ foo/file.py"',
+            'see "/home/example/my project/test.py"',
+            "see path:/home/example/file.py",
         ]:
             self.assertEqual(analysis.public_text(value), "<redacted>")
-        self.assertEqual(analysis.public_text("1 passed in 0.1s"), "1 passed in 0.1s")
-        self.assertEqual(analysis.public_text("ratio 3/4"), "ratio 3/4")
-        self.assertEqual(analysis.public_text("and/or"), "and/or")
+        for value in [
+            "1 passed in 0.1s",
+            "ratio 3/4",
+            "and/or",
+            "</testcase>",
+            "**/test_*.py",
+            "*/foo.py",
+            "see https://example.com/home",
+        ]:
+            self.assertEqual(analysis.public_text(value), value)
 
     def test_public_basename_handles_windows_and_posix(self):
         self.assertEqual(analysis.public_basename("C:\\Users\\example\\job.json"), "job.json")
