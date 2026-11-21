@@ -30,12 +30,12 @@ The builder checks each acceptance statement against its frozen prompt file, rec
 
 | Reference or model | Average precision | PR-AUC (trapezoid) |
 | --- | --- | --- |
-| No skill (prevalence) | 0.700 | not defined for a constant score |
+| No skill (prevalence) | 0.700 | 0.850 (constant-score convention) |
 | TF-IDF cosine | 0.948 | 0.944 |
 | TF-IDF cosine, file paths removed | 0.909 | 0.902 |
 | Logistic regression | 0.685 | 0.619 |
 
-The fold-prior reference assigns 7/9 to every clean pair and 6/9 to every conflict pair, so it ranks all clean pairs above all conflicts. Its pooled AP happens to equal prevalence under the tie-aware definition, and its PR-AUC is 0.350. Use those probabilities for Brier and log-loss checks, not as a ranking baseline. The no-skill AP is the prevalence, 0.700.
+The fold-prior reference assigns 7/9 to every clean pair and 6/9 to every conflict pair, so it ranks all clean pairs above all conflicts. Its pooled AP happens to equal prevalence under the tie-aware definition, and its PR-AUC is 0.350. Use those probabilities for Brier and log-loss checks, not as a ranking baseline. A truly constant score gives a trapezoid PR-AUC of 0.850 at this prevalence under the repository's convention; that value is an artifact of the convention, not a ranking result.
 
 Per-pair scores:
 
@@ -54,11 +54,13 @@ Per-pair scores:
 
 ## What the numbers mean
 
-The TF-IDF average precision of 0.948 is not a prediction result. The construction puts both tasks in a pair on the same module and test file, and the task text names that module and test file. Lexical similarity therefore restates the construction. All five fresh pairs are conflicts, so a model that scores the fresh wording higher gets a high rank without learning anything about conflict risk. One v3 conflict, itsdangerous, scores below two clean pairs.
+The table above repeats the per-pair scores in `results.json`.
 
-Removing explicit file paths drops average precision from 0.948 to 0.909. The small drop says the score does not come only from the named paths. The pairs were also authored together, so wording similarity still restates how the tasks were built.
+The TF-IDF average precision of 0.948 is not a prediction result. The fresh pairs were designed to edit overlapping files, and all five conflicted. The construction also puts both tasks in a pair on the same module and test file, and the task text names that module and test file. This run cannot separate lexical similarity from the construction. One v3 conflict, itsdangerous, scores below two clean pairs.
 
-Logistic regression lands below the no-skill AP, 0.685 against 0.700. The hand-crafted features add no usable signal here, and the fitted scores are unstable at this sample size.
+Removing explicit file paths changed average precision from 0.948 to 0.909. This run cannot tell whether the remaining rank comes from wording, the module names that stay in the prose, or the paired authorship.
+
+Logistic regression scored 0.685 against a 0.700 no-skill AP. This run cannot tell whether the hand-crafted features carry signal; ten pairs and the construction confound any such conclusion.
 
 The no-skill AP is the prevalence, 0.700, because seven of ten pairs are conflicts. That is the class balance of this construction, not the prevalence of conflicts among arbitrary task pairs.
 

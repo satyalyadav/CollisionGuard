@@ -41,7 +41,7 @@ Each pair touches one module and one test file in its repository. The two tasks 
 | urllib3 | `to_bool` | `to_int` | `test/test_util.py` |
 | jsonschema | `chunks` | `flatten` | `jsonschema/tests/test_utils.py` |
 
-Every acceptance block names its required tests. The focused command selects only those tests. Children install dependencies into task-specific virtual environments under `/tmp/controlled-single-project-venvs/` and prove the imported module path through the recorder.
+Every acceptance block names its required tests. The focused command selects only those tests. Children install dependencies into task-specific virtual environments under a scratch directory outside the repository, for example `<scratch>/controlled-single-project-venvs/`, and prove the imported module path through the recorder.
 
 ## Isolation and capture
 

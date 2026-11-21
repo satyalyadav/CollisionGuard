@@ -205,6 +205,13 @@ class RunnerTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             runner._load(path)
 
+    def test_path_stripping_boundaries(self):
+        self.assertNotIn("src/foo.py", runner._strip_paths("Edit src/foo.py."))
+        self.assertNotIn("src/foo.py", runner._strip_paths("Edit src/foo.py, then"))
+        self.assertIn("src/foo.pyc", runner._strip_paths("Edit src/foo.pyc"))
+        self.assertIn("src/foo.py.bak", runner._strip_paths("Edit src/foo.py.bak"))
+        self.assertIn("src/foo.yamlx", runner._strip_paths("Edit src/foo.yamlx"))
+
     def test_json_safe_replaces_nan(self):
         self.assertIsNone(runner._json_safe(float("nan")))
         self.assertEqual(runner._json_safe({"a": [float("nan")]}), {"a": [None]})

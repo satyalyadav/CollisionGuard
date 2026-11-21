@@ -32,11 +32,10 @@ from pathlib import Path
 
 PROTOCOL_VERSION = "controlled-single-project-posthoc-git-visible-1"
 METHOD_ID = "posthoc-ordinary-git-staging-v1"
-DEFAULT_EVIDENCE = Path(
-    "/home/satyal/cse-572/Project/data/private/research/controlled-single-project-v3"
-)
-DEFAULT_OBJECTS = Path("/home/satyal/cse-572/Project/.git/objects")
-DEFAULT_OUT = Path("data/controlled-single-project/posthoc-git-visible.json")
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_EVIDENCE = ROOT / "data/private/research/controlled-single-project-v3"
+DEFAULT_OBJECTS = ROOT / ".git/objects"
+DEFAULT_OUT = ROOT / "data/controlled-single-project/posthoc-git-visible.json"
 DEFAULT_PRIVATE = DEFAULT_EVIDENCE / "supplemental"
 COMMAND_TIMEOUT = 60
 
@@ -47,6 +46,12 @@ def utc_now() -> str:
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def public_producer_path(path: Path) -> str:
+    """Name the producer relative to its repository, never by absolute path."""
+    parent = path.parent.name
+    return f"{parent}/{path.name}" if parent else path.name
 
 
 def canonical_json(value) -> bytes:
@@ -552,7 +557,7 @@ def main(argv=None) -> int:
     test_audit = load_test_audit(evidence)
     repos = set(args.repos.split(",")) if args.repos else None
 
-    work_root = args.work_root or Path(tempfile.mkdtemp(prefix="controlled-posthoc-", dir="/tmp/opencode"))
+    work_root = args.work_root or Path(tempfile.mkdtemp(prefix="controlled-posthoc-"))
     work_root.mkdir(parents=True, exist_ok=True)
     home = work_root / "home"
     home.mkdir(exist_ok=True)
@@ -649,7 +654,7 @@ def main(argv=None) -> int:
         "protocol_version": PROTOCOL_VERSION,
         "method": {
             "id": METHOD_ID,
-            "producer_path": str(producer),
+            "producer_path": public_producer_path(producer),
             "producer_sha256": producer_sha,
             "created_at": started,
             "git_version": run_cmd(["git", "--version"], work_root, env)["stdout"].strip(),

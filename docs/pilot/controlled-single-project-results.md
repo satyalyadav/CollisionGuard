@@ -66,7 +66,7 @@ Freeze an ordinary Git staging policy prospectively before any fresh expansion, 
 
 - Original analysis producer, preserved at `data/private/research/controlled-single-project-v3/supplemental/original-analysis-producer.py`, SHA-256 `b25b0936c72d15023704470178e6b7a7d62c866d17de3892e77709371e722a46`.
 - Focused tests: `python3 -m unittest tests.test_controlled_analysis -v` passed 5 of 5.
-- Local real-data run: `python3 scripts/analyze_controlled_pilot.py --work-root /tmp/opencode/controlled-posthoc-work2 --out data/controlled-single-project/posthoc-git-visible.json` completed in 11.4 s with no network or package installs.
+- Local real-data run: `python3 scripts/analyze_controlled_pilot.py --work-root <scratch>/controlled-posthoc-work2 --out data/controlled-single-project/posthoc-git-visible.json` completed in 11.4 s with no network or package installs.
 - Public facts: `data/controlled-single-project/posthoc-git-visible.json`, original SHA-256 `bbc654d58479f89478f297dc3e32eaa1513ebcd464b948bf50971fbc1acd6ee8` before root reporting corrections. The original export is preserved privately. Current public SHA-256 `b9e753864ff40b23960e3dfef23564c8771e3602ef4613ed086df73f40e28374`. The public copy records the producer as the repository-relative path `scripts/analyze_controlled_pilot.py`; the original local worktree path is not published. Labels and trees are unchanged.
 - Private supplement: `data/private/research/controlled-single-project-v3/supplemental/posthoc-full.json` plus the ten patch files under `supplemental/patches/`. These contain command records, full hashes, exclusions, conflicts and patch bytes.
 

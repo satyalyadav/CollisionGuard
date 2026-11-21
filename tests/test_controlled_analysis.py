@@ -62,6 +62,13 @@ class ControlledAnalysisTests(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
 
+    def test_public_producer_path_is_repository_relative(self):
+        absolute = Path("/home/example/Project/scripts/analyze_controlled_pilot.py")
+        self.assertEqual(analysis.public_producer_path(absolute),
+                         "scripts/analyze_controlled_pilot.py")
+        self.assertEqual(analysis.public_producer_path(Path("analyze_controlled_pilot.py")),
+                         "analyze_controlled_pilot.py")
+
     def test_ignored_cache_differences_leave_independent_source_clean(self):
         _, git_a, a = self.fx.derive("a", {"a.txt": "A\n", "b.txt": "base b\n",
                                            ".gitignore": "cache/\n", "cache/junk": "A cache\n"})

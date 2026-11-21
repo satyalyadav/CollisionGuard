@@ -30,7 +30,8 @@ TABLE = ROOT / "data/private/research/controlled-prediction-10/table.json"
 PUBLIC_OUT = ROOT / "data/controlled-prediction-10/results.json"
 PROTOCOL_VERSION = "controlled-prediction-results-1"
 PATH_RE = re.compile(
-    r"`?[A-Za-z0-9_./-]+\.(?:py|rst|md|txt|toml|cfg|ini|yaml|yml)(?![\w.])`?")
+    r"`?[A-Za-z0-9_./-]+\.(?:py|rst|md|txt|toml|cfg|ini|yaml|yml)"
+    r"(?!\w)(?!\.[A-Za-z0-9_])`?")
 
 
 def _load(path):
