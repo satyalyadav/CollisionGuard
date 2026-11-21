@@ -58,7 +58,7 @@ URL_RE = re.compile(r"""\bhttps?://[^\s"'`|<>]+""")
 QUOTED_ABSOLUTE_RE = re.compile(r'''"/[^"]*"|'/[^']*'|`/[^`]*`''')
 BARE_ABSOLUTE_RE = re.compile(
     r'''(?:(?<![\w])[A-Za-z]:[\\/]|\\\\[^\s\\]+\\'''
-    r'''|(?:^|(?<=[\s=:@|(\[{,;>]))//?[^\s"'`]+)''')
+    r'''|(?:^|(?<=[\s=:@|(\[{,;>]))//?(?!>)[^\s"'`]+)''')
 
 
 def public_basename(value: str) -> str:

@@ -104,6 +104,8 @@ class ControlledAnalysisTests(unittest.TestCase):
             "see https://example.com/home",
             "see https://example.com/?next=/home",
             'see <a href="https://example.com/home">',
+            '<testcase name="sample" />',
+            '<testcase name="sample"/>',
         ]:
             self.assertEqual(analysis.public_text(value), value)
 
