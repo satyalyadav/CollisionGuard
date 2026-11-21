@@ -245,7 +245,14 @@ def _local_pair_data(repo, pr_a, pr_b):
         result = run(["git", "-C", str(work), "merge-base",
                       f"refs/pr/{pr_a}", f"refs/pr/{pr_b}"], timeout=120)
         if result.returncode != 0:
-            return None
+            for number in (pr_a, pr_b):
+                run(["git", "-C", str(work), "fetch", "--no-tags", "--depth", "600",
+                     f"https://github.com/{repo}.git",
+                     f"refs/pull/{number}/head:refs/pr/{number}"])
+            result = run(["git", "-C", str(work), "merge-base",
+                          f"refs/pr/{pr_a}", f"refs/pr/{pr_b}"], timeout=120)
+            if result.returncode != 0:
+                return None
         base = result.stdout.strip()
         tree = run(["git", "-C", str(work), "ls-tree", "-r", "--name-only", base])
         if tree.returncode != 0:
@@ -312,14 +319,16 @@ def fetch_pair(api, pair):
         "base_source": base_source,
         "head_a": pull_a["head"]["sha"],
         "head_b": pull_b["head"]["sha"],
-        "files_a": [{"path": row["filename"], "status": row.get("status", "changed"),
+        "files_a": [{"path": row.get("filename") or row.get("path"),
+                     "status": row.get("status", "changed"),
                      "additions": row.get("additions", 0),
                      "deletions": row.get("deletions", 0)}
-                    for row in files_a if row.get("filename")],
-        "files_b": [{"path": row["filename"], "status": row.get("status", "changed"),
+                    for row in files_a if (row.get("filename") or row.get("path"))],
+        "files_b": [{"path": row.get("filename") or row.get("path"),
+                     "status": row.get("status", "changed"),
                      "additions": row.get("additions", 0),
                      "deletions": row.get("deletions", 0)}
-                    for row in files_b if row.get("filename")],
+                    for row in files_b if (row.get("filename") or row.get("path"))],
         "files_truncated": bool(trunc_a or trunc_b),
         "tree_paths": tree_paths,
         "tree_truncated": tree_truncated,
@@ -328,6 +337,23 @@ def fetch_pair(api, pair):
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "source": "github-rest",
     }
+
+
+def refresh_files_local(pair, row):
+    local = _local_pair_data(pair["repo"], pair["pr_a"], pair["pr_b"])
+    if not local:
+        return {**row, "files_refresh": "failed"}
+    return {**row, "base_sha": local["base_sha"], "base_source": "local-git",
+            "tree_paths": local["tree_paths"], "tree_truncated": False,
+            "files_a": [{"path": path, "status": "changed",
+                         "additions": 0, "deletions": 0}
+                        for path in local["files_a"]],
+            "files_b": [{"path": path, "status": "changed",
+                         "additions": 0, "deletions": 0}
+                        for path in local["files_b"]],
+            "files_truncated": False,
+            "files_refresh": "local-git",
+            "refreshed_at": datetime.now(timezone.utc).isoformat()}
 
 
 def refresh_row(api, pair, row):
@@ -364,6 +390,8 @@ def main(argv=None):
     parser.add_argument("--sample", type=int, default=80,
                         help="balanced pilot size; ignored with --all")
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--refresh-empty-files", action="store_true",
+                        help="recompute changed paths locally when a side is empty")
     parser.add_argument("--retry-errors", action="store_true",
                         help="refetch pairs whose last checkpoint row is not ok")
     parser.add_argument("--refresh-bases", action="store_true",
@@ -394,6 +422,25 @@ def main(argv=None):
         done = {key: value for key, value in done.items()
                 if value.get("status") == "ok"}
     api = GitHub()
+    if args.refresh_empty_files:
+        table_pairs = {pair["instance_id"]: pair for pair in table["pairs"]}
+        targets = [row for row in done.values()
+                   if row.get("status") == "ok"
+                   and (not row.get("files_a") or not row.get("files_b"))]
+        print(f"refreshing {len(targets)} rows with an empty changed-file side",
+              flush=True)
+        for number, row in enumerate(targets, 1):
+            pair = table_pairs.get(row["instance_id"])
+            if pair is None:
+                continue
+            refreshed = refresh_files_local(pair, row)
+            _append(args.out, refreshed)
+            print(f"[{number}/{len(targets)}] {row['repo']} "
+                  f"{len(refreshed.get('files_a', []))}/"
+                  f"{len(refreshed.get('files_b', []))} "
+                  f"{refreshed.get('files_refresh')}", flush=True)
+        return
+
     if args.refresh_bases:
         table_pairs = {pair["instance_id"]: pair for pair in table["pairs"]}
         targets = [row for row in done.values()

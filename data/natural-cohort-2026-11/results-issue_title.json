@@ -10,64 +10,64 @@
   "clean": 151,
   "conflict": 32,
   "excluded_identical_text": 10,
-  "generated_at": "2026-11-21T20:08:02.412719+00:00",
+  "generated_at": "2026-11-21T21:01:57.207047+00:00",
   "models": {
     "fold_prior": {
       "ap_interval": {
-        "high": 0.21125113172165494,
-        "low": 0.10317874053548179,
+        "high": 0.2241187658569801,
+        "low": 0.10549162180114628,
         "n_clusters": 182,
         "n_skipped": 0,
         "n_valid": 1000,
-        "point": 0.14606641265612658
+        "point": 0.15174137545410693
       },
-      "average_precision": 0.14606641265612658,
+      "average_precision": 0.15174137545410693,
       "n": 183,
       "positives": 32,
-      "pr_auc_trapezoid": 0.17904591729058142,
+      "pr_auc_trapezoid": 0.2003324783042247,
       "precision_at_recall_0_5": 0.17486338797814208,
       "prevalence": 0.17486338797814208,
-      "recall_at_top_20pct": 0.09375,
+      "recall_at_top_20pct": 0.125,
       "repositories": 182,
-      "roc_auc": 0.40200745033112584
+      "roc_auc": 0.41928807947019864
     },
     "logistic": {
       "ap_interval": {
-        "high": 0.22884186544175242,
-        "low": 0.10063108852627245,
+        "high": 0.26407187313002783,
+        "low": 0.1077433410737271,
         "n_clusters": 182,
         "n_skipped": 0,
         "n_valid": 1000,
-        "point": 0.14602955679326085
+        "point": 0.16355307360955482
       },
-      "average_precision": 0.14602955679326085,
+      "average_precision": 0.16355307360955482,
       "n": 183,
       "positives": 32,
-      "pr_auc_trapezoid": 0.13692014517581708,
-      "precision_at_recall_0_5": 0.18620689655172415,
-      "prevalence": 0.17486338797814208,
-      "recall_at_top_20pct": 0.09375,
-      "repositories": 182,
-      "roc_auc": 0.3864859271523179
-    },
-    "tfidf": {
-      "ap_interval": {
-        "high": 0.2348754982289603,
-        "low": 0.1159388802477822,
-        "n_clusters": 182,
-        "n_skipped": 0,
-        "n_valid": 1000,
-        "point": 0.16500047135881096
-      },
-      "average_precision": 0.16500047135881096,
-      "n": 183,
-      "positives": 32,
-      "pr_auc_trapezoid": 0.16510672299916868,
-      "precision_at_recall_0_5": 0.17486338797814208,
+      "pr_auc_trapezoid": 0.15428803568741645,
+      "precision_at_recall_0_5": 0.1870967741935484,
       "prevalence": 0.17486338797814208,
       "recall_at_top_20pct": 0.1875,
       "repositories": 182,
-      "roc_auc": 0.49710264900662254
+      "roc_auc": 0.4283940397350993
+    },
+    "tfidf": {
+      "ap_interval": {
+        "high": 0.23200487290053948,
+        "low": 0.11586137032723372,
+        "n_clusters": 182,
+        "n_skipped": 0,
+        "n_valid": 1000,
+        "point": 0.16372237380028395
+      },
+      "average_precision": 0.16372237380028395,
+      "n": 183,
+      "positives": 32,
+      "pr_auc_trapezoid": 0.1639267715749202,
+      "precision_at_recall_0_5": 0.17486338797814208,
+      "prevalence": 0.17486338797814208,
+      "recall_at_top_20pct": 0.15625,
+      "repositories": 182,
+      "roc_auc": 0.4954470198675497
     }
   },
   "pairs": 183,
@@ -76,1468 +76,1468 @@
   "repositories": 182,
   "scores": [
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-76049e9da2e6",
       "label": 1,
-      "logistic": 0.5089232241912465,
+      "logistic": 0.5057170413705362,
       "repo": "aavetis/PRarena",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-58cbdf286476",
       "label": 0,
-      "logistic": 0.6406636963039776,
+      "logistic": 0.4265185130409416,
       "repo": "activeguild/vite-plugin-sass-dts",
-      "tfidf": 0.15335571386785707
+      "tfidf": 0.14832935771614744
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-6be7d6ad43b9",
       "label": 0,
-      "logistic": 0.5237301347995754,
+      "logistic": 0.6088547974044527,
       "repo": "AIDotNet/Thor",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-387797e10848",
       "label": 0,
-      "logistic": 0.48536783111965354,
+      "logistic": 0.564741086131557,
       "repo": "airbytehq/PyAirbyte",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-ae39589e4cfa",
       "label": 0,
-      "logistic": 0.48023056858518515,
+      "logistic": 0.5764608522174802,
       "repo": "ajthinking/data-story",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-49bcaf5b28b4",
       "label": 0,
-      "logistic": 0.4848655108000562,
+      "logistic": 0.4762443254963054,
       "repo": "akto-api-security/akto",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-c6128c6a6dad",
       "label": 1,
-      "logistic": 0.47375751235268543,
+      "logistic": 0.5470566145550568,
       "repo": "ant-design/ant-design",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-55b561a5e9eb",
       "label": 1,
-      "logistic": 0.5285968946286778,
+      "logistic": 0.4836662955791543,
       "repo": "Apollon77/ioBroker.alexa2",
-      "tfidf": 0.023718828394932476
+      "tfidf": 0.024917446887705624
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-12500a03a13a",
       "label": 0,
-      "logistic": 0.556147001890493,
+      "logistic": 0.5071237489708679,
       "repo": "astral-sh/uv",
-      "tfidf": 0.14802050855009488
+      "tfidf": 0.18233912425088028
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-e1b775414f67",
       "label": 0,
-      "logistic": 0.5815875031801094,
+      "logistic": 0.541399820370562,
       "repo": "autumn-library/autumn",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-656cdd730653",
       "label": 0,
-      "logistic": 0.3663785660809004,
+      "logistic": 0.2727181433662366,
       "repo": "aztfmod/terraform-provider-azurecaf",
-      "tfidf": 0.9856640383283437
+      "tfidf": 0.9859736479268243
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-15aaec4d2d96",
       "label": 0,
-      "logistic": 0.43957515873724656,
+      "logistic": 0.4438255504538199,
       "repo": "Azure-Samples/azure-ai-travel-agents",
-      "tfidf": 0.12318174878817306
+      "tfidf": 0.12267349192358042
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-fdb8634a06b6",
       "label": 0,
-      "logistic": 0.496305443078862,
+      "logistic": 0.5451635491991191,
       "repo": "Azure/AppConfiguration",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-f73c2e625185",
       "label": 0,
-      "logistic": 0.45526532580529583,
+      "logistic": 0.48287567926468955,
       "repo": "Azure/autorest.csharp",
-      "tfidf": 0.20742046645856854
+      "tfidf": 0.17498087937010778
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-2c9312ac86a2",
       "label": 1,
-      "logistic": 0.5067154127638329,
+      "logistic": 0.5330903510219474,
       "repo": "Azure/awesome-azd",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-da3a6e9784c0",
       "label": 0,
-      "logistic": 0.5548446287973161,
+      "logistic": 0.5019584657935726,
       "repo": "Azure/azqr",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-1b13bf59c1af",
       "label": 1,
-      "logistic": 0.5235515821587456,
+      "logistic": 0.49495548469262507,
       "repo": "Azure/azure-container-networking",
-      "tfidf": 0.007762313996301352
+      "tfidf": 0.00643900417342581
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-f1ac50df4326",
       "label": 0,
-      "logistic": 0.5202398684783437,
+      "logistic": 0.4700558348499293,
       "repo": "Azure/azure-mcp",
-      "tfidf": 0.5304069691561568
+      "tfidf": 0.5200945504070104
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-43d1de39ad59",
       "label": 0,
-      "logistic": 0.5460454869996239,
+      "logistic": 0.5316320001504257,
       "repo": "Azure/azure-sdk-for-java",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-b35d1679401e",
       "label": 0,
-      "logistic": 0.5091589993363493,
+      "logistic": 0.5058963093810409,
       "repo": "Azure/azure-sdk-for-js",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-393e3cecced8",
       "label": 0,
-      "logistic": 0.5241575568455435,
+      "logistic": 0.5258482868391774,
       "repo": "Azure/azure-storage-azcopy",
-      "tfidf": 0.013141121525529726
+      "tfidf": 0.013229779664875364
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-dbea9b759db8",
       "label": 1,
-      "logistic": 0.3838900392853206,
+      "logistic": 0.3975535909862082,
       "repo": "Azure/azure-storage-fuse",
-      "tfidf": 0.006483544845484515
+      "tfidf": 0.007919963368474899
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-d082e2ef7464",
       "label": 0,
-      "logistic": 0.3778373262013792,
+      "logistic": 0.17034886797897583,
       "repo": "Azure/bicep-registry-modules",
-      "tfidf": 0.6428838742474939
+      "tfidf": 0.5863718111755419
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-51b4dccde16b",
       "label": 0,
-      "logistic": 0.4695338458517175,
+      "logistic": 0.5019040529945014,
       "repo": "benbalter/jekyll-relative-links",
-      "tfidf": 0.07954866013725627
+      "tfidf": 0.07946764866268484
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-b6e28fdfa7d2",
       "label": 0,
-      "logistic": 0.5309577615310949,
+      "logistic": 0.5158358148592583,
       "repo": "benwbrum/fromthepage",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-b1c5b79f24fa",
       "label": 1,
-      "logistic": 0.4810406698621017,
+      "logistic": 0.48734820643396315,
       "repo": "bespokelabsai/curator",
-      "tfidf": 0.0226054477311334
+      "tfidf": 0.024558269879891962
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-9b473ec0abee",
       "label": 0,
-      "logistic": 0.5382699754469503,
+      "logistic": 0.48842501223366397,
       "repo": "binarywang/WxJava",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-366fa71573bb",
       "label": 0,
-      "logistic": 0.4702108872911082,
+      "logistic": 0.4892371485869499,
       "repo": "camunda/camunda",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-2218a6593ac2",
       "label": 0,
-      "logistic": 0.5265752826542281,
+      "logistic": 0.5666709076358933,
       "repo": "camunda/camunda-modeler",
-      "tfidf": 0.05412285499647105
+      "tfidf": 0.06279292516668374
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-f10cabb32988",
       "label": 0,
-      "logistic": 0.5615664825178491,
+      "logistic": 0.5315481818605953,
       "repo": "celestiaorg/rsmt2d",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-c47c552ff402",
       "label": 0,
-      "logistic": 0.5521981982856636,
+      "logistic": 0.5284706189949573,
       "repo": "chainwayxyz/citrea",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-6ff16f4bfa5b",
       "label": 0,
-      "logistic": 0.5499439217214978,
+      "logistic": 0.5417706237148255,
       "repo": "christianhelle/refitter",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-316e72021806",
       "label": 0,
-      "logistic": 0.4945752317865976,
+      "logistic": 0.556134542773296,
       "repo": "CommunityToolkit/Aspire",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-6290898730a1",
       "label": 0,
-      "logistic": 0.5221723924024165,
+      "logistic": 0.47283340484351066,
       "repo": "CoreWCF/CoreWCF",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-78bee680b8a8",
       "label": 0,
-      "logistic": 0.5229386641504489,
+      "logistic": 0.522402359401299,
       "repo": "coturn/coturn",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-b562b17a71ea",
       "label": 0,
-      "logistic": 0.5085051549817144,
+      "logistic": 0.5222026726907328,
       "repo": "DaveSkender/Stock.Indicators",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-ee600cb4c208",
       "label": 0,
-      "logistic": 0.4383616065859226,
+      "logistic": 0.5019584657935726,
       "repo": "davidmigloz/langchain_dart",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-39c8ad2f7b29",
       "label": 0,
-      "logistic": 0.5413429678087056,
+      "logistic": 0.48606775437851346,
       "repo": "docling-project/docling",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-de2af7b5d1da",
       "label": 0,
-      "logistic": 0.520761542766644,
+      "logistic": 0.5057170413705362,
       "repo": "dotnet/android-libraries",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-9ca4764ea6c0",
       "label": 0,
-      "logistic": 0.45125016218735176,
+      "logistic": 0.4875104867651235,
       "repo": "dotnet/aspnetcore",
-      "tfidf": 0.06235093609453742
+      "tfidf": 0.05359936470751238
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-b21a76d13653",
       "label": 0,
-      "logistic": 0.4957894957358761,
+      "logistic": 0.4870499093540446,
       "repo": "dotnet/dev-proxy",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-008447c8b960",
       "label": 0,
-      "logistic": 0.5124029612404353,
+      "logistic": 0.54209028555092,
       "repo": "dotnet/docs-aspire",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-327c8bd3e489",
       "label": 0,
-      "logistic": 0.471452056686641,
+      "logistic": 0.47544031548173465,
       "repo": "dotnet/docs-desktop",
-      "tfidf": 0.3407161829866748
+      "tfidf": 0.35512402965838646
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-a993dc151944",
       "label": 0,
-      "logistic": 0.5156672895034439,
+      "logistic": 0.5055975285440031,
       "repo": "dotnet/maui",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-3724ec48e364",
       "label": 0,
-      "logistic": 0.5209546062649811,
+      "logistic": 0.5054234850574628,
       "repo": "dotnet/msbuild",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-e806888912e8",
       "label": 0,
-      "logistic": 0.5554630926266114,
+      "logistic": 0.54209028555092,
       "repo": "dotnet/Nerdbank.GitVersioning",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-06a538ade39c",
       "label": 0,
-      "logistic": 0.5060811324573963,
+      "logistic": 0.5082030822041884,
       "repo": "dotnet/runtime",
-      "tfidf": 0.010936552877168137
+      "tfidf": 0.01302490561624144
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-5303310add6e",
       "label": 0,
-      "logistic": 0.5306073417940796,
+      "logistic": 0.4772081864472594,
       "repo": "dotnet/sdk",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-08c00be5b8b9",
       "label": 0,
-      "logistic": 0.4536479306466345,
+      "logistic": 0.45768347138182003,
       "repo": "dotnet/vscode-dotnet-runtime",
-      "tfidf": 0.08642593595987624
+      "tfidf": 0.09397632412600851
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-aba43f40a457",
       "label": 0,
-      "logistic": 0.497824682870075,
+      "logistic": 0.5293550383164178,
       "repo": "dotnet/winforms",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-6150d6f844b7",
       "label": 0,
-      "logistic": 0.5603689364689568,
+      "logistic": 0.49034026070585973,
       "repo": "dvcrn/mcp-server-siri-shortcuts",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-7ad0dc2caef7",
       "label": 0,
-      "logistic": 0.540680865361698,
+      "logistic": 0.5634591169612466,
       "repo": "elsa-workflows/elsa-studio",
-      "tfidf": 0.0034695043920818748
+      "tfidf": 0.003487646654358075
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-a9eeb4925bd4",
       "label": 0,
-      "logistic": 0.5141127276045255,
+      "logistic": 0.49002636917153397,
       "repo": "estruyf/vscode-front-matter",
-      "tfidf": 0.05012291731049362
+      "tfidf": 0.06193309234604389
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-4b805766c91d",
       "label": 0,
-      "logistic": 0.5398775048547678,
+      "logistic": 0.5548231239313219,
       "repo": "f/mcptools",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-2f34114cac71",
       "label": 0,
-      "logistic": 0.5384931890668827,
+      "logistic": 0.49034026070585973,
       "repo": "FerretDB/FerretDB",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-15ebc3673736",
       "label": 0,
-      "logistic": 0.43930079551663853,
+      "logistic": 0.456874316425908,
       "repo": "filecoin-project/lotus",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-18ff8ba16068",
       "label": 0,
-      "logistic": 0.5081845323050169,
+      "logistic": 0.5388186584937577,
       "repo": "fireship-io/flamethrower",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-91bd6ef928f6",
       "label": 0,
-      "logistic": 0.4660481799434537,
+      "logistic": 0.49164842092495087,
       "repo": "FritzAndFriends/SharpSite",
-      "tfidf": 0.1177564096578381
+      "tfidf": 0.11405039935214653
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-09a5588b0b90",
       "label": 0,
-      "logistic": 0.5189177550128922,
+      "logistic": 0.5348351781667633,
       "repo": "githubnext/awesome-continuous-ai",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-596266088244",
       "label": 0,
-      "logistic": 0.5018383220848763,
+      "logistic": 0.5301524484878883,
       "repo": "GMPrakhar/MAUI-Designer",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-0a107b88f6bd",
       "label": 0,
-      "logistic": 0.5505499398013858,
+      "logistic": 0.5200024022832208,
       "repo": "GradleUp/shadow",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-355ea6d1b2a9",
       "label": 1,
-      "logistic": 0.5653566094069268,
+      "logistic": 0.556170078873163,
       "repo": "hackmdio/codimd",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-e6f512c7a9b5",
       "label": 0,
-      "logistic": 0.5278315496727137,
+      "logistic": 0.5256370216079861,
       "repo": "hacs/integration",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-c6dce28cb969",
       "label": 0,
-      "logistic": 0.5521981982856636,
+      "logistic": 0.5249339313348597,
       "repo": "haydenbleasel/eververse",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-b76b642203c9",
       "label": 0,
-      "logistic": 0.5104527285780665,
+      "logistic": 0.5227193171177014,
       "repo": "huggingface/huggingface_hub",
-      "tfidf": 0.0617409718463634
+      "tfidf": 0.04905084875352815
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-e452e9083d8f",
       "label": 1,
-      "logistic": 0.509582009338793,
+      "logistic": 0.5570483871269463,
       "repo": "hyperlight-dev/hyperlight",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-34fde48715d5",
       "label": 1,
-      "logistic": 0.4848655108000562,
+      "logistic": 0.4762443254963054,
       "repo": "icehouse-ventures/laravel-chartjs",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-60baf1cce7f9",
       "label": 1,
-      "logistic": 0.5013486602620708,
+      "logistic": 0.5068349338452417,
       "repo": "johnpapa/shopathome",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-45d6b58226e1",
       "label": 0,
-      "logistic": 0.3525796275610294,
+      "logistic": 0.4707325081217927,
       "repo": "jsforce/jsforce",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-0bd230fcf822",
       "label": 0,
-      "logistic": 0.5169845690929546,
+      "logistic": 0.5121214568842455,
       "repo": "kanisterio/kanister",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-0d58998c53be",
       "label": 0,
-      "logistic": 0.5521605046050718,
+      "logistic": 0.5292018854847631,
       "repo": "keephq/keep",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-b84b772bf9dc",
       "label": 0,
-      "logistic": 0.4704672732357148,
+      "logistic": 0.516692287092159,
       "repo": "kubernetes-sigs/azuredisk-csi-driver",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-c4c9ccc536be",
       "label": 0,
-      "logistic": 0.5238660735725031,
+      "logistic": 0.4942662031892921,
       "repo": "kubernetes-sigs/blob-csi-driver",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-b3c19d94d427",
       "label": 0,
-      "logistic": 0.5466603597959978,
+      "logistic": 0.5269352322842471,
       "repo": "kubetail-org/kubetail",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-453c75b28c01",
       "label": 1,
-      "logistic": 0.4734312263155726,
+      "logistic": 0.548973902271381,
       "repo": "langchain-ai/langchain",
-      "tfidf": 0.15208167855824334
+      "tfidf": 0.1359926874427417
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-0cc382ed7251",
       "label": 0,
-      "logistic": 0.5569740056622374,
+      "logistic": 0.5052612810440926,
       "repo": "lawrencegripper/azbrowse",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-a98d2c3afbc8",
       "label": 1,
-      "logistic": 0.504260420285451,
+      "logistic": 0.45677619461018126,
       "repo": "lgallard/terraform-aws-backup",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-d82e9f3f162c",
       "label": 0,
-      "logistic": 0.45079586737543714,
+      "logistic": 0.4052548435529404,
       "repo": "licensee/licensee",
-      "tfidf": 0.21774137630478765
+      "tfidf": 0.5716469027914575
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-4e39e7d851b6",
       "label": 0,
-      "logistic": 0.4776877484212348,
+      "logistic": 0.446268528544077,
       "repo": "lostintangent/gistpad",
-      "tfidf": 0.19750533255720065
+      "tfidf": 0.1738511169157411
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-929f90736f3f",
       "label": 0,
-      "logistic": 0.5308225381016173,
+      "logistic": 0.5165753677664306,
       "repo": "lynx-family/lynx-stack",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-bc4170b31d94",
       "label": 0,
-      "logistic": 0.5276700797363504,
+      "logistic": 0.5353441103161938,
       "repo": "microsoft/ApplicationInsights-Java",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-661632c90960",
       "label": 0,
-      "logistic": 0.47267320317705586,
+      "logistic": 0.5227225947894297,
       "repo": "microsoft/ApplicationInsights-JS",
-      "tfidf": 0.06387723531514283
+      "tfidf": 0.06495376481648081
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-bc5c136a91ca",
       "label": 0,
-      "logistic": 0.5143659858293529,
+      "logistic": 0.5165012676502745,
       "repo": "microsoft/autogen",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-add24f685bc6",
       "label": 0,
-      "logistic": 0.5272677407776953,
+      "logistic": 0.5005866576436095,
       "repo": "microsoft/AzureTRE",
-      "tfidf": 0.0366488949875883
+      "tfidf": 0.040191290766315085
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-988509b2602a",
       "label": 1,
-      "logistic": 0.41229940584309677,
+      "logistic": 0.4822872647726103,
       "repo": "microsoft/BotFramework-WebChat",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-3756efaa2a99",
       "label": 1,
-      "logistic": 0.49125648514147296,
+      "logistic": 0.5397897668340135,
       "repo": "microsoft/DacFx",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-1e8f31156aec",
       "label": 0,
-      "logistic": 0.5587232053724668,
+      "logistic": 0.5868986024789001,
       "repo": "microsoft/debug-gym",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-63084e941969",
       "label": 0,
-      "logistic": 0.5467827858614784,
+      "logistic": 0.54209028555092,
       "repo": "microsoft/ebpf-for-windows",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-9589924608a0",
       "label": 0,
-      "logistic": 0.4756918282949647,
+      "logistic": 0.5284706189949573,
       "repo": "microsoft/generative-ai-with-javascript",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-d4e81047ca37",
       "label": 0,
-      "logistic": 0.4713562058137278,
+      "logistic": 0.4560587120296327,
       "repo": "microsoft/graphrag",
-      "tfidf": 0.4400594370333057
+      "tfidf": 0.4764872570319451
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-81db0a8251fd",
       "label": 0,
-      "logistic": 0.5189698870980453,
+      "logistic": 0.5233800030626425,
       "repo": "microsoft/GSL",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-5b77d0be6f95",
       "label": 0,
-      "logistic": 0.5116936036609938,
+      "logistic": 0.44744073376968807,
       "repo": "microsoft/lisa",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-76b615dce75e",
       "label": 0,
-      "logistic": 0.500243104686054,
+      "logistic": 0.5199813057572417,
       "repo": "microsoft/magentic-ui",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-722f944c6545",
       "label": 0,
-      "logistic": 0.49659917112268886,
+      "logistic": 0.5087221517995246,
       "repo": "microsoft/MSBuildLocator",
-      "tfidf": 0.011041756090609157
+      "tfidf": 0.009526195358919345
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-bcebe5751c92",
       "label": 1,
-      "logistic": 0.4752584847589305,
+      "logistic": 0.48941487195712274,
       "repo": "microsoft/msquic",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-33c428ee2fae",
       "label": 1,
-      "logistic": 0.5433727328331015,
+      "logistic": 0.49966709180480384,
       "repo": "microsoft/onnxruntime",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-73e947918b31",
       "label": 0,
-      "logistic": 0.5603689364689568,
+      "logistic": 0.49034026070585973,
       "repo": "microsoft/onnxscript",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-61305f1b0357",
       "label": 0,
-      "logistic": 0.4935817349807429,
+      "logistic": 0.4946141786812064,
       "repo": "microsoft/OpenAPI.NET",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-a33a006d17e8",
       "label": 0,
-      "logistic": 0.4630664433925434,
+      "logistic": 0.5133845293364003,
       "repo": "microsoft/perfview",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-67a48ce0c052",
       "label": 0,
-      "logistic": 0.4712998451335626,
+      "logistic": 0.5337517869801522,
       "repo": "microsoft/pict",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-1572a2c54f9c",
       "label": 0,
-      "logistic": 0.444893191587009,
+      "logistic": 0.48606430383326815,
       "repo": "microsoft/playwright",
-      "tfidf": 0.38531220940221483
+      "tfidf": 0.38707779145430066
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-a161e9ea2e39",
       "label": 0,
-      "logistic": 0.5199488882956312,
+      "logistic": 0.5455137377598925,
       "repo": "microsoft/PowerToys",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-de00c65bf833",
       "label": 0,
-      "logistic": 0.5135850395672636,
+      "logistic": 0.5058963093810409,
       "repo": "microsoft/project-oagents",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-47ebcf8d0b37",
       "label": 1,
-      "logistic": 0.47876552812607787,
+      "logistic": 0.4819609106547067,
       "repo": "microsoft/PSRule",
-      "tfidf": 0.24843401310471463
+      "tfidf": 0.2632826122521539
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-d6bc8d41fba2",
       "label": 0,
-      "logistic": 0.479029081778983,
+      "logistic": 0.3281487334318522,
       "repo": "microsoft/Qcodes",
-      "tfidf": 0.04516369977643021
+      "tfidf": 0.052273745038442836
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-6716d1e97eda",
       "label": 0,
-      "logistic": 0.5847228291715436,
+      "logistic": 0.3231443962312155,
       "repo": "microsoft/react-native-gallery",
-      "tfidf": 0.5876732017590207
+      "tfidf": 0.5086118878540741
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-0e6f0729cf28",
       "label": 0,
-      "logistic": 0.5460239270171923,
+      "logistic": 0.4881191324720415,
       "repo": "microsoft/sarif-tools",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-b313773c84fb",
       "label": 0,
-      "logistic": 0.52265680209986,
+      "logistic": 0.4844331867375822,
       "repo": "microsoft/sbom-tool",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-76e94cb76e8a",
       "label": 0,
-      "logistic": 0.4423182841901946,
+      "logistic": 0.49277342818953945,
       "repo": "microsoft/TypeScript",
-      "tfidf": 0.11975154043793147
+      "tfidf": 0.10542868436102623
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-16bc11bfe5cb",
       "label": 1,
-      "logistic": 0.24884265880896866,
+      "logistic": 0.28800171106055034,
       "repo": "microsoft/typescript-go",
-      "tfidf": 0.16994003953409023
+      "tfidf": 0.16545948073160555
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-1eaefc406fef",
       "label": 0,
-      "logistic": 0.48173256380399554,
+      "logistic": 0.5382864774657086,
       "repo": "microsoft/vcpkg",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-22584b4eeea2",
       "label": 1,
-      "logistic": 0.4848655108000562,
+      "logistic": 0.5316320001504257,
       "repo": "microsoft/vscode-mssql",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-53e434b822e4",
       "label": 1,
-      "logistic": 0.5340006128829091,
+      "logistic": 0.4686936250987656,
       "repo": "microsoft/vscode-python",
-      "tfidf": 0.08331824141698882
+      "tfidf": 0.08595767079817719
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-8ba49ece8e4a",
       "label": 0,
-      "logistic": 0.48821327776967766,
+      "logistic": 0.454143579359237,
       "repo": "microsoft/Windows-Containers",
-      "tfidf": 0.42257393539400007
+      "tfidf": 0.4603120304811529
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-157d3b2355b1",
       "label": 0,
-      "logistic": 0.5097339163379663,
+      "logistic": 0.34895407843951937,
       "repo": "microsoft/WinUI-Gallery",
-      "tfidf": 0.6578098675524545
+      "tfidf": 0.43795721302203505
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-c8daf3a6b425",
       "label": 0,
-      "logistic": 0.33850101344356576,
+      "logistic": 0.442599133336469,
       "repo": "MicrosoftLearning/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions",
-      "tfidf": 0.008105332614437919
+      "tfidf": 0.011847624871824305
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-8c06fc2055d4",
       "label": 0,
-      "logistic": 0.5358715312507819,
+      "logistic": 0.4942662031892921,
       "repo": "MikePopoloski/slang",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-3855f6ade0ca",
       "label": 1,
-      "logistic": 0.48125103419282733,
+      "logistic": 0.5036373274276467,
       "repo": "mlco2/codecarbon",
-      "tfidf": 0.1945309111805328
+      "tfidf": 0.15838092555134395
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-684bec76bd8e",
       "label": 0,
-      "logistic": 0.5373379672700771,
+      "logistic": 0.5507972818324021,
       "repo": "mlflow/mlflow",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-eaa6440ab245",
       "label": 0,
-      "logistic": 0.5580115400057871,
+      "logistic": 0.5165012676502745,
       "repo": "monosans/proxy-scraper-checker",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-af7ba11cf78c",
       "label": 0,
-      "logistic": 0.5933630295743292,
+      "logistic": 0.4655866130346417,
       "repo": "Mr-Quin/danmaku-anywhere",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-7d36407e417e",
       "label": 0,
-      "logistic": 0.5039014626977172,
+      "logistic": 0.5189770693969156,
       "repo": "Myriad-Dreamin/tinymist",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-ef9741f987dd",
       "label": 0,
-      "logistic": 0.49113722321708153,
+      "logistic": 0.5210056268085828,
       "repo": "nanvix/nanvix",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-b47721a7f481",
       "label": 0,
-      "logistic": 0.2520889111617797,
+      "logistic": 0.45656995889493907,
       "repo": "navidrome/navidrome",
-      "tfidf": 0.11594837093633162
+      "tfidf": 0.11993706509351712
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-4851d779f0f1",
       "label": 0,
-      "logistic": 0.528608567886019,
+      "logistic": 0.514394156270774,
       "repo": "net-daemon/netdaemon",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-e0878e77e370",
       "label": 0,
-      "logistic": 0.4960345575187379,
+      "logistic": 0.5382864774657086,
       "repo": "NG-ZORRO/ng-zorro-antd",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-8935431b1b19",
       "label": 0,
-      "logistic": 0.5028618171266077,
+      "logistic": 0.5134163189219102,
       "repo": "obophenotype/cell-ontology",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-cbc4316fa063",
       "label": 0,
-      "logistic": 0.49950122724212614,
+      "logistic": 0.5024364853531043,
       "repo": "onnx/onnx",
-      "tfidf": 0.07364393695730549
+      "tfidf": 0.0763502896468826
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-080b3727f9e1",
       "label": 0,
-      "logistic": 0.5189698870980453,
+      "logistic": 0.5165753677664306,
       "repo": "open-telemetry/opentelemetry-cpp",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-b72e0c2ea1ae",
       "label": 0,
-      "logistic": 0.5433478131938535,
+      "logistic": 0.4933934970509614,
       "repo": "opendocument-app/OpenDocument.droid",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-dccfc1cb165d",
       "label": 1,
-      "logistic": 0.5184612229484818,
+      "logistic": 0.5084100662844764,
       "repo": "OpenRouterTeam/ai-sdk-provider",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-0c5ee70d4a19",
       "label": 0,
-      "logistic": 0.5089282904914945,
+      "logistic": 0.460200573380442,
       "repo": "opsmill/infrahub",
-      "tfidf": 0.20153600133210045
+      "tfidf": 0.2733314368986552
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-d9e8765a2bb3",
       "label": 0,
-      "logistic": 0.5245738295814565,
+      "logistic": 0.5258505898936614,
       "repo": "orbitalapi/orbital",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-2d94a28dfaa1",
       "label": 1,
-      "logistic": 0.5746321075161298,
+      "logistic": 0.4828299310092324,
       "repo": "OrchardCMS/OrchardCore",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-755396bb87bb",
       "label": 0,
-      "logistic": 0.492477943081382,
+      "logistic": 0.5213049114333176,
       "repo": "oss-apps/split-pro",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-04e27c8dff84",
       "label": 0,
-      "logistic": 0.4226990048284043,
+      "logistic": 0.35612895941217904,
       "repo": "OWASP/mastg",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-147ae1f1b75b",
       "label": 0,
-      "logistic": 0.546355276954897,
+      "logistic": 0.5496276235724243,
       "repo": "OWASP/wrongsecrets",
-      "tfidf": 0.10464593609603377
+      "tfidf": 0.10716090578675765
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-32617e65c098",
       "label": 0,
-      "logistic": 0.5719851935313524,
+      "logistic": 0.481001224311689,
       "repo": "owncast/owncast",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-0ccd70f830da",
       "label": 1,
-      "logistic": 0.4953873605258046,
+      "logistic": 0.49682081987674664,
       "repo": "PepperDash/Essentials",
-      "tfidf": 0.1249707278580455
+      "tfidf": 0.08858733328699238
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-4a12ac8d4af1",
       "label": 0,
-      "logistic": 0.4957894957358761,
+      "logistic": 0.5386156321630406,
       "repo": "pgdogdev/pgdog",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-315394dd23da",
       "label": 0,
-      "logistic": 0.37382069539130164,
+      "logistic": 0.31410422755851786,
       "repo": "pnp/cli-microsoft365",
-      "tfidf": 0.7501731805056513
+      "tfidf": 0.5518519749779287
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-106d81d93da0",
       "label": 0,
-      "logistic": 0.3059837531370447,
+      "logistic": 0.30478849749948284,
       "repo": "primer/react",
-      "tfidf": 0.811735278035906
+      "tfidf": 0.8118057272379622
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-b2947be16699",
       "label": 1,
-      "logistic": 0.4848655108000562,
+      "logistic": 0.4762443254963054,
       "repo": "promptfoo/promptfoo",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-1b82a49e6277",
       "label": 0,
-      "logistic": 0.564455135607738,
+      "logistic": 0.4464855029972503,
       "repo": "pulumi/docs",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-8b053a754010",
       "label": 0,
-      "logistic": 0.3748415529976515,
+      "logistic": 0.39264265725435077,
       "repo": "python/python-docs-zh-tw",
-      "tfidf": 0.672375897238375
+      "tfidf": 0.9605367937127492
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-c88a9151522f",
       "label": 0,
-      "logistic": 0.5460454869996239,
+      "logistic": 0.5316320001504257,
       "repo": "QL-Win/QuickLook",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-c1dcd81c300f",
       "label": 1,
-      "logistic": 0.5078132001521583,
+      "logistic": 0.48039631838263147,
       "repo": "quarylabs/sqruff",
-      "tfidf": 0.013203517496087645
+      "tfidf": 0.020247009736940158
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-93b8d89f8972",
       "label": 0,
-      "logistic": 0.5049216947122938,
+      "logistic": 0.4869944595872044,
       "repo": "reneschulte/WriteableBitmapEx",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-9b118dbbde80",
       "label": 0,
-      "logistic": 0.5095831303885827,
+      "logistic": 0.5249458512752947,
       "repo": "reorx/jsoncv",
-      "tfidf": 0.04503999118477741
+      "tfidf": 0.04413243777616306
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-850cbacd0d96",
       "label": 0,
-      "logistic": 0.5157185530237978,
+      "logistic": 0.5197526028934112,
       "repo": "risingwavelabs/risingwave",
-      "tfidf": 0.05613109874572452
+      "tfidf": 0.060239946481987994
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-ace549969570",
       "label": 0,
-      "logistic": 0.4085857075844738,
+      "logistic": 0.3688900292521928,
       "repo": "rocket-admin/rocketadmin",
-      "tfidf": 0.5131349859440782
+      "tfidf": 0.6684125472266932
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-283b7aec2b4c",
       "label": 0,
-      "logistic": 0.5076793112804697,
+      "logistic": 0.48469841615362724,
       "repo": "ruvnet/ruv-FANN",
-      "tfidf": 0.19689690134575724
+      "tfidf": 0.18933264691316695
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-031e833e14fb",
       "label": 1,
-      "logistic": 0.5556844571570495,
+      "logistic": 0.49633545101502874,
       "repo": "serilog-contrib/serilog-enrichers-clientinfo",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-4428eaeb866b",
       "label": 0,
-      "logistic": 0.4107437580818858,
+      "logistic": 0.4754502094582859,
       "repo": "shader-slang/slang",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-26f551daf737",
       "label": 0,
-      "logistic": 0.41086000426039604,
+      "logistic": 0.0853824360317796,
       "repo": "ShaunLawrie/PwshSpectreConsole",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-cba7652eff43",
       "label": 1,
-      "logistic": 0.4772567522343591,
+      "logistic": 0.48311462932122123,
       "repo": "shopware/shopware",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-b880d5902ca7",
       "label": 1,
-      "logistic": 0.49093362248066025,
+      "logistic": 0.49827510656563206,
       "repo": "spcl/dace",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-ec6097dc4c30",
       "label": 0,
-      "logistic": 0.49296266689798424,
+      "logistic": 0.48955825298112005,
       "repo": "specmatic/specmatic",
-      "tfidf": 0.2664262348308715
+      "tfidf": 0.26221375199396146
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-8e2d88dcdbf0",
       "label": 0,
-      "logistic": 0.5439867515071272,
+      "logistic": 0.5382864774657086,
       "repo": "stefankoegl/python-json-patch",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-7decee8f0408",
       "label": 0,
-      "logistic": 0.5719748482865792,
+      "logistic": 0.49966709180480384,
       "repo": "SuperClaude-Org/SuperClaude_Framework",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-7cf5c05e4484",
       "label": 0,
-      "logistic": 0.5741279123663762,
+      "logistic": 0.4642510876373153,
       "repo": "syncfusion/maui-toolkit",
-      "tfidf": 0.06648230461078644
+      "tfidf": 0.0656466537126738
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-daa23c553287",
       "label": 0,
-      "logistic": 0.5508271361362116,
+      "logistic": 0.5170847324129331,
       "repo": "sysadminsmedia/homebox",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-d580a8a47b50",
       "label": 0,
-      "logistic": 0.5253000750912571,
+      "logistic": 0.5436875653600497,
       "repo": "taiga-family/taiga-ui",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-54bfb0cb44d9",
       "label": 0,
-      "logistic": 0.4960345575187379,
+      "logistic": 0.5382864774657086,
       "repo": "thrasher-corp/gocryptotrader",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-830fb154ad87",
       "label": 1,
-      "logistic": 0.4597736083673799,
+      "logistic": 0.45896603766404365,
       "repo": "tokens-studio/figma-plugin",
-      "tfidf": 0.17502933174932803
+      "tfidf": 0.1844859543331675
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-f19644b9506a",
       "label": 0,
-      "logistic": 0.5580115400057871,
+      "logistic": 0.5165012676502745,
       "repo": "tomhrr/cosh",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-8335ace8a4a4",
       "label": 0,
-      "logistic": 0.5466603597959978,
+      "logistic": 0.5269352322842471,
       "repo": "valkey-io/valkey-glide",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-07d076c00d16",
       "label": 0,
-      "logistic": 0.4727611109489465,
+      "logistic": 0.4363210545876683,
       "repo": "vespa-engine/pyvespa",
-      "tfidf": 0.3181576979284804
+      "tfidf": 0.3201554491302581
     },
     {
-      "fold_prior": 0.16216216216216217,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-2209fdb0272c",
       "label": 0,
-      "logistic": 0.4898507950797911,
+      "logistic": 0.3418086339553449,
       "repo": "vltpkg/vltpkg",
-      "tfidf": 0.10218753163239873
+      "tfidf": 0.1153477667513448
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-6f9d992b6001",
       "label": 0,
-      "logistic": 0.5580115400057871,
+      "logistic": 0.5304721170776668,
       "repo": "Voxelum/minecraft-launcher-core-node",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-434320165e34",
       "label": 0,
-      "logistic": 0.5180289906099261,
+      "logistic": 0.5768005124796203,
       "repo": "Voxelum/x-minecraft-launcher",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-413ac3c2fe1f",
       "label": 0,
-      "logistic": 0.4905128796316136,
+      "logistic": 0.4868120938039958,
       "repo": "wcandillon/react-native-webgpu",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.174496644295302,
       "instance_id": "nc-caabd495c5aa",
       "label": 0,
-      "logistic": 0.4887709128411515,
+      "logistic": 0.4992288239531279,
       "repo": "web-infra-dev/rspack",
-      "tfidf": 0.2536670564821626
+      "tfidf": 0.2635410150443092
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-05e8cd2fb0af",
       "label": 1,
-      "logistic": 0.3867197846206223,
+      "logistic": 0.4075703415846095,
       "repo": "webgptorg/promptbook",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.18309859154929578,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-923788a60796",
       "label": 0,
-      "logistic": 0.5098760869770785,
+      "logistic": 0.5346308943467478,
       "repo": "wvlet/airframe",
-      "tfidf": 0.017664129578205078
+      "tfidf": 0.016791856987576518
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-218f5c4dfd32",
       "label": 0,
-      "logistic": 0.49808392796522943,
+      "logistic": 0.5081045718508233,
       "repo": "wvlet/wvlet",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-96dcc7eeeed2",
       "label": 0,
-      "logistic": 0.5365734705022748,
+      "logistic": 0.5187881053373014,
       "repo": "xtermjs/xterm.js",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-89897d7e1103",
       "label": 0,
-      "logistic": 0.5258691554075907,
+      "logistic": 0.5064599766935682,
       "repo": "yiisoft-contrib/yiiframework.com",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-fe0ed1fde76f",
       "label": 0,
-      "logistic": 0.5327749735273802,
+      "logistic": 0.48842501223366397,
       "repo": "yytypescript/book",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16556291390728478,
+      "fold_prior": 0.1773049645390071,
       "instance_id": "nc-213ce77bc7b8",
       "label": 0,
-      "logistic": 0.5801384062012036,
+      "logistic": 0.5135531622988802,
       "repo": "yytypescript/book",
       "tfidf": 0.0
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.15384615384615385,
       "instance_id": "nc-c5d0dc1b7fb7",
       "label": 0,
-      "logistic": 0.35903066079433804,
+      "logistic": 0.3704960570571025,
       "repo": "zapier/zapier-platform",
-      "tfidf": 0.8551931361812233
+      "tfidf": 0.8596200201470955
     },
     {
-      "fold_prior": 0.19594594594594594,
+      "fold_prior": 0.18666666666666668,
       "instance_id": "nc-663e9b21e6dc",
       "label": 0,
-      "logistic": 0.3029356393946287,
+      "logistic": 0.25402846466958817,
       "repo": "zeroc-ice/ice-demos",
-      "tfidf": 0.9861553448458884
+      "tfidf": 0.9856277473849983
     },
     {
-      "fold_prior": 0.16783216783216784,
+      "fold_prior": 0.18120805369127516,
       "instance_id": "nc-afe98dcab5d1",
       "label": 0,
-      "logistic": 0.504576769239375,
+      "logistic": 0.49657009308373934,
       "repo": "zwave-js/zwave-js",
-      "tfidf": 0.22206059298856945
+      "tfidf": 0.22139979905432577
     }
   ],
   "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",

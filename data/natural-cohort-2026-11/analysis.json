@@ -66,118 +66,118 @@
       },
       "blend_equal": {
         "all": {
-          "average_precision": 0.27419758083146645,
+          "average_precision": 0.27750668553536206,
           "conflicts": 144,
           "pairs": 652,
           "prevalence": 0.22085889570552147,
-          "roc_auc": 0.5486111111111112
+          "roc_auc": 0.5500464785651794
         },
         "cross_agent": {
-          "average_precision": 0.4475455712155575,
+          "average_precision": 0.4392228202098796,
           "conflicts": 41,
           "pairs": 102,
           "prevalence": 0.4019607843137255,
-          "roc_auc": 0.5405837664934027
+          "roc_auc": 0.5373850459816074
         },
         "different_linked_issue": {
-          "average_precision": 0.28431590827582487,
+          "average_precision": 0.2865775472987644,
           "conflicts": 143,
           "pairs": 642,
           "prevalence": 0.22274143302180685,
-          "roc_auc": 0.5535406477290244
+          "roc_auc": 0.5547598693891279
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.24975674725462702,
+          "average_precision": 0.25181838769532505,
           "conflicts": 133,
           "pairs": 620,
           "prevalence": 0.21451612903225806,
-          "roc_auc": 0.533919501011255
+          "roc_auc": 0.535154621667104
         },
         "early_issue": {
-          "average_precision": 0.16837128508680013,
+          "average_precision": 0.18820877074677558,
           "conflicts": 18,
           "pairs": 120,
           "prevalence": 0.15,
-          "roc_auc": 0.5544662309368192
+          "roc_auc": 0.5675381263616558
         },
         "same_agent": {
-          "average_precision": 0.25918374421438634,
+          "average_precision": 0.2651592319723628,
           "conflicts": 103,
           "pairs": 550,
           "prevalence": 0.18727272727272729,
-          "roc_auc": 0.5764210160509111
+          "roc_auc": 0.5794617840620316
         },
         "strict_issue": {
-          "average_precision": 0.1539130599264562,
+          "average_precision": 0.17015475471376956,
           "conflicts": 24,
           "pairs": 173,
           "prevalence": 0.13872832369942195,
-          "roc_auc": 0.5560682326621924
+          "roc_auc": 0.568092841163311
         },
         "titles_dissimilar": {
-          "average_precision": 0.24691577050692878,
+          "average_precision": 0.24937558119569303,
           "conflicts": 134,
           "pairs": 626,
           "prevalence": 0.21405750798722045,
-          "roc_auc": 0.5328464385390123
+          "roc_auc": 0.5341357238199247
         }
       },
       "blend_text_heavy": {
         "all": {
-          "average_precision": 0.2689730419108293,
+          "average_precision": 0.2717616344318213,
           "conflicts": 144,
           "pairs": 652,
           "prevalence": 0.22085889570552147,
-          "roc_auc": 0.5449064960629921
+          "roc_auc": 0.5453029308836396
         },
         "cross_agent": {
-          "average_precision": 0.4447551769629798,
+          "average_precision": 0.43898812211055904,
           "conflicts": 41,
           "pairs": 102,
           "prevalence": 0.4019607843137255,
-          "roc_auc": 0.538984406237505
+          "roc_auc": 0.5353858456617353
         },
         "different_linked_issue": {
-          "average_precision": 0.2781740616608541,
+          "average_precision": 0.2798385144565143,
           "conflicts": 143,
           "pairs": 642,
           "prevalence": 0.22274143302180685,
-          "roc_auc": 0.5497568563700828
+          "roc_auc": 0.5499390389169948
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.23928535203497933,
+          "average_precision": 0.24251606568337752,
           "conflicts": 133,
           "pairs": 620,
           "prevalence": 0.21451612903225806,
-          "roc_auc": 0.5295039446665946
+          "roc_auc": 0.5296428957403776
         },
         "early_issue": {
-          "average_precision": 0.1700423230012649,
+          "average_precision": 0.18966307228847765,
           "conflicts": 18,
           "pairs": 120,
           "prevalence": 0.15,
-          "roc_auc": 0.5582788671023965
+          "roc_auc": 0.5675381263616558
         },
         "same_agent": {
-          "average_precision": 0.25240068033356333,
+          "average_precision": 0.2579037869296783,
           "conflicts": 103,
           "pairs": 550,
           "prevalence": 0.18727272727272729,
-          "roc_auc": 0.5720987815208184
+          "roc_auc": 0.5743793575291588
         },
         "strict_issue": {
-          "average_precision": 0.14993546591155843,
+          "average_precision": 0.1636494101795356,
           "conflicts": 24,
           "pairs": 173,
           "prevalence": 0.13872832369942195,
-          "roc_auc": 0.5597035794183445
+          "roc_auc": 0.5706096196868009
         },
         "titles_dissimilar": {
-          "average_precision": 0.2374665572340961,
+          "average_precision": 0.24145591068160904,
           "conflicts": 134,
           "pairs": 626,
           "prevalence": 0.21405750798722045,
-          "roc_auc": 0.5285387088945517
+          "roc_auc": 0.5287510617643489
         }
       },
       "directory_overlap": {
@@ -305,11 +305,11 @@
           "roc_auc": 0.7012641214100994
         },
         "blend_equal": {
-          "average_precision": 0.27716892175696733,
+          "average_precision": 0.2810561078244144,
           "conflicts": 124,
           "pairs": 598,
           "prevalence": 0.20735785953177258,
-          "roc_auc": 0.5628743024363685
+          "roc_auc": 0.5652562270314414
         },
         "predicted_overlap": {
           "average_precision": 0.25439398046375356,
@@ -319,11 +319,11 @@
           "roc_auc": 0.5653923370083027
         },
         "text_score": {
-          "average_precision": 0.26124737427868505,
+          "average_precision": 0.2662667593036686,
           "conflicts": 124,
           "pairs": 598,
           "prevalence": 0.20735785953177258,
-          "roc_auc": 0.5366816387641214
+          "roc_auc": 0.5387913434054716
         }
       },
       "predicted_overlap": {
@@ -444,60 +444,60 @@
       },
       "text_score": {
         "all": {
-          "average_precision": 0.25921196619603093,
+          "average_precision": 0.26346621764755507,
           "conflicts": 144,
           "pairs": 652,
           "prevalence": 0.22085889570552147,
-          "roc_auc": 0.5235400262467191
+          "roc_auc": 0.5247156605424322
         },
         "cross_agent": {
-          "average_precision": 0.4494964546976931,
+          "average_precision": 0.45023958321218305,
           "conflicts": 41,
           "pairs": 102,
           "prevalence": 0.4019607843137255,
-          "roc_auc": 0.5269892043182727
+          "roc_auc": 0.5241903238704518
         },
         "different_linked_issue": {
-          "average_precision": 0.266320663635291,
+          "average_precision": 0.2699637274837404,
           "conflicts": 143,
           "pairs": 642,
           "prevalence": 0.22274143302180685,
-          "roc_auc": 0.5275305856468181
+          "roc_auc": 0.5284835405075885
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.2260058551206332,
+          "average_precision": 0.23423347422902116,
           "conflicts": 133,
           "pairs": 620,
           "prevalence": 0.21451612903225806,
-          "roc_auc": 0.5039601056028161
+          "roc_auc": 0.5049636411356935
         },
         "early_issue": {
-          "average_precision": 0.18413219680608628,
+          "average_precision": 0.19826811347423406,
           "conflicts": 18,
           "pairs": 120,
           "prevalence": 0.15,
-          "roc_auc": 0.5898692810457516
+          "roc_auc": 0.6018518518518519
         },
         "same_agent": {
-          "average_precision": 0.2403271639721155,
+          "average_precision": 0.2480227572101174,
           "conflicts": 103,
           "pairs": 550,
           "prevalence": 0.18727272727272729,
-          "roc_auc": 0.5434938424447775
+          "roc_auc": 0.546773527942486
         },
         "strict_issue": {
-          "average_precision": 0.15298108863960536,
+          "average_precision": 0.16421662383676827,
           "conflicts": 24,
           "pairs": 173,
           "prevalence": 0.13872832369942195,
-          "roc_auc": 0.5753635346756153
+          "roc_auc": 0.591023489932886
         },
         "titles_dissimilar": {
-          "average_precision": 0.22565690863288154,
+          "average_precision": 0.23417497467112253,
           "conflicts": 134,
           "pairs": 626,
           "prevalence": 0.21405750798722045,
-          "roc_auc": 0.5037768474699672
+          "roc_auc": 0.5048841160053391
         }
       }
     },
@@ -559,106 +559,106 @@
       },
       "blend_equal": {
         "all": {
-          "average_precision": 0.1429449296213782,
+          "average_precision": 0.14310958953564556,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5062056737588653
+          "roc_auc": 0.5073877068557919
         },
         "cross_agent": null,
         "different_linked_issue": {
-          "average_precision": 0.1429449296213782,
+          "average_precision": 0.14310958953564556,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5062056737588653
+          "roc_auc": 0.5073877068557919
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.15314227229950286,
+          "average_precision": 0.15332707773540394,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.5154320987654321
+          "roc_auc": 0.5169753086419753
         },
         "early_issue": {
-          "average_precision": 0.16752119560637863,
+          "average_precision": 0.16804626675474343,
           "conflicts": 15,
           "pairs": 106,
           "prevalence": 0.14150943396226415,
-          "roc_auc": 0.5457875457875458
+          "roc_auc": 0.553113553113553
         },
         "same_agent": {
-          "average_precision": 0.14328559697130575,
+          "average_precision": 0.14345046658927854,
           "conflicts": 24,
           "pairs": 162,
           "prevalence": 0.14814814814814814,
-          "roc_auc": 0.4975845410628019
+          "roc_auc": 0.49879227053140096
         },
         "strict_issue": {
-          "average_precision": 0.1429449296213782,
+          "average_precision": 0.14310958953564556,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5062056737588653
+          "roc_auc": 0.5073877068557919
         },
         "titles_dissimilar": {
-          "average_precision": 0.15314227229950286,
+          "average_precision": 0.15332707773540394,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.5154320987654321
+          "roc_auc": 0.5169753086419753
         }
       },
       "blend_text_heavy": {
         "all": {
-          "average_precision": 0.14561242997012713,
+          "average_precision": 0.14535416743603774,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5135933806146572
+          "roc_auc": 0.5141843971631206
         },
         "cross_agent": null,
         "different_linked_issue": {
-          "average_precision": 0.14561242997012713,
+          "average_precision": 0.14535416743603774,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5135933806146572
+          "roc_auc": 0.5141843971631206
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.15644779164830586,
+          "average_precision": 0.15617375681116755,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.524074074074074
+          "roc_auc": 0.5253086419753087
         },
         "early_issue": {
-          "average_precision": 0.17435933936766412,
+          "average_precision": 0.17432122019628266,
           "conflicts": 15,
           "pairs": 106,
           "prevalence": 0.14150943396226415,
-          "roc_auc": 0.5641025641025642
+          "roc_auc": 0.5706959706959708
         },
         "same_agent": {
-          "average_precision": 0.1460076170430235,
+          "average_precision": 0.14574956542539128,
           "conflicts": 24,
           "pairs": 162,
           "prevalence": 0.14814814814814814,
-          "roc_auc": 0.5054347826086957
+          "roc_auc": 0.5060386473429952
         },
         "strict_issue": {
-          "average_precision": 0.14561242997012713,
+          "average_precision": 0.14535416743603774,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.5135933806146572
+          "roc_auc": 0.5141843971631206
         },
         "titles_dissimilar": {
-          "average_precision": 0.15644779164830586,
+          "average_precision": 0.15617375681116755,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.524074074074074
+          "roc_auc": 0.5253086419753087
         }
       },
       "directory_overlap": {
@@ -871,54 +871,54 @@
       },
       "text_score": {
         "all": {
-          "average_precision": 0.1497715992090717,
+          "average_precision": 0.14976279161362097,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.532210401891253
+          "roc_auc": 0.533096926713948
         },
         "cross_agent": null,
         "different_linked_issue": {
-          "average_precision": 0.1497715992090717,
+          "average_precision": 0.14976279161362097,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.532210401891253
+          "roc_auc": 0.533096926713948
         },
         "dissimilar_and_different_issue": {
-          "average_precision": 0.16033974905832463,
+          "average_precision": 0.1608134701912054,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.5432098765432098
+          "roc_auc": 0.5450617283950617
         },
         "early_issue": {
-          "average_precision": 0.17449625426422438,
+          "average_precision": 0.17358405022015239,
           "conflicts": 15,
           "pairs": 106,
           "prevalence": 0.14150943396226415,
-          "roc_auc": 0.578021978021978
+          "roc_auc": 0.5824175824175823
         },
         "same_agent": {
-          "average_precision": 0.1502982410405443,
+          "average_precision": 0.15029364201964482,
           "conflicts": 24,
           "pairs": 162,
           "prevalence": 0.14814814814814814,
-          "roc_auc": 0.5250603864734299
+          "roc_auc": 0.5259661835748792
         },
         "strict_issue": {
-          "average_precision": 0.1497715992090717,
+          "average_precision": 0.14976279161362097,
           "conflicts": 24,
           "pairs": 165,
           "prevalence": 0.14545454545454545,
-          "roc_auc": 0.532210401891253
+          "roc_auc": 0.533096926713948
         },
         "titles_dissimilar": {
-          "average_precision": 0.16033974905832463,
+          "average_precision": 0.1608134701912054,
           "conflicts": 24,
           "pairs": 159,
           "prevalence": 0.1509433962264151,
-          "roc_auc": 0.5432098765432098
+          "roc_auc": 0.5450617283950617
         }
       }
     },
@@ -931,69 +931,69 @@
       "models": {
         "logistic": {
           "all": {
-            "average_precision": 0.14602955679326085,
+            "average_precision": 0.16355307360955482,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.3864859271523179
+            "roc_auc": 0.4283940397350993
           },
           "cross_agent": {
-            "average_precision": 0.29166666666666663,
+            "average_precision": 0.26666666666666666,
             "conflicts": 2,
             "pairs": 6,
             "prevalence": 0.3333333333333333,
-            "roc_auc": 0.125
+            "roc_auc": 0.0
           },
           "different_linked_issue": {
-            "average_precision": 0.14602955679326085,
+            "average_precision": 0.16355307360955482,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.3864859271523179
+            "roc_auc": 0.4283940397350993
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.14728185907411004,
+            "average_precision": 0.16420769462531168,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.36842672413793104
+            "roc_auc": 0.40862068965517245
           },
           "early_issue": {
-            "average_precision": 0.1531972458207898,
+            "average_precision": 0.1892550613020788,
             "conflicts": 19,
             "pairs": 116,
             "prevalence": 0.16379310344827586,
-            "roc_auc": 0.4215952251763429
+            "roc_auc": 0.43977211068909383
           },
           "same_agent": {
-            "average_precision": 0.14635582120057453,
+            "average_precision": 0.16395090661299583,
             "conflicts": 30,
             "pairs": 177,
             "prevalence": 0.1694915254237288,
-            "roc_auc": 0.39489795918367343
+            "roc_auc": 0.445578231292517
           },
           "strict_issue": {
-            "average_precision": 0.13705303381467424,
+            "average_precision": 0.1626938779714572,
             "conflicts": 28,
             "pairs": 174,
             "prevalence": 0.16091954022988506,
-            "roc_auc": 0.3874755381604697
+            "roc_auc": 0.450220156555773
           },
           "titles_dissimilar": {
-            "average_precision": 0.14728185907411004,
+            "average_precision": 0.16420769462531168,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.36842672413793104
+            "roc_auc": 0.40862068965517245
           }
         },
         "tfidf": {
           "all": {
-            "average_precision": 0.16500047135881096,
+            "average_precision": 0.16372237380028395,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.49710264900662254
+            "roc_auc": 0.4954470198675497
           },
           "cross_agent": {
             "average_precision": 0.41666666666666663,
@@ -1003,46 +1003,46 @@
             "roc_auc": 0.5625
           },
           "different_linked_issue": {
-            "average_precision": 0.16500047135881096,
+            "average_precision": 0.16372237380028395,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.49710264900662254
+            "roc_auc": 0.4954470198675497
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.1771361947629797,
+            "average_precision": 0.17534136833411773,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5129310344827587
+            "roc_auc": 0.5112068965517242
           },
           "early_issue": {
-            "average_precision": 0.17151424915783836,
+            "average_precision": 0.17095475623644224,
             "conflicts": 19,
             "pairs": 116,
             "prevalence": 0.16379310344827586,
-            "roc_auc": 0.5485621269669018
+            "roc_auc": 0.5480195333695063
           },
           "same_agent": {
-            "average_precision": 0.16031702976380485,
+            "average_precision": 0.15884550059315095,
             "conflicts": 30,
             "pairs": 177,
             "prevalence": 0.1694915254237288,
-            "roc_auc": 0.4939909297052155
+            "roc_auc": 0.4919501133786849
           },
           "strict_issue": {
-            "average_precision": 0.1554902935511969,
+            "average_precision": 0.1538245669989041,
             "conflicts": 28,
             "pairs": 174,
             "prevalence": 0.16091954022988506,
-            "roc_auc": 0.5058708414872798
+            "roc_auc": 0.5036692759295499
           },
           "titles_dissimilar": {
-            "average_precision": 0.1771361947629797,
+            "average_precision": 0.17534136833411773,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5129310344827587
+            "roc_auc": 0.5112068965517242
           }
         }
       },
@@ -1054,11 +1054,11 @@
       "models": {
         "logistic": {
           "all": {
-            "average_precision": 0.28987911287518403,
+            "average_precision": 0.2733253711840374,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.5968543046357615
+            "roc_auc": 0.5591887417218544
           },
           "cross_agent": {
             "average_precision": 0.7,
@@ -1068,55 +1068,55 @@
             "roc_auc": 0.625
           },
           "different_linked_issue": {
-            "average_precision": 0.28987911287518403,
+            "average_precision": 0.2733253711840374,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.5968543046357615
+            "roc_auc": 0.5591887417218544
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.2951165683405536,
+            "average_precision": 0.27616234806500084,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5971982758620691
+            "roc_auc": 0.5536637931034483
           },
           "early_issue": {
-            "average_precision": 0.28949055803760015,
+            "average_precision": 0.26121617253800866,
             "conflicts": 19,
             "pairs": 116,
             "prevalence": 0.16379310344827586,
-            "roc_auc": 0.5529028757460662
+            "roc_auc": 0.5203472599023331
           },
           "same_agent": {
-            "average_precision": 0.2794487719778912,
+            "average_precision": 0.25211645870142074,
             "conflicts": 30,
             "pairs": 177,
             "prevalence": 0.1694915254237288,
-            "roc_auc": 0.5956916099773242
+            "roc_auc": 0.5546485260770975
           },
           "strict_issue": {
-            "average_precision": 0.2836268481853865,
+            "average_precision": 0.2539215787301441,
             "conflicts": 28,
             "pairs": 174,
             "prevalence": 0.16091954022988506,
-            "roc_auc": 0.6125244618395304
+            "roc_auc": 0.5658023483365949
           },
           "titles_dissimilar": {
-            "average_precision": 0.2951165683405536,
+            "average_precision": 0.27616234806500084,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5971982758620691
+            "roc_auc": 0.5536637931034483
           }
         },
         "tfidf": {
           "all": {
-            "average_precision": 0.18951406723423092,
+            "average_precision": 0.18956837919179878,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.554635761589404
+            "roc_auc": 0.5533940397350993
           },
           "cross_agent": {
             "average_precision": 1.0,
@@ -1126,46 +1126,46 @@
             "roc_auc": 1.0
           },
           "different_linked_issue": {
-            "average_precision": 0.18951406723423092,
+            "average_precision": 0.18956837919179878,
             "conflicts": 32,
             "pairs": 183,
             "prevalence": 0.17486338797814208,
-            "roc_auc": 0.554635761589404
+            "roc_auc": 0.5533940397350993
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.2033327025598673,
+            "average_precision": 0.2040962776683886,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5657327586206897
+            "roc_auc": 0.565301724137931
           },
           "early_issue": {
-            "average_precision": 0.20964096927152415,
+            "average_precision": 0.20761064002763074,
             "conflicts": 19,
             "pairs": 116,
             "prevalence": 0.16379310344827586,
-            "roc_auc": 0.6049918610960391
+            "roc_auc": 0.6060770482908301
           },
           "same_agent": {
-            "average_precision": 0.17819820292674007,
+            "average_precision": 0.1779264158572352,
             "conflicts": 30,
             "pairs": 177,
             "prevalence": 0.1694915254237288,
-            "roc_auc": 0.5387755102040817
+            "roc_auc": 0.5378684807256235
           },
           "strict_issue": {
-            "average_precision": 0.16709454951610844,
+            "average_precision": 0.16721242076588347,
             "conflicts": 28,
             "pairs": 174,
             "prevalence": 0.16091954022988506,
-            "roc_auc": 0.5327788649706457
+            "roc_auc": 0.5335127201565558
           },
           "titles_dissimilar": {
-            "average_precision": 0.2033327025598673,
+            "average_precision": 0.2040962776683886,
             "conflicts": 32,
             "pairs": 177,
             "prevalence": 0.1807909604519774,
-            "roc_auc": 0.5657327586206897
+            "roc_auc": 0.565301724137931
           }
         }
       },
@@ -1177,118 +1177,118 @@
       "models": {
         "logistic": {
           "all": {
-            "average_precision": 0.22751218935094203,
+            "average_precision": 0.25436509469926755,
             "conflicts": 151,
             "pairs": 666,
             "prevalence": 0.22672672672672672,
-            "roc_auc": 0.5133543367839002
+            "roc_auc": 0.5339741528965473
           },
           "cross_agent": {
-            "average_precision": 0.35301694333799233,
+            "average_precision": 0.35189698407906483,
             "conflicts": 42,
             "pairs": 103,
             "prevalence": 0.4077669902912621,
-            "roc_auc": 0.42232630757220924
+            "roc_auc": 0.41666666666666663
           },
           "different_linked_issue": {
-            "average_precision": 0.2303769475775969,
+            "average_precision": 0.26004134703971266,
             "conflicts": 150,
             "pairs": 656,
             "prevalence": 0.22865853658536586,
-            "roc_auc": 0.5153491436100132
+            "roc_auc": 0.5366205533596837
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.21030054186148037,
+            "average_precision": 0.2258826306339803,
             "conflicts": 140,
             "pairs": 634,
             "prevalence": 0.22082018927444794,
-            "roc_auc": 0.4976286871023713
+            "roc_auc": 0.5159412955465587
           },
           "early_issue": {
-            "average_precision": 0.1286470338928115,
+            "average_precision": 0.14027211191723107,
             "conflicts": 20,
             "pairs": 126,
             "prevalence": 0.15873015873015872,
-            "roc_auc": 0.3393867924528301
+            "roc_auc": 0.4002358490566038
           },
           "same_agent": {
-            "average_precision": 0.20441226966806703,
+            "average_precision": 0.23962650549168435,
             "conflicts": 109,
             "pairs": 563,
             "prevalence": 0.1936056838365897,
-            "roc_auc": 0.5195711918522411
+            "roc_auc": 0.5520147112314595
           },
           "strict_issue": {
-            "average_precision": 0.1252982290910518,
+            "average_precision": 0.12866872037462332,
             "conflicts": 28,
             "pairs": 182,
             "prevalence": 0.15384615384615385,
-            "roc_auc": 0.38891465677179965
+            "roc_auc": 0.39076994434137285
           },
           "titles_dissimilar": {
-            "average_precision": 0.21106665002628777,
+            "average_precision": 0.22600986031376952,
             "conflicts": 141,
             "pairs": 640,
             "prevalence": 0.2203125,
-            "roc_auc": 0.49896957034636646
+            "roc_auc": 0.5158899359001692
           }
         },
         "tfidf": {
           "all": {
-            "average_precision": 0.26287670744973796,
+            "average_precision": 0.26667688401917794,
             "conflicts": 151,
             "pairs": 666,
             "prevalence": 0.22672672672672672,
-            "roc_auc": 0.5229730598598341
+            "roc_auc": 0.5238474892303735
           },
           "cross_agent": {
-            "average_precision": 0.4518207280085133,
+            "average_precision": 0.452546162986944,
             "conflicts": 42,
             "pairs": 103,
             "prevalence": 0.4077669902912621,
-            "roc_auc": 0.5218579234972678
+            "roc_auc": 0.5191256830601092
           },
           "different_linked_issue": {
-            "average_precision": 0.2699950458805496,
+            "average_precision": 0.27318150191460594,
             "conflicts": 150,
             "pairs": 656,
             "prevalence": 0.22865853658536586,
-            "roc_auc": 0.5270619235836627
+            "roc_auc": 0.5277206851119894
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.23152722634310952,
+            "average_precision": 0.2390117287025952,
             "conflicts": 140,
             "pairs": 634,
             "prevalence": 0.22082018927444794,
-            "roc_auc": 0.5050245806824755
+            "roc_auc": 0.5057041642567959
           },
           "early_issue": {
-            "average_precision": 0.1923743384749989,
+            "average_precision": 0.2057858920354609,
             "conflicts": 20,
             "pairs": 126,
             "prevalence": 0.15873015873015872,
-            "roc_auc": 0.594811320754717
+            "roc_auc": 0.6061320754716981
           },
           "same_agent": {
-            "average_precision": 0.24395022680698683,
+            "average_precision": 0.2509139419219679,
             "conflicts": 109,
             "pairs": 563,
             "prevalence": 0.1936056838365897,
-            "roc_auc": 0.5437497474033061
+            "roc_auc": 0.5464979994341834
           },
           "strict_issue": {
-            "average_precision": 0.17259057544279718,
+            "average_precision": 0.18239422325146748,
             "conflicts": 28,
             "pairs": 182,
             "prevalence": 0.15384615384615385,
-            "roc_auc": 0.5907931354359925
+            "roc_auc": 0.6037801484230056
           },
           "titles_dissimilar": {
-            "average_precision": 0.23102577282624906,
+            "average_precision": 0.2388068918772779,
             "conflicts": 141,
             "pairs": 640,
             "prevalence": 0.2203125,
-            "roc_auc": 0.5046760187040747
+            "roc_auc": 0.5054577239585554
           }
         }
       },
@@ -1300,118 +1300,118 @@
       "models": {
         "logistic": {
           "all": {
-            "average_precision": 0.2748791162868984,
+            "average_precision": 0.296018654975673,
             "conflicts": 154,
             "pairs": 672,
             "prevalence": 0.22916666666666666,
-            "roc_auc": 0.5752770395627539
+            "roc_auc": 0.6065160708017852
           },
           "cross_agent": {
-            "average_precision": 0.4168008378050253,
+            "average_precision": 0.41391417946397235,
             "conflicts": 42,
             "pairs": 104,
             "prevalence": 0.40384615384615385,
-            "roc_auc": 0.43317972350230416
+            "roc_auc": 0.46927803379416283
           },
           "different_linked_issue": {
-            "average_precision": 0.28155275677074193,
+            "average_precision": 0.3026680877906092,
             "conflicts": 153,
             "pairs": 662,
             "prevalence": 0.2311178247734139,
-            "roc_auc": 0.5793623277732836
+            "roc_auc": 0.6103856080742709
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.26341640401444716,
+            "average_precision": 0.27358838538960134,
             "conflicts": 140,
             "pairs": 634,
             "prevalence": 0.22082018927444794,
-            "roc_auc": 0.5741758241758241
+            "roc_auc": 0.6043811451706188
           },
           "early_issue": {
-            "average_precision": 0.17338686321929,
+            "average_precision": 0.19035357993548485,
             "conflicts": 20,
             "pairs": 126,
             "prevalence": 0.15873015873015872,
-            "roc_auc": 0.5504716981132075
+            "roc_auc": 0.5716981132075472
           },
           "same_agent": {
-            "average_precision": 0.23336954381076472,
+            "average_precision": 0.25574859557119173,
             "conflicts": 112,
             "pairs": 568,
             "prevalence": 0.19718309859154928,
-            "roc_auc": 0.5664943609022557
+            "roc_auc": 0.5964912280701755
           },
           "strict_issue": {
-            "average_precision": 0.15003658665519423,
+            "average_precision": 0.17380428634588313,
             "conflicts": 28,
             "pairs": 182,
             "prevalence": 0.15384615384615385,
-            "roc_auc": 0.5111317254174397
+            "roc_auc": 0.5844155844155845
           },
           "titles_dissimilar": {
-            "average_precision": 0.2623726096161029,
+            "average_precision": 0.2724143733089438,
             "conflicts": 141,
             "pairs": 640,
             "prevalence": 0.2203125,
-            "roc_auc": 0.5732457823448315
+            "roc_auc": 0.6036327975099135
           }
         },
         "tfidf": {
           "all": {
-            "average_precision": 0.26261144150914195,
+            "average_precision": 0.2641639635147091,
             "conflicts": 154,
             "pairs": 672,
             "prevalence": 0.22916666666666666,
-            "roc_auc": 0.5082046332046333
+            "roc_auc": 0.5098718848718848
           },
           "cross_agent": {
-            "average_precision": 0.4761491442096948,
+            "average_precision": 0.4703959258073102,
             "conflicts": 42,
             "pairs": 104,
             "prevalence": 0.40384615384615385,
-            "roc_auc": 0.5491551459293396
+            "roc_auc": 0.5464669738863288
           },
           "different_linked_issue": {
-            "average_precision": 0.2711269761110251,
+            "average_precision": 0.2727069720525198,
             "conflicts": 153,
             "pairs": 662,
             "prevalence": 0.2311178247734139,
-            "roc_auc": 0.5105037430820396
+            "roc_auc": 0.5122500866751416
           },
           "dissimilar_and_different_issue": {
-            "average_precision": 0.22648614166615316,
+            "average_precision": 0.22750867854885354,
             "conflicts": 140,
             "pairs": 634,
             "prevalence": 0.22082018927444794,
-            "roc_auc": 0.48161509543088493
+            "roc_auc": 0.48352371312897635
           },
           "early_issue": {
-            "average_precision": 0.15778139745221637,
+            "average_precision": 0.159495280110962,
             "conflicts": 20,
             "pairs": 126,
             "prevalence": 0.15873015873015872,
-            "roc_auc": 0.5160377358490565
+            "roc_auc": 0.5193396226415095
           },
           "same_agent": {
-            "average_precision": 0.25656678828749674,
+            "average_precision": 0.25913653800616215,
             "conflicts": 112,
             "pairs": 568,
             "prevalence": 0.19718309859154928,
-            "roc_auc": 0.5556077694235589
+            "roc_auc": 0.5588385025062657
           },
           "strict_issue": {
-            "average_precision": 0.1450381683950702,
+            "average_precision": 0.14887871689976345,
             "conflicts": 28,
             "pairs": 182,
             "prevalence": 0.15384615384615385,
-            "roc_auc": 0.4902597402597403
+            "roc_auc": 0.5051020408163266
           },
           "titles_dissimilar": {
-            "average_precision": 0.22478066304181038,
+            "average_precision": 0.2257374037717191,
             "conflicts": 141,
             "pairs": 640,
             "prevalence": 0.2203125,
-            "roc_auc": 0.4827029946417658
+            "roc_auc": 0.4845790872525192
           }
         }
       },

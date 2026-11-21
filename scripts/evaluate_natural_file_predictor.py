@@ -93,6 +93,11 @@ def _percentile(values, fraction):
 
 def _paired_gain(rows, first_key, second_key, n_boot=1000, seed=0):
     """Paired repository-bootstrap difference second minus first."""
+    labels = [int(row["label"] == "conflict") for row in rows]
+    first = [row[first_key] for row in rows]
+    second = [row[second_key] for row in rows]
+    observed_ap = average_precision(labels, second) - average_precision(labels, first)
+    observed_auc = roc_auc_score(labels, second) - roc_auc_score(labels, first)
     groups = {}
     for index, row in enumerate(rows):
         groups.setdefault(row["repo"], []).append(index)
@@ -114,6 +119,8 @@ def _paired_gain(rows, first_key, second_key, n_boot=1000, seed=0):
     if not ap_diffs:
         return None
     return {
+        "observed_ap_difference": observed_ap,
+        "observed_auc_difference": observed_auc,
         "ap_difference": _percentile(ap_diffs, 0.5),
         "ap_interval": [_percentile(ap_diffs, 0.025), _percentile(ap_diffs, 0.975)],
         "auc_difference": _percentile(auc_diffs, 0.5),
@@ -202,6 +209,7 @@ def pair_row(pair, fetched, text_score, task_a, task_b):
                                   + recall(predicted_b, available_b)) / 2,
         "coverage_mean": ((len(available_a) / len(changed_a) if changed_a else 0.0)
                           + (len(available_b) / len(changed_b) if changed_b else 0.0)) / 2,
+        "empty_footprint": not changed_a or not changed_b,
         "conflict_recall": _conflict_recall(predicted_a, predicted_b,
                                             pair.get("conflict_paths", [])),
         "conflict_intersection_recall": _conflict_intersection(
@@ -238,6 +246,27 @@ def _bootstrap(rows, key):
         return average_precision(y, s)
 
     return cluster_bootstrap(labels, scores, repos, ap, 1000, 0)
+
+
+def _nonempty_metrics(rows):
+    group = [row for row in rows if not row["empty_footprint"]]
+    labels = [int(row["label"] == "conflict") for row in group]
+    if not group or len(set(labels)) < 2:
+        return None
+    return {
+        "pairs": len(group),
+        "conflicts": sum(labels),
+        "text_ap": average_precision(labels, [row["text_score"] for row in group]),
+        "text_auc": roc_auc_score(labels, [row["text_score"] for row in group]),
+        "overlap_ap": average_precision(
+            labels, [row["predicted_overlap"] for row in group]),
+        "overlap_auc": roc_auc_score(
+            labels, [row["predicted_overlap"] for row in group]),
+        "oracle_ap": average_precision(
+            labels, [row["actual_overlap"] for row in group]),
+        "oracle_auc": roc_auc_score(
+            labels, [row["actual_overlap"] for row in group]),
+    }
 
 
 def _strata_metrics(rows):
@@ -353,6 +382,7 @@ def summarize(rows):
         "random_overlap_auc": roc_auc_score(labels, [row["random_overlap"] for row in rows]),
         "random_overlap_pr_auc": random_pr,
         "blends": blended,
+        "paired_gain_overlap_vs_text": _paired_gain(rows, "text_score", "predicted_overlap"),
         "paired_gain_equal_blend": _paired_gain(rows, "text_score", "blend_equal"),
         "paired_gain_text_heavy": _paired_gain(rows, "text_score", "blend_text_heavy"),
         "stripped_overlap_ap": _ap(rows, "stripped_overlap")[0],
@@ -370,6 +400,7 @@ def summarize(rows):
         "languages": languages,
         "strata": by_stratum,
         "strata_metrics": _strata_metrics(rows),
+        "nonempty_footprint": _nonempty_metrics(rows),
         "per_pair": rows,
         "caveats": [
             "Balanced pilot of real co-active PR pairs; prevalence is not a base rate.",

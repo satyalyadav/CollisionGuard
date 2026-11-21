@@ -104,13 +104,24 @@ def _folds(records):
 
 
 def _canonical_fold_map(table):
-    """Assign every title-eligible pair to one fold, reused by all variants."""
-    pairs_rows, _ = _eligible(table, "title")
-    records = _records(pairs_rows)
+    """Assign every pair, including identical-title pairs, to one shared fold.
+
+    All variants reuse this map so the same repository stays in the same fold
+    even when a variant adds a pair the title variant excludes.
+    """
+    records = [{
+        "instance_id": pair["instance_id"],
+        "repo": pair["repo"],
+        "task_a": pair["title_a"],
+        "task_b": pair["title_b"],
+        "family": None,
+    } for pair in table["pairs"]]
     mapping = {}
-    for fold, (_, test) in enumerate(_folds(records)):
+    for fold, (_, test) in enumerate(splits.group_kfold(records, N_SPLITS, SEED)):
         for index in test:
             mapping[records[index]["instance_id"]] = fold
+    if len(mapping) != len(table["pairs"]):
+        raise ValueError("canonical fold map does not cover every pair")
     return mapping
 
 
@@ -183,6 +194,10 @@ def build(table, variant):
     records = _records(pairs_rows)
     pairs = [(pair["task_a"], pair["task_b"]) for pair in pairs_rows]
     fold_map = _canonical_fold_map(table)
+    missing = [record["instance_id"] for record in records
+               if record["instance_id"] not in fold_map]
+    if missing:
+        raise ValueError(f"{variant}: {len(missing)} pairs have no canonical fold")
     folds = []
     for fold in range(N_SPLITS):
         test = [index for index, record in enumerate(records)

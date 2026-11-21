@@ -4,9 +4,9 @@
   "actual_overlap_is_oracle": true,
   "actual_overlap_pr_auc": 0.2021423611913279,
   "blends": {
-    "equal": 0.1429449296213782,
-    "path_heavy": 0.1448239069572038,
-    "text_heavy": 0.14561242997012713
+    "equal": 0.14310958953564556,
+    "path_heavy": 0.1455165120651969,
+    "text_heavy": 0.14535416743603774
   },
   "caveats": [
     "Balanced pilot of real co-active PR pairs; prevalence is not a base rate.",
@@ -59,7 +59,7 @@
     },
     "Python": {
       "conflicts": 4,
-      "mean_recall": 0.13179906597026161,
+      "mean_recall": 0.13220164245979463,
       "pairs": 23,
       "predicted_overlap_ap": 0.3804347826086957
     },
@@ -76,12 +76,22 @@
       "predicted_overlap_ap": 0.15555555555555556
     }
   },
-  "mean_changed_path_coverage": 0.7369967568442354,
+  "mean_changed_path_coverage": 0.7430573629048415,
   "mean_conflict_intersection_recall": 0.008333333333333333,
   "mean_conflict_path_coverage": 0.8777777777777778,
   "mean_conflict_path_recall": 0.17500000000000002,
-  "mean_recall_at_k": 0.17602033869815548,
-  "mean_recall_at_k_available_paths": 0.19522686802886666,
+  "mean_recall_at_k": 0.1760764554209389,
+  "mean_recall_at_k_available_paths": 0.19528298475165004,
+  "nonempty_footprint": {
+    "conflicts": 24,
+    "oracle_ap": 0.19182724023454606,
+    "oracle_auc": 0.5872289972899729,
+    "overlap_ap": 0.15603741496598636,
+    "overlap_auc": 0.45901084010840104,
+    "pairs": 147,
+    "text_ap": 0.1709054464693877,
+    "text_auc": 0.5420054200542006
+  },
   "nonzero_overlap_ap": 0.1411943353803819,
   "nonzero_overlap_pr_auc": 0.12528230813114533,
   "overlap_positive_rule": {
@@ -91,38 +101,57 @@
     "true_positives": 5
   },
   "paired_gain_equal_blend": {
-    "ap_difference": -0.007701380059303126,
+    "ap_difference": -0.00747371698849629,
     "ap_interval": [
-      -0.033400500397923305,
-      0.02716648890891997
+      -0.03401544766517736,
+      0.02575767204096699
     ],
-    "auc_difference": -0.02771428571428558,
+    "auc_difference": -0.027714285714285747,
     "auc_interval": [
-      -0.07770582793709535,
-      0.03777208706786178
+      -0.08048103607770585,
+      0.03977686150861015
     ],
-    "bootstrap": 1000
+    "bootstrap": 1000,
+    "observed_ap_difference": -0.006653202077975401,
+    "observed_auc_difference": -0.025709219858156107
+  },
+  "paired_gain_overlap_vs_text": {
+    "ap_difference": -0.011552514501687094,
+    "ap_interval": [
+      -0.06517764528871003,
+      0.035959428146847605
+    ],
+    "auc_difference": -0.07650501672240806,
+    "auc_interval": [
+      -0.19860375541646608,
+      0.07340372046254401
+    ],
+    "bootstrap": 1000,
+    "observed_ap_difference": -0.009990064340893695,
+    "observed_auc_difference": -0.06973995271867622
   },
   "paired_gain_text_heavy": {
-    "ap_difference": -0.004701025380157237,
+    "ap_difference": -0.005170853778867918,
     "ap_interval": [
-      -0.017553872648124608,
-      0.013470745863761346
+      -0.019906717146664116,
+      0.013457582011474456
     ],
-    "auc_difference": -0.019142857142857128,
+    "auc_difference": -0.01959205582393997,
     "auc_interval": [
-      -0.05155993431855499,
-      0.01603453592352755
+      -0.052795031055900665,
+      0.01752645502645489
     ],
-    "bootstrap": 1000
+    "bootstrap": 1000,
+    "observed_ap_difference": -0.004408624177583226,
+    "observed_auc_difference": -0.01891252955082745
   },
   "pairs": 165,
   "per_pair": [
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.34560525178251766,
-      "blend_path_heavy": 0.22835818144681436,
-      "blend_text_heavy": 0.4628523221182209,
+      "blend_equal": 0.3396826771690957,
+      "blend_path_heavy": 0.22539689414010344,
+      "blend_text_heavy": 0.4539684601980881,
       "changed_a": [
         "docs/community-toolkit/hosting-java.md"
       ],
@@ -134,6 +163,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-008447c8b960",
       "label": "clean",
@@ -180,15 +210,15 @@
         ".github/ISSUE_TEMPLATE/config.yml"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.5800993924539242,
+      "text_score": 0.5682542432270804,
       "tree_files": 1842,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2727272727272727,
-      "blend_equal": 0.058242020436694505,
-      "blend_path_heavy": 0.029121010218347253,
-      "blend_text_heavy": 0.08736303065504175,
+      "blend_equal": 0.060794629642502034,
+      "blend_path_heavy": 0.030397314821251017,
+      "blend_text_heavy": 0.09119194446375305,
       "changed_a": [
         "README.md",
         "src/Serilog.Enrichers.ClientInfo/Enrichers/CorrelationIdEnricher.cs",
@@ -212,6 +242,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.7291666666666667,
       "directory_overlap": 0.4,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-031e833e14fb",
       "label": "conflict",
@@ -258,15 +289,15 @@
         "src/Serilog.Enrichers.ClientInfo/Enrichers/ClientIpEnricher.cs"
       ],
       "stripped_recall_mean": 0.22916666666666666,
-      "text_score": 0.11648404087338901,
+      "text_score": 0.12158925928500407,
       "tree_files": 26,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.021339924277909202,
-      "blend_path_heavy": 0.010669962138954601,
-      "blend_text_heavy": 0.0320098864168638,
+      "blend_equal": 0.02169028910139283,
+      "blend_path_heavy": 0.010845144550696415,
+      "blend_text_heavy": 0.032535433652089246,
       "changed_a": [
         "demos/android/MASVS-NETWORK/MASTG-DEMO-0048/MASTG-DEMO-0048.md",
         "demos/android/MASVS-NETWORK/MASTG-DEMO-0049/MASTG-DEMO-0049.md",
@@ -296,6 +327,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.71875,
       "directory_overlap": 0.1111111111111111,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-04e27c8dff84",
       "label": "clean",
@@ -342,15 +374,15 @@
         "demos/ios/MASVS-STORAGE/MASTG-DEMO-0019/function.asm"
       ],
       "stripped_recall_mean": 0.03125,
-      "text_score": 0.042679848555818405,
+      "text_score": 0.04338057820278566,
       "tree_files": 1477,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.06666666666666667,
-      "blend_equal": 0.06992931370622123,
-      "blend_path_heavy": 0.034964656853110614,
-      "blend_text_heavy": 0.10489397055933183,
+      "blend_equal": 0.07114999110592257,
+      "blend_path_heavy": 0.035574995552961286,
+      "blend_text_heavy": 0.10672498665888386,
       "changed_a": [
         "docs/oauth-integration.md",
         "examples/usage/remote-server/oauth-test.html",
@@ -376,6 +408,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.5634920634920635,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-05e8cd2fb0af",
       "label": "conflict",
@@ -422,15 +455,15 @@
         "documents/commands/SECTION.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.13985862741244245,
+      "text_score": 0.14229998221184514,
       "tree_files": 1841,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.75,
-      "blend_equal": 0.2544189791306294,
-      "blend_path_heavy": 0.2522094895653147,
-      "blend_text_heavy": 0.256628468695944,
+      "blend_equal": 0.25514368124481795,
+      "blend_path_heavy": 0.252571840622409,
+      "blend_text_heavy": 0.2577155218672269,
       "changed_a": [
         "tests/unit/test_package.py",
         "vespa/package.py",
@@ -447,6 +480,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-07d076c00d16",
       "label": "clean",
@@ -493,15 +527,15 @@
         "docs/sphinx/source/api/vespa/index.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.2588379582612587,
+      "text_score": 0.2602873624896359,
       "tree_files": 284,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.15650069998923827,
-      "blend_path_heavy": 0.07825034999461913,
-      "blend_text_heavy": 0.2347510499838574,
+      "blend_equal": 0.14865181416298984,
+      "blend_path_heavy": 0.07432590708149492,
+      "blend_text_heavy": 0.22297772124448476,
       "changed_a": [
         "sdk/include/opentelemetry/sdk/metrics/meter_context.h",
         "sdk/src/metrics/meter_context.cc",
@@ -519,6 +553,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-080b3727f9e1",
       "label": "clean",
@@ -565,15 +600,15 @@
         "sdk/src/metrics/aggregation/lastvalue_aggregation.cc"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.31300139997847654,
+      "text_score": 0.2973036283259797,
       "tree_files": 1414,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.46028782793621614,
-      "blend_path_heavy": 0.4444296282538224,
-      "blend_text_heavy": 0.47614602761860997,
+      "blend_equal": 0.4677033069056238,
+      "blend_path_heavy": 0.4481373677385262,
+      "blend_text_heavy": 0.48726924607272143,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -581,6 +616,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.4,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-08c00be5b8b9",
       "label": "clean",
@@ -627,15 +663,15 @@
         "vscode-dotnet-runtime-library/src/Acquisition/VersionUtilities.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.4920042273010038,
+      "text_score": 0.5068351852398191,
       "tree_files": 256,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2650931505006345,
-      "blend_path_heavy": 0.3468322895360315,
-      "blend_text_heavy": 0.18335401146523744,
+      "blend_equal": 0.2671037941013305,
+      "blend_path_heavy": 0.3478376113363795,
+      "blend_text_heavy": 0.18636997686628146,
       "changed_a": [
         ".github/ISSUE_TEMPLATE/submission.yml",
         "CONTRIBUTING.md"
@@ -649,6 +685,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-09a5588b0b90",
       "label": "clean",
@@ -695,15 +732,15 @@
         "LICENSE"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.10161487242984038,
+      "text_score": 0.10563615963123242,
       "tree_files": 8,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.125,
-      "blend_equal": 0.06912772069376236,
-      "blend_path_heavy": 0.03456386034688118,
-      "blend_text_heavy": 0.10369158104064354,
+      "blend_equal": 0.06530579941267536,
+      "blend_path_heavy": 0.03265289970633768,
+      "blend_text_heavy": 0.09795869911901305,
       "changed_a": [
         "build.gradle.kts",
         "docs/configuration/merging/README.md",
@@ -722,6 +759,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8125,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-0a107b88f6bd",
       "label": "clean",
@@ -768,15 +806,15 @@
         "src/main/kotlin/com/github/jengelman/gradle/plugins/shadow/transformers/ComponentsXmlResourceTransformer.kt"
       ],
       "stripped_recall_mean": 0.0625,
-      "text_score": 0.1382554413875247,
+      "text_score": 0.13061159882535073,
       "tree_files": 149,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.02197588726334795,
-      "blend_path_heavy": 0.010987943631673975,
-      "blend_text_heavy": 0.032963830895021924,
+      "blend_equal": 0.022054454568232327,
+      "blend_path_heavy": 0.011027227284116163,
+      "blend_text_heavy": 0.03308168185234849,
       "changed_a": [
         ".golangci.yml",
         "pkg/controllers/repositoryserver/repositoryserver_controller_test.go",
@@ -803,6 +841,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-0bd230fcf822",
       "label": "clean",
@@ -849,15 +888,15 @@
         "pkg/kopia/command/parse_command_output.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0439517745266959,
+      "text_score": 0.044108909136464654,
       "tree_files": 951,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04600628845729591,
-      "blend_path_heavy": 0.023003144228647954,
-      "blend_text_heavy": 0.06900943268594387,
+      "blend_equal": 0.049069433713629235,
+      "blend_path_heavy": 0.024534716856814617,
+      "blend_text_heavy": 0.07360415057044385,
       "changed_a": [
         "backend/infrahub/computed_attribute/constants.py",
         "backend/tests/unit/core/schema/schema_branch/test_validate_computed_attributes.py",
@@ -869,6 +908,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-0c5ee70d4a19",
       "label": "clean",
@@ -915,15 +955,15 @@
         "frontend/app/src/entities/ipam/ip-namespaces/ui/ip-namespace-card.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.09201257691459182,
+      "text_score": 0.09813886742725847,
       "tree_files": 2821,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.016073575730168342,
-      "blend_path_heavy": 0.008036787865084171,
-      "blend_text_heavy": 0.024110363595252513,
+      "blend_equal": 0.019970453575331504,
+      "blend_path_heavy": 0.009985226787665752,
+      "blend_text_heavy": 0.029955680362997256,
       "changed_a": [
         ".devcontainer/Dockerfile",
         ".golangci.yaml",
@@ -948,6 +988,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9583333333333333,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-0cc382ed7251",
       "label": "clean",
@@ -994,15 +1035,15 @@
         "internal/pkg/expanders/subscription.go"
       ],
       "stripped_recall_mean": 0.041666666666666664,
-      "text_score": 0.032147151460336684,
+      "text_score": 0.03994090715066301,
       "tree_files": 5042,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.06913826674173595,
-      "blend_path_heavy": 0.09012468892642353,
-      "blend_text_heavy": 0.048151844557048365,
+      "blend_equal": 0.06829169060685443,
+      "blend_path_heavy": 0.08970140085898276,
+      "blend_text_heavy": 0.046881980354726085,
       "changed_a": [
         "sarif/operations/templates/sarif_emacs.txt"
       ],
@@ -1015,6 +1056,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.4,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-0e6f0729cf28",
       "label": "clean",
@@ -1061,15 +1103,15 @@
         "sarif/operations/ls_op.py"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.02716542237236079,
+      "text_score": 0.025472270102597745,
       "tree_files": 69,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.9742790428810209,
-      "blend_path_heavy": 0.9871395214405104,
-      "blend_text_heavy": 0.9614185643215313,
+      "blend_equal": 0.9756812193078235,
+      "blend_path_heavy": 0.9878406096539117,
+      "blend_text_heavy": 0.9635218289617351,
       "changed_a": [
         "package-lock.json",
         "package.json",
@@ -1089,6 +1131,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-106d81d93da0",
       "label": "clean",
@@ -1135,15 +1178,15 @@
         "contributor-docs/migration-from-box.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.9485580857620417,
+      "text_score": 0.9513624386156468,
       "tree_files": 7791,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.12100154759832511,
-      "blend_path_heavy": 0.1160563293547181,
-      "blend_text_heavy": 0.1259467658419321,
+      "blend_equal": 0.12782979165012692,
+      "blend_path_heavy": 0.11947045138061901,
+      "blend_text_heavy": 0.13618913191963483,
       "changed_a": [
         "crates/uv-build-backend/src/lib.rs",
         "crates/uv-build-backend/src/metadata.rs",
@@ -1158,6 +1201,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.2857142857142857,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-12500a03a13a",
       "label": "clean",
@@ -1204,15 +1248,15 @@
         "crates/uv/tests/it/version.rs"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.13089198408553912,
+      "text_score": 0.14454847218914277,
       "tree_files": 1043,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.007578317473985727,
-      "blend_path_heavy": 0.0037891587369928634,
-      "blend_text_heavy": 0.01136747621097859,
+      "blend_equal": 0.007529985528765672,
+      "blend_path_heavy": 0.003764992764382836,
+      "blend_text_heavy": 0.011294978293148508,
       "changed_a": [
         ".github/workflows/codeql-analysis.yml",
         ".github/workflows/container_test.yml",
@@ -1239,6 +1283,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9666666666666667,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-147ae1f1b75b",
       "label": "clean",
@@ -1285,15 +1330,15 @@
         ".github/workflows/version-sync-check.yml"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.015156634947971453,
+      "text_score": 0.015059971057531344,
       "tree_files": 752,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1364087853062455,
-      "blend_path_heavy": 0.1237599482086783,
-      "blend_text_heavy": 0.1490576224038127,
+      "blend_equal": 0.1402707301154668,
+      "blend_path_heavy": 0.12569092061328896,
+      "blend_text_heavy": 0.15485053961764467,
       "changed_a": [
         "packages/trace-viewer/src/ui/uiModeView.tsx",
         "tests/playwright-test/ui-mode-metadata.spec.ts",
@@ -1321,6 +1366,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-1572a2c54f9c",
       "label": "clean",
@@ -1367,15 +1413,15 @@
         "tests/library/unroute-behavior.spec.ts"
       ],
       "stripped_recall_mean": 0.03571428571428571,
-      "text_score": 0.16170645950137993,
+      "text_score": 0.1694303491198225,
       "tree_files": 2820,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.8043446354543371,
-      "blend_path_heavy": 0.9021723177271685,
-      "blend_text_heavy": 0.7065169531815055,
+      "blend_equal": 0.8117788888989683,
+      "blend_path_heavy": 0.9058894444494842,
+      "blend_text_heavy": 0.7176683333484525,
       "changed_a": [
         "WinUIGallery/Pages/HomePage.xaml"
       ],
@@ -1391,6 +1437,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-157d3b2355b1",
       "label": "clean",
@@ -1437,15 +1484,15 @@
         "WinUIGallery/Assets/HomeHeaderTiles/Header-WindowsDesign.png"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.6086892709086741,
+      "text_score": 0.6235577777979366,
       "tree_files": 942,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.006791429903019261,
-      "blend_path_heavy": 0.0033957149515096304,
-      "blend_text_heavy": 0.01018714485452889,
+      "blend_equal": 0.006599899357258969,
+      "blend_path_heavy": 0.0032999496786294846,
+      "blend_text_heavy": 0.009899849035888454,
       "changed_a": [
         "src/tools/model-inference/Dockerfile",
         "src/tools/model-inference/README.md",
@@ -1481,6 +1528,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.14761904761904762,
       "directory_overlap": 0.125,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-15aaec4d2d96",
       "label": "clean",
@@ -1527,15 +1575,15 @@
         "src/tools/echo-ping/src/instrumentation.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.013582859806038522,
+      "text_score": 0.013199798714517938,
       "tree_files": 383,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.06492831281922373,
-      "blend_path_heavy": 0.032464156409611866,
-      "blend_text_heavy": 0.0973924692288356,
+      "blend_equal": 0.06381381699391166,
+      "blend_path_heavy": 0.03190690849695583,
+      "blend_text_heavy": 0.09572072549086749,
       "changed_a": [
         "CHANGELOG.md",
         "go.mod",
@@ -1550,6 +1598,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-15ebc3673736",
       "label": "clean",
@@ -1596,7 +1645,7 @@
         "documentation/en/api-v0-methods-miner.md"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.12985662563844746,
+      "text_score": 0.1276276339878233,
       "tree_files": 1657,
       "tree_truncated": false
     },
@@ -1625,6 +1674,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.75,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-18ff8ba16068",
       "label": "clean",
@@ -1677,9 +1727,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0012020565484039264,
-      "blend_path_heavy": 0.0006010282742019632,
-      "blend_text_heavy": 0.0018030848226058896,
+      "blend_equal": 0.001176242744878924,
+      "blend_path_heavy": 0.000588121372439462,
+      "blend_text_heavy": 0.001764364117318386,
       "changed_a": [
         "cns/hnsclient/hnsclient_windows.go",
         "cns/hnsclient/hnsclient_windows_test.go"
@@ -1693,6 +1743,7 @@
       "conflict_recall": 1.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-1b13bf59c1af",
       "label": "conflict",
@@ -1739,15 +1790,15 @@
         "cns/client/error_test.go"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.002404113096807853,
+      "text_score": 0.002352485489757848,
       "tree_files": 1647,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.05837564637496658,
-      "blend_path_heavy": 0.02918782318748329,
-      "blend_text_heavy": 0.08756346956244987,
+      "blend_equal": 0.058025659178039486,
+      "blend_path_heavy": 0.029012829589019743,
+      "blend_text_heavy": 0.08703848876705923,
       "changed_a": [
         "content/docs/pulumi-cloud/access-management/oidc/provider/aws.md",
         "content/docs/pulumi-cloud/access-management/oidc/provider/azure.md",
@@ -1766,6 +1817,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.15,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-1b82a49e6277",
       "label": "clean",
@@ -1812,15 +1864,15 @@
         "static-prebuilt/docs/reference/pkg/nodejs/pulumi/esc-sdk/assets/navigation.js"
       ],
       "stripped_recall_mean": 0.1,
-      "text_score": 0.11675129274993316,
+      "text_score": 0.11605131835607897,
       "tree_files": 10005,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0037157476897240233,
-      "blend_path_heavy": 0.0018578738448620116,
-      "blend_text_heavy": 0.005573621534586035,
+      "blend_equal": 0.0033599477036112715,
+      "blend_path_heavy": 0.0016799738518056358,
+      "blend_text_heavy": 0.005039921555416907,
       "changed_a": [
         "debug_gym/agents/llm_api.py",
         "tests/agents/test_llm_api.py"
@@ -1835,6 +1887,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-1e8f31156aec",
       "label": "clean",
@@ -1881,15 +1934,15 @@
         "LICENSE"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0074314953794480465,
+      "text_score": 0.006719895407222543,
       "tree_files": 132,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.09090909090909091,
-      "blend_equal": 0.07372291119763846,
-      "blend_path_heavy": 0.03686145559881923,
-      "blend_text_heavy": 0.1105843667964577,
+      "blend_equal": 0.07294263715017589,
+      "blend_path_heavy": 0.036471318575087945,
+      "blend_text_heavy": 0.10941395572526383,
       "changed_a": [
         "ports/libvpx/0002-Fix-nasm-debug-format-flag.patch",
         "ports/libvpx/0003-add-uwp-v142-and-v143-support.patch",
@@ -1911,6 +1964,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-1eaefc406fef",
       "label": "clean",
@@ -1957,15 +2011,15 @@
         "ports/llgi/fix-sources.patch"
       ],
       "stripped_recall_mean": 0.21428571428571427,
-      "text_score": 0.14744582239527693,
+      "text_score": 0.14588527430035178,
       "tree_files": 12473,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.01401226178801758,
-      "blend_path_heavy": 0.00700613089400879,
-      "blend_text_heavy": 0.02101839268202637,
+      "blend_equal": 0.013033518107372705,
+      "blend_path_heavy": 0.006516759053686353,
+      "blend_text_heavy": 0.01955027716105906,
       "changed_a": [
         "docs/reference/values-types-variables/truthy-falsy-values.md"
       ],
@@ -1978,6 +2032,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-213ce77bc7b8",
       "label": "clean",
@@ -2024,15 +2079,15 @@
         "static/img/overview/ecmascript/browser-rendering-engine-javascript-engine-ecmascript-relations.svg"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.02802452357603516,
+      "text_score": 0.02606703621474541,
       "tree_files": 436,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.31187379978944346,
-      "blend_path_heavy": 0.15593689989472173,
-      "blend_text_heavy": 0.4678106996841652,
+      "blend_equal": 0.3177452127722656,
+      "blend_path_heavy": 0.1588726063861328,
+      "blend_text_heavy": 0.4766178191583984,
       "changed_a": [
         "src/graph/src/reify/add-edge.ts"
       ],
@@ -2044,6 +2099,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-2209fdb0272c",
       "label": "clean",
@@ -2090,15 +2146,15 @@
         "src/error-cause/tsconfig.json"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.6237475995788869,
+      "text_score": 0.6354904255445312,
       "tree_files": 1629,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.5667506328990904,
-      "blend_path_heavy": 0.6167086497828785,
-      "blend_text_heavy": 0.5167926160153024,
+      "blend_equal": 0.4101854069624019,
+      "blend_path_heavy": 0.5384260368145343,
+      "blend_text_heavy": 0.2819447771102695,
       "changed_a": [
         "client/src/plugins/zeebe-plugin/deployment-plugin/DeploymentConfigValidator.js",
         "client/src/plugins/zeebe-plugin/deployment-plugin/__tests__/DeploymentConfigValidatorSpec.js"
@@ -2114,6 +2170,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.8,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-2218a6593ac2",
       "label": "clean",
@@ -2160,15 +2217,15 @@
         "app/test/fixtures/import-warnings.bpmn"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.46683459913151426,
+      "text_score": 0.15370414725813714,
       "tree_files": 1054,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.037476593425677426,
-      "blend_path_heavy": 0.018738296712838713,
-      "blend_text_heavy": 0.05621489013851614,
+      "blend_equal": 0.05673264671694349,
+      "blend_path_heavy": 0.028366323358471744,
+      "blend_text_heavy": 0.08509897007541523,
       "changed_a": [
         "README.md",
         "localization/xliff/vscode-mssql.xlf",
@@ -2189,6 +2246,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-22584b4eeea2",
       "label": "conflict",
@@ -2235,15 +2293,15 @@
         "src/reactviews/pages/ExecutionPlan/icons/compute_to_control_node.png"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.07495318685135485,
+      "text_score": 0.11346529343388698,
       "tree_files": 913,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1569354982762448,
-      "blend_path_heavy": 0.0784677491381224,
-      "blend_text_heavy": 0.23540324741436722,
+      "blend_equal": 0.1510415348821788,
+      "blend_path_heavy": 0.0755207674410894,
+      "blend_text_heavy": 0.2265623023232682,
       "changed_a": [
         "PwshSpectreConsole/public/measurement/Get-SpectreImageConsoleSize.ps1"
       ],
@@ -2257,6 +2315,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.3333333333333333,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-26f551daf737",
       "label": "clean",
@@ -2303,15 +2362,15 @@
         "PwshSpectreConsole.Tests/writing/Write-SpectreRule.tests.ps1"
       ],
       "stripped_recall_mean": 0.3333333333333333,
-      "text_score": 0.3138709965524896,
+      "text_score": 0.3020830697643576,
       "tree_files": 395,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2,
-      "blend_equal": 0.08806035345480909,
-      "blend_path_heavy": 0.0995857322829601,
-      "blend_text_heavy": 0.07653497462665806,
+      "blend_equal": 0.08782488741298194,
+      "blend_path_heavy": 0.09946799926204652,
+      "blend_text_heavy": 0.07618177556391738,
       "changed_a": [
         "website/src/pages/index.tsx",
         "website/src/pages/styles.module.css",
@@ -2327,6 +2386,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-2c9312ac86a2",
       "label": "conflict",
@@ -2373,15 +2433,15 @@
         "website/src/pages/index.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.06500959579850706,
+      "text_score": 0.0645386637148528,
       "tree_files": 393,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.041666666666666664,
-      "blend_equal": 0.08600978670157605,
-      "blend_path_heavy": 0.043004893350788026,
-      "blend_text_heavy": 0.12901468005236408,
+      "blend_equal": 0.0827174289185661,
+      "blend_path_heavy": 0.04135871445928305,
+      "blend_text_heavy": 0.12407614337784914,
       "changed_a": [
         "dotnet-install.sh",
         "global.json",
@@ -2416,6 +2476,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.8365384615384616,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-2d94a28dfaa1",
       "label": "conflict",
@@ -2462,15 +2523,15 @@
         "src/OrchardCore/OrchardCore.ContentManagement.Abstractions/IContentDefinitionManager.cs"
       ],
       "stripped_recall_mean": 0.125,
-      "text_score": 0.1720195734031521,
+      "text_score": 0.1654348578371322,
       "tree_files": 9114,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.05654470364684825,
-      "blend_path_heavy": 0.028272351823424125,
-      "blend_text_heavy": 0.08481705547027238,
+      "blend_equal": 0.058448236858435275,
+      "blend_path_heavy": 0.029224118429217637,
+      "blend_text_heavy": 0.08767235528765291,
       "changed_a": [
         ".devcontainer/Dockerfile",
         ".devcontainer/README.md",
@@ -2490,6 +2551,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.20833333333333331,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-2f34114cac71",
       "label": "clean",
@@ -2536,15 +2598,15 @@
         "internal/dataapi/server/server.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1130894072936965,
+      "text_score": 0.11689647371687055,
       "tree_files": 1177,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.46546622521386233,
-      "blend_path_heavy": 0.23273311260693116,
-      "blend_text_heavy": 0.6981993378207935,
+      "blend_equal": 0.44400208026070015,
+      "blend_path_heavy": 0.22200104013035007,
+      "blend_text_heavy": 0.6660031203910503,
       "changed_a": [
         "src/m365/entra/commands/administrativeunit/administrativeunit-list.spec.ts",
         "src/m365/entra/commands/administrativeunit/administrativeunit-list.ts"
@@ -2558,6 +2620,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-315394dd23da",
       "label": "clean",
@@ -2604,15 +2667,15 @@
         "src/m365/entra/commands/administrativeunit/administrativeunit-member-remove.spec.ts"
       ],
       "stripped_recall_mean": 1.0,
-      "text_score": 0.9309324504277247,
+      "text_score": 0.8880041605214003,
       "tree_files": 11559,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07413012714779792,
-      "blend_path_heavy": 0.03706506357389896,
-      "blend_text_heavy": 0.11119519072169687,
+      "blend_equal": 0.07523134316734129,
+      "blend_path_heavy": 0.03761567158367064,
+      "blend_text_heavy": 0.11284701475101193,
       "changed_a": [
         "src/CommunityToolkit.Aspire.Hosting.Ollama/OllamaResourceBuilderExtensions.cs",
         "src/CommunityToolkit.Aspire.Hosting.Sqlite/SqliteResourceBuilderExtensions.cs",
@@ -2629,6 +2692,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8333333333333333,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-316e72021806",
       "label": "clean",
@@ -2675,15 +2739,15 @@
         "src/CommunityToolkit.Aspire.Hosting.NodeJS.Extensions/YarnPackageInstallerLifecycleHook.cs"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.14826025429559583,
+      "text_score": 0.15046268633468257,
       "tree_files": 979,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04097795162981952,
-      "blend_path_heavy": 0.02048897581490976,
-      "blend_text_heavy": 0.061466927444729286,
+      "blend_equal": 0.04120408748085855,
+      "blend_path_heavy": 0.020602043740429274,
+      "blend_text_heavy": 0.06180613122128782,
       "changed_a": [
         "web/public/styles/admin/main-layout.css"
       ],
@@ -2693,6 +2757,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-32617e65c098",
       "label": "clean",
@@ -2739,15 +2804,15 @@
         "web/components/admin/notification/browser.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.08195590325963904,
+      "text_score": 0.0824081749617171,
       "tree_files": 1591,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.30430928342011654,
-      "blend_path_heavy": 0.15215464171005827,
-      "blend_text_heavy": 0.4564639251301748,
+      "blend_equal": 0.3041186399670612,
+      "blend_path_heavy": 0.1520593199835306,
+      "blend_text_heavy": 0.45617795995059174,
       "changed_a": [
         "dotnet-desktop-guide/winforms/controls-design/how-to-create-usercontrol.md"
       ],
@@ -2760,6 +2825,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-327c8bd3e489",
       "label": "clean",
@@ -2806,15 +2872,15 @@
         "dotnet-desktop-guide/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md"
       ],
       "stripped_recall_mean": 1.0,
-      "text_score": 0.6086185668402331,
+      "text_score": 0.6082372799341224,
       "tree_files": 11045,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.06819498268712305,
-      "blend_path_heavy": 0.03409749134356153,
-      "blend_text_heavy": 0.10229247403068459,
+      "blend_equal": 0.06586023788621645,
+      "blend_path_heavy": 0.032930118943108225,
+      "blend_text_heavy": 0.09879035682932467,
       "changed_a": [
         "README.md",
         "src/Builder.php",
@@ -2834,6 +2900,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.6428571428571428,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-34fde48715d5",
       "label": "conflict",
@@ -2880,15 +2947,15 @@
         "tests/Pest.php"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1363899653742461,
+      "text_score": 0.1317204757724329,
       "tree_files": 33,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.01922146266160044,
-      "blend_path_heavy": 0.00961073133080022,
-      "blend_text_heavy": 0.02883219399240066,
+      "blend_equal": 0.01794340440206957,
+      "blend_path_heavy": 0.008971702201034786,
+      "blend_text_heavy": 0.02691510660310436,
       "changed_a": [
         ".github/workflows/build.yml",
         ".github/workflows/push-image.yml"
@@ -2905,6 +2972,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.8,
       "directory_overlap": 0.125,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-355ea6d1b2a9",
       "label": "conflict",
@@ -2951,15 +3019,15 @@
         "public/markdown-lint/images/mark-error.png"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.03844292532320088,
+      "text_score": 0.03588680880413914,
       "tree_files": 416,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.022080116601998726,
-      "blend_path_heavy": 0.011040058300999363,
-      "blend_text_heavy": 0.03312017490299809,
+      "blend_equal": 0.021782415621356768,
+      "blend_path_heavy": 0.010891207810678384,
+      "blend_text_heavy": 0.03267362343203515,
       "changed_a": [
         "schema-manager/src/main/java/io/camunda/search/schema/SchemaManager.java",
         "schema-manager/src/main/java/io/camunda/search/schema/config/SchemaManagerConfiguration.java"
@@ -2973,6 +3041,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-366fa71573bb",
       "label": "clean",
@@ -3019,15 +3088,15 @@
         "zeebe/engine/src/test/java/io/camunda/zeebe/engine/processing/bpmn/behavior/MultiInstanceOutputCollectionBehaviorTest.java"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.04416023320399745,
+      "text_score": 0.043564831242713535,
       "tree_files": 16378,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.046973907598836344,
-      "blend_path_heavy": 0.023486953799418172,
-      "blend_text_heavy": 0.07046086139825451,
+      "blend_equal": 0.046360430597586946,
+      "blend_path_heavy": 0.023180215298793473,
+      "blend_text_heavy": 0.06954064589638043,
       "changed_a": [
         "src/Shared/TaskLoggingHelper.cs"
       ],
@@ -3042,6 +3111,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-3724ec48e364",
       "label": "clean",
@@ -3088,15 +3158,15 @@
         "eng/Common.globalconfig"
       ],
       "stripped_recall_mean": 0.625,
-      "text_score": 0.09394781519767269,
+      "text_score": 0.09272086119517389,
       "tree_files": 2549,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.17795469824986587,
-      "blend_path_heavy": 0.1445329046804885,
-      "blend_text_heavy": 0.21137649181924323,
+      "blend_equal": 0.17326000254700807,
+      "blend_path_heavy": 0.1421855568290596,
+      "blend_text_heavy": 0.20433444826495656,
       "changed_a": [
         "src/Microsoft.Build.Sql/sdk/Sdk.targets",
         "test/Microsoft.Build.Sql.Tests/BuildTests.cs",
@@ -3110,6 +3180,7 @@
       "conflict_recall": 1.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-3756efaa2a99",
       "label": "conflict",
@@ -3156,15 +3227,15 @@
         "test/Microsoft.Build.Sql.Tests/TestData/SuccessfulBuildWithBuildExtensionConfigurationScript/Table1.sql"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.2447982853886206,
+      "text_score": 0.23540889398290502,
       "tree_files": 130,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0348865630603853,
-      "blend_path_heavy": 0.01744328153019265,
-      "blend_text_heavy": 0.052329844590577955,
+      "blend_equal": 0.03426876403772469,
+      "blend_path_heavy": 0.017134382018862346,
+      "blend_text_heavy": 0.05140314605658704,
       "changed_a": [
         "codecarbon/core/hardware_cache.py",
         "codecarbon/core/resource_tracker.py",
@@ -3183,6 +3254,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.125,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-3855f6ade0ca",
       "label": "conflict",
@@ -3229,15 +3301,15 @@
         "dashboard/data/data_functions.py"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0697731261207706,
+      "text_score": 0.06853752807544938,
       "tree_files": 683,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.12952062695459488,
-      "blend_path_heavy": 0.12031586903285299,
-      "blend_text_heavy": 0.13872538487633673,
+      "blend_equal": 0.12910525238005044,
+      "blend_path_heavy": 0.12010818174558077,
+      "blend_text_heavy": 0.13810232301452008,
       "changed_a": [],
       "changed_b": [
         "go_installer.sh"
@@ -3247,6 +3319,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-393e3cecced8",
       "label": "clean",
@@ -3293,22 +3366,81 @@
         "common/mmf_linux.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.14793014279807862,
+      "text_score": 0.14709939364898975,
       "tree_files": 549,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.017524661773387327,
-      "blend_path_heavy": 0.008762330886693663,
-      "blend_text_heavy": 0.026286992660080992,
-      "changed_a": [],
-      "changed_b": [],
+      "blend_equal": 0.01809736137227675,
+      "blend_path_heavy": 0.009048680686138375,
+      "blend_text_heavy": 0.027146042058415126,
+      "changed_a": [
+        "docling/datamodel/pipeline_options.py",
+        "docs/examples/pictures_description_api.py"
+      ],
+      "changed_b": [
+        "docling/backend/docx/latex/omml.py",
+        "tests/data/groundtruth/docling_v2/2203.01017v2.doctags.txt",
+        "tests/data/groundtruth/docling_v2/2203.01017v2.json",
+        "tests/data/groundtruth/docling_v2/2203.01017v2.md",
+        "tests/data/groundtruth/docling_v2/2203.01017v2.pages.json",
+        "tests/data/groundtruth/docling_v2/2206.01062.doctags.txt",
+        "tests/data/groundtruth/docling_v2/2206.01062.json",
+        "tests/data/groundtruth/docling_v2/2206.01062.md",
+        "tests/data/groundtruth/docling_v2/2206.01062.pages.json",
+        "tests/data/groundtruth/docling_v2/2305.03393v1-pg9.doctags.txt",
+        "tests/data/groundtruth/docling_v2/2305.03393v1-pg9.json",
+        "tests/data/groundtruth/docling_v2/2305.03393v1-pg9.md",
+        "tests/data/groundtruth/docling_v2/2305.03393v1-pg9.pages.json",
+        "tests/data/groundtruth/docling_v2/2305.03393v1.doctags.txt",
+        "tests/data/groundtruth/docling_v2/2305.03393v1.json",
+        "tests/data/groundtruth/docling_v2/2305.03393v1.md",
+        "tests/data/groundtruth/docling_v2/2305.03393v1.pages.json",
+        "tests/data/groundtruth/docling_v2/amt_handbook_sample.doctags.txt",
+        "tests/data/groundtruth/docling_v2/amt_handbook_sample.json",
+        "tests/data/groundtruth/docling_v2/amt_handbook_sample.md",
+        "tests/data/groundtruth/docling_v2/amt_handbook_sample.pages.json",
+        "tests/data/groundtruth/docling_v2/code_and_formula.doctags.txt",
+        "tests/data/groundtruth/docling_v2/code_and_formula.json",
+        "tests/data/groundtruth/docling_v2/code_and_formula.pages.json",
+        "tests/data/groundtruth/docling_v2/multi_page.doctags.txt",
+        "tests/data/groundtruth/docling_v2/multi_page.json",
+        "tests/data/groundtruth/docling_v2/multi_page.md",
+        "tests/data/groundtruth/docling_v2/multi_page.pages.json",
+        "tests/data/groundtruth/docling_v2/picture_classification.doctags.txt",
+        "tests/data/groundtruth/docling_v2/picture_classification.json",
+        "tests/data/groundtruth/docling_v2/picture_classification.pages.json",
+        "tests/data/groundtruth/docling_v2/redp5110_sampled.doctags.txt",
+        "tests/data/groundtruth/docling_v2/redp5110_sampled.json",
+        "tests/data/groundtruth/docling_v2/redp5110_sampled.md",
+        "tests/data/groundtruth/docling_v2/redp5110_sampled.pages.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_01.doctags.txt",
+        "tests/data/groundtruth/docling_v2/right_to_left_01.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_01.md",
+        "tests/data/groundtruth/docling_v2/right_to_left_01.pages.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_02.doctags.txt",
+        "tests/data/groundtruth/docling_v2/right_to_left_02.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_02.md",
+        "tests/data/groundtruth/docling_v2/right_to_left_02.pages.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_03.doctags.txt",
+        "tests/data/groundtruth/docling_v2/right_to_left_03.json",
+        "tests/data/groundtruth/docling_v2/right_to_left_03.md",
+        "tests/data/groundtruth/docling_v2/right_to_left_03.pages.json",
+        "tests/data_scanned/groundtruth/docling_v2/ocr_test.pages.json",
+        "tests/data_scanned/groundtruth/docling_v2/ocr_test_rotated_180.pages.json",
+        "tests/data_scanned/groundtruth/docling_v2/ocr_test_rotated_270.pages.json",
+        "tests/data_scanned/groundtruth/docling_v2/ocr_test_rotated_90.pages.json",
+        "tests/test_e2e_conversion.py",
+        "tests/test_e2e_ocr_conversion.py",
+        "tests/test_interfaces.py"
+      ],
       "conflict_intersection_recall": null,
       "conflict_path_coverage": null,
       "conflict_recall": null,
-      "coverage_mean": 0.0,
+      "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-39c8ad2f7b29",
       "label": "clean",
@@ -3333,9 +3465,9 @@
       "predicted_overlap": 0.0,
       "random_overlap": 0.0,
       "recall_a": 0.0,
-      "recall_available_mean": 0.0,
-      "recall_b": 0.0,
-      "recall_mean": 0.0,
+      "recall_available_mean": 0.009259259259259259,
+      "recall_b": 0.018518518518518517,
+      "recall_mean": 0.009259259259259259,
       "repo": "docling-project/docling",
       "stratum": "same",
       "stripped_conflict_recall": null,
@@ -3354,16 +3486,16 @@
         "tests/data/groundtruth/docling_v2/code_and_formula.json",
         "tests/data/groundtruth/docling_v2/equations.docx.md"
       ],
-      "stripped_recall_mean": 0.0,
-      "text_score": 0.035049323546774654,
+      "stripped_recall_mean": 0.009259259259259259,
+      "text_score": 0.0361947227445535,
       "tree_files": 624,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2576314776417533,
-      "blend_path_heavy": 0.3431014531065909,
-      "blend_text_heavy": 0.17216150217691567,
+      "blend_equal": 0.26608435877171904,
+      "blend_path_heavy": 0.3473278936715738,
+      "blend_text_heavy": 0.18484082387186426,
       "changed_a": [
         "README.md",
         "VIDEO_SUPPORT.md",
@@ -3386,6 +3518,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.7083333333333334,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-413ac3c2fe1f",
       "label": "clean",
@@ -3432,15 +3565,15 @@
         "apps/example/src/assets/react.png"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.08669152671207807,
+      "text_score": 0.1035972889720095,
       "tree_files": 415,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.09614815177402862,
-      "blend_path_heavy": 0.04807407588701431,
-      "blend_text_heavy": 0.14422222766104292,
+      "blend_equal": 0.10111050394290218,
+      "blend_path_heavy": 0.05055525197145109,
+      "blend_text_heavy": 0.15166575591435327,
       "changed_a": [
         "xmcl",
         "xmcl-runtime/launch/LaunchService.ts"
@@ -3460,6 +3593,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5625,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-434320165e34",
       "label": "clean",
@@ -3506,15 +3640,15 @@
         "xmcl-electron-app/main/assets/mod.mapping.json"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.19229630354805724,
+      "text_score": 0.20222100788580435,
       "tree_files": 1156,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07792063583976035,
-      "blend_path_heavy": 0.03896031791988017,
-      "blend_text_heavy": 0.11688095375964053,
+      "blend_equal": 0.08362612696505888,
+      "blend_path_heavy": 0.04181306348252944,
+      "blend_text_heavy": 0.1254391904475883,
       "changed_a": [
         "source/slang/diff.meta.slang",
         "source/slang/hlsl.meta.slang",
@@ -3530,6 +3664,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-4428eaeb866b",
       "label": "clean",
@@ -3576,15 +3711,15 @@
         "tests/spirv/ref-this.slang"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1558412716795207,
+      "text_score": 0.16725225393011775,
       "tree_files": 5135,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.22329432408855943,
-      "blend_path_heavy": 0.11164716204427971,
-      "blend_text_heavy": 0.33494148613283914,
+      "blend_equal": 0.18605637797779923,
+      "blend_path_heavy": 0.09302818898889961,
+      "blend_text_heavy": 0.2790845669666988,
       "changed_a": [
         "libs/core/langchain_core/utils/_merge.py",
         "libs/core/tests/unit_tests/test_messages.py"
@@ -3599,6 +3734,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-453c75b28c01",
       "label": "conflict",
@@ -3645,15 +3781,15 @@
         "libs/core/langchain_core/sys_info.py"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.44658864817711885,
+      "text_score": 0.37211275595559845,
       "tree_files": 5086,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2,
-      "blend_equal": 0.22519145789662315,
-      "blend_path_heavy": 0.23759572894831157,
-      "blend_text_heavy": 0.21278718684493475,
+      "blend_equal": 0.22426383243019377,
+      "blend_path_heavy": 0.23713191621509688,
+      "blend_text_heavy": 0.21139574864529062,
       "changed_a": [
         "package-lock.json",
         "src/connection.ts",
@@ -3669,6 +3805,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8333333333333333,
       "directory_overlap": 0.4,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-45d6b58226e1",
       "label": "clean",
@@ -3715,15 +3852,15 @@
         "test/package/JSforceTestSuite/objects/BigTable__c.object"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.20038291579324632,
+      "text_score": 0.1985276648603875,
       "tree_files": 189,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.14988345029875308,
-      "blend_path_heavy": 0.07494172514937654,
-      "blend_text_heavy": 0.22482517544812963,
+      "blend_equal": 0.1548590487003954,
+      "blend_path_heavy": 0.0774295243501977,
+      "blend_text_heavy": 0.2322885730505931,
       "changed_a": [
         ".github/copilot-instructions.md",
         "docs/changelog.md",
@@ -3758,6 +3895,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.4722222222222222,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-47ebcf8d0b37",
       "label": "conflict",
@@ -3804,15 +3942,15 @@
         "src/PSRule/Definitions/Conventions/ConventionFilter.cs"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.29976690059750616,
+      "text_score": 0.3097180974007908,
       "tree_files": 1165,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07769344471814926,
-      "blend_path_heavy": 0.03884672235907463,
-      "blend_text_heavy": 0.1165401670772239,
+      "blend_equal": 0.07451779563398551,
+      "blend_path_heavy": 0.03725889781699276,
+      "blend_text_heavy": 0.11177669345097827,
       "changed_a": [
         "src/HassModel/NetDaemon.HassModel.CodeGenerator/CodeGeneration/HelpersGenerator.cs",
         "src/HassModel/NetDaemon.HassModel.Tests/CodeGenerator/HelpersGeneratorTest.cs"
@@ -3826,6 +3964,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-4851d779f0f1",
       "label": "clean",
@@ -3872,15 +4011,15 @@
         "src/Client/NetDaemon.HassClient.Tests/Integration/Testdata/service_event.json"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.15538688943629853,
+      "text_score": 0.14903559126797103,
       "tree_files": 567,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.029080551949005565,
-      "blend_path_heavy": 0.014540275974502782,
-      "blend_text_heavy": 0.04362082792350835,
+      "blend_equal": 0.02764352751573709,
+      "blend_path_heavy": 0.013821763757868545,
+      "blend_text_heavy": 0.04146529127360563,
       "changed_a": [
         ".github/workflows/prod.yml"
       ],
@@ -3892,6 +4031,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-49bcaf5b28b4",
       "label": "clean",
@@ -3938,15 +4078,15 @@
         "apps/dashboard/src/main/java/com/akto/filter/SecurityHeadersFilter.java"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.05816110389801113,
+      "text_score": 0.05528705503147418,
       "tree_files": 2612,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.09090909090909091,
-      "blend_equal": 0.046072860085852096,
-      "blend_path_heavy": 0.023036430042926048,
-      "blend_text_heavy": 0.06910929012877814,
+      "blend_equal": 0.04290343030076711,
+      "blend_path_heavy": 0.021451715150383556,
+      "blend_text_heavy": 0.06435514545115067,
       "changed_a": [
         "pgdog/src/config/mod.rs",
         "pgdog/src/frontend/router/parser/error.rs",
@@ -3968,6 +4108,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8888888888888888,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-4a12ac8d4af1",
       "label": "clean",
@@ -4014,15 +4155,15 @@
         "pgdog/src/net/messages/replication/mod.rs"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.09214572017170419,
+      "text_score": 0.08580686060153422,
       "tree_files": 499,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.035259353421301404,
-      "blend_path_heavy": 0.017629676710650702,
-      "blend_text_heavy": 0.052889030131952106,
+      "blend_equal": 0.036870118023434276,
+      "blend_path_heavy": 0.018435059011717138,
+      "blend_text_heavy": 0.055305177035151414,
       "changed_a": [
         "README.md",
         "cmd/mcptools/commands/new.go",
@@ -4041,6 +4182,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8571428571428572,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-4b805766c91d",
       "label": "clean",
@@ -4087,15 +4229,15 @@
         "cmd/mcptools/commands/shell.go"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.07051870684260281,
+      "text_score": 0.07374023604686855,
       "tree_files": 66,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.2371332115353706,
-      "blend_path_heavy": 0.2435666057676853,
-      "blend_text_heavy": 0.23069981730305586,
+      "blend_equal": 0.2395254375858786,
+      "blend_path_heavy": 0.24476271879293932,
+      "blend_text_heavy": 0.2342881563788179,
       "changed_a": [
         "src/fileSystem/index.ts",
         "src/repos/store/index.ts",
@@ -4110,6 +4252,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.75,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-4e39e7d851b6",
       "label": "clean",
@@ -4156,15 +4299,15 @@
         "src/commands/file.ts"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.22426642307074116,
+      "text_score": 0.2290508751717572,
       "tree_files": 143,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.125,
-      "blend_equal": 0.5143113712779099,
-      "blend_path_heavy": 0.757155685638955,
-      "blend_text_heavy": 0.27146705691686496,
+      "blend_equal": 0.5122923704192897,
+      "blend_path_heavy": 0.7561461852096448,
+      "blend_text_heavy": 0.2684385556289345,
       "changed_a": [
         "README.md",
         "lib/jekyll-relative-links/generator.rb",
@@ -4183,6 +4326,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6666666666666666,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-51b4dccde16b",
       "label": "clean",
@@ -4229,15 +4373,15 @@
         "lib/jekyll-relative-links/version.rb"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.028622742555819928,
+      "text_score": 0.024584740838579325,
       "tree_files": 45,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.09088910917755759,
-      "blend_path_heavy": 0.045444554588778795,
-      "blend_text_heavy": 0.13633366376633638,
+      "blend_equal": 0.08425267071147267,
+      "blend_path_heavy": 0.04212633535573634,
+      "blend_text_heavy": 0.126379006067209,
       "changed_a": [
         "src/Cli/Microsoft.DotNet.Configurer/Microsoft.DotNet.Configurer.csproj",
         "src/Cli/Microsoft.TemplateEngine.Cli/Microsoft.TemplateEngine.Cli.csproj",
@@ -4260,6 +4404,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-5303310add6e",
       "label": "clean",
@@ -4306,15 +4451,15 @@
         "src/Cli/dotnet/Commands/Restore/RestoringCommand.cs"
       ],
       "stripped_recall_mean": 0.08333333333333333,
-      "text_score": 0.18177821835511518,
+      "text_score": 0.16850534142294535,
       "tree_files": 7429,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04250234609065685,
-      "blend_path_heavy": 0.021251173045328427,
-      "blend_text_heavy": 0.06375351913598529,
+      "blend_equal": 0.04161578673888498,
+      "blend_path_heavy": 0.02080789336944249,
+      "blend_text_heavy": 0.062423680108327474,
       "changed_a": [
         "src/client/telemetry/constants.ts",
         "src/client/telemetry/index.ts",
@@ -4330,6 +4475,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.875,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-53e434b822e4",
       "label": "conflict",
@@ -4376,15 +4522,15 @@
         "src/client/testing/common/configSettingService.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0850046921813137,
+      "text_score": 0.08323157347776997,
       "tree_files": 1547,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.003760228764104642,
-      "blend_path_heavy": 0.001880114382052321,
-      "blend_text_heavy": 0.005640343146156963,
+      "blend_equal": 0.003519063827517519,
+      "blend_path_heavy": 0.0017595319137587596,
+      "blend_text_heavy": 0.005278595741276279,
       "changed_a": [
         "README.md",
         "cmd/documentation/exchanges_templates/alphapoint.tmpl",
@@ -4410,6 +4556,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-54bfb0cb44d9",
       "label": "clean",
@@ -4456,15 +4603,15 @@
         "internal/testing/websocket/mock.go"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.007520457528209284,
+      "text_score": 0.007038127655035038,
       "tree_files": 1527,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.5,
-      "blend_equal": 0.36481515649861224,
-      "blend_path_heavy": 0.3966932925350204,
-      "blend_text_heavy": 0.3329370204622041,
+      "blend_equal": 0.36227820610466405,
+      "blend_path_heavy": 0.3954248173380463,
+      "blend_text_heavy": 0.3291315948712818,
       "changed_a": [
         ".gitignore",
         "main.js"
@@ -4477,6 +4624,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.6,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-55b561a5e9eb",
       "label": "conflict",
@@ -4523,15 +4671,15 @@
         ".github/ISSUE_TEMPLATE/feature_request.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.3010588844257959,
+      "text_score": 0.29598498363789955,
       "tree_files": 68,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.16666666666666666,
-      "blend_equal": 0.12543369790240055,
-      "blend_path_heavy": 0.11827240450675583,
-      "blend_text_heavy": 0.13259499129804525,
+      "blend_equal": 0.11890707807634569,
+      "blend_path_heavy": 0.1150090945937284,
+      "blend_text_heavy": 0.122805061558963,
       "changed_a": [
         "package-lock.json",
         "src/index.ts"
@@ -4548,6 +4696,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.65,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-58cbdf286476",
       "label": "clean",
@@ -4594,15 +4743,15 @@
         "example/nuxt-sass/app.module.scss.d.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.13975628469368997,
+      "text_score": 0.12670304504158028,
       "tree_files": 63,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.05,
-      "blend_equal": 0.03742438013692232,
-      "blend_path_heavy": 0.01871219006846116,
-      "blend_text_heavy": 0.056136570205383485,
+      "blend_equal": 0.03687559051279006,
+      "blend_path_heavy": 0.01843779525639503,
+      "blend_text_heavy": 0.05531338576918509,
       "changed_a": [
         "DnDHelper/DragAndDropOperations.cs",
         "DnDHelper/ScalingHelper.cs",
@@ -4633,6 +4782,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.7916666666666667,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-596266088244",
       "label": "clean",
@@ -4679,15 +4829,15 @@
         "Platforms/Android/MainActivity.cs"
       ],
       "stripped_recall_mean": 0.1111111111111111,
-      "text_score": 0.07484876027384464,
+      "text_score": 0.07375118102558012,
       "tree_files": 80,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.008161702398844886,
-      "blend_path_heavy": 0.004080851199422443,
-      "blend_text_heavy": 0.012242553598267328,
+      "blend_equal": 0.007713254230882493,
+      "blend_path_heavy": 0.0038566271154412465,
+      "blend_text_heavy": 0.01156988134632374,
       "changed_a": [
         "lisa/main.py",
         "lisa/parameter_parser/argparser.py"
@@ -4743,6 +4893,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-5b77d0be6f95",
       "label": "clean",
@@ -4789,15 +4940,15 @@
         "selftests/variable_normal.yml"
       ],
       "stripped_recall_mean": 0.011363636363636364,
-      "text_score": 0.01632340479768977,
+      "text_score": 0.015426508461764986,
       "tree_files": 556,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.07407407407407407,
-      "blend_equal": 0.053513306765641803,
-      "blend_path_heavy": 0.026756653382820902,
-      "blend_text_heavy": 0.0802699601484627,
+      "blend_equal": 0.050163331451751045,
+      "blend_path_heavy": 0.025081665725875522,
+      "blend_text_heavy": 0.07524499717762656,
       "changed_a": [
         "angular-app/package-lock.json",
         "angular-app/package.json",
@@ -4836,6 +4987,7 @@
       "conflict_recall": 1.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-60baf1cce7f9",
       "label": "conflict",
@@ -4882,15 +5034,15 @@
         "CODE_OF_CONDUCT.md"
       ],
       "stripped_recall_mean": 0.08695652173913043,
-      "text_score": 0.10702661353128361,
+      "text_score": 0.10032666290350209,
       "tree_files": 245,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.031746031746031744,
-      "blend_equal": 0.016012617015521965,
-      "blend_path_heavy": 0.008006308507760983,
-      "blend_text_heavy": 0.024018925523282948,
+      "blend_equal": 0.016181697910001683,
+      "blend_path_heavy": 0.008090848955000842,
+      "blend_text_heavy": 0.024272546865002527,
       "changed_a": [
         "src/Microsoft.OpenApi/Extensions/CollectionExtensions.cs",
         "src/Microsoft.OpenApi/Writers/OpenApiWriterExtensions.cs",
@@ -4965,6 +5117,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8113207547169812,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-61305f1b0357",
       "label": "clean",
@@ -5011,15 +5164,15 @@
         "test/Microsoft.OpenApi.Readers.Tests/V31Tests/ReferenceSamples/subschemaComponentSchemaReference.yaml"
       ],
       "stripped_recall_mean": 0.051100628930817606,
-      "text_score": 0.03202523403104393,
+      "text_score": 0.03236339582000337,
       "tree_files": 941,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2857142857142857,
-      "blend_equal": 0.3334450615644499,
-      "blend_path_heavy": 0.38100824506793923,
-      "blend_text_heavy": 0.2858818780609606,
+      "blend_equal": 0.32398633423113776,
+      "blend_path_heavy": 0.3762788814012831,
+      "blend_text_heavy": 0.27169378706099234,
       "changed_a": [
         ".github/workflows/test.yml",
         "package-lock.json",
@@ -5038,6 +5191,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-6150d6f844b7",
       "label": "clean",
@@ -5084,15 +5238,15 @@
         "screenshot.png"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.23831869455747132,
+      "text_score": 0.21940123989084692,
       "tree_files": 13,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.07142857142857142,
-      "blend_equal": 0.0931452345521363,
-      "blend_path_heavy": 0.04657261727606815,
-      "blend_text_heavy": 0.13971785182820445,
+      "blend_equal": 0.09915024273389565,
+      "blend_path_heavy": 0.049575121366947826,
+      "blend_text_heavy": 0.14872536410084347,
       "changed_a": [
         "src/CoreWCF.ConfigurationManager/src/Resources/Strings.resx",
         "src/CoreWCF.Http/src/Resources/Strings.resx",
@@ -5117,6 +5271,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9642857142857143,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-6290898730a1",
       "label": "clean",
@@ -5163,15 +5318,15 @@
         "src/CoreWCF.Templates/tests/Shared/CertificateGeneration/CertificatePurpose.cs"
       ],
       "stripped_recall_mean": 0.03571428571428571,
-      "text_score": 0.1862904691042726,
+      "text_score": 0.1983004854677913,
       "tree_files": 2174,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.008149089077178843,
-      "blend_path_heavy": 0.004074544538589422,
-      "blend_text_heavy": 0.012223633615768264,
+      "blend_equal": 0.008561603355577445,
+      "blend_path_heavy": 0.004280801677788723,
+      "blend_text_heavy": 0.012842405033366169,
       "changed_a": [
         ".azure/reusable-test.yml",
         ".github/workflows/reusable-test.yml"
@@ -5185,6 +5340,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-63084e941969",
       "label": "clean",
@@ -5231,15 +5387,15 @@
         "tests/bpf2c_tests/expected/map_in_map_btf_raw.c"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.016298178154357686,
+      "text_score": 0.01712320671115489,
       "tree_files": 1862,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.3333333333333333,
-      "blend_equal": 0.5162482796051956,
-      "blend_path_heavy": 0.5914574731359311,
-      "blend_text_heavy": 0.4410390860744601,
+      "blend_equal": 0.6097176470224598,
+      "blend_path_heavy": 0.6381921568445632,
+      "blend_text_heavy": 0.5812431372003564,
       "changed_a": [
         "README.md",
         "azurecaf/models_generated.go",
@@ -5261,6 +5417,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.6666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-656cdd730653",
       "label": "clean",
@@ -5307,15 +5464,15 @@
         "azurecaf/resource_name_test.go"
       ],
       "stripped_recall_mean": 0.17142857142857143,
-      "text_score": 0.3658298925437246,
+      "text_score": 0.5527686273782529,
       "tree_files": 49,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.060337011448743066,
-      "blend_path_heavy": 0.030168505724371533,
-      "blend_text_heavy": 0.0905055171731146,
+      "blend_equal": 0.059640487271730915,
+      "blend_path_heavy": 0.029820243635865457,
+      "blend_text_heavy": 0.08946073090759638,
       "changed_a": [],
       "changed_b": [
         "README.md",
@@ -5330,6 +5487,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.4166666666666667,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-661632c90960",
       "label": "clean",
@@ -5376,15 +5534,15 @@
         "shared/AppInsightsCore/src/JavaScriptSDK.Interfaces/IFeatureOptIn.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.12067402289748613,
+      "text_score": 0.11928097454346183,
       "tree_files": 1040,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.4413151879935756,
-      "blend_path_heavy": 0.2206575939967878,
-      "blend_text_heavy": 0.6619727819903634,
+      "blend_equal": 0.43851498948773704,
+      "blend_path_heavy": 0.21925749474386852,
+      "blend_text_heavy": 0.6577724842316055,
       "changed_a": [
         "swift/Glacier2/greeter/Package.swift",
         "swift/Glacier2/greeter/README.md",
@@ -5411,6 +5569,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-663e9b21e6dc",
       "label": "clean",
@@ -5457,15 +5616,15 @@
         "csharp/IceDiscovery/Greeter/README.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.8826303759871512,
+      "text_score": 0.8770299789754741,
       "tree_files": 1247,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.41622419479517103,
-      "blend_path_heavy": 0.26366765295314104,
-      "blend_text_heavy": 0.568780736637201,
+      "blend_equal": 0.44388922946309295,
+      "blend_path_heavy": 0.277500170287102,
+      "blend_text_heavy": 0.6102782886390838,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -5473,6 +5632,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.25,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-6716d1e97eda",
       "label": "clean",
@@ -5519,15 +5679,15 @@
         "NewArch/src/examples/LinearGradientExamplePage.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.7213372784792309,
+      "text_score": 0.7766673478150747,
       "tree_files": 514,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07587405049823012,
-      "blend_path_heavy": 0.09349258080467061,
-      "blend_text_heavy": 0.05825552019178964,
+      "blend_equal": 0.07595230814074289,
+      "blend_path_heavy": 0.093531709625927,
+      "blend_text_heavy": 0.05837290665555877,
       "changed_a": [
         "doc/pict.md"
       ],
@@ -5543,6 +5703,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-67a48ce0c052",
       "label": "clean",
@@ -5589,15 +5750,15 @@
         "cli/common.cpp"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.040636989885349147,
+      "text_score": 0.04079350517037466,
       "tree_files": 418,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.3286586135048185,
-      "blend_path_heavy": 0.21988486230796483,
-      "blend_text_heavy": 0.43743236470167224,
+      "blend_equal": 0.3258712736024483,
+      "blend_path_heavy": 0.21849119235677966,
+      "blend_text_heavy": 0.43325135484811683,
       "changed_a": [
         "mlflow/prompt/registry_utils.py",
         "tests/prompt/test_registry.py",
@@ -5613,6 +5774,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6666666666666666,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-684bec76bd8e",
       "label": "clean",
@@ -5659,7 +5821,7 @@
         "tests/integration/__init__.py"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.546206115898526,
+      "text_score": 0.5406314360937854,
       "tree_files": 5381,
       "tree_truncated": false
     },
@@ -5697,6 +5859,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.696969696969697,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-6be7d6ad43b9",
       "label": "clean",
@@ -5749,9 +5912,9 @@
     },
     {
       "actual_overlap": 0.2,
-      "blend_equal": 0.006111056148201382,
-      "blend_path_heavy": 0.003055528074100691,
-      "blend_text_heavy": 0.009166584222302073,
+      "blend_equal": 0.005983932470288603,
+      "blend_path_heavy": 0.0029919662351443016,
+      "blend_text_heavy": 0.008975898705432904,
       "changed_a": [
         "packages/core/README.md",
         "packages/core/launch.test.ts",
@@ -5767,6 +5930,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-6f9d992b6001",
       "label": "clean",
@@ -5813,15 +5977,15 @@
         "packages/file-transfer/error.ts"
       ],
       "stripped_recall_mean": 0.125,
-      "text_score": 0.012222112296402764,
+      "text_score": 0.011967864940577206,
       "tree_files": 350,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2,
-      "blend_equal": 0.02934733099352078,
-      "blend_path_heavy": 0.01467366549676039,
-      "blend_text_heavy": 0.04402099649028117,
+      "blend_equal": 0.026994599661091342,
+      "blend_path_heavy": 0.013497299830545671,
+      "blend_text_heavy": 0.040491899491637014,
       "changed_a": [
         "README.md",
         "docs/docfx_project/articles/cli-tool.md",
@@ -5867,6 +6031,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.96875,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-6ff16f4bfa5b",
       "label": "clean",
@@ -5913,15 +6078,15 @@
         "src/Refitter.SourceGenerator/Refitter.SourceGenerator.csproj"
       ],
       "stripped_recall_mean": 0.08125,
-      "text_score": 0.05869466198704156,
+      "text_score": 0.053989199322182685,
       "tree_files": 371,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.13068448307384067,
-      "blend_path_heavy": 0.06534224153692034,
-      "blend_text_heavy": 0.196026724610761,
+      "blend_equal": 0.11878883415114493,
+      "blend_path_heavy": 0.05939441707557246,
+      "blend_text_heavy": 0.17818325122671738,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -5929,6 +6094,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-722f944c6545",
       "label": "clean",
@@ -5975,15 +6141,15 @@
         "Releasing_MSBuildLocator.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.26136896614768135,
+      "text_score": 0.23757766830228985,
       "tree_files": 38,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.09523809523809523,
-      "blend_equal": 0.05897676708588715,
-      "blend_path_heavy": 0.029488383542943575,
-      "blend_text_heavy": 0.08846515062883073,
+      "blend_equal": 0.05922576039123077,
+      "blend_path_heavy": 0.029612880195615386,
+      "blend_text_heavy": 0.08883864058684615,
       "changed_a": [
         ".env.example",
         ".oxlintrc.json",
@@ -6016,6 +6182,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6041666666666666,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-755396bb87bb",
       "label": "clean",
@@ -6062,15 +6229,15 @@
         "prisma/migrations/20240228204411_add_deleted_at_for_expense/migration.sql"
       ],
       "stripped_recall_mean": 0.22083333333333333,
-      "text_score": 0.1179535341717743,
+      "text_score": 0.11845152078246154,
       "tree_files": 287,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2,
-      "blend_equal": 0.06733833084522689,
-      "blend_path_heavy": 0.089224720978169,
-      "blend_text_heavy": 0.04545194071228479,
+      "blend_equal": 0.06786632017255678,
+      "blend_path_heavy": 0.08948871564183394,
+      "blend_text_heavy": 0.04624392470327962,
       "changed_a": [
         "README.md",
         "docs/index.html",
@@ -6092,6 +6259,7 @@
       "conflict_recall": 1.0,
       "coverage_mean": 0.7777777777777777,
       "directory_overlap": 0.6666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-76049e9da2e6",
       "label": "conflict",
@@ -6138,7 +6306,7 @@
         "docs/_config.yml"
       ],
       "stripped_recall_mean": 0.2777777777777778,
-      "text_score": 0.023565550579342683,
+      "text_score": 0.024621529234002463,
       "tree_files": 12,
       "tree_truncated": false
     },
@@ -6161,6 +6329,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-76b615dce75e",
       "label": "clean",
@@ -6213,9 +6382,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07553101717585149,
-      "blend_path_heavy": 0.0933210641434813,
-      "blend_text_heavy": 0.05774097020822169,
+      "blend_equal": 0.07463403662317716,
+      "blend_path_heavy": 0.09287257386714413,
+      "blend_text_heavy": 0.05639549937921021,
       "changed_a": [
         "src/apps/relay/mainrelay.c"
       ],
@@ -6227,6 +6396,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.75,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-78bee680b8a8",
       "label": "clean",
@@ -6273,15 +6443,15 @@
         "rpm/turnserver.init.el"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.039950923240591886,
+      "text_score": 0.038156962135243236,
       "tree_files": 304,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1109237222761028,
-      "blend_path_heavy": 0.0554618611380514,
-      "blend_text_heavy": 0.1663855834141542,
+      "blend_equal": 0.11369110320979367,
+      "blend_path_heavy": 0.056845551604896835,
+      "blend_text_heavy": 0.1705366548146905,
       "changed_a": [
         "src/modules/Elsa.Studio.UIHints/Components/Cases.razor",
         "src/modules/Elsa.Studio.UIHints/Components/Cases.razor.cs"
@@ -6297,6 +6467,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-7ad0dc2caef7",
       "label": "clean",
@@ -6343,15 +6514,15 @@
         "src/modules/Elsa.Studio.Workflows.Designer/ClientLib/src/designer/internal/create-activity-element.ts"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.2218474445522056,
+      "text_score": 0.22738220641958734,
       "tree_files": 852,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.15012163125109065,
-      "blend_path_heavy": 0.07506081562554533,
-      "blend_text_heavy": 0.22518244687663597,
+      "blend_equal": 0.150542636691819,
+      "blend_path_heavy": 0.0752713183459095,
+      "blend_text_heavy": 0.2258139550377285,
       "changed_a": [
         "maui/src/SegmentedControl/Views/SegmentItemView.cs",
         "maui/tests/Syncfusion.Maui.Toolkit.UnitTest/Buttons/SfSegmentedControlUnitTests.cs"
@@ -6366,6 +6537,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-7cf5c05e4484",
       "label": "clean",
@@ -6412,15 +6584,15 @@
         "maui/src/Charts/Annotation/VerticalLineAnnotation.cs"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.3002432625021813,
+      "text_score": 0.301085273383638,
       "tree_files": 1611,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04341257787727125,
-      "blend_path_heavy": 0.021706288938635625,
-      "blend_text_heavy": 0.06511886681590687,
+      "blend_equal": 0.04250352631635738,
+      "blend_path_heavy": 0.02125176315817869,
+      "blend_text_heavy": 0.06375528947453607,
       "changed_a": [
         "tools/typst-preview-frontend/src/styles/layout.css"
       ],
@@ -6432,6 +6604,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-7d36407e417e",
       "label": "clean",
@@ -6478,15 +6651,15 @@
         "crates/tinymist-world/src/parser/typst_tokens.rs"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0868251557545425,
+      "text_score": 0.08500705263271476,
       "tree_files": 2196,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.038461538461538464,
-      "blend_equal": 0.10525485556477747,
-      "blend_path_heavy": 0.052627427782388735,
-      "blend_text_heavy": 0.1578822833471662,
+      "blend_equal": 0.10122548699395707,
+      "blend_path_heavy": 0.050612743496978536,
+      "blend_text_heavy": 0.15183823049093562,
       "changed_a": [
         ".claude/commands/shared/collaboration-patterns.yml",
         ".claude/commands/shared/quality-patterns.yml",
@@ -6523,6 +6696,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.41363636363636364,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-7decee8f0408",
       "label": "clean",
@@ -6569,15 +6743,15 @@
         ".github/ISSUE_TEMPLATE/bug_report.yml"
       ],
       "stripped_recall_mean": 0.1,
-      "text_score": 0.21050971112955494,
+      "text_score": 0.20245097398791415,
       "tree_files": 62,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.040959587393330346,
-      "blend_path_heavy": 0.020479793696665173,
-      "blend_text_heavy": 0.06143938108999552,
+      "blend_equal": 0.03829007911479543,
+      "blend_path_heavy": 0.019145039557397714,
+      "blend_text_heavy": 0.05743511867219314,
       "changed_a": [
         "docs/headers.md"
       ],
@@ -6594,6 +6768,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-81db0a8251fd",
       "label": "clean",
@@ -6640,15 +6815,15 @@
         "tests/pointers_tests.cpp"
       ],
       "stripped_recall_mean": 0.08333333333333333,
-      "text_score": 0.08191917478666069,
+      "text_score": 0.07658015822959086,
       "tree_files": 45,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.044477208466922276,
-      "blend_path_heavy": 0.022238604233461138,
-      "blend_text_heavy": 0.06671581270038342,
+      "blend_equal": 0.04195215161963932,
+      "blend_path_heavy": 0.02097607580981966,
+      "blend_text_heavy": 0.06292822742945897,
       "changed_a": [
         "README.md"
       ],
@@ -6658,6 +6833,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-8335ace8a4a4",
       "label": "clean",
@@ -6704,15 +6880,15 @@
         "glide-core/redis-rs/afl/parser/in/error"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.08895441693384455,
+      "text_score": 0.08390430323927864,
       "tree_files": 868,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0024513928235154344,
-      "blend_path_heavy": 0.0012256964117577172,
-      "blend_text_heavy": 0.0036770892352731514,
+      "blend_equal": 0.0026139387477540407,
+      "blend_path_heavy": 0.0013069693738770203,
+      "blend_text_heavy": 0.003920908121631061,
       "changed_a": [
         "dashboard/pages/fragment_graph.tsx"
       ],
@@ -6722,6 +6898,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-850cbacd0d96",
       "label": "clean",
@@ -6768,15 +6945,15 @@
         "java/connector-node/risingwave-source-cdc-test/src/test/resources/log4j2.properties"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.004902785647030869,
+      "text_score": 0.005227877495508081,
       "tree_files": 5713,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.6666666666666666,
-      "blend_equal": 0.13716702296361838,
-      "blend_path_heavy": 0.06858351148180919,
-      "blend_text_heavy": 0.20575053444542757,
+      "blend_equal": 0.13625815506951858,
+      "blend_path_heavy": 0.06812907753475929,
+      "blend_text_heavy": 0.20438723260427788,
       "changed_a": [
         ".gitignore",
         "src/ontology/cl-edit.owl",
@@ -6791,6 +6968,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-8935431b1b19",
       "label": "clean",
@@ -6837,15 +7015,15 @@
         "src/patterns/dosdp-patterns/taxonSpecific.yaml"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.27433404592723676,
+      "text_score": 0.27251631013903715,
       "tree_files": 298,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.06830873336478278,
-      "blend_path_heavy": 0.03415436668239139,
-      "blend_text_heavy": 0.10246310004717418,
+      "blend_equal": 0.07142159604956548,
+      "blend_path_heavy": 0.03571079802478274,
+      "blend_text_heavy": 0.10713239407434821,
       "changed_a": [
         "models/search/SearchActiveRecord.php",
         "models/search/SearchApiType.php",
@@ -6863,6 +7041,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-89897d7e1103",
       "label": "clean",
@@ -6909,15 +7088,15 @@
         "web/image/contribute/ico_contribute_01.svg"
       ],
       "stripped_recall_mean": 0.3333333333333333,
-      "text_score": 0.13661746672956557,
+      "text_score": 0.14284319209913096,
       "tree_files": 943,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04434563410510187,
-      "blend_path_heavy": 0.022172817052550933,
-      "blend_text_heavy": 0.0665184511576528,
+      "blend_equal": 0.05454704875085171,
+      "blend_path_heavy": 0.027273524375425854,
+      "blend_text_heavy": 0.08182057312627757,
       "changed_a": [
         "library/decimal.po"
       ],
@@ -6929,6 +7108,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-8b053a754010",
       "label": "clean",
@@ -6975,15 +7155,15 @@
         "library/sys.po"
       ],
       "stripped_recall_mean": 1.0,
-      "text_score": 0.08869126821020373,
+      "text_score": 0.10909409750170342,
       "tree_files": 534,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.6068215005793556,
-      "blend_path_heavy": 0.6367440836230112,
-      "blend_text_heavy": 0.5768989175357,
+      "blend_equal": 0.6028613100232906,
+      "blend_path_heavy": 0.6347639883449786,
+      "blend_text_heavy": 0.5709586317016025,
       "changed_a": [
         "helpful_tools/Install-DockerCE/README.md",
         "helpful_tools/Install-DockerCE/uninstall-docker-ce.ps1",
@@ -6998,6 +7178,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8333333333333333,
       "directory_overlap": 0.6,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-8ba49ece8e4a",
       "label": "clean",
@@ -7044,15 +7225,15 @@
         "helpful_tools/GitHubActions/install_buildkit_workflow.yaml"
       ],
       "stripped_recall_mean": 0.6666666666666666,
-      "text_score": 0.5469763344920445,
+      "text_score": 0.5390559533799145,
       "tree_files": 34,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.027560705727710095,
-      "blend_path_heavy": 0.013780352863855047,
-      "blend_text_heavy": 0.041341058591565144,
+      "blend_equal": 0.027473693308278903,
+      "blend_path_heavy": 0.013736846654139451,
+      "blend_text_heavy": 0.04121053996241836,
       "changed_a": [
         "pyslang/examples/README.md",
         "pyslang/examples/extract_logic_names.py",
@@ -7072,6 +7253,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.42857142857142855,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-8c06fc2055d4",
       "label": "clean",
@@ -7118,15 +7300,15 @@
         "tests/unittests/data/file_with_no_eol.sv"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.05512141145542019,
+      "text_score": 0.054947386616557806,
       "tree_files": 552,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.3427495157434829,
-      "blend_path_heavy": 0.3856604721574557,
-      "blend_text_heavy": 0.2998385593295101,
+      "blend_equal": 0.34438659016965,
+      "blend_path_heavy": 0.38647900937053925,
+      "blend_text_heavy": 0.3022941709687607,
       "changed_a": [
         "jsonpatch.py",
         "patch_test.py",
@@ -7138,6 +7320,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.3333333333333333,
       "directory_overlap": 1.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-8e2d88dcdbf0",
       "label": "clean",
@@ -7184,15 +7367,15 @@
         "jsonpatch.py"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.25692760291553723,
+      "text_score": 0.2602017517678714,
       "tree_files": 26,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.21280664249183057,
-      "blend_path_heavy": 0.10640332124591528,
-      "blend_text_heavy": 0.31920996373774585,
+      "blend_equal": 0.22457288947713377,
+      "blend_path_heavy": 0.11228644473856689,
+      "blend_text_heavy": 0.3368593342157007,
       "changed_a": [
         ".github/copilot-instructions.md",
         ".github/workflows/dotnet-build.yml",
@@ -7289,6 +7472,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.2727272727272727,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-91bd6ef928f6",
       "label": "clean",
@@ -7335,15 +7519,15 @@
         "tests/SharpSite.Tests.Plugins/ValidateManifest.cs"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.42561328498366113,
+      "text_score": 0.44914577895426755,
       "tree_files": 265,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.20111131853275765,
-      "blend_path_heavy": 0.10055565926637883,
-      "blend_text_heavy": 0.3016669777991365,
+      "blend_equal": 0.20215211949284032,
+      "blend_path_heavy": 0.10107605974642016,
+      "blend_text_heavy": 0.3032281792392605,
       "changed_a": [
         "airframe-surface/src/main/scala-3/wvlet/airframe/surface/CompileTimeSurfaceFactory.scala",
         "airframe-surface/src/test/scala/wvlet/airframe/surface/i3869.scala"
@@ -7356,6 +7540,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.25,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-923788a60796",
       "label": "clean",
@@ -7402,7 +7587,7 @@
         "airframe-surface/.js/src/main/scala-2/wvlet/airframe/surface/SurfaceFactory.scala"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.4022226370655153,
+      "text_score": 0.40430423898568063,
       "tree_files": 1400,
       "tree_truncated": false
     },
@@ -7437,6 +7622,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.35,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-929f90736f3f",
       "label": "clean",
@@ -7489,9 +7675,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.11397914551998814,
-      "blend_path_heavy": 0.11254512831554962,
-      "blend_text_heavy": 0.11541316272442666,
+      "blend_equal": 0.12431125842430116,
+      "blend_path_heavy": 0.11771118476770613,
+      "blend_text_heavy": 0.13091133208089617,
       "changed_a": [
         "Source/WriteableBitmapEx.Uwp/WriteableBitmapEx.Uwp.csproj",
         "Source/WriteableBitmapEx.WinRT/WriteableBitmapEx.WinRT.csproj",
@@ -7507,6 +7693,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-93b8d89f8972",
       "label": "clean",
@@ -7553,15 +7740,15 @@
         "3rdParty/nuget/nuget.exe"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.11684717992886517,
+      "text_score": 0.1375114057374912,
       "tree_files": 291,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.5420484310928291,
-      "blend_path_heavy": 0.4853099298321288,
-      "blend_text_heavy": 0.5987869323535293,
+      "blend_equal": 0.5409504106594608,
+      "blend_path_heavy": 0.48476091961544465,
+      "blend_text_heavy": 0.5971399017034769,
       "changed_a": [
         "lessons/09-lesson/README.md",
         "lessons/09-lesson/solution/solution-quiz.md",
@@ -7591,6 +7778,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-9589924608a0",
       "label": "clean",
@@ -7637,15 +7825,15 @@
         "lessons/06-tool-calling/solution/solution-quiz.md"
       ],
       "stripped_recall_mean": 0.0625,
-      "text_score": 0.6555254336142295,
+      "text_score": 0.653329392747493,
       "tree_files": 204,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.006260833556288694,
-      "blend_path_heavy": 0.003130416778144347,
-      "blend_text_heavy": 0.00939125033443304,
+      "blend_equal": 0.005756627122812033,
+      "blend_path_heavy": 0.0028783135614060167,
+      "blend_text_heavy": 0.008634940684218051,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -7653,6 +7841,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.125,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-96dcc7eeeed2",
       "label": "clean",
@@ -7699,15 +7888,15 @@
         ".github/ISSUE_TEMPLATE/config.yml"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.012521667112577389,
+      "text_score": 0.011513254245624067,
       "tree_files": 687,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.02650060045247968,
-      "blend_path_heavy": 0.01325030022623984,
-      "blend_text_heavy": 0.039750900678719524,
+      "blend_equal": 0.0300801775182602,
+      "blend_path_heavy": 0.0150400887591301,
+      "blend_text_heavy": 0.045120266277390304,
       "changed_a": [
         "CHANGELOG.md",
         "package-lock.json",
@@ -7724,6 +7913,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-988509b2602a",
       "label": "conflict",
@@ -7770,15 +7960,15 @@
         "packages/bundle/test-d/pass/import-create-direct-line.test-d.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.05300120090495936,
+      "text_score": 0.0601603550365204,
       "tree_files": 4739,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.052622948282693705,
-      "blend_path_heavy": 0.026311474141346852,
-      "blend_text_heavy": 0.07893442242404056,
+      "blend_equal": 0.04920831251928004,
+      "blend_path_heavy": 0.02460415625964002,
+      "blend_text_heavy": 0.07381246877892006,
       "changed_a": [
         "sample.cv.json",
         "schema/jsoncv.schema.json",
@@ -7792,6 +7982,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-9b118dbbde80",
       "label": "clean",
@@ -7838,15 +8029,15 @@
         "src/editor/index.html"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.10524589656538741,
+      "text_score": 0.09841662503856008,
       "tree_files": 44,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.2857142857142857,
-      "blend_equal": 0.007829378533768375,
-      "blend_path_heavy": 0.003914689266884187,
-      "blend_text_heavy": 0.011744067800652562,
+      "blend_equal": 0.007715889489908712,
+      "blend_path_heavy": 0.003857944744954356,
+      "blend_text_heavy": 0.011573834234863068,
       "changed_a": [
         "weixin-java-cp/src/main/java/me/chanjar/weixin/cp/config/impl/AbstractWxCpInRedisConfigImpl.java",
         "weixin-java-cp/src/test/java/me/chanjar/weixin/cp/config/impl/DemoToStringFix.java",
@@ -7865,6 +8056,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.575,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-9b473ec0abee",
       "label": "clean",
@@ -7911,15 +8103,15 @@
         "weixin-java-mp/src/main/java/me/chanjar/weixin/mp/bean/invoice/merchant/MerchantInvoicePlatformInfo.java"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.01565875706753675,
+      "text_score": 0.015431778979817424,
       "tree_files": 3781,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.042166106293845665,
-      "blend_path_heavy": 0.021083053146922832,
-      "blend_text_heavy": 0.0632491594407685,
+      "blend_equal": 0.04344415944036165,
+      "blend_path_heavy": 0.021722079720180826,
+      "blend_text_heavy": 0.06516623916054248,
       "changed_a": [
         "src/OpenApi/src/Extensions/JsonNodeSchemaExtensions.cs",
         "src/OpenApi/test/Microsoft.AspNetCore.OpenApi.Tests/Services/OpenApiSchemaService/OpenApiSchemaService.PrimaryConstructorSchemas.cs"
@@ -7932,6 +8124,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-9ca4764ea6c0",
       "label": "clean",
@@ -7978,15 +8171,15 @@
         "eng/Versions.props"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.08433221258769133,
+      "text_score": 0.0868883188807233,
       "tree_files": 16231,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.05748997065887925,
-      "blend_path_heavy": 0.028744985329439626,
-      "blend_text_heavy": 0.08623495598831887,
+      "blend_equal": 0.05742631217427736,
+      "blend_path_heavy": 0.02871315608713868,
+      "blend_text_heavy": 0.08613946826141604,
       "changed_a": [
         "src/modules/cmdpal/Microsoft.CmdPal.UI.ViewModels/Commands/FallbackReloadItem.cs"
       ],
@@ -8008,6 +8201,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9545454545454546,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-a161e9ea2e39",
       "label": "clean",
@@ -8054,15 +8248,15 @@
         "src/common/notifications/BackgroundActivator/BackgroundActivator.vcxproj"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1149799413177585,
+      "text_score": 0.11485262434855471,
       "tree_files": 5914,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.045454545454545456,
-      "blend_equal": 0.10823037762901262,
-      "blend_path_heavy": 0.05411518881450631,
-      "blend_text_heavy": 0.16234556644351894,
+      "blend_equal": 0.10031277072874305,
+      "blend_path_heavy": 0.050156385364371524,
+      "blend_text_heavy": 0.15046915609311456,
       "changed_a": [
         ".github/workflows/test.yml",
         ".gitignore",
@@ -8095,6 +8289,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.631578947368421,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-a98d2c3afbc8",
       "label": "conflict",
@@ -8141,15 +8336,15 @@
         "examples/simple_plan_windows_vss_backup/terraform.tfvars"
       ],
       "stripped_recall_mean": 0.125,
-      "text_score": 0.21646075525802524,
+      "text_score": 0.2006255414574861,
       "tree_files": 116,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.013248763864629136,
-      "blend_path_heavy": 0.006624381932314568,
-      "blend_text_heavy": 0.019873145796943704,
+      "blend_equal": 0.013428411336567869,
+      "blend_path_heavy": 0.006714205668283934,
+      "blend_text_heavy": 0.0201426170048518,
       "changed_a": [
         "README.md"
       ],
@@ -8163,6 +8358,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-a993dc151944",
       "label": "clean",
@@ -8209,15 +8405,15 @@
         "src/Essentials/src/MainThread/MainThread.netstandard.cs"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.02649752772925827,
+      "text_score": 0.026856822673135737,
       "tree_files": 15153,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.3333333333333333,
-      "blend_equal": 0.11483981514136948,
-      "blend_path_heavy": 0.05741990757068474,
-      "blend_text_heavy": 0.17225972271205423,
+      "blend_equal": 0.11490565014963232,
+      "blend_path_heavy": 0.05745282507481616,
+      "blend_text_heavy": 0.17235847522444847,
       "changed_a": [
         "src/helpers/ArticleHelper.ts",
         "src/helpers/ContentType.ts"
@@ -8231,6 +8427,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-a9eeb4925bd4",
       "label": "clean",
@@ -8277,15 +8474,15 @@
         "src/components/uniforms-frontmatter/ValidatedForm.tsx"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.22967963028273897,
+      "text_score": 0.22981130029926464,
       "tree_files": 692,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04039292120876559,
-      "blend_path_heavy": 0.020196460604382797,
-      "blend_text_heavy": 0.060589381813148394,
+      "blend_equal": 0.0390310540235311,
+      "blend_path_heavy": 0.01951552701176555,
+      "blend_text_heavy": 0.058546581035296655,
       "changed_a": [
         "build.cmd",
         "src/System.Windows.Forms/System/Windows/Forms/Application.ThreadContext.cs"
@@ -8298,6 +8495,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-aba43f40a457",
       "label": "clean",
@@ -8344,15 +8542,15 @@
         "src/System.Windows.Forms/System/Windows/Forms/Nrbf/WinFormsNrbfSerializer.cs"
       ],
       "stripped_recall_mean": 0.75,
-      "text_score": 0.08078584241753119,
+      "text_score": 0.0780621080470622,
       "tree_files": 5954,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.044766137962216755,
-      "blend_path_heavy": 0.022383068981108378,
-      "blend_text_heavy": 0.06714920694332513,
+      "blend_equal": 0.050834880882641466,
+      "blend_path_heavy": 0.025417440441320733,
+      "blend_text_heavy": 0.0762523213239622,
       "changed_a": [
         "frontend/src/app/components/audit/audit.component.html"
       ],
@@ -8365,6 +8563,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-ace549969570",
       "label": "clean",
@@ -8411,15 +8610,15 @@
         "backend/src/entities/permission/dto/create-permissions.dto.ts"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.08953227592443351,
+      "text_score": 0.10166976176528293,
       "tree_files": 1817,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.08333333333333333,
-      "blend_equal": 0.05456039191765858,
-      "blend_path_heavy": 0.02728019595882929,
-      "blend_text_heavy": 0.08184058787648787,
+      "blend_equal": 0.05299047409089344,
+      "blend_path_heavy": 0.02649523704544672,
+      "blend_text_heavy": 0.07948571113634016,
       "changed_a": [
         "CHANGELOG.md",
         "airlock_processor/StatusChangedQueueTrigger/__init__.py",
@@ -8442,6 +8641,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-add24f685bc6",
       "label": "clean",
@@ -8488,15 +8688,15 @@
         "docs/assets/corp-tenant.png"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.10912078383531716,
+      "text_score": 0.10598094818178688,
       "tree_files": 1363,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.013416747480692517,
-      "blend_path_heavy": 0.006708373740346258,
-      "blend_text_heavy": 0.020125121221038773,
+      "blend_equal": 0.011214577179728909,
+      "blend_path_heavy": 0.005607288589864454,
+      "blend_text_heavy": 0.016821865769593363,
       "changed_a": [
         "packages/core/src/index.ts",
         "packages/core/src/types/integration.test.ts",
@@ -8513,6 +8713,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6666666666666666,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-ae39589e4cfa",
       "label": "clean",
@@ -8559,7 +8760,7 @@
         "packages/core/src/support/computerTester/ComputerTester.ts"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.026833494961385033,
+      "text_score": 0.022429154359457817,
       "tree_files": 572,
       "tree_truncated": false
     },
@@ -8596,6 +8797,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8666666666666667,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-af7ba11cf78c",
       "label": "clean",
@@ -8648,9 +8850,9 @@
     },
     {
       "actual_overlap": 0.3333333333333333,
-      "blend_equal": 0.056216371485853824,
-      "blend_path_heavy": 0.028108185742926912,
-      "blend_text_heavy": 0.08432455722878074,
+      "blend_equal": 0.05526958581870842,
+      "blend_path_heavy": 0.02763479290935421,
+      "blend_text_heavy": 0.08290437872806262,
       "changed_a": [
         "packages/zwave-js/src/lib/driver/Driver.ts"
       ],
@@ -8664,6 +8866,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-afe98dcab5d1",
       "label": "clean",
@@ -8710,15 +8913,15 @@
         "docs/_images/s2-inclusion-selection.png"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.11243274297170765,
+      "text_score": 0.11053917163741683,
       "tree_files": 3620,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.4233017820691583,
-      "blend_path_heavy": 0.5449842243679125,
-      "blend_text_heavy": 0.3016193397704041,
+      "blend_equal": 0.4165333945029528,
+      "blend_path_heavy": 0.5416000305848098,
+      "blend_text_heavy": 0.2914667584210958,
       "changed_a": [
         "poetry.lock",
         "pyproject.toml",
@@ -8737,6 +8940,7 @@
       "conflict_recall": 0.2,
       "coverage_mean": 0.42857142857142855,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b1c5b79f24fa",
       "label": "conflict",
@@ -8783,15 +8987,15 @@
         "src/bespokelabs/curator/request_processor/openai_batch_request_processor.py"
       ],
       "stripped_recall_mean": 0.21428571428571427,
-      "text_score": 0.17993689747164998,
+      "text_score": 0.16640012233923893,
       "tree_files": 121,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.05,
-      "blend_equal": 0.025961344429718657,
-      "blend_path_heavy": 0.012980672214859329,
-      "blend_text_heavy": 0.038942016644577984,
+      "blend_equal": 0.026344453354023717,
+      "blend_path_heavy": 0.013172226677011858,
+      "blend_text_heavy": 0.039516680031035575,
       "changed_a": [
         "DevProxy.Abstractions/DevProxy.Abstractions.csproj",
         "DevProxy.Abstractions/Extensions/CommandLineExtensions.cs",
@@ -8822,6 +9026,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b21a76d13653",
       "label": "clean",
@@ -8868,15 +9073,15 @@
         "DevProxy/Extensions/ConfigurationManagerExtensions.cs"
       ],
       "stripped_recall_mean": 0.13157894736842105,
-      "text_score": 0.051922688859437315,
+      "text_score": 0.052688906708047434,
       "tree_files": 487,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.025669770735259025,
-      "blend_path_heavy": 0.012834885367629513,
-      "blend_text_heavy": 0.038504656102888536,
+      "blend_equal": 0.02337306014946407,
+      "blend_path_heavy": 0.011686530074732035,
+      "blend_text_heavy": 0.03505959022419611,
       "changed_a": [
         "src/Microsoft.Sbom.Api/Executors/SPDXSbomReaderForExternalDocumentReference.cs",
         "test/Microsoft.Sbom.Api.Tests/Executors/SPDXSBOMReaderForExternalDocumentReferenceTests.cs"
@@ -8889,6 +9094,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b313773c84fb",
       "label": "clean",
@@ -8935,15 +9141,15 @@
         ".github/release-drafter.yml"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.05133954147051805,
+      "text_score": 0.04674612029892814,
       "tree_files": 587,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0031644075007872534,
-      "blend_path_heavy": 0.0015822037503936267,
-      "blend_text_heavy": 0.00474661125118088,
+      "blend_equal": 0.002672077328078435,
+      "blend_path_heavy": 0.0013360386640392176,
+      "blend_text_heavy": 0.004008115992117653,
       "changed_a": [
         "modules/dashboard/internal/cluster-api/health-monitor.go",
         "modules/shared/k8shelpers/authorizer.go",
@@ -8960,6 +9166,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b3c19d94d427",
       "label": "clean",
@@ -9006,15 +9213,15 @@
         "modules/cluster-api/graph/resolver_test.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.006328815001574507,
+      "text_score": 0.00534415465615687,
       "tree_files": 295,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.016967433290222093,
-      "blend_path_heavy": 0.008483716645111047,
-      "blend_text_heavy": 0.02545114993533314,
+      "blend_equal": 0.01685069501345198,
+      "blend_path_heavy": 0.00842534750672599,
+      "blend_text_heavy": 0.025276042520177972,
       "changed_a": [
         "persistence/mediafile_repository.go",
         "persistence/mediafile_repository_test.go"
@@ -9029,6 +9236,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b47721a7f481",
       "label": "clean",
@@ -9075,15 +9283,15 @@
         "conf/buildtags/buildtags.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.03393486658044419,
+      "text_score": 0.03370139002690396,
       "tree_files": 1065,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.08332683289212094,
-      "blend_path_heavy": 0.09721897200161603,
-      "blend_text_heavy": 0.06943469378262584,
+      "blend_equal": 0.07959895186043436,
+      "blend_path_heavy": 0.09535503148577273,
+      "blend_text_heavy": 0.063842872235096,
       "changed_a": [
         "docs/_indicators/Tema.md",
         "src/Indicators.csproj"
@@ -9098,6 +9306,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b562b17a71ea",
       "label": "clean",
@@ -9144,15 +9353,15 @@
         "docs/examples/Skender.Stock.Indicators-Examples.zip"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.05554255467313077,
+      "text_score": 0.04808679260975762,
       "tree_files": 923,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0350604469097563,
-      "blend_path_heavy": 0.01753022345487815,
-      "blend_text_heavy": 0.052590670364634454,
+      "blend_equal": 0.03613275092336183,
+      "blend_path_heavy": 0.018066375461680915,
+      "blend_text_heavy": 0.05419912638504275,
       "changed_a": [
         "app/models/collection.rb",
         "app/models/concerns/duplicate_slug_cleanup.rb",
@@ -9171,6 +9380,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.675,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b6e28fdfa7d2",
       "label": "clean",
@@ -9217,15 +9427,15 @@
         "config/locales/contact/contact-de.yml"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0701208938195126,
+      "text_score": 0.07226550184672366,
       "tree_files": 1752,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.019753382542803045,
-      "blend_path_heavy": 0.009876691271401523,
-      "blend_text_heavy": 0.029630073814204568,
+      "blend_equal": 0.019535807365217477,
+      "blend_path_heavy": 0.009767903682608738,
+      "blend_text_heavy": 0.029303711047826215,
       "changed_a": [
         "app/src/androidTest/java/at/tomtasche/reader/test/MainActivityTests.java",
         "app/src/main/AndroidManifest.xml"
@@ -9238,6 +9448,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b72e0c2ea1ae",
       "label": "clean",
@@ -9284,15 +9495,15 @@
         "app/src/main/res/layout/fragment_document.xml"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.03950676508560609,
+      "text_score": 0.03907161473043495,
       "tree_files": 271,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.5,
-      "blend_equal": 0.05208526543928891,
-      "blend_path_heavy": 0.026042632719644455,
-      "blend_text_heavy": 0.07812789815893337,
+      "blend_equal": 0.05150776412573033,
+      "blend_path_heavy": 0.025753882062865167,
+      "blend_text_heavy": 0.0772616461885955,
       "changed_a": [
         "src/huggingface_hub/hf_api.py",
         "tests/test_hf_api.py"
@@ -9305,6 +9516,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b76b642203c9",
       "label": "clean",
@@ -9351,15 +9563,15 @@
         "src/huggingface_hub/inference/_providers/fal_ai.py"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.10417053087857782,
+      "text_score": 0.10301552825146067,
       "tree_files": 422,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.14597152336885058,
-      "blend_path_heavy": 0.07298576168442529,
-      "blend_text_heavy": 0.21895728505327589,
+      "blend_equal": 0.1465356469489591,
+      "blend_path_heavy": 0.07326782347447955,
+      "blend_text_heavy": 0.21980347042343865,
       "changed_a": [
         "vendor/sigs.k8s.io/cloud-provider-azure/pkg/provider/azure_controller_standard.go",
         "vendor/sigs.k8s.io/cloud-provider-azure/pkg/provider/azure_controller_vmssflex.go"
@@ -9387,6 +9599,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b84b772bf9dc",
       "label": "clean",
@@ -9433,15 +9646,15 @@
         "vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/descriptor.pb.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.29194304673770116,
+      "text_score": 0.2930712938979182,
       "tree_files": 11673,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.04716174124845838,
-      "blend_path_heavy": 0.02358087062422919,
-      "blend_text_heavy": 0.07074261187268757,
+      "blend_equal": 0.047971714679527606,
+      "blend_path_heavy": 0.023985857339763803,
+      "blend_text_heavy": 0.07195757201929141,
       "changed_a": [
         "dace/codegen/codegen.py",
         "dace/codegen/tools/type_inference.py",
@@ -9464,6 +9677,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.4166666666666667,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-b880d5902ca7",
       "label": "conflict",
@@ -9510,15 +9724,15 @@
         ".github/workflows/fpga-ci.yml"
       ],
       "stripped_recall_mean": 0.041666666666666664,
-      "text_score": 0.09432348249691676,
+      "text_score": 0.09594342935905521,
       "tree_files": 1287,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0742039269585441,
-      "blend_path_heavy": 0.03710196347927205,
-      "blend_text_heavy": 0.11130589043781614,
+      "blend_equal": 0.08448236029378618,
+      "blend_path_heavy": 0.04224118014689309,
+      "blend_text_heavy": 0.12672354044067927,
       "changed_a": [
         "agent/agent-tooling/src/main/java/com/microsoft/applicationinsights/agent/internal/init/AppInsightsCertificate.java",
         "agent/agent-tooling/src/main/java/com/microsoft/applicationinsights/agent/internal/telemetry/BatchItemProcessor.java",
@@ -9530,6 +9744,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-bc4170b31d94",
       "label": "clean",
@@ -9576,15 +9791,15 @@
         "agent/instrumentation/micrometer-1.0/src/main/java/io/opentelemetry/javaagent/instrumentation/micrometer/ai/MicrometerInstrumentationModule.java"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1484078539170882,
+      "text_score": 0.16896472058757236,
       "tree_files": 1237,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2784794245165837,
-      "blend_path_heavy": 0.13923971225829185,
-      "blend_text_heavy": 0.41771913677487554,
+      "blend_equal": 0.27355451792676927,
+      "blend_path_heavy": 0.13677725896338463,
+      "blend_text_heavy": 0.4103317768901539,
       "changed_a": [
         "python/packages/autogen-ext/pyproject.toml",
         "python/samples/agentchat_graphrag/requirements.txt",
@@ -9600,6 +9815,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.16666666666666666,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-bc5c136a91ca",
       "label": "clean",
@@ -9646,15 +9862,15 @@
         ".github/ISSUE_TEMPLATE/config.yml"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.5569588490331674,
+      "text_score": 0.5471090358535385,
       "tree_files": 1808,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.04,
-      "blend_equal": 0.1353046034798166,
-      "blend_path_heavy": 0.0676523017399083,
-      "blend_text_heavy": 0.2029569052197249,
+      "blend_equal": 0.13594805985049102,
+      "blend_path_heavy": 0.06797402992524551,
+      "blend_text_heavy": 0.20392208977573653,
       "changed_a": [
         "docs/API.md",
         "docs/PreviewFeatures.md",
@@ -9690,6 +9906,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.96,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-bcebe5751c92",
       "label": "conflict",
@@ -9736,7 +9953,7 @@
         "src/bin/winuser/msquic.rc.in"
       ],
       "stripped_recall_mean": 0.06,
-      "text_score": 0.2706092069596332,
+      "text_score": 0.27189611970098204,
       "tree_files": 1017,
       "tree_truncated": false
     },
@@ -9754,6 +9971,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-c47c552ff402",
       "label": "clean",
@@ -9806,9 +10024,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2554966397578913,
-      "blend_path_heavy": 0.25274831987894564,
-      "blend_text_heavy": 0.25824495963683686,
+      "blend_equal": 0.2582944466820212,
+      "blend_path_heavy": 0.2541472233410106,
+      "blend_text_heavy": 0.26244167002303176,
       "changed_a": [
         "README.md",
         "charts/latest/blob-csi-driver/templates/csi-blob-node.yaml",
@@ -9823,6 +10041,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c4c9ccc536be",
       "label": "clean",
@@ -9869,15 +10088,15 @@
         "deploy/v1.10.0/blobfuse-proxy.yaml"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.2609932795157825,
+      "text_score": 0.26658889336404235,
       "tree_files": 10012,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.23076923076923078,
-      "blend_equal": 0.28687122510677676,
-      "blend_path_heavy": 0.14343561255338838,
-      "blend_text_heavy": 0.43030683766016514,
+      "blend_equal": 0.2827736355342265,
+      "blend_path_heavy": 0.14138681776711326,
+      "blend_text_heavy": 0.4241604533013398,
       "changed_a": [
         "packages/core/index.js",
         "packages/core/index.mjs",
@@ -9903,6 +10122,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c5d0dc1b7fb7",
       "label": "clean",
@@ -9949,15 +10169,15 @@
         "packages/cli/src/utils/zapierwrapper.js"
       ],
       "stripped_recall_mean": 0.16666666666666666,
-      "text_score": 0.5737424502135535,
+      "text_score": 0.565547271068453,
       "tree_files": 775,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.19090668022413365,
-      "blend_path_heavy": 0.09545334011206683,
-      "blend_text_heavy": 0.28636002033620045,
+      "blend_equal": 0.18937042988271524,
+      "blend_path_heavy": 0.09468521494135762,
+      "blend_text_heavy": 0.28405564482407286,
       "changed_a": [
         "components/splitter/SplitBar.tsx",
         "components/splitter/__tests__/index.test.tsx"
@@ -9971,6 +10191,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c6128c6a6dad",
       "label": "conflict",
@@ -10017,15 +10238,15 @@
         "components/message/demo/update.tsx"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.3818133604482673,
+      "text_score": 0.3787408597654305,
       "tree_files": 4222,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.005908784110863864,
-      "blend_path_heavy": 0.002954392055431932,
-      "blend_text_heavy": 0.008863176166295797,
+      "blend_equal": 0.006038968728588268,
+      "blend_path_heavy": 0.003019484364294134,
+      "blend_text_heavy": 0.009058453092882402,
       "changed_a": [
         "BUILD_TROUBLESHOOTING.md",
         "packages/next-config/index.ts"
@@ -10043,6 +10264,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.41666666666666663,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c6dce28cb969",
       "label": "clean",
@@ -10089,15 +10311,15 @@
         "apps/app/actions/group/delete.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.011817568221727729,
+      "text_score": 0.012077937457176537,
       "tree_files": 1051,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.11748339883952941,
-      "blend_path_heavy": 0.11429725497532026,
-      "blend_text_heavy": 0.12066954270373857,
+      "blend_equal": 0.11628803141930241,
+      "blend_path_heavy": 0.11369957126520676,
+      "blend_text_heavy": 0.11887649157339805,
       "changed_a": [
         "QuickLook/App.xaml.cs"
       ],
@@ -10110,6 +10332,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c88a9151522f",
       "label": "clean",
@@ -10156,15 +10379,15 @@
         "QuickLook.Plugin/QuickLook.Plugin.TextViewer/Syntax/Dark/Makefile.xshd"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.12385568656794772,
+      "text_score": 0.1214649517274937,
       "tree_files": 711,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.16358307274038025,
-      "blend_path_heavy": 0.13734709192574568,
-      "blend_text_heavy": 0.18981905355501483,
+      "blend_equal": 0.18083358267202582,
+      "blend_path_heavy": 0.14597234689156846,
+      "blend_text_heavy": 0.21569481845248317,
       "changed_a": [
         "Instructions/Labs/AZ400_M04_L10_Integrate_Azure_Key_Vault_with_Azure_DevOps.md"
       ],
@@ -10176,6 +10399,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-c8daf3a6b425",
       "label": "clean",
@@ -10222,15 +10446,15 @@
         ".github/ISSUE_TEMPLATE/feedback.yml"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.2160550343696494,
+      "text_score": 0.25055605423294053,
       "tree_files": 206,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.12068705727986057,
-      "blend_path_heavy": 0.06034352863993028,
-      "blend_text_heavy": 0.18103058591979085,
+      "blend_equal": 0.12303518827936899,
+      "blend_path_heavy": 0.061517594139684495,
+      "blend_text_heavy": 0.18455278241905348,
       "changed_a": [
         "crates/node_binding/binding.js",
         "crates/rspack_binding_builder_testing/binding.js",
@@ -10244,6 +10468,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-caabd495c5aa",
       "label": "clean",
@@ -10290,15 +10515,15 @@
         "packages/rspack/src/Resolver.ts"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.24137411455972113,
+      "text_score": 0.24607037655873798,
       "tree_files": 18605,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1465728268725277,
-      "blend_path_heavy": 0.07328641343626385,
-      "blend_text_heavy": 0.21985924030879156,
+      "blend_equal": 0.1500951132504691,
+      "blend_path_heavy": 0.07504755662523455,
+      "blend_text_heavy": 0.22514266987570364,
       "changed_a": [
         "docs/Operators.md",
         "docs/TestCoverage.md",
@@ -10317,6 +10542,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8125,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-cbc4316fa063",
       "label": "clean",
@@ -10363,15 +10589,15 @@
         "onnx/onnx-ml.proto"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.2931456537450554,
+      "text_score": 0.3001902265009382,
       "tree_files": 7652,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2242040508566127,
-      "blend_path_heavy": 0.11210202542830636,
-      "blend_text_heavy": 0.33630607628491904,
+      "blend_equal": 0.2210882213408428,
+      "blend_path_heavy": 0.1105441106704214,
+      "blend_text_heavy": 0.3316323320112642,
       "changed_a": [
         "avm/res/web/site/README.md",
         "avm/res/web/site/basic-publishing-credentials-policy/main.json",
@@ -10401,6 +10627,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.9333333333333333,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-d082e2ef7464",
       "label": "clean",
@@ -10447,15 +10674,15 @@
         "avm/res/communication/communication-service/README.md"
       ],
       "stripped_recall_mean": 0.4,
-      "text_score": 0.4484081017132254,
+      "text_score": 0.4421764426816856,
       "tree_files": 3980,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.30357632555304415,
-      "blend_path_heavy": 0.2073437183320776,
-      "blend_text_heavy": 0.39980893277401064,
+      "blend_equal": 0.29135074723064847,
+      "blend_path_heavy": 0.20123092917087979,
+      "blend_text_heavy": 0.3814705652904172,
       "changed_a": [
         ".semversioner/next-release/minor-20250521041234833898.json",
         "graphrag/storage/factory.py",
@@ -10596,6 +10823,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8138020833333333,
       "directory_overlap": 0.125,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-d4e81047ca37",
       "label": "clean",
@@ -10642,15 +10870,15 @@
         ".github/workflows/python-integration-tests.yml"
       ],
       "stripped_recall_mean": 0.3411458333333333,
-      "text_score": 0.49604153999497713,
+      "text_score": 0.4715903833501858,
       "tree_files": 670,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.07689211984457756,
-      "blend_path_heavy": 0.03844605992228878,
-      "blend_text_heavy": 0.11533817976686633,
+      "blend_equal": 0.07501106421138491,
+      "blend_path_heavy": 0.037505532105692456,
+      "blend_text_heavy": 0.11251659631707736,
       "changed_a": [
         "projects/kit/components/input-date-range/test/input-date-range.directive.spec.ts",
         "projects/kit/components/input-date/input-date.directive.ts",
@@ -10664,6 +10892,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.6666666666666666,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-d580a8a47b50",
       "label": "clean",
@@ -10710,15 +10939,15 @@
         "projects/kit/components/progress/progress-segmented/progress-segmented.directive.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.1537842396891551,
+      "text_score": 0.15002212842276982,
       "tree_files": 23463,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.11825116224660322,
-      "blend_path_heavy": 0.05912558112330161,
-      "blend_text_heavy": 0.17737674336990483,
+      "blend_equal": 0.11544167555138381,
+      "blend_path_heavy": 0.057720837775691904,
+      "blend_text_heavy": 0.17316251332707572,
       "changed_a": [
         "docs/changes/newsfragments/7212.new",
         "docs/dataset/introduction.rst",
@@ -10737,6 +10966,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.8333333333333333,
       "directory_overlap": 0.4,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-d6bc8d41fba2",
       "label": "clean",
@@ -10783,15 +11013,15 @@
         "src/qcodes/dataset/data_export.py"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.23650232449320643,
+      "text_score": 0.23088335110276761,
       "tree_files": 1008,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1634241425940347,
-      "blend_path_heavy": 0.08171207129701735,
-      "blend_text_heavy": 0.24513621389105206,
+      "blend_equal": 0.1726751588462831,
+      "blend_path_heavy": 0.08633757942314155,
+      "blend_text_heavy": 0.2590127382694246,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -10799,6 +11029,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-d82e9f3f162c",
       "label": "clean",
@@ -10845,15 +11076,15 @@
         "vendor/choosealicense.com/_licenses/bsd-3-clause.txt"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.3268482851880694,
+      "text_score": 0.3453503176925662,
       "tree_files": 297,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.0663222723437395,
-      "blend_path_heavy": 0.03316113617186975,
-      "blend_text_heavy": 0.09948340851560925,
+      "blend_equal": 0.06703655562316387,
+      "blend_path_heavy": 0.03351827781158193,
+      "blend_text_heavy": 0.1005548334347458,
       "changed_a": [
         ".gitlab-ci-gradle.yml",
         "analytics/build.gradle.kts",
@@ -10956,6 +11187,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.005319148936170213,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-d9e8765a2bb3",
       "label": "clean",
@@ -11002,15 +11234,15 @@
         "orbital-ui/src/assets/img/tabler/calendar-event.svg"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.132644544687479,
+      "text_score": 0.13407311124632773,
       "tree_files": 7681,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1306386509831483,
-      "blend_path_heavy": 0.1208748810471297,
-      "blend_text_heavy": 0.14040242091916688,
+      "blend_equal": 0.13037710042749515,
+      "blend_path_heavy": 0.12074410576930313,
+      "blend_text_heavy": 0.14001009508568718,
       "changed_a": [
         ".gitignore",
         "cmd/azqr/commands/scan.go",
@@ -11026,6 +11258,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.14285714285714285,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-da3a6e9784c0",
       "label": "clean",
@@ -11072,15 +11305,15 @@
         "internal/renderers/json/json.go"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.15016619085518548,
+      "text_score": 0.1496430897438792,
       "tree_files": 364,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.43065415066544316,
-      "blend_path_heavy": 0.34032707533272155,
-      "blend_text_heavy": 0.5209812259981648,
+      "blend_equal": 0.43882542143383824,
+      "blend_path_heavy": 0.34441271071691915,
+      "blend_text_heavy": 0.5332381321507573,
       "changed_a": [
         "frontend/components/Label/Selector.vue"
       ],
@@ -11092,6 +11325,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-daa23c553287",
       "label": "clean",
@@ -11138,15 +11372,15 @@
         ".devcontainer/Dockerfile"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.6113083013308863,
+      "text_score": 0.6276508428676765,
       "tree_files": 691,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.08333333333333333,
-      "blend_equal": 0.07212985244275322,
-      "blend_path_heavy": 0.03606492622137661,
-      "blend_text_heavy": 0.10819477866412983,
+      "blend_equal": 0.06839383131271459,
+      "blend_path_heavy": 0.034196915656357296,
+      "blend_text_heavy": 0.10259074696907189,
       "changed_a": [
         ".gitignore",
         "CHANGELOG.md",
@@ -11169,6 +11403,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-dbea9b759db8",
       "label": "conflict",
@@ -11215,7 +11450,7 @@
         "component/attr_cache/cacheMap.go"
       ],
       "stripped_recall_mean": 0.3055555555555556,
-      "text_score": 0.14425970488550643,
+      "text_score": 0.13678766262542918,
       "tree_files": 379,
       "tree_truncated": false
     },
@@ -11246,6 +11481,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5833333333333334,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-de00c65bf833",
       "label": "clean",
@@ -11298,9 +11534,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.023425022491076447,
-      "blend_path_heavy": 0.011712511245538224,
-      "blend_text_heavy": 0.03513753373661467,
+      "blend_equal": 0.024126187132610503,
+      "blend_path_heavy": 0.012063093566305251,
+      "blend_text_heavy": 0.036189280698915756,
       "changed_a": [],
       "changed_b": [],
       "conflict_intersection_recall": null,
@@ -11308,6 +11544,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.0,
       "directory_overlap": 0.0,
+      "empty_footprint": true,
       "files_truncated": false,
       "instance_id": "nc-de2af7b5d1da",
       "label": "clean",
@@ -11354,15 +11591,15 @@
         "docs/artifact-list-with-versions.md"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.046850044982152894,
+      "text_score": 0.048252374265221006,
       "tree_files": 2139,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.06448502944930248,
-      "blend_path_heavy": 0.03224251472465124,
-      "blend_text_heavy": 0.09672754417395373,
+      "blend_equal": 0.06415384344412046,
+      "blend_path_heavy": 0.03207692172206023,
+      "blend_text_heavy": 0.0962307651661807,
       "changed_a": [
         "components/input/demo/otp.md",
         "components/input/demo/otp.ts",
@@ -11380,6 +11617,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.75,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-e0878e77e370",
       "label": "clean",
@@ -11426,7 +11664,7 @@
         "components/skeleton/demo/element.ts"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.12897005889860497,
+      "text_score": 0.12830768688824093,
       "tree_files": 3482,
       "tree_truncated": false
     },
@@ -11450,6 +11688,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-e1b775414f67",
       "label": "clean",
@@ -11502,9 +11741,9 @@
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.02677708455810107,
-      "blend_path_heavy": 0.013388542279050534,
-      "blend_text_heavy": 0.0401656268371516,
+      "blend_equal": 0.02690269429672625,
+      "blend_path_heavy": 0.013451347148363125,
+      "blend_text_heavy": 0.040354041445089375,
       "changed_a": [
         ".github/copilot-instructions.md",
         "src/hyperlight_guest/build.rs",
@@ -11537,6 +11776,7 @@
       "conflict_recall": 0.0,
       "coverage_mean": 0.9444444444444444,
       "directory_overlap": 0.2,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-e452e9083d8f",
       "label": "conflict",
@@ -11583,15 +11823,15 @@
         "Justfile"
       ],
       "stripped_recall_mean": 0.027777777777777776,
-      "text_score": 0.05355416911620214,
+      "text_score": 0.0538053885934525,
       "tree_files": 808,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.06960832753095297,
-      "blend_path_heavy": 0.03480416376547649,
-      "blend_text_heavy": 0.10441249129642946,
+      "blend_equal": 0.06974682171334291,
+      "blend_path_heavy": 0.034873410856671457,
+      "blend_text_heavy": 0.10462023257001438,
       "changed_a": [
         "custom_components/hacs/repositories/base.py",
         "tests/repositories/test_download_counter.py"
@@ -11618,6 +11858,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.3833333333333333,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-e6f512c7a9b5",
       "label": "clean",
@@ -11664,15 +11905,15 @@
         "custom_components/hacs/update.py"
       ],
       "stripped_recall_mean": 0.03333333333333333,
-      "text_score": 0.13921665506190595,
+      "text_score": 0.13949364342668583,
       "tree_files": 702,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.013468875043332102,
-      "blend_path_heavy": 0.006734437521666051,
-      "blend_text_heavy": 0.020203312564998153,
+      "blend_equal": 0.014350901672473427,
+      "blend_path_heavy": 0.0071754508362367134,
+      "blend_text_heavy": 0.021526352508710142,
       "changed_a": [
         "src/nbgv/Program.cs"
       ],
@@ -11687,6 +11928,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-e806888912e8",
       "label": "clean",
@@ -11733,15 +11975,15 @@
         "tools/Get-NuGetTool.ps1"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.026937750086664203,
+      "text_score": 0.028701803344946854,
       "tree_files": 297,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.23076923076923078,
-      "blend_equal": 0.09945845214679908,
-      "blend_path_heavy": 0.10528478162895509,
-      "blend_text_heavy": 0.09363212266464306,
+      "blend_equal": 0.0986282232574878,
+      "blend_path_heavy": 0.10486966718429945,
+      "blend_text_heavy": 0.09238677933067616,
       "changed_a": [
         "README.md",
         "config-safe.toml",
@@ -11767,6 +12009,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.7916666666666667,
       "directory_overlap": 0.5,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-eaa6440ab245",
       "label": "clean",
@@ -11813,15 +12056,15 @@
         "Cargo.toml"
       ],
       "stripped_recall_mean": 0.125,
-      "text_score": 0.08780579318248705,
+      "text_score": 0.0861453354038645,
       "tree_files": 29,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.2204406673708312,
-      "blend_path_heavy": 0.16577588924097114,
-      "blend_text_heavy": 0.27510544550069127,
+      "blend_equal": 0.22182642222360574,
+      "blend_path_heavy": 0.16646876666735844,
+      "blend_text_heavy": 0.27718407777985304,
       "changed_a": [
         "build.gradle.kts",
         "gradle.properties",
@@ -11842,6 +12085,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.7857142857142857,
       "directory_overlap": 0.3333333333333333,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-ec6097dc4c30",
       "label": "clean",
@@ -11888,15 +12132,15 @@
         "core/src/main/kotlin/io/specmatic/core/SuccessReport.kt"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.3297702236305513,
+      "text_score": 0.3325417333361004,
       "tree_files": 1247,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.03317926370652955,
-      "blend_path_heavy": 0.016589631853264775,
-      "blend_text_heavy": 0.04976889555979433,
+      "blend_equal": 0.034293503732043255,
+      "blend_path_heavy": 0.017146751866021628,
+      "blend_text_heavy": 0.05144025559806488,
       "changed_a": [
         "packages/openai_dart/lib/src/generated/client.dart",
         "packages/openai_dart/lib/src/generated/schema/create_response_request.dart",
@@ -11918,6 +12162,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.7272727272727273,
       "directory_overlap": 0.25,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-ee600cb4c208",
       "label": "clean",
@@ -11964,15 +12209,15 @@
         "packages/openai_dart/lib/src/generated/schema/chat_completion_message_tool_calls.dart"
       ],
       "stripped_recall_mean": 0.0,
-      "text_score": 0.0663585274130591,
+      "text_score": 0.06858700746408651,
       "tree_files": 1692,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.031484584502855885,
-      "blend_path_heavy": 0.015742292251427942,
-      "blend_text_heavy": 0.04722687675428383,
+      "blend_equal": 0.03070005359988586,
+      "blend_path_heavy": 0.01535002679994293,
+      "blend_text_heavy": 0.04605008039982879,
       "changed_a": [
         "src/daemons/linuxd/src/main.rs",
         "src/microvm/src/logging.rs",
@@ -11991,6 +12236,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-ef9741f987dd",
       "label": "clean",
@@ -12037,15 +12283,15 @@
         "src/kernel/src/pm/process/capability.rs"
       ],
       "stripped_recall_mean": 0.25,
-      "text_score": 0.06296916900571177,
+      "text_score": 0.06140010719977172,
       "tree_files": 999,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.07142857142857142,
-      "blend_equal": 0.21702046604076822,
-      "blend_path_heavy": 0.32279594730609834,
-      "blend_text_heavy": 0.11124498477543804,
+      "blend_equal": 0.21737335689076034,
+      "blend_path_heavy": 0.32297239273109446,
+      "blend_text_heavy": 0.11177432105042626,
       "changed_a": [
         "README.md",
         "datasquare.go",
@@ -12070,6 +12316,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5625,
       "directory_overlap": 1.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-f10cabb32988",
       "label": "clean",
@@ -12116,7 +12363,7 @@
         "datasquare_test.go"
       ],
       "stripped_recall_mean": 0.2767857142857143,
-      "text_score": 0.00546950351010786,
+      "text_score": 0.006175285210092153,
       "tree_files": 23,
       "tree_truncated": false
     },
@@ -12136,6 +12383,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.75,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-f19644b9506a",
       "label": "clean",
@@ -12188,9 +12436,9 @@
     },
     {
       "actual_overlap": 0.25,
-      "blend_equal": 0.026924206318728064,
-      "blend_path_heavy": 0.013462103159364032,
-      "blend_text_heavy": 0.040386309478092096,
+      "blend_equal": 0.032838328380002384,
+      "blend_path_heavy": 0.016419164190001192,
+      "blend_text_heavy": 0.04925749257000357,
       "changed_a": [
         "README.md"
       ],
@@ -12205,6 +12453,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.875,
       "directory_overlap": 0.125,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-f1ac50df4326",
       "label": "clean",
@@ -12251,15 +12500,15 @@
         "eng/common/TestResources/Update-TestResources.cmd"
       ],
       "stripped_recall_mean": 0.125,
-      "text_score": 0.05384841263745613,
+      "text_score": 0.06567665676000477,
       "tree_files": 613,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.03498473855159629,
-      "blend_path_heavy": 0.017492369275798145,
-      "blend_text_heavy": 0.05247710782739444,
+      "blend_equal": 0.03718514839926109,
+      "blend_path_heavy": 0.018592574199630545,
+      "blend_text_heavy": 0.05577772259889163,
       "changed_a": [
         "package-lock.json",
         "package.json",
@@ -12274,6 +12523,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.5,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-f73c2e625185",
       "label": "clean",
@@ -12320,15 +12570,15 @@
         "test/TestServerProjectsLowLevel/body-file/tests/Generated/Tests/body_file_LowLevelTestEnvironment.cs"
       ],
       "stripped_recall_mean": 0.5,
-      "text_score": 0.06996947710319258,
+      "text_score": 0.07437029679852218,
       "tree_files": 12837,
       "tree_truncated": false
     },
     {
       "actual_overlap": 0.0,
-      "blend_equal": 0.1655732776935976,
-      "blend_path_heavy": 0.0827866388467988,
-      "blend_text_heavy": 0.24835991654039638,
+      "blend_equal": 0.1611231593971656,
+      "blend_path_heavy": 0.0805615796985828,
+      "blend_text_heavy": 0.2416847390957484,
       "changed_a": [
         "examples/DotNetCore/WebJobs/WebJobHelloWorld/README.md",
         "examples/DotNetCore/WebJobs/WebJobHelloWorld/WebJobHelloWorld/Functions.cs",
@@ -12348,6 +12598,7 @@
       "conflict_recall": null,
       "coverage_mean": 0.375,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-fdb8634a06b6",
       "label": "clean",
@@ -12394,7 +12645,7 @@
         "examples/DotNetCore/ChatApp/ChatApp/Message.cs"
       ],
       "stripped_recall_mean": 0.375,
-      "text_score": 0.3311465553871952,
+      "text_score": 0.3222463187943312,
       "tree_files": 270,
       "tree_truncated": false
     },
@@ -12414,6 +12665,7 @@
       "conflict_recall": null,
       "coverage_mean": 1.0,
       "directory_overlap": 0.0,
+      "empty_footprint": false,
       "files_truncated": false,
       "instance_id": "nc-fe0ed1fde76f",
       "label": "clean",
@@ -12566,7 +12818,7 @@
     },
     "same": {
       "conflicts": 24,
-      "mean_recall": 0.17619355484688676,
+      "mean_recall": 0.17625071076824023,
       "pairs": 162
     }
   },
@@ -12579,17 +12831,17 @@
       "overlap_auc": 0.4602958937198068,
       "pairs": 162,
       "prevalence": 0.14814814814814814,
-      "text_ap": 0.1502982410405443,
-      "text_auc": 0.5250603864734299
+      "text_ap": 0.15029364201964482,
+      "text_auc": 0.5259661835748792
     }
   },
   "strict_issue": true,
   "stripped_mean_conflict_path_recall": 0.17500000000000002,
-  "stripped_mean_recall_at_k": 0.16126023768805448,
+  "stripped_mean_recall_at_k": 0.1613163544108379,
   "stripped_overlap_ap": 0.13886605415860734,
   "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",
-  "text_only_ap": 0.1497715992090717,
-  "text_only_auc": 0.532210401891253,
+  "text_only_ap": 0.14976279161362097,
+  "text_only_auc": 0.533096926713948,
   "text_variant": "issue_title_body",
   "top_k": 5
 }
