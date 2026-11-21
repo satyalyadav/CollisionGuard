@@ -1,0 +1,588 @@
+{
+  "caveats": [
+    "Ten constructed pairs across ten repositories, with seven conflicts.",
+    "Both tasks in every pair were designed to touch the same module.",
+    "The task text names the module and test file, so lexical similarity partly restates the construction.",
+    "The two cohorts use different capture policies and are not a random sample.",
+    "These scores check the workflow and support no accuracy or held-out claim."
+  ],
+  "clean": 3,
+  "conflict": 7,
+  "generated_at": "2026-11-21T02:15:42.154853+00:00",
+  "leakage_audit": {
+    "folds": 10,
+    "passed": true
+  },
+  "models": {
+    "base_rate_reference": {
+      "ap_interval": {
+        "high": 0.9,
+        "low": 0.4,
+        "n_clusters": 10,
+        "n_skipped": 0,
+        "n_valid": 500,
+        "point": 0.7
+      },
+      "average_precision": 0.7,
+      "brier": 0.2592592592592593,
+      "confusion": {
+        "f1": 0.8235294117647058,
+        "fn": 0,
+        "fp": 3,
+        "precision": 0.7,
+        "recall": 1.0,
+        "threshold": 0.5,
+        "tn": 0,
+        "tp": 7
+      },
+      "ece": 0.0,
+      "log_loss": 0.7350487947085974,
+      "n": 10,
+      "n_repos": 10,
+      "per_repo": {
+        "dateutil/dateutil": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "encode/httpx": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pallets/click": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "pallets/itsdangerous": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "psf/requests": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pypa/packaging": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pytest-dev/pluggy": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "python-attrs/attrs": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "python-jsonschema/jsonschema": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "urllib3/urllib3": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        }
+      },
+      "positives": 7,
+      "pr_auc_trapezoid": 0.35,
+      "precision_at_recall": {
+        "min_recall": 0.5,
+        "precision": 0.7,
+        "threshold": 0.6666666666666666
+      },
+      "prevalence": 0.7,
+      "recall_at_budget": {
+        "budget": 0.2,
+        "flagged": 0,
+        "recall": 0.0
+      },
+      "reliability": [
+        [
+          0.0,
+          0.2,
+          0,
+          null,
+          null
+        ],
+        [
+          0.2,
+          0.4,
+          0,
+          null,
+          null
+        ],
+        [
+          0.4,
+          0.6,
+          0,
+          null,
+          null
+        ],
+        [
+          0.6,
+          0.8,
+          10,
+          0.7,
+          0.7
+        ],
+        [
+          0.8,
+          1.0,
+          0,
+          null,
+          null
+        ]
+      ],
+      "warnings": [
+        "only 7 positives: treat every metric as a demonstration",
+        "repo dateutil/dateutil has no positives, so its AP is undefined",
+        "repo pallets/click has no positives, so its AP is undefined",
+        "repo python-attrs/attrs has no positives, so its AP is undefined"
+      ]
+    },
+    "logistic_regression": {
+      "ap_interval": {
+        "high": 1.0,
+        "low": 0.38834722222222234,
+        "n_clusters": 10,
+        "n_skipped": 0,
+        "n_valid": 500,
+        "point": 0.685374149659864
+      },
+      "average_precision": 0.685374149659864,
+      "brier": 0.3585206582315566,
+      "confusion": {
+        "f1": 0.5454545454545454,
+        "fn": 4,
+        "fp": 1,
+        "precision": 0.75,
+        "recall": 0.42857142857142855,
+        "threshold": 0.5,
+        "tn": 2,
+        "tp": 3
+      },
+      "ece": 0.3790518676166699,
+      "log_loss": 1.0413612981556342,
+      "n": 10,
+      "n_repos": 10,
+      "per_repo": {
+        "dateutil/dateutil": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "encode/httpx": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pallets/click": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "pallets/itsdangerous": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "psf/requests": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pypa/packaging": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pytest-dev/pluggy": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "python-attrs/attrs": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "python-jsonschema/jsonschema": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "urllib3/urllib3": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        }
+      },
+      "positives": 7,
+      "pr_auc_trapezoid": 0.6194727891156462,
+      "precision_at_recall": {
+        "min_recall": 0.5,
+        "precision": 0.8,
+        "threshold": 0.4886067496174623
+      },
+      "prevalence": 0.7,
+      "recall_at_budget": {
+        "budget": 0.2,
+        "flagged": 2,
+        "recall": 0.14285714285714285
+      },
+      "reliability": [
+        [
+          0.0,
+          0.2,
+          2,
+          0.09249332916230019,
+          1.0
+        ],
+        [
+          0.2,
+          0.4,
+          1,
+          0.3490407921847495,
+          0.0
+        ],
+        [
+          0.4,
+          0.6,
+          4,
+          0.4637499085933518,
+          0.75
+        ],
+        [
+          0.6,
+          0.8,
+          0,
+          null,
+          null
+        ],
+        [
+          0.8,
+          1.0,
+          3,
+          0.8271547255599857,
+          0.6666666666666666
+        ]
+      ],
+      "warnings": [
+        "only 7 positives: treat every metric as a demonstration",
+        "repo dateutil/dateutil has no positives, so its AP is undefined",
+        "repo pallets/click has no positives, so its AP is undefined",
+        "repo python-attrs/attrs has no positives, so its AP is undefined"
+      ]
+    },
+    "tfidf_cosine": {
+      "ap_interval": {
+        "high": 1.0,
+        "low": 0.8089375000000001,
+        "n_clusters": 10,
+        "n_skipped": 0,
+        "n_valid": 500,
+        "point": 0.9478458049886621
+      },
+      "average_precision": 0.9478458049886621,
+      "brier": null,
+      "confusion": {
+        "f1": 0.7272727272727273,
+        "fn": 3,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "threshold": 0.5,
+        "tn": 3,
+        "tp": 4
+      },
+      "ece": null,
+      "log_loss": null,
+      "n": 10,
+      "n_repos": 10,
+      "per_repo": {
+        "dateutil/dateutil": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "encode/httpx": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pallets/click": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "pallets/itsdangerous": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "psf/requests": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pypa/packaging": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pytest-dev/pluggy": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "python-attrs/attrs": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "python-jsonschema/jsonschema": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "urllib3/urllib3": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        }
+      },
+      "positives": 7,
+      "pr_auc_trapezoid": 0.9441609977324263,
+      "precision_at_recall": {
+        "min_recall": 0.5,
+        "precision": 1.0,
+        "threshold": 0.6054671880369071
+      },
+      "prevalence": 0.7,
+      "recall_at_budget": {
+        "budget": 0.2,
+        "flagged": 2,
+        "recall": 0.2857142857142857
+      },
+      "reliability": [],
+      "warnings": [
+        "only 7 positives: treat every metric as a demonstration",
+        "repo dateutil/dateutil has no positives, so its AP is undefined",
+        "repo pallets/click has no positives, so its AP is undefined",
+        "repo python-attrs/attrs has no positives, so its AP is undefined"
+      ]
+    },
+    "tfidf_cosine_paths_removed": {
+      "ap_interval": {
+        "high": 1.0,
+        "low": 0.7023090277777778,
+        "n_clusters": 10,
+        "n_skipped": 0,
+        "n_valid": 500,
+        "point": 0.9087301587301587
+      },
+      "average_precision": 0.9087301587301587,
+      "brier": null,
+      "confusion": {
+        "f1": 0.7272727272727273,
+        "fn": 3,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "threshold": 0.5,
+        "tn": 3,
+        "tp": 4
+      },
+      "ece": null,
+      "log_loss": null,
+      "n": 10,
+      "n_repos": 10,
+      "per_repo": {
+        "dateutil/dateutil": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "encode/httpx": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pallets/click": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "pallets/itsdangerous": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "psf/requests": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pypa/packaging": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "pytest-dev/pluggy": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "python-attrs/attrs": {
+          "ap": null,
+          "n": 1,
+          "positives": 0
+        },
+        "python-jsonschema/jsonschema": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        },
+        "urllib3/urllib3": {
+          "ap": 1.0,
+          "n": 1,
+          "positives": 1
+        }
+      },
+      "positives": 7,
+      "pr_auc_trapezoid": 0.9018140589569161,
+      "precision_at_recall": {
+        "min_recall": 0.5,
+        "precision": 1.0,
+        "threshold": 0.568474742244024
+      },
+      "prevalence": 0.7,
+      "recall_at_budget": {
+        "budget": 0.2,
+        "flagged": 2,
+        "recall": 0.2857142857142857
+      },
+      "reliability": [],
+      "warnings": [
+        "only 7 positives: treat every metric as a demonstration",
+        "repo dateutil/dateutil has no positives, so its AP is undefined",
+        "repo pallets/click has no positives, so its AP is undefined",
+        "repo python-attrs/attrs has no positives, so its AP is undefined"
+      ]
+    }
+  },
+  "pairs": 10,
+  "protocol_version": "controlled-prediction-results-1",
+  "repositories": 10,
+  "scores": [
+    {
+      "base_rate": 0.7777777777777778,
+      "cohort": "controlled-v3",
+      "instance_id": "csp-pair-e308d29f9e78ab7d",
+      "label": 0,
+      "logistic": 0.3490407921847495,
+      "repo": "pallets/click",
+      "tfidf": 0.2291901525980409,
+      "tfidf_paths_removed": 0.22783508397093305
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "controlled-v3",
+      "instance_id": "csp-pair-498b338d2e5358d3",
+      "label": 1,
+      "logistic": 0.05852693410664884,
+      "repo": "pallets/itsdangerous",
+      "tfidf": 0.18228394554155017,
+      "tfidf_paths_removed": 0.18228394554155017
+    },
+    {
+      "base_rate": 0.7777777777777778,
+      "cohort": "controlled-v3",
+      "instance_id": "csp-pair-dd4ecebb1da0e148",
+      "label": 0,
+      "logistic": 0.4475623787757752,
+      "repo": "python-attrs/attrs",
+      "tfidf": 0.43477303563115255,
+      "tfidf_paths_removed": 0.43477303563115255
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "controlled-v3",
+      "instance_id": "csp-pair-3a67e8e1250dad67",
+      "label": 1,
+      "logistic": 0.12645972421795154,
+      "repo": "pypa/packaging",
+      "tfidf": 0.9962521139399906,
+      "tfidf_paths_removed": 0.9963078359574045
+    },
+    {
+      "base_rate": 0.7777777777777778,
+      "cohort": "controlled-v3",
+      "instance_id": "csp-pair-ca9d8edc2f182f15",
+      "label": 0,
+      "logistic": 0.8363345917972305,
+      "repo": "dateutil/dateutil",
+      "tfidf": 0.0826061711592235,
+      "tfidf_paths_removed": 0.08373574935278032
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "fresh-2026-11",
+      "instance_id": "csp-pair-aaee6437b3bf1ca3",
+      "label": 1,
+      "logistic": 0.5104060908414254,
+      "repo": "pytest-dev/pluggy",
+      "tfidf": 0.6251991673038643,
+      "tfidf_paths_removed": 0.5763240184330611
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "fresh-2026-11",
+      "instance_id": "csp-pair-0353590eb1f6b423",
+      "label": 1,
+      "logistic": 0.8250037850461848,
+      "repo": "psf/requests",
+      "tfidf": 0.7335711439590872,
+      "tfidf_paths_removed": 0.7124564987891675
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "fresh-2026-11",
+      "instance_id": "csp-pair-561b5869bd6f0397",
+      "label": 1,
+      "logistic": 0.4886067496174623,
+      "repo": "encode/httpx",
+      "tfidf": 0.48618367851495187,
+      "tfidf_paths_removed": 0.412562556610154
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "fresh-2026-11",
+      "instance_id": "csp-pair-4d4bce4963b46dac",
+      "label": 1,
+      "logistic": 0.820125799836542,
+      "repo": "urllib3/urllib3",
+      "tfidf": 0.6054671880369071,
+      "tfidf_paths_removed": 0.568474742244024
+    },
+    {
+      "base_rate": 0.6666666666666666,
+      "cohort": "fresh-2026-11",
+      "instance_id": "csp-pair-88ba07ab67ac5a9e",
+      "label": 1,
+      "logistic": 0.4084244151387442,
+      "repo": "python-jsonschema/jsonschema",
+      "tfidf": 0.3296992782668224,
+      "tfidf_paths_removed": 0.2052205894097411
+    }
+  ],
+  "table_sha256": "4b06ebb7e97ffe71b63c030401e86a4b59280fc5b6b0946b7f2b69851e94d091"
+}

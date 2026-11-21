@@ -1,0 +1,47 @@
+{
+  "clean": 3,
+  "cohorts": [
+    {
+      "clean": 3,
+      "cohort": "controlled-v3",
+      "conflict": 2,
+      "pairs": 5,
+      "plan_file_sha256": "cac2af20170cfa9074edb1ec8fc1ba7016abcf90864878c9cff3a60ebb4b2bb3",
+      "plan_sha256": "a3c17bee0d254a1490e454ac8d630119463b4aa5e2a147af70212a2107dfc9fc",
+      "repositories": [
+        "dateutil/dateutil",
+        "pallets/click",
+        "pallets/itsdangerous",
+        "pypa/packaging",
+        "python-attrs/attrs"
+      ],
+      "results_file_sha256": "4109a7c3f36ce8ec0fb27c5c06d4c3ccbe0b5eb7310d81ffe15fbed42da7d67c",
+      "run_id": "csp-run-20261116-2ef8b5"
+    },
+    {
+      "capture_policy": "ordinary-git-staging-v1",
+      "clean": 0,
+      "cohort": "fresh-2026-11",
+      "conflict": 5,
+      "pairs": 5,
+      "plan_file_sha256": "e2bb2c4b293ee52136b343dd17b004ce4765b4576fecd01b63309a9d355aadce",
+      "plan_sha256": "d7274fbb5d1443c7bd2fea65b40247f3988b7d73ee9b50467f4b1f1784d16ee7",
+      "repositories": [
+        "encode/httpx",
+        "psf/requests",
+        "pytest-dev/pluggy",
+        "python-jsonschema/jsonschema",
+        "urllib3/urllib3"
+      ],
+      "results_file_sha256": "d0b7c565fa9fde2409f9e2173e915301ac6aad551a0dfcbd709c50e8a2a79ae2",
+      "run_id": "csp-run-20261120-9b7d2e"
+    }
+  ],
+  "conflict": 7,
+  "note": "Full task text, changed paths and pair rows stay under data/private/. This summary carries counts, labels and hashes only.",
+  "pairs": 10,
+  "protocol_version": "controlled-prediction-table-1",
+  "repositories": 10,
+  "table_sha256": "4b06ebb7e97ffe71b63c030401e86a4b59280fc5b6b0946b7f2b69851e94d091",
+  "task_text_public": false
+}
