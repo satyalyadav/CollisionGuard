@@ -92,6 +92,7 @@ class ControlledAnalysisTests(unittest.TestCase):
             'see <a href="/home/example/file.py">',
             "see https://example.com|/home/example/file.py",
             "see cmd>/home/example/file.py",
+            "see />foo/file.py",
         ]:
             self.assertEqual(analysis.public_text(value), "<redacted>")
         for value in [
