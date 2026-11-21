@@ -70,7 +70,7 @@ The no-skill AP is the prevalence, 0.700, because seven of ten pairs are conflic
 - The two cohorts use different capture policies, and the v3 labels are post-hoc.
 - The fresh cohort was designed so both tasks edit overlapping files, and all five conflicted. The label distribution is not a base rate.
 - The task text was written by the coordinator and delivered by one model.
-- The prompts name the module and test file, which makes lexical overlap partly a leak of the construction.
+- The prompts name the module and test file. The run cannot separate those signals from lexical similarity or from the paired authorship.
 - No timestamps or historical decisions exist, so a forward-time check is impossible.
 - The private table cannot be rebuilt from the public repository alone.
 

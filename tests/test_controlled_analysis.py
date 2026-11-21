@@ -70,25 +70,40 @@ class ControlledAnalysisTests(unittest.TestCase):
         self.assertEqual(analysis.public_producer_path(Path("analyze_controlled_pilot.py")),
                          "analyze_controlled_pilot.py")
 
-    def test_public_text_removes_absolute_paths(self):
-        self.assertEqual(analysis.public_text("see /home/example/repo/test.py:12"),
-                         "see <path>")
-        self.assertEqual(analysis.public_text("see C:\\Users\\example\\test.py"),
-                         "see <path>")
+    def test_public_text_redacts_absolute_paths(self):
+        for value in [
+            "see /home/example/repo/test.py:12",
+            "see C:/Users/example/test.py",
+            "see C:\\Users\\example\\test.py",
+            "see \\\\server\\share\\test.py",
+            "see /srv/builds/foo",
+            'see "/home/example/my project/test.py"',
+        ]:
+            self.assertEqual(analysis.public_text(value), "<redacted>")
         self.assertEqual(analysis.public_text("1 passed in 0.1s"), "1 passed in 0.1s")
+
+    def test_public_basename_handles_windows_and_posix(self):
+        self.assertEqual(analysis.public_basename("C:\\Users\\example\\job.json"), "job.json")
+        self.assertEqual(analysis.public_basename("\\\\server\\share\\job.json"), "job.json")
+        self.assertEqual(analysis.public_basename("/home/example/job.json"), "job.json")
 
     def test_test_audit_sanitizes_absolute_paths(self):
         evidence = self.tmp / "evidence"
         evidence.mkdir()
         payload = {"tasks": [{"task_id": "t", "repo": "r", "test_jobs": [
-            {"file": "/home/example/job.json", "returncode": 0,
-             "stdout_tail": "setup from /home/example/repo\n"
-                            "1 passed in /home/example/repo/tests/test_x.py\n"}]}]}
+            {"file": "C:\\Users\\example\\job.json", "returncode": 0,
+             "stdout_tail": "setup from C:\\Users\\example\\repo\n1 passed in 0.1s\n"},
+            {"file": "/home/example/job2.json", "returncode": 1,
+             "stdout_tail": "FAILED /home/example/repo/tests/test_x.py\n"}]}]}
         (evidence / "root-job-audit.json").write_text(json.dumps(payload))
         audit = analysis.load_test_audit(evidence)
         self.assertEqual(audit["t"]["jobs"][0]["job_file"], "job.json")
-        self.assertIn("1 passed", audit["t"]["jobs"][0]["summary_line"])
-        self.assertNotIn("/home/", json.dumps(audit))
+        self.assertEqual(audit["t"]["jobs"][0]["summary_line"], "1 passed in 0.1s")
+        self.assertEqual(audit["t"]["jobs"][1]["job_file"], "job2.json")
+        self.assertEqual(audit["t"]["jobs"][1]["summary_line"], "<redacted>")
+        rendered = json.dumps(audit)
+        self.assertNotIn("C:\\\\", rendered)
+        self.assertNotIn("/home/", rendered)
 
     def test_ignored_cache_differences_leave_independent_source_clean(self):
         _, git_a, a = self.fx.derive("a", {"a.txt": "A\n", "b.txt": "base b\n",

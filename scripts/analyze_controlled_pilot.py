@@ -54,13 +54,18 @@ def public_producer_path(path: Path) -> str:
     return f"{parent}/{path.name}" if parent else path.name
 
 
-ABSOLUTE_PATH_RE = re.compile(
-    r"(?:/(?:home|tmp|Users|var|opt|root|private)/[^\s\"'`]+|[A-Za-z]:\\[^\s\"'`]+)")
+ABSOLUTE_MARKER_RE = re.compile(
+    r"(?:[A-Za-z]:[\\/]|\\\\[^\\\s]+\\|(?<![\w.])/(?:[A-Za-z0-9_.-]+/)+)")
+
+
+def public_basename(value: str) -> str:
+    """Return the last path component for POSIX and Windows paths."""
+    return value.replace("\\", "/").rstrip("/").rsplit("/", 1)[-1]
 
 
 def public_text(value: str) -> str:
-    """Replace machine-local absolute paths before text enters public output."""
-    return ABSOLUTE_PATH_RE.sub("<path>", value)
+    """Drop a log line that contains any absolute path marker."""
+    return "<redacted>" if ABSOLUTE_MARKER_RE.search(value) else value
 
 
 def canonical_json(value) -> bytes:
@@ -408,7 +413,7 @@ def load_test_audit(evidence: Path) -> dict:
             tail = [line for line in job.get("stdout_tail", "").splitlines() if line.strip()]
             summary = tail[-1].strip() if tail else None
             jobs.append({
-                "job_file": Path(job.get("file", "")).name,
+                "job_file": public_basename(job.get("file", "")),
                 "returncode": job.get("returncode"),
                 "summary_line": public_text(summary) if summary else None,
             })
