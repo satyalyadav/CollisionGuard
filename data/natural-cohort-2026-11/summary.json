@@ -1,0 +1,114 @@
+{
+  "both_linked_issue_conflicts": 33,
+  "both_linked_issues": 193,
+  "both_pr_bodies": 659,
+  "clean": 518,
+  "conflict": 155,
+  "languages": {
+    "1C Enterprise": 1,
+    "Bicep": 1,
+    "C": 11,
+    "C#": 60,
+    "C++": 14,
+    "CMake": 1,
+    "CSS": 1,
+    "Circom": 2,
+    "Common Lisp": 1,
+    "Dart": 9,
+    "Dockerfile": 1,
+    "Elixir": 1,
+    "F#": 1,
+    "GAP": 1,
+    "Go": 60,
+    "HCL": 1,
+    "HTML": 12,
+    "Jac": 1,
+    "Java": 25,
+    "JavaScript": 33,
+    "Julia": 3,
+    "Jupyter Notebook": 3,
+    "Kotlin": 10,
+    "MDX": 3,
+    "Makefile": 2,
+    "MoonBit": 2,
+    "Nextflow": 1,
+    "PHP": 16,
+    "PowerShell": 3,
+    "Python": 132,
+    "R": 1,
+    "ReScript": 1,
+    "Ruby": 8,
+    "Rust": 41,
+    "Scala": 2,
+    "Shell": 4,
+    "Swift": 3,
+    "TypeScript": 191,
+    "TypeSpec": 1,
+    "Zig": 2,
+    "unknown": 7
+  },
+  "licenses": {
+    "AGPL-3.0": 35,
+    "Apache-2.0": 159,
+    "BSD-3-Clause": 7,
+    "CC-BY-4.0": 5,
+    "CC-BY-SA-4.0": 3,
+    "ECL-2.0": 2,
+    "EUPL-1.2": 1,
+    "GPL-2.0": 6,
+    "GPL-3.0": 23,
+    "ISC": 1,
+    "LGPL-3.0": 4,
+    "MIT": 293,
+    "MPL-2.0": 2,
+    "NOASSERTION": 103,
+    "unknown": 29
+  },
+  "note": "Pair list and labels from the CC-BY replication package. Task text joined from AIDev and kept private; public summary carries counts, provenance and hashes only.",
+  "pairs": 673,
+  "pairs_per_repo": {
+    "more_than_one": 57,
+    "one": 559
+  },
+  "prevalence": 0.2303120356612184,
+  "protocol_version": "natural-cohort-table-1",
+  "repositories": 616,
+  "source": {
+    "replication_package": {
+      "doi": "10.5281/zenodo.21186464",
+      "evaluable_rows": 716,
+      "file": "rq3_merge_replay_full.csv",
+      "license": "CC-BY-4.0",
+      "repository": "Quantum535/concurrent-agentic-prs-replication",
+      "sha256": "a6a3f3e88f6b8445a07d5b43bb8c6d4583cfffb33bd25f650a766a096baaef3c"
+    },
+    "task_text": {
+      "dataset": "hao-li/AIDev",
+      "files": {
+        "issue.parquet": {
+          "bytes": 74957881,
+          "sha256": "fc45ba381ca3566a88ffce91272dd0a37eba3fa31e681a333ef2ded85e9c3a30"
+        },
+        "pull_request.parquet": {
+          "bytes": 362078556,
+          "sha256": "a9341e2ef692ae4220830b046da228000becc623a1591c5634728d78c331c32b"
+        },
+        "related_issue.parquet": {
+          "bytes": 1264494,
+          "sha256": "16a22395a2572b29345888c76aba4c39e98dc1cf79b54685a521451c469e7aef"
+        },
+        "repository.parquet": {
+          "bytes": 1496533,
+          "sha256": "1c84f195fd9813c4bb2c1f2436a9dde71329348f23b5ddd7b92f66125e626f3d"
+        }
+      },
+      "revision": "main as retrieved 2026-11-21"
+    }
+  },
+  "strata": {
+    "cross": 104,
+    "same": 569
+  },
+  "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",
+  "task_text_public": false
+}

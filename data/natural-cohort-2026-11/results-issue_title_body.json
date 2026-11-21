@@ -1,0 +1,1551 @@
+{
+  "caveats": [
+    "Retrospective co-active PR pairs, not tasks dispatched from a common queue.",
+    "PR text is written at PR creation, after coding has started; title only is the least leaky variant.",
+    "The issue-text subset is closer to pre-start but is only a proxy for the agent's instructions.",
+    "Pairs come from a stratified sample with all cross-agent pairs; prevalence is not a population base rate.",
+    "Multiple pairs can share a repository or a PR; folds keep whole repositories together.",
+    "Text-only results do not establish prediction accuracy for unseen repositories."
+  ],
+  "clean": 151,
+  "conflict": 32,
+  "excluded_identical_text": 10,
+  "generated_at": "2026-11-21T20:08:06.821580+00:00",
+  "models": {
+    "fold_prior": {
+      "ap_interval": {
+        "high": 0.21125113172165494,
+        "low": 0.10317874053548179,
+        "n_clusters": 182,
+        "n_skipped": 0,
+        "n_valid": 1000,
+        "point": 0.14606641265612658
+      },
+      "average_precision": 0.14606641265612658,
+      "n": 183,
+      "positives": 32,
+      "pr_auc_trapezoid": 0.17904591729058142,
+      "precision_at_recall_0_5": 0.17486338797814208,
+      "prevalence": 0.17486338797814208,
+      "recall_at_top_20pct": 0.09375,
+      "repositories": 182,
+      "roc_auc": 0.40200745033112584
+    },
+    "logistic": {
+      "ap_interval": {
+        "high": 0.45409750411218114,
+        "low": 0.16961363868274093,
+        "n_clusters": 182,
+        "n_skipped": 0,
+        "n_valid": 1000,
+        "point": 0.28987911287518403
+      },
+      "average_precision": 0.28987911287518403,
+      "n": 183,
+      "positives": 32,
+      "pr_auc_trapezoid": 0.2785406112095231,
+      "precision_at_recall_0_5": 0.2602739726027397,
+      "prevalence": 0.17486338797814208,
+      "recall_at_top_20pct": 0.25,
+      "repositories": 182,
+      "roc_auc": 0.5968543046357615
+    },
+    "tfidf": {
+      "ap_interval": {
+        "high": 0.28010065939502454,
+        "low": 0.12656435088583975,
+        "n_clusters": 182,
+        "n_skipped": 0,
+        "n_valid": 1000,
+        "point": 0.18951406723423092
+      },
+      "average_precision": 0.18951406723423092,
+      "n": 183,
+      "positives": 32,
+      "pr_auc_trapezoid": 0.18185372619814857,
+      "precision_at_recall_0_5": 0.208955223880597,
+      "prevalence": 0.17486338797814208,
+      "recall_at_top_20pct": 0.21875,
+      "repositories": 182,
+      "roc_auc": 0.554635761589404
+    }
+  },
+  "pairs": 183,
+  "prevalence": 0.17486338797814208,
+  "protocol_version": "natural-cohort-results-1",
+  "repositories": 182,
+  "scores": [
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-76049e9da2e6",
+      "label": 1,
+      "logistic": 0.46647559752901036,
+      "repo": "aavetis/PRarena",
+      "tfidf": 0.023565550579342683
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-58cbdf286476",
+      "label": 0,
+      "logistic": 0.4466103131156173,
+      "repo": "activeguild/vite-plugin-sass-dts",
+      "tfidf": 0.13975628469368997
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-6be7d6ad43b9",
+      "label": 0,
+      "logistic": 0.38419656501473853,
+      "repo": "AIDotNet/Thor",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-387797e10848",
+      "label": 0,
+      "logistic": 0.606881771758979,
+      "repo": "airbytehq/PyAirbyte",
+      "tfidf": 0.020069074712535682
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-ae39589e4cfa",
+      "label": 0,
+      "logistic": 0.42169393575172387,
+      "repo": "ajthinking/data-story",
+      "tfidf": 0.026833494961385033
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-49bcaf5b28b4",
+      "label": 0,
+      "logistic": 0.42176746978362745,
+      "repo": "akto-api-security/akto",
+      "tfidf": 0.05816110389801113
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-c6128c6a6dad",
+      "label": 1,
+      "logistic": 0.36612188482376906,
+      "repo": "ant-design/ant-design",
+      "tfidf": 0.3818133604482673
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-55b561a5e9eb",
+      "label": 1,
+      "logistic": 0.4979421281786337,
+      "repo": "Apollon77/ioBroker.alexa2",
+      "tfidf": 0.3010588844257959
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-12500a03a13a",
+      "label": 0,
+      "logistic": 0.4622810277974372,
+      "repo": "astral-sh/uv",
+      "tfidf": 0.13089198408553912
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-e1b775414f67",
+      "label": 0,
+      "logistic": 0.46617652752509525,
+      "repo": "autumn-library/autumn",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-656cdd730653",
+      "label": 0,
+      "logistic": 0.41390463082977924,
+      "repo": "aztfmod/terraform-provider-azurecaf",
+      "tfidf": 0.3658298925437246
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-15aaec4d2d96",
+      "label": 0,
+      "logistic": 0.4385843255160677,
+      "repo": "Azure-Samples/azure-ai-travel-agents",
+      "tfidf": 0.013582859806038522
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-fdb8634a06b6",
+      "label": 0,
+      "logistic": 0.4062123363203213,
+      "repo": "Azure/AppConfiguration",
+      "tfidf": 0.3311465553871952
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-f73c2e625185",
+      "label": 0,
+      "logistic": 0.585666846644735,
+      "repo": "Azure/autorest.csharp",
+      "tfidf": 0.06996947710319258
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-2c9312ac86a2",
+      "label": 1,
+      "logistic": 0.5107985657234421,
+      "repo": "Azure/awesome-azd",
+      "tfidf": 0.06500959579850706
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-da3a6e9784c0",
+      "label": 0,
+      "logistic": 0.45192575856236844,
+      "repo": "Azure/azqr",
+      "tfidf": 0.15016619085518548
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-1b13bf59c1af",
+      "label": 1,
+      "logistic": 0.5982135593484686,
+      "repo": "Azure/azure-container-networking",
+      "tfidf": 0.002404113096807853
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-f1ac50df4326",
+      "label": 0,
+      "logistic": 0.44939019029926713,
+      "repo": "Azure/azure-mcp",
+      "tfidf": 0.05384841263745613
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-43d1de39ad59",
+      "label": 0,
+      "logistic": 0.523357979866881,
+      "repo": "Azure/azure-sdk-for-java",
+      "tfidf": 0.18174809698909639
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-b35d1679401e",
+      "label": 0,
+      "logistic": 0.5887047435315669,
+      "repo": "Azure/azure-sdk-for-js",
+      "tfidf": 0.07994734338559899
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-393e3cecced8",
+      "label": 0,
+      "logistic": 0.3968277990015474,
+      "repo": "Azure/azure-storage-azcopy",
+      "tfidf": 0.14793014279807862
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-dbea9b759db8",
+      "label": 1,
+      "logistic": 0.508832469874079,
+      "repo": "Azure/azure-storage-fuse",
+      "tfidf": 0.14425970488550643
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-d082e2ef7464",
+      "label": 0,
+      "logistic": 0.5337405023758193,
+      "repo": "Azure/bicep-registry-modules",
+      "tfidf": 0.4484081017132254
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-51b4dccde16b",
+      "label": 0,
+      "logistic": 0.26603413369802226,
+      "repo": "benbalter/jekyll-relative-links",
+      "tfidf": 0.028622742555819928
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-b6e28fdfa7d2",
+      "label": 0,
+      "logistic": 0.42389005704640104,
+      "repo": "benwbrum/fromthepage",
+      "tfidf": 0.0701208938195126
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-b1c5b79f24fa",
+      "label": 1,
+      "logistic": 0.20808598853092486,
+      "repo": "bespokelabsai/curator",
+      "tfidf": 0.17993689747164998
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-9b473ec0abee",
+      "label": 0,
+      "logistic": 0.3628460689533002,
+      "repo": "binarywang/WxJava",
+      "tfidf": 0.01565875706753675
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-366fa71573bb",
+      "label": 0,
+      "logistic": 0.6921539645508576,
+      "repo": "camunda/camunda",
+      "tfidf": 0.04416023320399745
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-2218a6593ac2",
+      "label": 0,
+      "logistic": 0.5134159325009825,
+      "repo": "camunda/camunda-modeler",
+      "tfidf": 0.46683459913151426
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-f10cabb32988",
+      "label": 0,
+      "logistic": 0.39856871492325685,
+      "repo": "celestiaorg/rsmt2d",
+      "tfidf": 0.00546950351010786
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-c47c552ff402",
+      "label": 0,
+      "logistic": 0.44089723301157074,
+      "repo": "chainwayxyz/citrea",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-6ff16f4bfa5b",
+      "label": 0,
+      "logistic": 0.5132849173052076,
+      "repo": "christianhelle/refitter",
+      "tfidf": 0.05869466198704156
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-316e72021806",
+      "label": 0,
+      "logistic": 0.4519267006710695,
+      "repo": "CommunityToolkit/Aspire",
+      "tfidf": 0.14826025429559583
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-6290898730a1",
+      "label": 0,
+      "logistic": 0.6093126078259025,
+      "repo": "CoreWCF/CoreWCF",
+      "tfidf": 0.1862904691042726
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-78bee680b8a8",
+      "label": 0,
+      "logistic": 0.4760070385772657,
+      "repo": "coturn/coturn",
+      "tfidf": 0.039950923240591886
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-b562b17a71ea",
+      "label": 0,
+      "logistic": 0.44947923325085465,
+      "repo": "DaveSkender/Stock.Indicators",
+      "tfidf": 0.05554255467313077
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-ee600cb4c208",
+      "label": 0,
+      "logistic": 0.4815805192696574,
+      "repo": "davidmigloz/langchain_dart",
+      "tfidf": 0.0663585274130591
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-39c8ad2f7b29",
+      "label": 0,
+      "logistic": 0.5478624721840577,
+      "repo": "docling-project/docling",
+      "tfidf": 0.035049323546774654
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-de2af7b5d1da",
+      "label": 0,
+      "logistic": 0.5079529743448616,
+      "repo": "dotnet/android-libraries",
+      "tfidf": 0.046850044982152894
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-9ca4764ea6c0",
+      "label": 0,
+      "logistic": 0.3223123025980279,
+      "repo": "dotnet/aspnetcore",
+      "tfidf": 0.08433221258769133
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-b21a76d13653",
+      "label": 0,
+      "logistic": 0.29009059836029333,
+      "repo": "dotnet/dev-proxy",
+      "tfidf": 0.051922688859437315
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-008447c8b960",
+      "label": 0,
+      "logistic": 0.4562133999903168,
+      "repo": "dotnet/docs-aspire",
+      "tfidf": 0.5800993924539242
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-327c8bd3e489",
+      "label": 0,
+      "logistic": 0.5246682492353059,
+      "repo": "dotnet/docs-desktop",
+      "tfidf": 0.6086185668402331
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-a993dc151944",
+      "label": 0,
+      "logistic": 0.2806904525657497,
+      "repo": "dotnet/maui",
+      "tfidf": 0.02649752772925827
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-3724ec48e364",
+      "label": 0,
+      "logistic": 0.46576666722320803,
+      "repo": "dotnet/msbuild",
+      "tfidf": 0.09394781519767269
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-e806888912e8",
+      "label": 0,
+      "logistic": 0.4500752868795094,
+      "repo": "dotnet/Nerdbank.GitVersioning",
+      "tfidf": 0.026937750086664203
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-06a538ade39c",
+      "label": 0,
+      "logistic": 0.589806190552952,
+      "repo": "dotnet/runtime",
+      "tfidf": 0.18716157897201982
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-5303310add6e",
+      "label": 0,
+      "logistic": 0.5559155350864112,
+      "repo": "dotnet/sdk",
+      "tfidf": 0.18177821835511518
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-08c00be5b8b9",
+      "label": 0,
+      "logistic": 0.4373236018334133,
+      "repo": "dotnet/vscode-dotnet-runtime",
+      "tfidf": 0.4920042273010038
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-aba43f40a457",
+      "label": 0,
+      "logistic": 0.46823620505867214,
+      "repo": "dotnet/winforms",
+      "tfidf": 0.08078584241753119
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-6150d6f844b7",
+      "label": 0,
+      "logistic": 0.3946722867112342,
+      "repo": "dvcrn/mcp-server-siri-shortcuts",
+      "tfidf": 0.23831869455747132
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-7ad0dc2caef7",
+      "label": 0,
+      "logistic": 0.6606687430803038,
+      "repo": "elsa-workflows/elsa-studio",
+      "tfidf": 0.2218474445522056
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-a9eeb4925bd4",
+      "label": 0,
+      "logistic": 0.7161684522058133,
+      "repo": "estruyf/vscode-front-matter",
+      "tfidf": 0.22967963028273897
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-4b805766c91d",
+      "label": 0,
+      "logistic": 0.42364917610938607,
+      "repo": "f/mcptools",
+      "tfidf": 0.07051870684260281
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-2f34114cac71",
+      "label": 0,
+      "logistic": 0.5548156960784597,
+      "repo": "FerretDB/FerretDB",
+      "tfidf": 0.1130894072936965
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-15ebc3673736",
+      "label": 0,
+      "logistic": 0.3220222032524807,
+      "repo": "filecoin-project/lotus",
+      "tfidf": 0.12985662563844746
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-18ff8ba16068",
+      "label": 0,
+      "logistic": 0.5363564306040344,
+      "repo": "fireship-io/flamethrower",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-91bd6ef928f6",
+      "label": 0,
+      "logistic": 0.35360078320553684,
+      "repo": "FritzAndFriends/SharpSite",
+      "tfidf": 0.42561328498366113
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-09a5588b0b90",
+      "label": 0,
+      "logistic": 0.4891803647832142,
+      "repo": "githubnext/awesome-continuous-ai",
+      "tfidf": 0.10161487242984038
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-596266088244",
+      "label": 0,
+      "logistic": 0.4098122334430686,
+      "repo": "GMPrakhar/MAUI-Designer",
+      "tfidf": 0.07484876027384464
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-0a107b88f6bd",
+      "label": 0,
+      "logistic": 0.6754451760847836,
+      "repo": "GradleUp/shadow",
+      "tfidf": 0.1382554413875247
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-355ea6d1b2a9",
+      "label": 1,
+      "logistic": 0.47412958172259806,
+      "repo": "hackmdio/codimd",
+      "tfidf": 0.03844292532320088
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-e6f512c7a9b5",
+      "label": 0,
+      "logistic": 0.14724226440272078,
+      "repo": "hacs/integration",
+      "tfidf": 0.13921665506190595
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-c6dce28cb969",
+      "label": 0,
+      "logistic": 0.3337363970901248,
+      "repo": "haydenbleasel/eververse",
+      "tfidf": 0.011817568221727729
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-b76b642203c9",
+      "label": 0,
+      "logistic": 0.1587830798803528,
+      "repo": "huggingface/huggingface_hub",
+      "tfidf": 0.10417053087857782
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-e452e9083d8f",
+      "label": 1,
+      "logistic": 0.5292052577940217,
+      "repo": "hyperlight-dev/hyperlight",
+      "tfidf": 0.05355416911620214
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-34fde48715d5",
+      "label": 1,
+      "logistic": 0.5425005330286696,
+      "repo": "icehouse-ventures/laravel-chartjs",
+      "tfidf": 0.1363899653742461
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-60baf1cce7f9",
+      "label": 1,
+      "logistic": 0.3926919505616968,
+      "repo": "johnpapa/shopathome",
+      "tfidf": 0.10702661353128361
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-45d6b58226e1",
+      "label": 0,
+      "logistic": 0.4931648658662253,
+      "repo": "jsforce/jsforce",
+      "tfidf": 0.20038291579324632
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-0bd230fcf822",
+      "label": 0,
+      "logistic": 0.5602728452385416,
+      "repo": "kanisterio/kanister",
+      "tfidf": 0.0439517745266959
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-0d58998c53be",
+      "label": 0,
+      "logistic": 0.564537192216618,
+      "repo": "keephq/keep",
+      "tfidf": 0.11698846921667808
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-b84b772bf9dc",
+      "label": 0,
+      "logistic": 0.5016096219752993,
+      "repo": "kubernetes-sigs/azuredisk-csi-driver",
+      "tfidf": 0.29194304673770116
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-c4c9ccc536be",
+      "label": 0,
+      "logistic": 0.5374046828012149,
+      "repo": "kubernetes-sigs/blob-csi-driver",
+      "tfidf": 0.2609932795157825
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-b3c19d94d427",
+      "label": 0,
+      "logistic": 0.3662476157622724,
+      "repo": "kubetail-org/kubetail",
+      "tfidf": 0.006328815001574507
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-453c75b28c01",
+      "label": 1,
+      "logistic": 0.6787755504553913,
+      "repo": "langchain-ai/langchain",
+      "tfidf": 0.44658864817711885
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-0cc382ed7251",
+      "label": 0,
+      "logistic": 0.47474957485725316,
+      "repo": "lawrencegripper/azbrowse",
+      "tfidf": 0.032147151460336684
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-a98d2c3afbc8",
+      "label": 1,
+      "logistic": 0.7881837478765181,
+      "repo": "lgallard/terraform-aws-backup",
+      "tfidf": 0.21646075525802524
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-d82e9f3f162c",
+      "label": 0,
+      "logistic": 0.5457624585899388,
+      "repo": "licensee/licensee",
+      "tfidf": 0.3268482851880694
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-4e39e7d851b6",
+      "label": 0,
+      "logistic": 0.4501834965784808,
+      "repo": "lostintangent/gistpad",
+      "tfidf": 0.22426642307074116
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-929f90736f3f",
+      "label": 0,
+      "logistic": 0.4260227820610545,
+      "repo": "lynx-family/lynx-stack",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-bc4170b31d94",
+      "label": 0,
+      "logistic": 0.4243933277701671,
+      "repo": "microsoft/ApplicationInsights-Java",
+      "tfidf": 0.1484078539170882
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-661632c90960",
+      "label": 0,
+      "logistic": 0.2711357476876103,
+      "repo": "microsoft/ApplicationInsights-JS",
+      "tfidf": 0.12067402289748613
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-bc5c136a91ca",
+      "label": 0,
+      "logistic": 0.4060521461938533,
+      "repo": "microsoft/autogen",
+      "tfidf": 0.5569588490331674
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-add24f685bc6",
+      "label": 0,
+      "logistic": 0.5360013669888158,
+      "repo": "microsoft/AzureTRE",
+      "tfidf": 0.10912078383531716
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-988509b2602a",
+      "label": 1,
+      "logistic": 0.6113846171530469,
+      "repo": "microsoft/BotFramework-WebChat",
+      "tfidf": 0.05300120090495936
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-3756efaa2a99",
+      "label": 1,
+      "logistic": 0.5226648161615357,
+      "repo": "microsoft/DacFx",
+      "tfidf": 0.2447982853886206
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-1e8f31156aec",
+      "label": 0,
+      "logistic": 0.26920233445742203,
+      "repo": "microsoft/debug-gym",
+      "tfidf": 0.0074314953794480465
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-63084e941969",
+      "label": 0,
+      "logistic": 0.5144876002037183,
+      "repo": "microsoft/ebpf-for-windows",
+      "tfidf": 0.016298178154357686
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-9589924608a0",
+      "label": 0,
+      "logistic": 0.44284124553627274,
+      "repo": "microsoft/generative-ai-with-javascript",
+      "tfidf": 0.6555254336142295
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-d4e81047ca37",
+      "label": 0,
+      "logistic": 0.5493081154433325,
+      "repo": "microsoft/graphrag",
+      "tfidf": 0.49604153999497713
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-81db0a8251fd",
+      "label": 0,
+      "logistic": 0.48796792770896696,
+      "repo": "microsoft/GSL",
+      "tfidf": 0.08191917478666069
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-5b77d0be6f95",
+      "label": 0,
+      "logistic": 0.374130986533094,
+      "repo": "microsoft/lisa",
+      "tfidf": 0.01632340479768977
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-76b615dce75e",
+      "label": 0,
+      "logistic": 0.4693604924444244,
+      "repo": "microsoft/magentic-ui",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-722f944c6545",
+      "label": 0,
+      "logistic": 0.33626518808522765,
+      "repo": "microsoft/MSBuildLocator",
+      "tfidf": 0.26136896614768135
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-bcebe5751c92",
+      "label": 1,
+      "logistic": 0.507845873620552,
+      "repo": "microsoft/msquic",
+      "tfidf": 0.2706092069596332
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-33c428ee2fae",
+      "label": 1,
+      "logistic": 0.7193049999715705,
+      "repo": "microsoft/onnxruntime",
+      "tfidf": 0.3393975250891795
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-73e947918b31",
+      "label": 0,
+      "logistic": 0.46149898267052925,
+      "repo": "microsoft/onnxscript",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-61305f1b0357",
+      "label": 0,
+      "logistic": 0.4708825407615877,
+      "repo": "microsoft/OpenAPI.NET",
+      "tfidf": 0.03202523403104393
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-a33a006d17e8",
+      "label": 0,
+      "logistic": 0.5765270661898731,
+      "repo": "microsoft/perfview",
+      "tfidf": 0.030368975649549046
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-67a48ce0c052",
+      "label": 0,
+      "logistic": 0.629937679048836,
+      "repo": "microsoft/pict",
+      "tfidf": 0.040636989885349147
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-1572a2c54f9c",
+      "label": 0,
+      "logistic": 0.46259408210710523,
+      "repo": "microsoft/playwright",
+      "tfidf": 0.16170645950137993
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-a161e9ea2e39",
+      "label": 0,
+      "logistic": 0.4758758692347481,
+      "repo": "microsoft/PowerToys",
+      "tfidf": 0.1149799413177585
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-de00c65bf833",
+      "label": 0,
+      "logistic": 0.47572969947262067,
+      "repo": "microsoft/project-oagents",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-47ebcf8d0b37",
+      "label": 1,
+      "logistic": 0.3742758611956921,
+      "repo": "microsoft/PSRule",
+      "tfidf": 0.29976690059750616
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-d6bc8d41fba2",
+      "label": 0,
+      "logistic": 0.7147506812488152,
+      "repo": "microsoft/Qcodes",
+      "tfidf": 0.23650232449320643
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-6716d1e97eda",
+      "label": 0,
+      "logistic": 0.23795107012847705,
+      "repo": "microsoft/react-native-gallery",
+      "tfidf": 0.7213372784792309
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-0e6f0729cf28",
+      "label": 0,
+      "logistic": 0.5408702877908418,
+      "repo": "microsoft/sarif-tools",
+      "tfidf": 0.02716542237236079
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-b313773c84fb",
+      "label": 0,
+      "logistic": 0.47748940591903755,
+      "repo": "microsoft/sbom-tool",
+      "tfidf": 0.05133954147051805
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-76e94cb76e8a",
+      "label": 0,
+      "logistic": 0.6507868059250972,
+      "repo": "microsoft/TypeScript",
+      "tfidf": 0.1678959457551079
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-16bc11bfe5cb",
+      "label": 1,
+      "logistic": 0.5090480093119281,
+      "repo": "microsoft/typescript-go",
+      "tfidf": 0.019655943244198903
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-1eaefc406fef",
+      "label": 0,
+      "logistic": 0.3620605509765231,
+      "repo": "microsoft/vcpkg",
+      "tfidf": 0.14744582239527693
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-22584b4eeea2",
+      "label": 1,
+      "logistic": 0.5070444715677045,
+      "repo": "microsoft/vscode-mssql",
+      "tfidf": 0.07495318685135485
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-53e434b822e4",
+      "label": 1,
+      "logistic": 0.43016867835899236,
+      "repo": "microsoft/vscode-python",
+      "tfidf": 0.0850046921813137
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-8ba49ece8e4a",
+      "label": 0,
+      "logistic": 0.47013756604096124,
+      "repo": "microsoft/Windows-Containers",
+      "tfidf": 0.5469763344920445
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-157d3b2355b1",
+      "label": 0,
+      "logistic": 0.503561153571294,
+      "repo": "microsoft/WinUI-Gallery",
+      "tfidf": 0.6086892709086741
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-c8daf3a6b425",
+      "label": 0,
+      "logistic": 0.5792293972913868,
+      "repo": "MicrosoftLearning/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions",
+      "tfidf": 0.2160550343696494
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-8c06fc2055d4",
+      "label": 0,
+      "logistic": 0.43992636197600277,
+      "repo": "MikePopoloski/slang",
+      "tfidf": 0.05512141145542019
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-3855f6ade0ca",
+      "label": 1,
+      "logistic": 0.4033931861720192,
+      "repo": "mlco2/codecarbon",
+      "tfidf": 0.0697731261207706
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-684bec76bd8e",
+      "label": 0,
+      "logistic": 0.7365070226829538,
+      "repo": "mlflow/mlflow",
+      "tfidf": 0.546206115898526
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-eaa6440ab245",
+      "label": 0,
+      "logistic": 0.5350067003965066,
+      "repo": "monosans/proxy-scraper-checker",
+      "tfidf": 0.08780579318248705
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-af7ba11cf78c",
+      "label": 0,
+      "logistic": 0.3837222229910788,
+      "repo": "Mr-Quin/danmaku-anywhere",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-7d36407e417e",
+      "label": 0,
+      "logistic": 0.5852434814060374,
+      "repo": "Myriad-Dreamin/tinymist",
+      "tfidf": 0.0868251557545425
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-ef9741f987dd",
+      "label": 0,
+      "logistic": 0.4309574308890118,
+      "repo": "nanvix/nanvix",
+      "tfidf": 0.06296916900571177
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-b47721a7f481",
+      "label": 0,
+      "logistic": 0.7957530622283561,
+      "repo": "navidrome/navidrome",
+      "tfidf": 0.03393486658044419
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-4851d779f0f1",
+      "label": 0,
+      "logistic": 0.5705219344558686,
+      "repo": "net-daemon/netdaemon",
+      "tfidf": 0.15538688943629853
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-e0878e77e370",
+      "label": 0,
+      "logistic": 0.5966308821863159,
+      "repo": "NG-ZORRO/ng-zorro-antd",
+      "tfidf": 0.12897005889860497
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-8935431b1b19",
+      "label": 0,
+      "logistic": 0.6498989661386186,
+      "repo": "obophenotype/cell-ontology",
+      "tfidf": 0.27433404592723676
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-cbc4316fa063",
+      "label": 0,
+      "logistic": 0.30661102605503093,
+      "repo": "onnx/onnx",
+      "tfidf": 0.2931456537450554
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-080b3727f9e1",
+      "label": 0,
+      "logistic": 0.44969599534918975,
+      "repo": "open-telemetry/opentelemetry-cpp",
+      "tfidf": 0.31300139997847654
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-b72e0c2ea1ae",
+      "label": 0,
+      "logistic": 0.46377296268290347,
+      "repo": "opendocument-app/OpenDocument.droid",
+      "tfidf": 0.03950676508560609
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-dccfc1cb165d",
+      "label": 1,
+      "logistic": 0.37119419638863804,
+      "repo": "OpenRouterTeam/ai-sdk-provider",
+      "tfidf": 0.32944245596656135
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-0c5ee70d4a19",
+      "label": 0,
+      "logistic": 0.3869455467115071,
+      "repo": "opsmill/infrahub",
+      "tfidf": 0.09201257691459182
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-d9e8765a2bb3",
+      "label": 0,
+      "logistic": 0.33840047064702544,
+      "repo": "orbitalapi/orbital",
+      "tfidf": 0.132644544687479
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-2d94a28dfaa1",
+      "label": 1,
+      "logistic": 0.4100205701007961,
+      "repo": "OrchardCMS/OrchardCore",
+      "tfidf": 0.1720195734031521
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-755396bb87bb",
+      "label": 0,
+      "logistic": 0.3534615936096102,
+      "repo": "oss-apps/split-pro",
+      "tfidf": 0.1179535341717743
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-04e27c8dff84",
+      "label": 0,
+      "logistic": 0.08117447236042095,
+      "repo": "OWASP/mastg",
+      "tfidf": 0.042679848555818405
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-147ae1f1b75b",
+      "label": 0,
+      "logistic": 0.40896091885804514,
+      "repo": "OWASP/wrongsecrets",
+      "tfidf": 0.015156634947971453
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-32617e65c098",
+      "label": 0,
+      "logistic": 0.4548094204062152,
+      "repo": "owncast/owncast",
+      "tfidf": 0.08195590325963904
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-0ccd70f830da",
+      "label": 1,
+      "logistic": 0.4995622955287526,
+      "repo": "PepperDash/Essentials",
+      "tfidf": 0.0601417188134054
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-4a12ac8d4af1",
+      "label": 0,
+      "logistic": 0.48206555947739427,
+      "repo": "pgdogdev/pgdog",
+      "tfidf": 0.09214572017170419
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-315394dd23da",
+      "label": 0,
+      "logistic": 0.1649247885935997,
+      "repo": "pnp/cli-microsoft365",
+      "tfidf": 0.9309324504277247
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-106d81d93da0",
+      "label": 0,
+      "logistic": 0.5845613210015203,
+      "repo": "primer/react",
+      "tfidf": 0.9485580857620417
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-b2947be16699",
+      "label": 1,
+      "logistic": 0.5342590172161258,
+      "repo": "promptfoo/promptfoo",
+      "tfidf": 0.09061599626165363
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-1b82a49e6277",
+      "label": 0,
+      "logistic": 0.35295676586831964,
+      "repo": "pulumi/docs",
+      "tfidf": 0.11675129274993316
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-8b053a754010",
+      "label": 0,
+      "logistic": 0.41726660226829737,
+      "repo": "python/python-docs-zh-tw",
+      "tfidf": 0.08869126821020373
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-c88a9151522f",
+      "label": 0,
+      "logistic": 0.4815537233173374,
+      "repo": "QL-Win/QuickLook",
+      "tfidf": 0.12385568656794772
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-c1dcd81c300f",
+      "label": 1,
+      "logistic": 0.3721037559706891,
+      "repo": "quarylabs/sqruff",
+      "tfidf": 0.11178864819290604
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-93b8d89f8972",
+      "label": 0,
+      "logistic": 0.5387998033124819,
+      "repo": "reneschulte/WriteableBitmapEx",
+      "tfidf": 0.11684717992886517
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-9b118dbbde80",
+      "label": 0,
+      "logistic": 0.4693419381472766,
+      "repo": "reorx/jsoncv",
+      "tfidf": 0.10524589656538741
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-850cbacd0d96",
+      "label": 0,
+      "logistic": 0.4274845428145618,
+      "repo": "risingwavelabs/risingwave",
+      "tfidf": 0.004902785647030869
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-ace549969570",
+      "label": 0,
+      "logistic": 0.4967141418776118,
+      "repo": "rocket-admin/rocketadmin",
+      "tfidf": 0.08953227592443351
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-283b7aec2b4c",
+      "label": 0,
+      "logistic": 0.46437608707031813,
+      "repo": "ruvnet/ruv-FANN",
+      "tfidf": 0.1051426640117874
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-031e833e14fb",
+      "label": 1,
+      "logistic": 0.4141234006120644,
+      "repo": "serilog-contrib/serilog-enrichers-clientinfo",
+      "tfidf": 0.11648404087338901
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-4428eaeb866b",
+      "label": 0,
+      "logistic": 0.4082440018433168,
+      "repo": "shader-slang/slang",
+      "tfidf": 0.1558412716795207
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-26f551daf737",
+      "label": 0,
+      "logistic": 0.4447439233423849,
+      "repo": "ShaunLawrie/PwshSpectreConsole",
+      "tfidf": 0.3138709965524896
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-cba7652eff43",
+      "label": 1,
+      "logistic": 0.662982205586952,
+      "repo": "shopware/shopware",
+      "tfidf": 0.32110845244278313
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-b880d5902ca7",
+      "label": 1,
+      "logistic": 0.6688294958653733,
+      "repo": "spcl/dace",
+      "tfidf": 0.09432348249691676
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-ec6097dc4c30",
+      "label": 0,
+      "logistic": 0.39899278403506144,
+      "repo": "specmatic/specmatic",
+      "tfidf": 0.3297702236305513
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-8e2d88dcdbf0",
+      "label": 0,
+      "logistic": 0.6277871003596938,
+      "repo": "stefankoegl/python-json-patch",
+      "tfidf": 0.25692760291553723
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-7decee8f0408",
+      "label": 0,
+      "logistic": 0.5866502789892737,
+      "repo": "SuperClaude-Org/SuperClaude_Framework",
+      "tfidf": 0.21050971112955494
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-7cf5c05e4484",
+      "label": 0,
+      "logistic": 0.5810875840243914,
+      "repo": "syncfusion/maui-toolkit",
+      "tfidf": 0.3002432625021813
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-daa23c553287",
+      "label": 0,
+      "logistic": 0.5896716073448194,
+      "repo": "sysadminsmedia/homebox",
+      "tfidf": 0.6113083013308863
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-d580a8a47b50",
+      "label": 0,
+      "logistic": 0.5170025452872441,
+      "repo": "taiga-family/taiga-ui",
+      "tfidf": 0.1537842396891551
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-54bfb0cb44d9",
+      "label": 0,
+      "logistic": 0.29890529693460655,
+      "repo": "thrasher-corp/gocryptotrader",
+      "tfidf": 0.007520457528209284
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-830fb154ad87",
+      "label": 1,
+      "logistic": 0.8267712519379972,
+      "repo": "tokens-studio/figma-plugin",
+      "tfidf": 0.2853384746706474
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-f19644b9506a",
+      "label": 0,
+      "logistic": 0.4615606018237361,
+      "repo": "tomhrr/cosh",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-8335ace8a4a4",
+      "label": 0,
+      "logistic": 0.3941157980458833,
+      "repo": "valkey-io/valkey-glide",
+      "tfidf": 0.08895441693384455
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-07d076c00d16",
+      "label": 0,
+      "logistic": 0.5264785207273197,
+      "repo": "vespa-engine/pyvespa",
+      "tfidf": 0.2588379582612587
+    },
+    {
+      "fold_prior": 0.16216216216216217,
+      "instance_id": "nc-2209fdb0272c",
+      "label": 0,
+      "logistic": 0.7628291692774828,
+      "repo": "vltpkg/vltpkg",
+      "tfidf": 0.6237475995788869
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-6f9d992b6001",
+      "label": 0,
+      "logistic": 0.3449918697639155,
+      "repo": "Voxelum/minecraft-launcher-core-node",
+      "tfidf": 0.012222112296402764
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-434320165e34",
+      "label": 0,
+      "logistic": 0.3536196043096328,
+      "repo": "Voxelum/x-minecraft-launcher",
+      "tfidf": 0.19229630354805724
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-413ac3c2fe1f",
+      "label": 0,
+      "logistic": 0.28395007849051557,
+      "repo": "wcandillon/react-native-webgpu",
+      "tfidf": 0.08669152671207807
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-caabd495c5aa",
+      "label": 0,
+      "logistic": 0.3890844737255213,
+      "repo": "web-infra-dev/rspack",
+      "tfidf": 0.24137411455972113
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-05e8cd2fb0af",
+      "label": 1,
+      "logistic": 0.46858086999627857,
+      "repo": "webgptorg/promptbook",
+      "tfidf": 0.13985862741244245
+    },
+    {
+      "fold_prior": 0.18309859154929578,
+      "instance_id": "nc-923788a60796",
+      "label": 0,
+      "logistic": 0.33768181603994096,
+      "repo": "wvlet/airframe",
+      "tfidf": 0.4022226370655153
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-218f5c4dfd32",
+      "label": 0,
+      "logistic": 0.3484770921113267,
+      "repo": "wvlet/wvlet",
+      "tfidf": 0.05684905599327417
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-96dcc7eeeed2",
+      "label": 0,
+      "logistic": 0.44772883454230333,
+      "repo": "xtermjs/xterm.js",
+      "tfidf": 0.012521667112577389
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-89897d7e1103",
+      "label": 0,
+      "logistic": 0.43217368549555607,
+      "repo": "yiisoft-contrib/yiiframework.com",
+      "tfidf": 0.13661746672956557
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-fe0ed1fde76f",
+      "label": 0,
+      "logistic": 0.5095502442377658,
+      "repo": "yytypescript/book",
+      "tfidf": 0.0
+    },
+    {
+      "fold_prior": 0.16556291390728478,
+      "instance_id": "nc-213ce77bc7b8",
+      "label": 0,
+      "logistic": 0.5208263159099783,
+      "repo": "yytypescript/book",
+      "tfidf": 0.02802452357603516
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-c5d0dc1b7fb7",
+      "label": 0,
+      "logistic": 0.499267913863787,
+      "repo": "zapier/zapier-platform",
+      "tfidf": 0.5737424502135535
+    },
+    {
+      "fold_prior": 0.19594594594594594,
+      "instance_id": "nc-663e9b21e6dc",
+      "label": 0,
+      "logistic": 0.2401953983079782,
+      "repo": "zeroc-ice/ice-demos",
+      "tfidf": 0.8826303759871512
+    },
+    {
+      "fold_prior": 0.16783216783216784,
+      "instance_id": "nc-afe98dcab5d1",
+      "label": 0,
+      "logistic": 0.5417849622634631,
+      "repo": "zwave-js/zwave-js",
+      "tfidf": 0.11243274297170765
+    }
+  ],
+  "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",
+  "validation": {
+    "folds": 5,
+    "leakage_audit_passed": true,
+    "scheme": "repository-grouped k-fold",
+    "seed": 0
+  },
+  "variant": "issue_title_body"
+}

@@ -12,6 +12,7 @@ Summary for reports. Dates use America/Phoenix time.
 - The [fresh cohort](docs/pilot/fresh-cohort-results.md) built five more verified pairs from repositories outside the earlier pilots, with ordinary Git staging frozen before coding. All five pairs qualified and all five conflicted; both tasks in each pair edited the same module and test file. This is a purposive construction, not a conflict base rate.
 - The [first prediction check](docs/pilot/controlled-prediction-results.md) scores the ten constructed pairs with the existing baselines. TF-IDF average precision is 0.948, but the construction and task text both name the target module and test file, so the score cannot be separated from the construction. Logistic regression is below the no-skill AP. No accuracy claim follows.
 - The [file predictor check](docs/pilot/file-predictor-results.md) finds about 62 percent of changed files with raw task text and 30 percent with paths removed. Its overlap score is 0.819, below the text-only 0.948, and adding it to the text score does not help. It also misses changelog conflicts. No accuracy claim follows.
+- The [natural-mix cohort](docs/pilot/natural-cohort-results.md) uses 666 real co-active AI-agent PR pairs from a CC-BY replication package, joined to AIDev text; outcomes were not designed here. PR titles alone give AUC 0.523 and AP 0.263 against 0.227 prevalence, so the constructed 0.948 does not transfer. The path-only file predictor on 652 pairs reaches overlap AUC 0.553 against text 0.524; the fixed blend gains 0.016 AP with a paired interval of -0.011 to +0.046. On the 165-pair strict-issue subset, overlap is below chance. Twenty replay labels agreed. The cohort challenges the model; no reliable file-overlap gain is established.
 - CooperBench forms a communicating condition. Other corpora lack verified task/base joins. The [AIDev pilot](docs/pilot/results.md) remains inconclusive. Sol access is unverified; project `AGENTS.md` remains a suggestion.
 
 ## Milestones
@@ -71,6 +72,16 @@ Built a ten-pair table from the two constructed cohorts, keeping task text in th
 ### 2026-11-21: Test the file predictor on the ten pairs
 
 Merged the path-only file predictor from PR 2 and evaluated it on the ten constructed pairs. At top five it recalled 62 percent of changed files with raw task text and 30 percent with explicit paths removed. Its predicted overlap scored 0.819 average precision, below the text-only 0.948; equal and text-heavy blends did not improve the text score. The overlap-positive rule caught all seven conflicts but also flagged two clean pairs, and the predictor missed the changelog conflicts in itsdangerous and packaging. Added the evaluation script, eleven tests and public results. See the [results](docs/pilot/file-predictor-results.md) and [public output](data/controlled-prediction-10/file-predictor.json). No accuracy result.
+
+### 2026-11-21: Build the natural-mix cohort
+
+Built the first cohort whose merge outcomes this project did not design. The pair list and labels come from the CC-BY replication package for *Concurrent AI-Agent Pull Requests on GitHub* (Zenodo 10.5281/zenodo.21186464): 747 attempts, 716 evaluable, 167 conflicts. Joining to AIDev task text left 673 pairs across 616 repositories (518 clean, 155 conflict). Seven pairs with identical titles were dropped, leaving 666. Issue text is available for 193 pairs; 182 of them are strict, where both PRs close a pre-created issue (174 usable).
+
+Label replay agreed 20/20 on a fixed sample. Text-only results under repository-grouped 5-fold CV: PR titles give TF-IDF AP 0.263 against 0.227 prevalence and AUC 0.523; logistic AUC 0.513. The strict-issue subset gives TF-IDF AUC 0.533 and logistic AP 0.284 against 0.161 prevalence, AUC 0.613. The constructed cohort's 0.948 AP does not transfer.
+
+Fetched the true merge base, base tree and changed paths for all 666 title-eligible pairs (662 ok, four unavailable, five truncated trees, five truncated file lists). An equal target-base shortcut had produced wrong trees for 20 of 108 refreshed rows; all were corrected. The path-only file predictor scored 652 pairs: mean footprint recall 0.225, predicted-overlap AUC 0.553, text AUC 0.524, oracle AUC 0.673. The fixed equal blend gains 0.016 AP, paired interval -0.011 to +0.046. On the strict-issue subset (165 pairs), overlap AUC is 0.463 and the blend does not beat text. The cohort challenges the model rather than confirming it.
+
+Reviews: Sol 6.2 high found the manifest and merge-base errors and asked for paired gains and better attrition reporting; ASU GLM-5.3 reproduced the source's headline numbers and flagged final-head labels and the strict subset; ASU MiMo-2.6 rejected CooperBench as engineered data. Added six scripts, four test modules, the protocol, results and public summaries. No accuracy claim follows.
 
 ## Maintaining this log
 
