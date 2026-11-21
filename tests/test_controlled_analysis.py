@@ -84,6 +84,9 @@ class ControlledAnalysisTests(unittest.TestCase):
             'see "/ foo/file.py"',
             'see "/home/example/my project/test.py"',
             "see path:/home/example/file.py",
+            "see --rootdir=/home/example/file.py",
+            "see //server/share/file.py",
+            'see "/ foo/it\'s/file.py"',
         ]:
             self.assertEqual(analysis.public_text(value), "<redacted>")
         for value in [
