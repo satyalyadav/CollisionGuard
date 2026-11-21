@@ -70,7 +70,7 @@ Freeze an ordinary Git staging policy prospectively before any fresh expansion, 
 - Public facts: `data/controlled-single-project/posthoc-git-visible.json`, original SHA-256 `bbc654d58479f89478f297dc3e32eaa1513ebcd464b948bf50971fbc1acd6ee8` before root reporting corrections. The original export is preserved privately. Current public SHA-256 `b9e753864ff40b23960e3dfef23564c8771e3602ef4613ed086df73f40e28374`. The public copy records the producer as the repository-relative path `scripts/analyze_controlled_pilot.py`; the original local worktree path is not published. Labels and trees are unchanged.
 - Private supplement: `data/private/research/controlled-single-project-v3/supplemental/posthoc-full.json` plus the ten patch files under `supplemental/patches/`. These contain command records, full hashes, exclusions, conflicts and patch bytes.
 
-Root changed reporting text and path handling in the analysis script after the recorded run. Current script SHA-256 `134aae9c876b8dbe2f99b0478a1b5038e85eef8593df375c4f2d1c91e2434dd1`; the original producer hash above identifies the executed version. No labels or merge results changed.
+Root changed reporting text and path handling in the analysis script after the recorded run. Current script SHA-256 `4eefc909a9a4e325d0302ecbafc2c52553bee2634d10793730bf442d0fd9d32a`; the original producer hash above identifies the executed version. No labels or merge results changed.
 
 ## Independent review
 

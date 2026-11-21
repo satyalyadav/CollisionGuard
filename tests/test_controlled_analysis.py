@@ -89,6 +89,9 @@ class ControlledAnalysisTests(unittest.TestCase):
             'see "/ foo/it\'s/file.py"',
             "see user@/home/example/file.py",
             "see cmd|/home/example/file.py",
+            'see <a href="/home/example/file.py">',
+            "see https://example.com|/home/example/file.py",
+            "see cmd>/home/example/file.py",
         ]:
             self.assertEqual(analysis.public_text(value), "<redacted>")
         for value in [
@@ -100,6 +103,7 @@ class ControlledAnalysisTests(unittest.TestCase):
             "*/foo.py",
             "see https://example.com/home",
             "see https://example.com/?next=/home",
+            'see <a href="https://example.com/home">',
         ]:
             self.assertEqual(analysis.public_text(value), value)
 
