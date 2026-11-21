@@ -1,5 +1,8 @@
-
+import sys
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
 
 from scripts.file_predictor import (
     get_repository_files,
@@ -7,7 +10,7 @@ from scripts.file_predictor import (
 )
 
 # Use the current CollisionGuard repository.
-repo_path = Path(__file__).resolve().parents[1]
+repo_path = REPO_ROOT
 
 files = get_repository_files(str(repo_path))
 
