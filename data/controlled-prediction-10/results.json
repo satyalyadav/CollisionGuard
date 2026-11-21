@@ -4,17 +4,18 @@
     "Both tasks in every pair were designed to touch the same module.",
     "The task text names the module and test file, so lexical similarity partly restates the construction.",
     "The two cohorts use different capture policies and are not a random sample.",
+    "The fold-prior reference assigns one constant per class, so its pooled AP equals prevalence; use no_skill_ap as the no-skill reference.",
     "These scores check the workflow and support no accuracy or held-out claim."
   ],
   "clean": 3,
   "conflict": 7,
-  "generated_at": "2026-11-21T02:15:42.154853+00:00",
+  "generated_at": "2026-11-21T02:36:23.399947+00:00",
   "leakage_audit": {
     "folds": 10,
     "passed": true
   },
   "models": {
-    "base_rate_reference": {
+    "fold_prior_reference": {
       "ap_interval": {
         "high": 0.9,
         "low": 0.4,
@@ -479,13 +480,14 @@
       ]
     }
   },
+  "no_skill_ap": 0.7,
   "pairs": 10,
   "protocol_version": "controlled-prediction-results-1",
   "repositories": 10,
   "scores": [
     {
-      "base_rate": 0.7777777777777778,
       "cohort": "controlled-v3",
+      "fold_prior": 0.7777777777777778,
       "instance_id": "csp-pair-e308d29f9e78ab7d",
       "label": 0,
       "logistic": 0.3490407921847495,
@@ -494,8 +496,8 @@
       "tfidf_paths_removed": 0.22783508397093305
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "controlled-v3",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-498b338d2e5358d3",
       "label": 1,
       "logistic": 0.05852693410664884,
@@ -504,8 +506,8 @@
       "tfidf_paths_removed": 0.18228394554155017
     },
     {
-      "base_rate": 0.7777777777777778,
       "cohort": "controlled-v3",
+      "fold_prior": 0.7777777777777778,
       "instance_id": "csp-pair-dd4ecebb1da0e148",
       "label": 0,
       "logistic": 0.4475623787757752,
@@ -514,8 +516,8 @@
       "tfidf_paths_removed": 0.43477303563115255
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "controlled-v3",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-3a67e8e1250dad67",
       "label": 1,
       "logistic": 0.12645972421795154,
@@ -524,8 +526,8 @@
       "tfidf_paths_removed": 0.9963078359574045
     },
     {
-      "base_rate": 0.7777777777777778,
       "cohort": "controlled-v3",
+      "fold_prior": 0.7777777777777778,
       "instance_id": "csp-pair-ca9d8edc2f182f15",
       "label": 0,
       "logistic": 0.8363345917972305,
@@ -534,8 +536,8 @@
       "tfidf_paths_removed": 0.08373574935278032
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "fresh-2026-11",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-aaee6437b3bf1ca3",
       "label": 1,
       "logistic": 0.5104060908414254,
@@ -544,8 +546,8 @@
       "tfidf_paths_removed": 0.5763240184330611
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "fresh-2026-11",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-0353590eb1f6b423",
       "label": 1,
       "logistic": 0.8250037850461848,
@@ -554,8 +556,8 @@
       "tfidf_paths_removed": 0.7124564987891675
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "fresh-2026-11",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-561b5869bd6f0397",
       "label": 1,
       "logistic": 0.4886067496174623,
@@ -564,8 +566,8 @@
       "tfidf_paths_removed": 0.412562556610154
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "fresh-2026-11",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-4d4bce4963b46dac",
       "label": 1,
       "logistic": 0.820125799836542,
@@ -574,8 +576,8 @@
       "tfidf_paths_removed": 0.568474742244024
     },
     {
-      "base_rate": 0.6666666666666666,
       "cohort": "fresh-2026-11",
+      "fold_prior": 0.6666666666666666,
       "instance_id": "csp-pair-88ba07ab67ac5a9e",
       "label": 1,
       "logistic": 0.4084244151387442,
@@ -584,5 +586,5 @@
       "tfidf_paths_removed": 0.2052205894097411
     }
   ],
-  "table_sha256": "4b06ebb7e97ffe71b63c030401e86a4b59280fc5b6b0946b7f2b69851e94d091"
+  "table_sha256": "d2d3557815b9fc9d03eb30ee50a89bbea5d55e1686948327c92e41fdb6aae4fe"
 }

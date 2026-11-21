@@ -36,7 +36,32 @@ def _sha256_file(path):
 
 
 def _canonical_json(value):
-    return json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return json.dumps(value, sort_keys=True, separators=(",", ":"),
+                      ensure_ascii=False).encode("utf-8")
+
+
+def table_body_digest(table):
+    """Digest the table content, excluding the timestamp and the digest field."""
+    body = {key: value for key, value in table.items()
+            if key not in ("table_sha256", "built_at")}
+    return _sha256_bytes(_canonical_json(body))
+
+
+def verify_table(table):
+    """Reject a table whose saved digest does not match its current content."""
+    expected = table.get("table_sha256")
+    actual = table_body_digest(table)
+    if expected != actual:
+        raise ValueError(f"table digest mismatch: saved {expected}, computed {actual}")
+
+
+def _check_plan_digest(plan):
+    """Reproduce the producer's canonical plan digest."""
+    digest = plan.get("plan_sha256")
+    canonical = {key: value for key, value in plan.items() if key != "plan_sha256"}
+    actual = _sha256_bytes(_canonical_json(canonical))
+    if digest != actual:
+        raise ValueError(f"plan digest mismatch: saved {digest}, computed {actual}")
 
 
 def _load(path):
@@ -128,6 +153,14 @@ def _v3_pairs(plan, results, plan_path):
 def _fresh_pairs(plan, results, plan_path):
     repositories = _repositories(plan)
     tasks = _index_by_task(plan, plan_path)
+    task_records = {}
+    for record in results.get("tasks", []):
+        task_id = record["task_id"]
+        if task_id in task_records:
+            raise ValueError(f"duplicate task record {task_id}")
+        task_records[task_id] = record
+    if set(task_records) != set(tasks):
+        raise ValueError("fresh task records do not match the frozen plan tasks")
     pairs = []
     for pair in results["pairs"]:
         pair_id = pair["pair_id"]
@@ -139,9 +172,19 @@ def _fresh_pairs(plan, results, plan_path):
         label = pair["label"]
         if label not in ("clean", "conflict"):
             raise ValueError(f"{pair_id}: unexpected label {label!r}")
-        if len(pair["changed_paths"]) != 2:
-            raise ValueError(f"{pair_id}: need one changed-path list per task")
-        by_task = dict(zip(task_ids, pair["changed_paths"]))
+        by_task = {}
+        for task_id in task_ids:
+            record = task_records[task_id]
+            if record["pair_id"] != pair_id or record["repo_id"] != repo_id:
+                raise ValueError(f"{pair_id}: task record {task_id} belongs elsewhere")
+            if not record.get("replay_ok"):
+                raise ValueError(f"{pair_id}: task {task_id} did not replay")
+            if record["prompt_sha256"] != tasks[task_id]["prompt_sha256"]:
+                raise ValueError(f"{pair_id}: task {task_id} prompt hash differs")
+            by_task[task_id] = record["changed_paths"]
+        if sorted(tuple(paths) for paths in pair["changed_paths"]) != sorted(
+                tuple(by_task[task_id]) for task_id in task_ids):
+            raise ValueError(f"{pair_id}: pair and task changed paths disagree")
         pairs.append(_record(pair_id, "fresh-2026-11", repo_id, repositories[repo_id],
                              task_ids, label, by_task, pair["conflict_paths"], tasks))
     return pairs
@@ -204,6 +247,8 @@ def build_table(v3_plan_path=V3_PLAN, v3_results_path=V3_RESULTS,
     fresh_plan = _load(fresh_plan_path)
     fresh_results = _load(fresh_results_path)
 
+    _check_plan_digest(v3_plan)
+    _check_plan_digest(fresh_plan)
     if fresh_plan.get("plan_sha256") != fresh_results.get("plan_sha256"):
         raise ValueError("fresh plan hash does not match the published summary")
     if fresh_plan.get("run_id") != fresh_results.get("run_id"):
@@ -249,8 +294,8 @@ def build_table(v3_plan_path=V3_PLAN, v3_results_path=V3_RESULTS,
         "cohorts": cohorts,
         "table_sha256": table_sha256,
         "task_text_public": False,
-        "note": ("Full task text, changed paths and pair rows stay under "
-                 "data/private/. This summary carries counts, labels and hashes only."),
+        "note": ("Full task text, changed paths and pair rows stay in the ignored "
+                 "private data root. This summary carries counts, labels and hashes only."),
     }
     return table, summary
 
@@ -269,8 +314,10 @@ def main(argv=None):
 
     table, summary = build_table()
     table = dict(table, built_at=datetime.now(timezone.utc).isoformat())
+    verify_table(table)
     if args.check:
         existing = _load(PRIVATE_OUT)
+        verify_table(existing)
         if existing.get("table_sha256") != table["table_sha256"]:
             raise SystemExit("saved table does not match the frozen inputs")
         print(f"table matches: {table['table_sha256']}")

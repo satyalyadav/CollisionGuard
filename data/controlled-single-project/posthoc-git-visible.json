@@ -35,7 +35,7 @@
     "derivation": "new temporary --git-dir; read-tree pinned tree; git --git-dir TEMP --work-tree ACTUAL add -A; write-tree",
     "git_version": "git version 2.43.0",
     "id": "posthoc-ordinary-git-staging-v1",
-    "producer_path": "/home/satyal/.t3/worktrees/Project/t3-9bc83601-b815177b5c8816fe/scripts/analyze_controlled_pilot.py",
+    "producer_path": "scripts/analyze_controlled_pilot.py",
     "producer_sha256": "b25b0936c72d15023704470178e6b7a7d62c866d17de3892e77709371e722a46",
     "source_mutation": "none; only read access to the coding worktrees"
   },

@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from baselines import TfidfBaseline
+from build_controlled_prediction import verify_table
 from evaltools import splits
 from evaltools.report import evaluate, format_report, prevalence_scores
 from evaltools.schema import normalize_records
@@ -28,13 +29,16 @@ from run_baselines import _folds, run_logistic_baseline, run_tfidf_baseline
 TABLE = ROOT / "data/private/research/controlled-prediction-10/table.json"
 PUBLIC_OUT = ROOT / "data/controlled-prediction-10/results.json"
 PROTOCOL_VERSION = "controlled-prediction-results-1"
-PATH_RE = re.compile(r"`?[A-Za-z0-9_./-]+\.(?:py|rst|md|txt|toml|cfg|ini|yaml|yml)`?")
+PATH_RE = re.compile(
+    r"`?[A-Za-z0-9_./-]+\.(?:py|rst|md|txt|toml|cfg|ini|yaml|yml)(?![\w.])`?")
 
 
 def _load(path):
     if not path.is_file():
         raise ValueError(f"missing table: {path}; run scripts/build_controlled_prediction.py")
-    return json.loads(path.read_text(encoding="utf-8"))
+    table = json.loads(path.read_text(encoding="utf-8"))
+    verify_table(table)
+    return table
 
 
 def _records(table):
@@ -59,7 +63,7 @@ def _audit_folds(records):
     return count
 
 
-def _base_rate(records):
+def _fold_priors(records):
     scores = [None] * len(records)
     for train, test in _folds([(record["repo"], record["repo"]) for record in records]):
         for index, score in zip(test, prevalence_scores(splits.take(records, train),
@@ -113,11 +117,12 @@ def build_results(table, source=None):
     print(f"Leakage audit passed for {folds} leave-one-repository-out folds.")
     print("Demo only: ten constructed pairs do not establish prediction accuracy.")
 
-    base_rate = _base_rate(records)
+    base_rate = _fold_priors(records)
     tfidf = run_tfidf_baseline(pairs, labels, repos, ids)
     stripped = [(_strip_paths(a), _strip_paths(b)) for a, b in pairs]
     tfidf_stripped = _tfidf_scores(stripped, repos)
     logistic = run_logistic_baseline(pairs, labels, repos, ids)
+    no_skill_ap = sum(labels) / len(labels)
 
     results = {
         "protocol_version": PROTOCOL_VERSION,
@@ -126,9 +131,11 @@ def build_results(table, source=None):
         "clean": labels.count(0),
         "conflict": labels.count(1),
         "repositories": len({record["repo"] for record in records}),
+        "no_skill_ap": no_skill_ap,
         "leakage_audit": {"folds": folds, "passed": True},
         "models": {
-            "base_rate_reference": _evaluate("base-rate reference", records, base_rate, True),
+            "fold_prior_reference": _evaluate(
+                "fold prior (probability reference)", records, base_rate, True),
             "tfidf_cosine": _evaluate("TF-IDF cosine", records, tfidf, False),
             "tfidf_cosine_paths_removed": _evaluate(
                 "TF-IDF cosine, file paths removed", records, tfidf_stripped, False),
@@ -140,7 +147,7 @@ def build_results(table, source=None):
                 "cohort": table["pairs"][index]["cohort"],
                 "repo": record["repo"],
                 "label": record["label"],
-                "base_rate": base_rate[index],
+                "fold_prior": base_rate[index],
                 "tfidf": tfidf[index],
                 "tfidf_paths_removed": tfidf_stripped[index],
                 "logistic": logistic[index],
@@ -152,6 +159,7 @@ def build_results(table, source=None):
             "Both tasks in every pair were designed to touch the same module.",
             "The task text names the module and test file, so lexical similarity partly restates the construction.",
             "The two cohorts use different capture policies and are not a random sample.",
+            "The fold-prior reference assigns one constant per class, so its pooled AP equals prevalence; use no_skill_ap as the no-skill reference.",
             "These scores check the workflow and support no accuracy or held-out claim.",
         ],
     }

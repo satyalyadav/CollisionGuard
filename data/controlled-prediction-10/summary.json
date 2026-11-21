@@ -15,7 +15,7 @@
         "pypa/packaging",
         "python-attrs/attrs"
       ],
-      "results_file_sha256": "4109a7c3f36ce8ec0fb27c5c06d4c3ccbe0b5eb7310d81ffe15fbed42da7d67c",
+      "results_file_sha256": "b9e753864ff40b23960e3dfef23564c8771e3602ef4613ed086df73f40e28374",
       "run_id": "csp-run-20261116-2ef8b5"
     },
     {
@@ -38,10 +38,10 @@
     }
   ],
   "conflict": 7,
-  "note": "Full task text, changed paths and pair rows stay under data/private/. This summary carries counts, labels and hashes only.",
+  "note": "Full task text, changed paths and pair rows stay in the ignored private data root. This summary carries counts, labels and hashes only.",
   "pairs": 10,
   "protocol_version": "controlled-prediction-table-1",
   "repositories": 10,
-  "table_sha256": "4b06ebb7e97ffe71b63c030401e86a4b59280fc5b6b0946b7f2b69851e94d091",
+  "table_sha256": "d2d3557815b9fc9d03eb30ee50a89bbea5d55e1686948327c92e41fdb6aae4fe",
   "task_text_public": false
 }

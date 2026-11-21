@@ -10,30 +10,32 @@ This is the first prediction run on pairs built by this project. It joins the fr
 | Fresh 2026-11 | 5 | 0 | 5 | Frozen ordinary Git staging |
 | Total | 10 | 3 | 7 | |
 
-Every pair uses a different repository, so leave-one-repository-out is also leave-one-pair-out for the held-out side. The full table, including task text and changed paths, stays under `data/private/research/controlled-prediction-10/`. The public summary is [summary.json](../../data/controlled-prediction-10/summary.json) and the public scores are [results.json](../../data/controlled-prediction-10/results.json). Both carry counts, labels, hashes and per-pair scores, with no task text and no local paths.
+Every pair uses a different repository, so leave-one-repository-out is also leave-one-pair-out for the held-out side. The full table, including task text and changed paths, stays in the ignored private data root. The public summary is [summary.json](../../data/controlled-prediction-10/summary.json) and the public scores are [results.json](../../data/controlled-prediction-10/results.json). Both carry counts, labels, hashes and per-pair scores, with no task text and no local paths.
 
-Table SHA-256: `4b06ebb7e97ffe71b63c030401e86a4b59280fc5b6b0946b7f2b69851e94d091`.
+Table SHA-256: `d2d3557815b9fc9d03eb30ee50a89bbea5d55e1686948327c92e41fdb6aae4fe`.
 
-The builder checks each acceptance statement against its frozen prompt bytes and verifies the fresh plan hash against the published summary. It rejects a missing task, a reused task, a duplicate repository, a changed prompt, or a table with only one label class.
+The builder checks each acceptance statement against its frozen prompt file, recomputes both plan digests, and joins the fresh changed paths through the per-task records rather than the replay-order pair list. It also recomputes the saved table digest before scoring. It rejects a missing task, a reused task, a duplicate repository, a changed prompt, a changed table body, or a table with only one label class.
 
 ## Method
 
-- Task input is the frozen acceptance text. The builder checks that this exact text appears in the prompt bytes the child received.
+- Task input is the frozen acceptance text. The builder checks that this exact text appears in the frozen prompt file; it does not inspect runtime transcripts.
 - TF-IDF cosine and logistic regression use the existing models in `src/baselines.py`; the runner adds no new feature.
-- A second TF-IDF run removes path-like tokens such as `src/module.py` from the task text, to show how much of the score comes from the named target.
+- A second TF-IDF run removes path-like tokens such as `src/module.py` from the task text. The regex removes 20 tokens from the ten fresh statements and none from the v3 statements, and it leaves module and symbol names in the prose.
 - Folds leave out all pairs from one repository. The leakage audit passed for all ten folds.
-- Metrics come from `src/evaltools/` with 500 repository-cluster bootstrap resamples.
+- Metrics come from `src/evaltools/` with 500 repository-cluster bootstrap resamples. The intervals resample the fixed out-of-fold scores.
 - TF-IDF is a similarity, not a probability, so calibration metrics are left out for it.
-- The base-rate reference scores each test pair with the conflict rate of its training folds.
+- The fold-prior reference scores each test pair with the conflict rate of its training folds. It is a probability reference, not a ranking baseline.
 
 ## Results
 
-| Model | Average precision | PR-AUC (trapezoid) |
+| Reference or model | Average precision | PR-AUC (trapezoid) |
 | --- | --- | --- |
-| Base-rate reference | 0.700 | 0.350 |
+| No skill (prevalence) | 0.700 | not defined for a constant score |
 | TF-IDF cosine | 0.948 | 0.944 |
 | TF-IDF cosine, file paths removed | 0.909 | 0.902 |
 | Logistic regression | 0.685 | 0.619 |
+
+The fold-prior reference assigns 7/9 to every clean pair and 6/9 to every conflict pair, so it ranks all clean pairs above all conflicts. Its pooled AP happens to equal prevalence under the tie-aware definition, and its PR-AUC is 0.350. Use those probabilities for Brier and log-loss checks, not as a ranking baseline. The no-skill AP is the prevalence, 0.700.
 
 Per-pair scores:
 
@@ -52,13 +54,13 @@ Per-pair scores:
 
 ## What the numbers mean
 
-The TF-IDF average precision of 0.948 is not a prediction result. The construction puts both tasks in a pair on the same module and test file, and the task text names that module and test file. Lexical similarity therefore restates the construction. All five fresh pairs are conflicts, so a model that scores the fresh wording higher gets a high rank without learning anything about conflict risk. One v3 conflict, itsdangerous, scores below three clean pairs.
+The TF-IDF average precision of 0.948 is not a prediction result. The construction puts both tasks in a pair on the same module and test file, and the task text names that module and test file. Lexical similarity therefore restates the construction. All five fresh pairs are conflicts, so a model that scores the fresh wording higher gets a high rank without learning anything about conflict risk. One v3 conflict, itsdangerous, scores below two clean pairs.
 
 Removing explicit file paths drops average precision from 0.948 to 0.909. The small drop says the score does not come only from the named paths. The pairs were also authored together, so wording similarity still restates how the tasks were built.
 
-Logistic regression lands at the base-rate reference. The hand-crafted features add no usable signal here, and the fitted scores are unstable at this sample size.
+Logistic regression lands below the no-skill AP, 0.685 against 0.700. The hand-crafted features add no usable signal here, and the fitted scores are unstable at this sample size.
 
-The base-rate reference has an average precision of 0.700 because seven of ten pairs are conflicts. That is the class balance of this construction, not the prevalence of conflicts among arbitrary task pairs.
+The no-skill AP is the prevalence, 0.700, because seven of ten pairs are conflicts. That is the class balance of this construction, not the prevalence of conflicts among arbitrary task pairs.
 
 ## Limits
 

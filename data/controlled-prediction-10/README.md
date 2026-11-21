@@ -1,6 +1,6 @@
 # Controlled prediction check: public files
 
-This folder holds the public side of the ten-pair prediction check. The full table, including task text and changed paths, stays under `data/private/` because the pilot protocols keep prompts out of the public repository.
+This folder holds the public side of the ten-pair prediction check. The full table, including task text and changed paths, stays in the ignored private data root because the pilot protocols keep prompts out of the public repository.
 
 - `summary.json` reports the pair count, label counts, cohort counts, repository names and input hashes.
 - `results.json` reports per-pair scores and aggregate metrics. It contains no task text and no local paths.
