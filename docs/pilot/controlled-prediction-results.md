@@ -68,7 +68,7 @@ The no-skill AP is the prevalence, 0.700, because seven of ten pairs are conflic
 
 - Ten pairs across ten repositories. The bootstrap intervals are wide and unstable.
 - The two cohorts use different capture policies, and the v3 labels are post-hoc.
-- The fresh cohort was designed to conflict, so the label distribution is not a base rate.
+- The fresh cohort was designed so both tasks edit overlapping files, and all five conflicted. The label distribution is not a base rate.
 - The task text was written by the coordinator and delivered by one model.
 - The prompts name the module and test file, which makes lexical overlap partly a leak of the construction.
 - No timestamps or historical decisions exist, so a forward-time check is impossible.
@@ -76,7 +76,7 @@ The no-skill AP is the prevalence, 0.700, because seven of ten pairs are conflic
 
 ## Next
 
-1. Remove file and module names from the task text, then rescore. If the rank survives, wording carries signal beyond the named paths. If it collapses, the current score is a construction artifact.
+1. Remove file and module names from the task text, then rescore. A surviving rank would be consistent with wording signal, but this construction still cannot separate wording from pair authorship.
 2. Add a file predictor over the pre-start tree and compare it with the text-only score. The ten pairs have changed-path labels, so this step is ready.
 3. Collect more pairs with both clean and conflict outcomes before claiming accuracy. The current set cannot support a train or held-out result.
 

@@ -158,7 +158,7 @@ def build_results(table, source=None):
         "caveats": [
             "Ten constructed pairs across ten repositories, with seven conflicts.",
             "Both tasks in every pair were designed to touch the same module.",
-            "The task text names the module and test file, so lexical similarity partly restates the construction.",
+            "The task text names the module and test file, and both tasks in each pair were designed to edit overlapping files; the run cannot separate lexical similarity from the construction.",
             "The two cohorts use different capture policies and are not a random sample.",
             "The fold-prior reference assigns one constant per class, so its pooled AP equals prevalence; use no_skill_ap as the no-skill reference.",
             "These scores check the workflow and support no accuracy or held-out claim.",

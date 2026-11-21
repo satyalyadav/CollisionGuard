@@ -54,6 +54,15 @@ def public_producer_path(path: Path) -> str:
     return f"{parent}/{path.name}" if parent else path.name
 
 
+ABSOLUTE_PATH_RE = re.compile(
+    r"(?:/(?:home|tmp|Users|var|opt|root|private)/[^\s\"'`]+|[A-Za-z]:\\[^\s\"'`]+)")
+
+
+def public_text(value: str) -> str:
+    """Replace machine-local absolute paths before text enters public output."""
+    return ABSOLUTE_PATH_RE.sub("<path>", value)
+
+
 def canonical_json(value) -> bytes:
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode()
 
@@ -397,10 +406,11 @@ def load_test_audit(evidence: Path) -> dict:
         jobs = []
         for job in task.get("test_jobs", []):
             tail = [line for line in job.get("stdout_tail", "").splitlines() if line.strip()]
+            summary = tail[-1].strip() if tail else None
             jobs.append({
                 "job_file": Path(job.get("file", "")).name,
                 "returncode": job.get("returncode"),
-                "summary_line": tail[-1].strip() if tail else None,
+                "summary_line": public_text(summary) if summary else None,
             })
         out[task["task_id"]] = {"repo_id": task.get("repo"), "jobs": jobs}
     return out

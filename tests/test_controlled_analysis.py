@@ -1,3 +1,4 @@
+import json
 import os
 import shutil
 import subprocess
@@ -56,7 +57,7 @@ class GitFixture:
 
 class ControlledAnalysisTests(unittest.TestCase):
     def setUp(self):
-        self.tmp = Path(tempfile.mkdtemp(prefix="controlled-test-", dir="/tmp/opencode"))
+        self.tmp = Path(tempfile.mkdtemp(prefix="controlled-test-"))
         self.fx = GitFixture(self.tmp)
 
     def tearDown(self):
@@ -68,6 +69,26 @@ class ControlledAnalysisTests(unittest.TestCase):
                          "scripts/analyze_controlled_pilot.py")
         self.assertEqual(analysis.public_producer_path(Path("analyze_controlled_pilot.py")),
                          "analyze_controlled_pilot.py")
+
+    def test_public_text_removes_absolute_paths(self):
+        self.assertEqual(analysis.public_text("see /home/example/repo/test.py:12"),
+                         "see <path>")
+        self.assertEqual(analysis.public_text("see C:\\Users\\example\\test.py"),
+                         "see <path>")
+        self.assertEqual(analysis.public_text("1 passed in 0.1s"), "1 passed in 0.1s")
+
+    def test_test_audit_sanitizes_absolute_paths(self):
+        evidence = self.tmp / "evidence"
+        evidence.mkdir()
+        payload = {"tasks": [{"task_id": "t", "repo": "r", "test_jobs": [
+            {"file": "/home/example/job.json", "returncode": 0,
+             "stdout_tail": "setup from /home/example/repo\n"
+                            "1 passed in /home/example/repo/tests/test_x.py\n"}]}]}
+        (evidence / "root-job-audit.json").write_text(json.dumps(payload))
+        audit = analysis.load_test_audit(evidence)
+        self.assertEqual(audit["t"]["jobs"][0]["job_file"], "job.json")
+        self.assertIn("1 passed", audit["t"]["jobs"][0]["summary_line"])
+        self.assertNotIn("/home/", json.dumps(audit))
 
     def test_ignored_cache_differences_leave_independent_source_clean(self):
         _, git_a, a = self.fx.derive("a", {"a.txt": "A\n", "b.txt": "base b\n",
