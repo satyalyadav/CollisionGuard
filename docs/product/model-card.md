@@ -32,31 +32,36 @@ Repository-grouped 5-fold cross-validation, seed 0:
 
 | Measure | Value |
 | --- | --- |
-| Average precision | 0.356 |
-| ROC AUC | 0.648 |
-| Brier raw / calibrated | 0.229 / 0.158 |
+| Average precision | 0.363 |
+| ROC AUC | 0.677 |
+| Brier raw / calibrated | 0.220 / 0.155 |
+| Brier held-out fold / constant baseline | 0.151 / 0.172 |
 | Forward-time AUC | 0.625 |
-| Issue-title transfer AUC (unseen repositories) | 0.582 |
+| Issue-title transfer AUC (unseen repositories) | 0.582 (0.458-0.705) |
 
 Band rates from out-of-fold scores:
 
 | Band | Pairs | Conflicts | Rate |
 | --- | --- | --- | --- |
-| Low (below 70th percentile) | 455 | 74 | 16.3% |
-| Elevated (70th to 90th) | 130 | 39 | 30.0% |
-| High (90th and above) | 67 | 31 | 46.3% |
+| Low (below 70th percentile) | 455 | 71 | 15.6% |
+| Elevated (70th to 90th) | 130 | 40 | 30.8% |
+| High (90th and above) | 67 | 33 | 49.3% |
 
-The high band captures 20.1 percent of conflicts with 44.6 percent precision. The top 30 percent captures 48.6 percent with 35.9 percent precision. The base rate is 22.1 percent.
+The high band captures 22.9 percent of conflicts (33/144). The top 10 percent by score captures 22.2 percent with 49.2 percent precision. The top 30 percent captures 50.0 percent with 36.9 percent precision. The base rate is 22.1 percent.
 
 ## Calibration
 
-Isotonic regression on out-of-fold scores reduces the Brier score from 0.229 to 0.158. Probabilities are still rough; the band and percentile are the intended outputs.
+Isotonic regression reduces the in-sample Brier score from 0.220 to 0.155. A calibrator fitted on folds 0-3 and scored on fold 4 gives 0.151, against a constant-probability baseline of 0.172. Calibration is modest but real. Probabilities are still rough; the band and percentile are the intended outputs.
+
+## Alternatives tested
+
+A zero-shot GLM-5.3 scorer on 40 balanced held-out pairs reached AUC 0.551 and AP 0.651. The calibrated model on the same pairs reached AUC 0.715 and AP 0.713; a rank-average fusion reached 0.670 AUC. The LLM scores were not integrated. The sample is small and the prompt supplied only titles, repository metadata, agent names and predicted files.
 
 ## Limitations
 
 - Retrospective co-active PR pairs, not tasks dispatched from a queue.
 - PR titles are written after coding and can summarize the change.
-- Issue-text transfer is weaker (AUC 0.582) and uses a small 165-pair subset.
+- Issue-text transfer is weaker (AUC 0.582, 95 percent interval 0.458-0.705) and uses a small 165-pair subset. The interval includes chance.
 - Agent identity and repository metadata carry much of the signal, so new agents and unusual repositories may behave differently.
 - Textual merge conflict is not semantic incompatibility. Clean merges can still break tests.
 - The file ranker is lexical and finds only about 22 percent of changed files.

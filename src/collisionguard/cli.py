@@ -42,7 +42,7 @@ def build_report(repo, task_a, task_b, agent_a=None, agent_b=None,
     files_b = [path for path, _ in ranked_b]
     shared = shared_files(files_a, files_b)
     bands = artifact["metadata"].get("bands", {})
-    return {
+    report = {
         "repo": str(Path(repo).resolve()),
         "tasks": {"a": task_a, "b": task_b},
         "agents": {"a": agent_a, "b": agent_b},
@@ -64,6 +64,10 @@ def build_report(repo, task_a, task_b, agent_a=None, agent_b=None,
                    "above chance but is not a safety guarantee. Use it to order "
                    "review or serialize suspicious pairs, not to approve work."),
     }
+    if not agent_a or not agent_b:
+        report["warning"] = ("agent names missing: the model treats them as unknown, "
+                             "so the historical band rates may not apply")
+    return report
 
 
 def _print(report):
@@ -91,6 +95,8 @@ def _print(report):
         for item in report["reasons"]:
             print(f"  {item['reason']} ({item['direction']} risk, {item['weight']:+.2f})")
     print()
+    if report.get("warning"):
+        print("Warning: " + report["warning"])
     print(report["caveat"])
 
 

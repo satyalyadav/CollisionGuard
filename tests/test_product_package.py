@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from collisionguard.cli import build_report
-from collisionguard.features import pair_features
+from collisionguard.features import normalize_agent, pair_features
 from collisionguard.files import (language_from_files, list_repo_files,
                                   predict_files, shared_directories, shared_files)
 from collisionguard.model import contributions, fit, load_artifact, save_artifact, score
@@ -29,6 +29,12 @@ class FeatureTests(unittest.TestCase):
         self.assertEqual(features["lang"], "Python")
         self.assertEqual(features["same"], 1)
         self.assertGreater(features["tree"], 4)
+
+    def test_agent_aliases(self):
+        self.assertEqual(normalize_agent("codex"), "OpenAI_Codex")
+        self.assertEqual(normalize_agent("Claude Code"), "Claude_Code")
+        self.assertEqual(normalize_agent("github-copilot"), "Copilot")
+        self.assertEqual(normalize_agent(""), "unknown")
 
     def test_pair_features_handles_empty_text(self):
         features = pair_features("", "", language=None, tree_files=0)
@@ -56,6 +62,15 @@ class FileTests(unittest.TestCase):
     def test_list_repo_files_on_current_checkout(self):
         paths = list_repo_files(ROOT)
         self.assertIn("README.md", paths)
+
+    def test_list_repo_files_on_plain_directory(self):
+        with tempfile.TemporaryDirectory() as temp:
+            Path(temp, "a.py").write_text("x")
+            Path(temp, "sub").mkdir()
+            Path(temp, "sub", "b.txt").write_text("y")
+            self.assertEqual(sorted(list_repo_files(temp)), ["a.py", "sub/b.txt"])
+        with self.assertRaises(ValueError):
+            list_repo_files("/does/not/exist")
 
 
 class ModelTests(unittest.TestCase):
@@ -127,7 +142,7 @@ class _Identity:
 class CliIntegrationTests(unittest.TestCase):
     def test_build_report_on_this_repo(self):
         report = build_report(ROOT, "Add a merge-risk CLI", "Improve the README",
-                              agent_a="opencode", agent_b="opencode")
+                              agent_a="codex", agent_b="copilot")
         self.assertEqual(report["risk"]["band"], report["risk"]["band"].lower())
         self.assertTrue(report["likely_files"]["a"])
         self.assertEqual(report["repo"], str(ROOT))

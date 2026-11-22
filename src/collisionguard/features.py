@@ -10,6 +10,19 @@ import re
 
 WORD = re.compile(r"[a-z0-9]+")
 
+AGENT_ALIASES = {
+    "codex": "OpenAI_Codex", "openai_codex": "OpenAI_Codex",
+    "openai-codex": "OpenAI_Codex", "openaicodex": "OpenAI_Codex",
+    "claude": "Claude_Code", "claude_code": "Claude_Code",
+    "claude-code": "Claude_Code", "claudecode": "Claude_Code",
+    "copilot": "Copilot", "github_copilot": "Copilot",
+    "github-copilot": "Copilot", "githubcopilot": "Copilot",
+    "devin": "Devin", "cursor": "Cursor",
+    "jules": "Google_Jules", "google_jules": "Google_Jules",
+    "google-jules": "Google_Jules",
+}
+
+
 TYPE_WORDS = {
     "docs": {"doc", "docs", "documentation", "readme", "changelog", "release",
              "guide", "comment", "typo"},
@@ -29,6 +42,15 @@ TYPE_WORDS = {
 }
 
 
+def normalize_agent(name):
+    """Map common product spellings to the names used in training."""
+    value = (name or "").strip()
+    if not value:
+        return "unknown"
+    key = value.casefold().replace(" ", "_")
+    return AGENT_ALIASES.get(key, value)
+
+
 def tokens(text):
     return set(WORD.findall((text or "").lower()))
 
@@ -41,8 +63,8 @@ def pair_features(task_a, task_b, language=None, tree_files=0, same_agent=False,
     model falls back to the shared task and repository features.
     """
     first, second = tokens(task_a), tokens(task_b)
-    first_agent = (agent_a or "unknown").strip() or "unknown"
-    second_agent = (agent_b or "unknown").strip() or "unknown"
+    first_agent = normalize_agent(agent_a)
+    second_agent = normalize_agent(agent_b)
     features = {
         "lang": language or "unknown",
         "tree": math.log1p(max(0, tree_files or 0)),

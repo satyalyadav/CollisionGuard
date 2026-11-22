@@ -33,24 +33,34 @@ PYTHONPATH=src uv run --locked python -m collisionguard.cli \
 
 Add `--json` for machine-readable output. Task text can also come from files with `--task-a-file` and `--task-b-file`.
 
+Pass both agent names for the calibrated band rates. Common spellings such as `codex`, `claude` and `copilot` are normalized to the training names. If either name is missing, the model treats the pair as unknown-agent and the CLI warns that the historical band rates may not apply.
+
+For a browser demo:
+
+```sh
+PYTHONPATH=src uv run --locked python scripts/serve_product.py
+# open http://127.0.0.1:8765
+```
+
 ## Measured performance
 
 Trained on 652 natural co-active AI-agent PR pairs from 598 repositories (144 conflicts, prevalence 22.1 percent). Repository-grouped cross-validation.
 
 | Measure | Value |
 | --- | --- |
-| Average precision | 0.356 |
-| ROC AUC | 0.648 |
-| Brier score, calibrated | 0.158 |
+| Average precision | 0.363 |
+| ROC AUC | 0.677 |
+| Brier score, raw / calibrated | 0.220 / 0.155 |
+| Brier score, held-out fold | 0.151 (constant baseline 0.172) |
 | Forward-time AUC (last 30 percent) | 0.625 |
-| Issue-title transfer AUC, unseen repositories | 0.582 |
-| Top 10 percent precision / recall | 0.446 / 0.201 |
-| Top 20 percent precision / recall | 0.392 / 0.354 |
-| Top 30 percent precision / recall | 0.359 / 0.486 |
+| Issue-title transfer AUC, unseen repositories | 0.582 (95 percent interval 0.458-0.705) |
+| Top 10 percent precision / recall | 0.492 / 0.222 |
+| Top 20 percent precision / recall | 0.385 / 0.347 |
+| Top 30 percent precision / recall | 0.369 / 0.500 |
 
-The high band (top 10 percent) has a 46.3 percent conflict rate against a 22.1 percent base rate. The elevated band (70th to 90th percentile) has 30.0 percent. The low band has 16.3 percent. A scheduler can use this to order review, but many flagged pairs still merge cleanly and many conflicts fall outside the flag.
+The high band (top 10 percent by score) has a 49.3 percent conflict rate against a 22.1 percent base. The elevated band (70th to 90th percentile) has 30.8 percent. The low band has 15.6 percent. A scheduler can use this to order review, but half of flagged pairs still merge cleanly and half of conflicts fall outside the top 30 percent.
 
-The issue-title transfer test is the closer pre-start check, because it uses issue text instead of outcome-adjacent PR titles. Its AUC is 0.582, so the model is weaker on genuinely pre-start text.
+The issue-title transfer test is the closer pre-start check, because it uses issue text instead of outcome-adjacent PR titles. Its AUC is 0.582, but the 95 percent interval includes chance, so the transfer result is uncertain.
 
 ## Train or refresh the model
 
@@ -59,6 +69,10 @@ uv run --locked python scripts/train_product_model.py
 ```
 
 This writes `models/collisionguard-v0.1.joblib` and the public metrics in `data/natural-cohort-2026-11/product-model.json`. The training table and file results stay under the ignored private root.
+
+## Alternatives tested
+
+A zero-shot GLM-5.3 scorer on 40 balanced held-out pairs did not beat the calibrated model (AUC 0.551 against 0.715). It is not in the product.
 
 ## Roadmap
 

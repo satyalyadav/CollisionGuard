@@ -19,6 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 import numpy as np
 from sklearn.isotonic import IsotonicRegression
@@ -26,8 +27,9 @@ from sklearn.metrics import brier_score_loss, roc_auc_score
 
 from collisionguard.features import pair_features
 from collisionguard.model import fit, raw_scores, save_artifact
-from evaltools import splits
+from evaltools.bootstrap import cluster_bootstrap
 from evaltools.metrics import average_precision
+from run_natural_predictions import _canonical_fold_map
 
 PRIVATE = ROOT / "data/private/research/natural-cohort-2026-11"
 TABLE = PRIVATE / "table.json"
@@ -127,12 +129,17 @@ def _transfer(title_rows, issue_rows):
         test_features.append(_features(pair, row["tree_files"], task_a, task_b))
         test_labels.append(1 if pair["label"] == "conflict" else 0)
     scores = raw_scores(model, vectorizer, test_features)
+    repos = [row["pair"]["repo"] for row in issue_rows]
     return {
         "train_pairs": len(train),
         "test_pairs": len(test_labels),
         "conflicts": sum(test_labels),
         "average_precision": average_precision(test_labels, scores),
+        "average_precision_interval": cluster_bootstrap(
+            test_labels, scores, repos, average_precision, 1000, 0),
         "roc_auc": roc_auc_score(test_labels, scores),
+        "roc_auc_interval": cluster_bootstrap(
+            test_labels, scores, repos, roc_auc_score, 1000, 0),
         "scheme": "train on title pairs from repositories absent from the issue subset; test on issue titles",
     }
 
@@ -177,12 +184,27 @@ def _main():
             continue
         title_rows.append({"pair": pair, "tree_files": row.get("tree_files", 0)})
     labels = [1 if row["pair"]["label"] == "conflict" else 0 for row in title_rows]
-    folds = splits.group_kfold(_records(title_rows), FOLDS, SEED)
+    fold_of = _canonical_fold_map(table)
+    folds = []
+    for fold in range(FOLDS):
+        test = [index for index, row in enumerate(title_rows)
+                if fold_of[row["pair"]["instance_id"]] == fold]
+        train = [index for index, row in enumerate(title_rows)
+                 if fold_of[row["pair"]["instance_id"]] != fold]
+        folds.append((train, test))
     oof = _oof(title_rows, labels, folds)
     raw_ap = average_precision(labels, oof)
     raw_auc = roc_auc_score(labels, oof)
     calibrator = IsotonicRegression(out_of_bounds="clip").fit(oof, labels)
     calibrated = [float(value) for value in calibrator.predict(oof)]
+    holdout = [index for index, row in enumerate(title_rows)
+               if fold_of[row["pair"]["instance_id"]] == 4]
+    train_only = [index for index in range(len(title_rows)) if index not in set(holdout)]
+    holdout_calibrator = IsotonicRegression(out_of_bounds="clip").fit(
+        [oof[i] for i in train_only], [labels[i] for i in train_only])
+    holdout_brier = brier_score_loss(
+        [labels[i] for i in holdout],
+        [float(value) for value in holdout_calibrator.predict([oof[i] for i in holdout])])
 
     ordered = sorted(oof)
     low_cut = ordered[int(0.70 * (len(ordered) - 1))]
@@ -214,6 +236,9 @@ def _main():
         "roc_auc": raw_auc,
         "brier_raw": brier_score_loss(labels, oof),
         "brier_calibrated": brier_score_loss(labels, calibrated),
+        "brier_calibrated_holdout": holdout_brier,
+        "brier_constant_baseline": (sum(labels) / len(labels))
+                                       * (1 - sum(labels) / len(labels)),
         "budgets": {str(f): _budget(oof, labels, f) for f in (0.1, 0.2, 0.3)},
         "bands": bands,
         "band_thresholds": {"low_cut": low_cut, "high_cut": high_cut},

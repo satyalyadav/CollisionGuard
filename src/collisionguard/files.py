@@ -1,11 +1,16 @@
 """Repository file listing, language detection, and path ranking."""
 
+import os
 import re
 import subprocess
 from pathlib import Path, PurePosixPath
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+MAX_FILES = 20000
+SKIP_DIRS = {".git", ".venv", "node_modules", "vendor", "dist", "build", ".next",
+             "target", "__pycache__", ".mypy_cache", ".pytest_cache", ".tox"}
 
 EXTENSIONS = {
     ".py": "Python", ".pyi": "Python",
@@ -21,8 +26,10 @@ EXTENSIONS = {
 
 
 def list_repo_files(repo_path):
-    """Return tracked files at HEAD, or files on disk when Git is unavailable."""
+    """Return tracked files at HEAD, or a bounded file walk without Git."""
     repo = Path(repo_path)
+    if not repo.is_dir():
+        raise ValueError(f"not a directory: {repo}")
     try:
         result = subprocess.run(
             ["git", "-C", str(repo), "ls-tree", "-r", "--name-only", "-z", "HEAD"],
@@ -33,11 +40,15 @@ def list_repo_files(repo_path):
             return paths
     except (subprocess.SubprocessError, OSError):
         pass
-    return sorted(
-        str(path.relative_to(repo)).replace("\\", "/")
-        for path in repo.rglob("*")
-        if path.is_file() and ".git" not in path.parts
-    )
+    paths = []
+    for root, directories, filenames in os.walk(repo, followlinks=False):
+        directories[:] = [name for name in directories if name not in SKIP_DIRS]
+        for name in filenames:
+            path = Path(root) / name
+            paths.append(str(path.relative_to(repo)).replace("\\", "/"))
+            if len(paths) >= MAX_FILES:
+                return sorted(paths)
+    return sorted(paths)
 
 
 def language_from_files(paths):
