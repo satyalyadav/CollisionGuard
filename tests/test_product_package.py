@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from collisionguard.cli import build_report
-from collisionguard.features import normalize_agent, pair_features
+from collisionguard.features import normalize_agent, pair_features, reason_text
 from collisionguard.files import (language_from_files, list_repo_files,
                                   predict_files, shared_directories, shared_files)
 from collisionguard.model import contributions, fit, load_artifact, save_artifact, score
@@ -93,6 +93,28 @@ class ModelTests(unittest.TestCase):
         self.assertTrue(reasons)
         self.assertIn("reason", reasons[0])
 
+    def test_ensemble_averages_the_two_components(self):
+        rows = []
+        labels = []
+        for index in range(40):
+            rows.append(pair_features("Add API endpoint" if index % 2 else "Fix docs",
+                                      "Update API client" if index % 2 else "Update docs",
+                                      language="Python", tree_files=10,
+                                      same_agent=bool(index % 3)))
+            labels.append(index % 2)
+        model, vectorizer = fit(rows, labels)
+        matrix = vectorizer.transform(rows)
+        combined = model.predict_proba(matrix)[:, 1]
+        linear = model.logistic.predict_proba(matrix)[:, 1]
+        forest = model.trees.predict_proba(matrix)[:, 1]
+        for value, first, second in zip(combined, linear, forest):
+            self.assertAlmostEqual(value, (first + second) / 2.0, places=12)
+
+    def test_agent_reason_text(self):
+        self.assertEqual(reason_text("agent_pair=OpenAI_Codex+Copilot"),
+                         "agent pairing OpenAI_Codex + Copilot")
+        self.assertEqual(reason_text("agent_a=Copilot"), "agent A is Copilot")
+
     def test_artifact_round_trip(self):
         rows = [pair_features("Add API endpoint", "Update API client",
                               language="Python", tree_files=10)] * 20
@@ -137,7 +159,7 @@ class _Identity:
         return list(values)
 
 
-@unittest.skipUnless((ROOT / "models" / "collisionguard-v0.1.joblib").is_file(),
+@unittest.skipUnless((ROOT / "models" / "collisionguard-v0.2.joblib").is_file(),
                      "product model artifact is not trained")
 class CliIntegrationTests(unittest.TestCase):
     def test_build_report_on_this_repo(self):

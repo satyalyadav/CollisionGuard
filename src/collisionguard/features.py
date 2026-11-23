@@ -116,4 +116,11 @@ def reason_text(feature_name):
         return REASON_LABELS[feature_name]
     if feature_name.startswith("lang="):
         return "repository language " + feature_name.split("=", 1)[1]
+    if feature_name.startswith("agent_pair="):
+        names = feature_name.split("=", 1)[1].split("+")
+        return "agent pairing " + " + ".join(names)
+    if feature_name.startswith("agent_a="):
+        return "agent A is " + feature_name.split("=", 1)[1]
+    if feature_name.startswith("agent_b="):
+        return "agent B is " + feature_name.split("=", 1)[1]
     return feature_name.replace("_", " ")

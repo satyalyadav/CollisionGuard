@@ -11,7 +11,7 @@ from .files import (language_from_files, list_repo_files, predict_files,
 from .model import contributions, load_artifact, score
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_MODEL = ROOT / "models" / "collisionguard-v0.1.joblib"
+DEFAULT_MODEL = ROOT / "models" / "collisionguard-v0.2.joblib"
 
 
 def _read_task(value, path):

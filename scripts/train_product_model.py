@@ -7,7 +7,7 @@ on the natural-mix title cohort and evaluated with repository-grouped folds.
     python3 scripts/train_product_model.py
 
 Outputs:
-- models/collisionguard-v0.1.joblib
+- models/collisionguard-v0.2.joblib
 - data/natural-cohort-2026-11/product-model.json
 """
 
@@ -35,7 +35,7 @@ PRIVATE = ROOT / "data/private/research/natural-cohort-2026-11"
 TABLE = PRIVATE / "table.json"
 FILE_RESULTS = ROOT / "data/natural-cohort-2026-11/file-predictor.json"
 STRICT_RESULTS = ROOT / "data/natural-cohort-2026-11/file-predictor-strict-issue.json"
-MODEL_OUT = ROOT / "models" / "collisionguard-v0.1.joblib"
+MODEL_OUT = ROOT / "models" / "collisionguard-v0.2.joblib"
 PUBLIC_OUT = ROOT / "data/natural-cohort-2026-11/product-model.json"
 FOLDS = 5
 SEED = 0
@@ -197,14 +197,20 @@ def _main():
     raw_auc = roc_auc_score(labels, oof)
     calibrator = IsotonicRegression(out_of_bounds="clip").fit(oof, labels)
     calibrated = [float(value) for value in calibrator.predict(oof)]
-    holdout = [index for index, row in enumerate(title_rows)
-               if fold_of[row["pair"]["instance_id"]] == 4]
-    train_only = [index for index in range(len(title_rows)) if index not in set(holdout)]
-    holdout_calibrator = IsotonicRegression(out_of_bounds="clip").fit(
-        [oof[i] for i in train_only], [labels[i] for i in train_only])
-    holdout_brier = brier_score_loss(
-        [labels[i] for i in holdout],
-        [float(value) for value in holdout_calibrator.predict([oof[i] for i in holdout])])
+    # Leave-one-fold-out calibration is the honest estimate. An isotonic map
+    # fitted on its own inputs is optimistic even when those inputs are
+    # out-of-fold classifier scores.
+    crossfit = [None] * len(oof)
+    for fold in range(FOLDS):
+        train = [i for i, row in enumerate(title_rows)
+                 if fold_of[row["pair"]["instance_id"]] != fold]
+        test = [i for i, row in enumerate(title_rows)
+                if fold_of[row["pair"]["instance_id"]] == fold]
+        fold_calibrator = IsotonicRegression(out_of_bounds="clip").fit(
+            [oof[i] for i in train], [labels[i] for i in train])
+        for index in test:
+            crossfit[index] = float(fold_calibrator.predict([oof[index]])[0])
+    crossfit_brier = brier_score_loss(labels, crossfit)
 
     ordered = sorted(oof)
     low_cut = ordered[int(0.70 * (len(ordered) - 1))]
@@ -236,7 +242,7 @@ def _main():
         "roc_auc": raw_auc,
         "brier_raw": brier_score_loss(labels, oof),
         "brier_calibrated": brier_score_loss(labels, calibrated),
-        "brier_calibrated_holdout": holdout_brier,
+        "brier_calibrated_crossfit": crossfit_brier,
         "brier_constant_baseline": (sum(labels) / len(labels))
                                        * (1 - sum(labels) / len(labels)),
         "budgets": {str(f): _budget(oof, labels, f) for f in (0.1, 0.2, 0.3)},
@@ -246,8 +252,8 @@ def _main():
         "issue_text_transfer": transfer,
     }
     metadata = {
-        "version": "collisionguard-v0.1",
-        "trained_on": "652 natural co-active AI-agent PR pairs (PR titles)",
+        "version": "collisionguard-v0.2",
+        "trained_on": "652 natural co-active AI-agent PR pairs (PR titles and repository metadata)",
         "table_sha256": table["table_sha256"],
         "built_at": datetime.now(timezone.utc).isoformat(),
         "bands": {
@@ -260,6 +266,8 @@ def _main():
                      "conflicts": bands["high"]["conflicts"]},
         },
         "features": "task type words, language, repository size, same-agent flag, task lengths",
+        "algorithm": ("equal-weight average of raw probabilities from a class-balanced "
+                      "logistic regression and an 800-tree extremely randomized forest"),
         "caveat": ("Retrospective, weak triage. PR titles are outcome-adjacent; "
                    "the issue-text transfer is the closer pre-start check and is weaker."),
     }

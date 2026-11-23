@@ -1,74 +1,75 @@
 {
   "metadata": {
+    "algorithm": "equal-weight average of raw probabilities from a class-balanced logistic regression and an 800-tree extremely randomized forest",
     "bands": {
       "elevated": {
-        "conflicts": 40,
+        "conflicts": 35,
         "pairs": 130,
-        "rate": 0.3076923076923077
+        "rate": 0.2692307692307692
       },
       "high": {
-        "conflicts": 33,
+        "conflicts": 37,
         "pairs": 67,
-        "rate": 0.4925373134328358
+        "rate": 0.5522388059701493
       },
       "low": {
-        "conflicts": 71,
+        "conflicts": 72,
         "pairs": 455,
-        "rate": 0.15604395604395604
+        "rate": 0.15824175824175823
       }
     },
-    "built_at": "2026-11-22T00:03:38.198548+00:00",
+    "built_at": "2026-11-23T01:52:51.306695+00:00",
     "caveat": "Retrospective, weak triage. PR titles are outcome-adjacent; the issue-text transfer is the closer pre-start check and is weaker.",
     "features": "task type words, language, repository size, same-agent flag, task lengths",
     "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",
-    "trained_on": "652 natural co-active AI-agent PR pairs (PR titles)",
-    "version": "collisionguard-v0.1"
+    "trained_on": "652 natural co-active AI-agent PR pairs (PR titles and repository metadata)",
+    "version": "collisionguard-v0.2"
   },
   "metrics": {
-    "average_precision": 0.3630544485204975,
+    "average_precision": 0.4426870769711152,
     "band_thresholds": {
-      "high_cut": 0.8156444345668797,
-      "low_cut": 0.5364541533029982
+      "high_cut": 0.6737121933922029,
+      "low_cut": 0.5135643446238713
     },
     "bands": {
       "elevated": {
-        "conflicts": 40,
+        "conflicts": 35,
         "pairs": 130,
-        "rate": 0.3076923076923077
+        "rate": 0.2692307692307692
       },
       "high": {
-        "conflicts": 33,
+        "conflicts": 37,
         "pairs": 67,
-        "rate": 0.4925373134328358
+        "rate": 0.5522388059701493
       },
       "low": {
-        "conflicts": 71,
+        "conflicts": 72,
         "pairs": 455,
-        "rate": 0.15604395604395604
+        "rate": 0.15824175824175823
       }
     },
-    "brier_calibrated": 0.15494940767812976,
-    "brier_calibrated_holdout": 0.15073639704098804,
+    "brier_calibrated": 0.14832832073485439,
+    "brier_calibrated_crossfit": 0.15718704839997674,
     "brier_constant_baseline": 0.17208024389325904,
-    "brier_raw": 0.2195057778161901,
+    "brier_raw": 0.19814151858029824,
     "budgets": {
       "0.1": {
         "conflicts": 144,
         "fraction": 0.1,
-        "lift": 2.229059829059829,
-        "precision": 0.49230769230769234,
-        "recall": 0.2222222222222222,
+        "lift": 2.577350427350427,
+        "precision": 0.5692307692307692,
+        "recall": 0.2569444444444444,
         "selected": 65,
-        "true_positives": 32
+        "true_positives": 37
       },
       "0.2": {
         "conflicts": 144,
         "fraction": 0.2,
-        "lift": 1.7414529914529915,
-        "precision": 0.38461538461538464,
-        "recall": 0.3472222222222222,
+        "lift": 1.8807692307692307,
+        "precision": 0.4153846153846154,
+        "recall": 0.375,
         "selected": 130,
-        "true_positives": 50
+        "true_positives": 54
       },
       "0.3": {
         "conflicts": 144,
@@ -82,31 +83,31 @@
     },
     "conflicts": 144,
     "forward_time": {
-      "average_precision": 0.347734208777282,
+      "average_precision": 0.3770020944333129,
       "conflicts": 49,
-      "roc_auc": 0.6252950159655698,
+      "roc_auc": 0.6540330417881438,
       "test_pairs": 196,
       "train_pairs": 456
     },
     "issue_text_transfer": {
-      "average_precision": 0.20297776645597357,
+      "average_precision": 0.2187044706386618,
       "average_precision_interval": {
-        "high": 0.3757378716942698,
-        "low": 0.12024888239800147,
+        "high": 0.3933074892375823,
+        "low": 0.12367458214878672,
         "n_clusters": 164,
         "n_skipped": 0,
         "n_valid": 1000,
-        "point": 0.20297776645597357
+        "point": 0.2187044706386618
       },
       "conflicts": 24,
-      "roc_auc": 0.5815602836879432,
+      "roc_auc": 0.5629432624113475,
       "roc_auc_interval": {
-        "high": 0.7045902048742958,
-        "low": 0.45768674547283705,
+        "high": 0.6840379064409237,
+        "low": 0.4413627246779295,
         "n_clusters": 164,
         "n_skipped": 0,
         "n_valid": 1000,
-        "point": 0.5815602836879432
+        "point": 0.5629432624113475
       },
       "scheme": "train on title pairs from repositories absent from the issue subset; test on issue titles",
       "test_pairs": 165,
@@ -115,7 +116,7 @@
     "pairs": 652,
     "prevalence": 0.22085889570552147,
     "repositories": 598,
-    "roc_auc": 0.6765501968503937,
+    "roc_auc": 0.7034257436570428,
     "validation": {
       "folds": 5,
       "scheme": "repository-grouped 5-fold",
