@@ -62,6 +62,8 @@ The score is an equal-weight average of a class-balanced logistic regression and
 
 The high band (top 10 percent by score) has a 55.2 percent conflict rate against a 22.1 percent base, up from 49.3 percent in v0.1. The elevated band has 26.9 percent and the low band 15.8 percent. The top 10 percent captures 37 of 144 conflicts; the top 30 percent captures 72. A scheduler can use this to order review, but 45 percent of high-band pairs still merge cleanly and half of conflicts fall outside the top 30 percent.
 
+The band rate is optimistic because the feature set and ensemble were chosen after looking at folds 0-3, and fold 4 was inspected during development. Fold 4 alone has 13 top-decile pairs, of which 5 conflict (38.5 percent against a 25.2 percent base). Treat the exact rate as uncertain.
+
 Two changes explain the gain. The v0.1 logistic standardized its one-hot features, which amplified rare categories; removing that scaling and averaging the linear score with the forest raised AP from 0.363 to 0.443. A raw logistic alone scores AP 0.405 and AUC 0.709; the forest alone scores AP 0.430 and AUC 0.679. The average trades a little AUC for better tail ranking.
 
 The issue-title transfer test is the closer pre-start check, because it uses issue text instead of outcome-adjacent PR titles. Its AUC is 0.563, essentially unchanged from v0.1 and still including chance in the interval. The product therefore remains a retrospective triage prior.

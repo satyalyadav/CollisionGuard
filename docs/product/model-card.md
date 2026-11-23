@@ -49,6 +49,8 @@ Band rates from out-of-fold scores:
 
 The high band captures 25.7 percent of conflicts (37/144). The top 10 percent by score captures 25.7 percent with 56.9 percent precision. The top 30 percent captures 50.0 percent with 36.9 percent precision. The base rate is 22.1 percent.
 
+The band rates are cross-validated but optimistic: the feature set and ensemble were chosen after looking at folds 0-3, and fold 4 was inspected during development. Fold 4 alone has 13 top-decile pairs, of which 5 conflict (38.5 percent against a 25.2 percent base). Treat the exact high-band rate as uncertain.
+
 ## Calibration
 
 Platt scaling reduces the in-sample Brier score from 0.198 to 0.155. A leave-one-fold-out calibrator gives 0.157, against a constant-probability baseline of 0.172. The cross-fitted value is the honest one; the in-sample value is optimistic. Calibration is modest but real. The calibrated score stays below 0.54 on this cohort, close to the observed high-band rate. Probabilities are still rough; the band and percentile are the intended outputs.
