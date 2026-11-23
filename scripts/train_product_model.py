@@ -22,11 +22,11 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import numpy as np
-from sklearn.isotonic import IsotonicRegression
 from sklearn.metrics import brier_score_loss, roc_auc_score
 
 from collisionguard.features import pair_features
-from collisionguard.model import fit, raw_scores, save_artifact
+from collisionguard.model import (
+    SigmoidCalibrator, fit, raw_scores, save_artifact)
 from evaltools.bootstrap import cluster_bootstrap
 from evaltools.metrics import average_precision
 from run_natural_predictions import _canonical_fold_map
@@ -195,9 +195,9 @@ def _main():
     oof = _oof(title_rows, labels, folds)
     raw_ap = average_precision(labels, oof)
     raw_auc = roc_auc_score(labels, oof)
-    calibrator = IsotonicRegression(out_of_bounds="clip").fit(oof, labels)
+    calibrator = SigmoidCalibrator().fit(oof, labels)
     calibrated = [float(value) for value in calibrator.predict(oof)]
-    # Leave-one-fold-out calibration is the honest estimate. An isotonic map
+    # Leave-one-fold-out calibration is the honest estimate. A calibrator
     # fitted on its own inputs is optimistic even when those inputs are
     # out-of-fold classifier scores.
     crossfit = [None] * len(oof)
@@ -206,7 +206,7 @@ def _main():
                  if fold_of[row["pair"]["instance_id"]] != fold]
         test = [i for i, row in enumerate(title_rows)
                 if fold_of[row["pair"]["instance_id"]] == fold]
-        fold_calibrator = IsotonicRegression(out_of_bounds="clip").fit(
+        fold_calibrator = SigmoidCalibrator().fit(
             [oof[i] for i in train], [labels[i] for i in train])
         for index in test:
             crossfit[index] = float(fold_calibrator.predict([oof[index]])[0])

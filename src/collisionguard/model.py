@@ -14,6 +14,27 @@ FORMAT = "collisionguard-product-2"
 LEGACY_FORMAT = "collisionguard-product-1"
 
 
+class SigmoidCalibrator:
+    """Platt scaling for the averaged score.
+
+    Isotonic regression produced exact 0.0 and 1.0 probabilities at the tails
+    on this cohort. A one-dimensional logistic map is smoother, scored slightly
+    better in leave-one-fold-out Brier, and keeps the displayed probability
+    near the observed band rate.
+    """
+
+    def __init__(self):
+        self.model = LogisticRegression()
+
+    def fit(self, scores, labels):
+        self.model.fit(np.asarray(scores).reshape(-1, 1), labels)
+        return self
+
+    def predict(self, scores):
+        values = np.asarray(scores).reshape(-1, 1)
+        return [float(value) for value in self.model.predict_proba(values)[:, 1]]
+
+
 class EnsembleClassifier:
     """Equal-weight average of a linear model and an extremely randomized forest.
 
@@ -71,7 +92,7 @@ def save_artifact(path, model, vectorizer, calibrator, oof_scores, metrics, meta
         "metadata": metadata,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump(artifact, path)
+    joblib.dump(artifact, path, compress=3)
     return artifact
 
 

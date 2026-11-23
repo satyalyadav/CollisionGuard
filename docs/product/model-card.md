@@ -2,7 +2,7 @@
 
 ## Model
 
-An equal-weight average of two classifiers over pre-start task and repository features: a class-balanced logistic regression and an 800-tree extremely randomized forest. The logistic model supplies the signed factor explanations; the forest contributes nonlinear interactions. The averaged score is calibrated with isotonic regression on out-of-fold scores.
+An equal-weight average of two classifiers over pre-start task and repository features: a class-balanced logistic regression and an 800-tree extremely randomized forest. The logistic model supplies the signed factor explanations; the forest contributes nonlinear interactions. The averaged score is calibrated with Platt scaling on out-of-fold scores; isotonic regression produced overconfident 0.0 and 1.0 tails on this cohort.
 
 Artifact: `models/collisionguard-v0.2.joblib`. Training script: `scripts/train_product_model.py`.
 
@@ -34,7 +34,7 @@ Repository-grouped 5-fold cross-validation, seed 0:
 | --- | --- |
 | Average precision | 0.443 |
 | ROC AUC | 0.703 |
-| Brier raw / in-sample calibrated / cross-fitted calibrated | 0.198 / 0.148 / 0.157 |
+| Brier raw / in-sample calibrated / cross-fitted calibrated | 0.198 / 0.155 / 0.157 |
 | Brier constant baseline | 0.172 |
 | Forward-time AUC | 0.654 |
 | Issue-title transfer AUC (unseen repositories) | 0.563 (0.441-0.684) |
@@ -51,7 +51,7 @@ The high band captures 25.7 percent of conflicts (37/144). The top 10 percent by
 
 ## Calibration
 
-Isotonic regression reduces the in-sample Brier score from 0.198 to 0.148. A leave-one-fold-out calibrator gives 0.157, against a constant-probability baseline of 0.172. The cross-fitted value is the honest one; the in-sample value is optimistic. Calibration is modest but real. Probabilities are still rough; the band and percentile are the intended outputs.
+Platt scaling reduces the in-sample Brier score from 0.198 to 0.155. A leave-one-fold-out calibrator gives 0.157, against a constant-probability baseline of 0.172. The cross-fitted value is the honest one; the in-sample value is optimistic. Calibration is modest but real. The calibrated score stays below 0.54 on this cohort, close to the observed high-band rate. Probabilities are still rough; the band and percentile are the intended outputs.
 
 ## Alternatives tested
 

@@ -52,7 +52,7 @@ The score is an equal-weight average of a class-balanced logistic regression and
 | --- | --- |
 | Average precision | 0.443 |
 | ROC AUC | 0.703 |
-| Brier score, raw / in-sample calibrated / cross-fitted calibrated | 0.198 / 0.148 / 0.157 |
+| Brier score, raw / in-sample calibrated / cross-fitted calibrated | 0.198 / 0.155 / 0.157 |
 | Brier score, constant baseline | 0.172 |
 | Forward-time AUC (last 30 percent) | 0.654 |
 | Issue-title transfer AUC, unseen repositories | 0.563 (95 percent interval 0.441-0.684) |

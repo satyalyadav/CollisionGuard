@@ -15,7 +15,8 @@ from collisionguard.cli import build_report
 from collisionguard.features import normalize_agent, pair_features, reason_text
 from collisionguard.files import (language_from_files, list_repo_files,
                                   predict_files, shared_directories, shared_files)
-from collisionguard.model import contributions, fit, load_artifact, save_artifact, score
+from collisionguard.model import (
+    SigmoidCalibrator, contributions, fit, load_artifact, save_artifact, score)
 import export_natural_cohort_hf as hf
 
 
@@ -109,6 +110,12 @@ class ModelTests(unittest.TestCase):
         forest = model.trees.predict_proba(matrix)[:, 1]
         for value, first, second in zip(combined, linear, forest):
             self.assertAlmostEqual(value, (first + second) / 2.0, places=12)
+
+    def test_sigmoid_calibrator_stays_in_range(self):
+        calibrator = SigmoidCalibrator().fit([0.0, 0.1, 0.8, 0.9], [0, 0, 1, 1])
+        values = calibrator.predict([0.0, 0.5, 1.0])
+        self.assertTrue(all(0.0 < value < 1.0 for value in values))
+        self.assertLess(values[0], values[2])
 
     def test_agent_reason_text(self):
         self.assertEqual(reason_text("agent_pair=OpenAI_Codex+Copilot"),

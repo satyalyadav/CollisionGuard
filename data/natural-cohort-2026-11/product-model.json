@@ -18,7 +18,7 @@
         "rate": 0.15824175824175823
       }
     },
-    "built_at": "2026-11-23T01:52:51.306695+00:00",
+    "built_at": "2026-11-23T02:03:40.812406+00:00",
     "caveat": "Retrospective, weak triage. PR titles are outcome-adjacent; the issue-text transfer is the closer pre-start check and is weaker.",
     "features": "task type words, language, repository size, same-agent flag, task lengths",
     "table_sha256": "80b93e885be6c4252e47ec38f3cda07e2fe9a2820e88f765886f3e6a91441b19",
@@ -28,7 +28,7 @@
   "metrics": {
     "average_precision": 0.4426870769711152,
     "band_thresholds": {
-      "high_cut": 0.6737121933922029,
+      "high_cut": 0.6737121933922028,
       "low_cut": 0.5135643446238713
     },
     "bands": {
@@ -48,8 +48,8 @@
         "rate": 0.15824175824175823
       }
     },
-    "brier_calibrated": 0.14832832073485439,
-    "brier_calibrated_crossfit": 0.15718704839997674,
+    "brier_calibrated": 0.15543320269930944,
+    "brier_calibrated_crossfit": 0.15650121138900464,
     "brier_constant_baseline": 0.17208024389325904,
     "brier_raw": 0.19814151858029824,
     "budgets": {
